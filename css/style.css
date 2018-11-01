@@ -30,8 +30,6 @@ body{
   display: flex;
   margin-bottom: 16px;
   margin-top:20px;
-  margin-left:320px;
-  margin-right:320px;
 }
 .logo{
   display: flex;
@@ -68,26 +66,22 @@ body{
   align-items: center;
   font-size: 14px;
   max-height: 45px;
-  padding-left:320px;
-  padding-right:320px;
   background: linear-gradient( to bottom, #F1EDF0, #FAF6F9 ) ;
 }
 .hot-search{
   display: flex;
-  flex: 15;
+  flex: 4;
   justify-content: flex-end;
 }
 .hot-word{
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  flex:4;
+  flex:1;
   padding-right: 20px;
 }
 .hot-rank{
   display: flex;
-  flex:1;
-  justify-content: center;
   height: 44px;
   margin-top: 0px;
   z-index: 2;
@@ -95,30 +89,32 @@ body{
 .hot{
   flex-direction: column;
   display: flex;
-  flex:1;
   border-radius: 5px;
-  padding-inline-start: 30px;
   margin: 0 auto;
+  padding: 0px 20px;
 }
 .hot-list-h{
   display: flex;
-  flex:3;
+  flex:7;
   padding-bottom:13px; 
   padding-top: 14px; 
 }
 .hot a{
-  padding-right: 60px;
+  padding: 0px 40px 0px 10px;
   text-decoration: none;
   color: black;
 }
+.hot a:hover{
+  font-weight: bold;
+}
 .hot-list{
   display: flex;
-  flex:3;
+  flex:7;
   padding-bottom: 15px;
 }
 .num{
   display: flex;
-  flex:1;
+  flex: 0 1 auto;
   color: #d8a3d2;
   padding-right: 0px;
 }
@@ -129,20 +125,15 @@ body{
   padding-left: 10px;
 }
 .rank{
-  display: flex;
-  flex:1;
-  flex-basis: 10px;
-  padding-left: 10px;
+  padding-right: 20px;
 }
 .rank a{
   text-decoration: none;
   color: black;
 }
 .news{
-  display: flex;
-  flex: 1;
   padding-left: 10px;
-  flex-basis: 10px;
+  padding-right: 20px;
 }
 .news a{
   text-decoration: none;
@@ -170,7 +161,6 @@ body{
   margin-left: 20px;
   margin-right: 20px;
 }
-
 .right{
   right:340px;
 }
@@ -265,7 +255,7 @@ body{
   flex:1;
   height: 53px;
   font-size: 18px;
-  border: 2px solid #504f57;
+  border: 0px solid #504f57;
   border-radius: 51px;
   background-color: #504f57;
   color: white;
