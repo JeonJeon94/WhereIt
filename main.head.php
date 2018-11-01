@@ -6,7 +6,7 @@ include_once('./head.php');
       <div class="top">
         <div style="flex:1;"></div>
           <div class="logo">
-            <img src="./images/header/logo.png"/>
+            <a href="./main.php"><img src="./images/header/logo.png"/></a>
           </div>
           <div class="logo-copy">
             FIND A UNIQUE PLACE
