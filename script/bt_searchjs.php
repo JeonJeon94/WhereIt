@@ -3,7 +3,6 @@
     $("#search-btn").css("backgroundColor", "#d0c1d0")
   },
   function(){
-    console.log("unhover");
     $("#search-btn").css("backgroundColor", "#504f57")
   });
   

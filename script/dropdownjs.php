@@ -7,7 +7,6 @@
     $('.hot').css("border",'0.04em solid #d8a3d2');
     
     $('.hot').hover(function(){
-      console.log("hover");
     },function(){
       $(".hot-list").slideUp('fast');
       $('#down_bt').css('display', 'block');
