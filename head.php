@@ -1,3 +1,10 @@
+<?php
+// if($_POST["search"]){
+//   $search = $_POST["search"];
+// }else{
+//   $search = "no name";
+// }
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,8 +25,8 @@
         </div>
         <div class="where-form2">  
           <form class="form" method="POST" action="search.php">
-            <div class="search-word2">
-              <input type="text" id="search-word2" name="search" value="" />
+            <div class="search-word">
+              <input type="text" id="search-word2" name="search" value="<?php echo $search; ?>" />
               <img id="search2" src="./images/search.png" />
             </div>
           </form>
