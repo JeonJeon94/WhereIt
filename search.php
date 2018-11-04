@@ -4,12 +4,15 @@
 if($_POST["search"]){
   $search = $_POST["search"];
 }else{
-  $search = "";
+  $search = "no name";
 }
 $name="핫플레이스 이름입니다"
 
 ?>
 <?php include_once("./head.php") ?>
+    <div class="move-top">
+      <img src="./images/up_arrow.png" /><br>TOP
+    </div>
     <div class="main">
       <div class="search-center">
         <div class="main-top">
@@ -23,7 +26,7 @@ $name="핫플레이스 이름입니다"
           </div> 
           <div class="search-time">
             <a href ="search.php" method="POST" value="<?php echo $search; ?>">누적</a>
-            <a href ="">최근 1개월</a>
+            <a href ="search.php">최근 1개월</a>
           </div>
         </div>
         <?php 
@@ -38,7 +41,7 @@ $name="핫플레이스 이름입니다"
           <div class="list-line">
             <?php for($i=0; $i < 12; $i++){ ?>
             <div class="store-list">
-              <div class="img-container">
+              <div class="img-container" onclick="location.href='./detail.php'">
                 <img src="./images/food1.jpeg" />
               </div>
               <div class="flex" style="padding:8px 4px;">
