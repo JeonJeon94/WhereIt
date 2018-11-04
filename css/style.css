@@ -10,7 +10,7 @@
 body {
   margin: 0;
   font-family: 'NotoSansCJKKR-Bold';
-  overflow: overlay;
+  overflow-x: overlay;
   overflow-y: overlay;
 }
 
@@ -425,7 +425,7 @@ body {
 
 .main-page .main .arrow {
   cursor: pointer;
-  position: fixed;
+  position: absolute;
   top: 47%;
 }
 
@@ -1013,6 +1013,7 @@ body {
   margin: 0 auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  padding-bottom: 30px;
 }
 
 .ranking-page .all .main .rank-area .ranking5 {
@@ -1049,6 +1050,7 @@ body {
   padding-right: 20px;
   font-size: 36px;
   width: 43px;
+  text-align: center;
 }
 
 .ranking-page .all .main .rank-area .ranking5 .ranking-store .store-img img, .ranking-page .all .main .rank-area .ranking10 .ranking-store .store-img img {
@@ -1077,11 +1079,61 @@ body {
 }
 
 .magazine-page .head {
-  padding-bottom: 30px;
+  padding-bottom: 50px;
 }
 
 .magazine-page .head .news a {
   color: #d8a3d2 !important;
+}
+
+.magazine-page .main .news-detail {
+  display: none;
+  padding-bottom: 50px;
+}
+
+.magazine-page .main .news-detail .detail-date {
+  font-size: 18px;
+  color: #b9bbc4;
+  padding-bottom: 10px;
+}
+
+.magazine-page .main .news-detail .detail-title {
+  font-size: 36px;
+  padding-bottom: 30px;
+}
+
+.magazine-page .main .news-detail .main-photo {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  overflow: hidden;
+  padding-bottom: 15px;
+}
+
+.magazine-page .main .news-detail .main-photo > img {
+  width: inherit;
+  height: inherit;
+  border-radius: 10px;
+}
+
+.magazine-page .main .news-detail .detail-text {
+  line-height: 25px;
+  padding-bottom: 15px;
+}
+
+.magazine-page .main .news-detail .sub-photo {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  overflow: hidden;
+}
+
+.magazine-page .main .news-detail .sub-photo > img {
+  width: inherit;
+  height: inherit;
+  border-radius: 10px;
 }
 
 .magazine-page .main .news-list {
@@ -1092,6 +1144,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-bottom: 30px;
 }
 
 .magazine-page .main .news-list .list-item {
@@ -1138,7 +1191,7 @@ body {
 .magazine-page .main .news-list .list-item .item-info .more {
   position: absolute;
   bottom: 20px;
-  right: -20px;
+  right: -15px;
 }
 
 .magazine-page .main .news-list .list-item .item-info .more > img {

@@ -12,7 +12,7 @@
 body{
   margin: 0;
   font-family: 'NotoSansCJKKR-Bold';
-  overflow: overlay;
+  overflow-x: overlay;
   overflow-y: overlay;
 }
 
@@ -287,7 +287,7 @@ body{
     }
     .arrow{
       cursor: pointer;
-      position: fixed;
+      position: absolute;
       top:47%;
 
       #prev_bt, #next_bt{
@@ -716,6 +716,7 @@ body{
         flex: 1;
         margin:0 auto;
         box-sizing: border-box;
+        padding-bottom: 30px;
 
         .ranking5{
           border-right: 1px solid #9cc7dd;
@@ -735,6 +736,7 @@ body{
               padding-right:20px; 
               font-size:36px;
               width: 43px;
+              text-align: center;
             }
             .store-img img{
               border-radius: 5px;
@@ -764,20 +766,64 @@ body{
 
 .magazine-page{
   .head{
-    padding-bottom: 30px;
+    padding-bottom: 50px;
 
     .news a{
       color: #d8a3d2 !important;
     }
   }
   .main{
+    .news-detail{
+      display: none;
+      padding-bottom: 50px;
+
+      .detail-date{
+        font-size: 18px;
+        color: #b9bbc4;
+        padding-bottom: 10px;
+      }
+      .detail-title{
+        font-size: 36px;
+        padding-bottom: 30px;
+      }
+      .main-photo{
+        width: 100%;
+        height: fit-content;
+        overflow: hidden;
+        padding-bottom: 15px;
+        
+        >img{
+          width: inherit;
+          height: inherit;
+          border-radius: 10px;
+        }
+      }
+      .detail-text{
+        line-height: 25px;
+        padding-bottom: 15px;
+      }
+      .sub-photo{
+        width: 100%;
+        height: fit-content;
+        overflow: hidden;
+
+        >img{
+          width: inherit;
+          height: inherit;
+          border-radius: 10px;
+        }
+      }
+
+    }
     .news-list{
       display: flex;
       flex-direction: column;
+      padding-bottom: 30px;
+    
       .list-item{
         display: flex;
-        // justify-content: center;
         padding-bottom: 50px;
+
         .item-picture img{
           border-radius: 10px;
         }
@@ -787,6 +833,7 @@ body{
           flex-direction: column;
           justify-content: center;
           padding-left: 80px;
+
           .info-date{
             font-size: 18px;
             color: #b9bbc4;
@@ -802,7 +849,7 @@ body{
           .more{
             position: absolute;
             bottom: 20px;
-            right: -20px;
+            right: -15px;
 
             >img{              
               color:#d8a3d2 !important;

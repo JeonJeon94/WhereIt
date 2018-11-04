@@ -1,5 +1,5 @@
     <div class="footer">
-      <div style="width:1200px; margin:0 auto;">
+      <div style="width:1200px; margin:0 auto; background-color:#F1EDF0;">
         <div class="info">
           <div class="copyright">
             Copyright 2018 BILLFISH Co,..,Ltd.All right reserved.

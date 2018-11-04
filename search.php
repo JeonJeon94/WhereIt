@@ -1,11 +1,7 @@
 <?php $page = "search"; ?>
 <?php include_once('./head.php'); ?>
 <?php 
-if($_POST["search"]){
-  $search = $_POST["search"];
-}else{
-  $search = "no name";
-}
+
 $name="핫플레이스 이름입니다"
 
 ?>
@@ -25,8 +21,8 @@ $name="핫플레이스 이름입니다"
             </div>
           </div> 
           <div class="search-time">
-            <a href ="search.php" method="POST" value="<?php echo $search; ?>">누적</a>
-            <a href ="search.php">최근 1개월</a>
+            <a id="all" style="color:black; font-weight:bold; border-bottom:2px solid black; padding-bottom:2px;" href ="">누적</a>
+            <a id="recently" href ="search_recently.php">최근 1개월</a>
           </div>
         </div>
         <?php 

@@ -9,13 +9,13 @@
       </div>
       <div class="btn">
         <div>
-          <a class="arrow left" onclick="plusSlides(-1)">
+          <a class="arrow left">
             <img id="prev_bt" src='./images/nav_bt.png'/>
             <img id="prev_arrow" src='./images/nav_arrow_left.png'/>
           </a>
         </div>
         <div>
-          <a class="arrow right" onclick="plusSlides(1)">
+          <a class="arrow right">
             <img id="next_bt" src='./images/nav_bt.png'/>
             <img id="next_arrow" src='./images/nav_arrow_right.png'/>
           </a>

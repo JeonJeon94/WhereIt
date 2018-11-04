@@ -1,9 +1,9 @@
 <?php
-// if($_POST["search"]){
-//   $search = $_POST["search"];
-// }else{
-//   $search = "no name";
-// }
+if(isset($_POST['search'])){
+  true;
+}else{
+  $_POST['search']="";
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -17,26 +17,26 @@
 <div class="all">
   <div class="head">
     <div class="top">
-        <div class="logo">
-          <a href="./main.php"><img src="./images/header/logo.png"/></a>
-        </div>
-        <div class="logo-copy">
-          FIND A UNIQUE PLACE
-        </div>
-        <div class="where-form2">  
-          <form class="form" method="POST" action="search.php">
-            <div class="search-word">
-              <input type="text" id="search-word2" name="search" value="<?php echo $search; ?>" />
-              <img id="search2" src="./images/search.png" />
-            </div>
-          </form>
-        </div>
-        <div class="login">
-          <a href="./login.php">로그인</a>
-        </div>
+      <div class="logo">
+        <a href="./main.php"><img src="./images/header/logo.png"/></a>
+      </div>
+      <div class="logo-copy">
+        FIND A UNIQUE PLACE
+      </div>
+      <div class="where-form2">  
+        <form class="form" method="post">
+          <div class="search-word">
+            <input type="text" id="search-word2" name="search" value="<?php echo $_POST['search']; ?>" />
+            <img id="search2" src="./images/search.png" onclick="location.href='search.php'"/>
+          </div>
+        </form>
+      </div>
+      <div class="login">
+        <a href="./login.php">로그인</a>
+      </div>
     </div>
     <div class="menu">
-      <div>
+      <div style="background:linear-gradient( to bottom, #F1EDF0, #FAF6F9);">
         <div style="flex:1; display: flex;">
           <div class="rank">
             <a href="./rank.php">랭킹</a>
