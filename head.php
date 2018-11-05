@@ -37,7 +37,7 @@ if(isset($_POST['search'])){
     </div>
     <div class="menu">
       <div style="background:linear-gradient( to bottom, #F1EDF0, #FAF6F9);">
-        <div style="flex:1; display: flex;">
+        <div style="flex:1; display:flex; padding-left:20px;">
           <div class="rank">
             <a href="./rank.php">랭킹</a>
           </div>
