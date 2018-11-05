@@ -1,67 +1,92 @@
+<?php $page="ranking"; ?>
 <?php include_once("./head.php") ?>
-<div class="all">
-  <div class="head">
-    <div class="top">
-      <div class="logo">
-        <img src="./images/header/logo.png"/>
-      </div>
-      <div class="where-form2">
-        <form class="form" method="POST" action="search.php">
-          <div class="search-word">
-            <input type="text" id="search-word" placeholder="지역명과 음식을 입력해주세요. Ex)망원동 양꼬치" />
-            <img id="search" src="./images/search.png" />
-          </div>
-        </form>
-      </div>
-      <div class="login">
-        <a href="./login.php">로그인<a>
-      </div>
-    </div>
-    <div class="menu">
-      <div class="rank">
-        <a href="./rank.php">랭킹</a>
-      </div>
-      <div class="news">
-        <a href="./news.php">매거진</a>
-      </div>
-      <div class="hot-search">
-        <div class="hot-word">
-          인기검색어
+<?php 
+
+$name="이플로네의 하루입니다.";
+?>
+    <div class="main">
+      <div class="title">
+        <div class="nowdays" onclick="location.href='./rank.php?name=nowdays'">
+          요즘 뜨는<br>핫플레이스
         </div>
-        <div class="hot-rank">
-          <div style="flex:1;">
-            <div class="hot">
-              <div class="hot-list-h"><div class="num">1</div><a href="#">강남 맛집 찾기</a></div>
-              <div class="hot-list" style="display:none;"><div class="num">2</div><a href="#">서초 맛집 찾기</a></div>
-              <div class="hot-list" style="display:none;"><div class="num">3</div><a href="#">구의 맛집 찾기</a></div>
-              <div class="hot-list" style="display:none;"><div class="num">4</div><a href="#">건대 맛집 찾기</a></div>
-              <div class="hot-list" style="display:none;"><div class="num">5</div><a href="#">목동 맛집 찾기</a></div>
-              <div class="hot-list" style="display:none;"><div class="num">6</div><a href="#">잠실 맛집 찾기</a></div>
-              <div class="hot-list" style="display:none;"><div class="num">7</div><a href="#">신림 맛집 찾기</a></div>
-              <div class="hot-list" style="display:none;"><div class="num">8</div><a href="#">강변 맛집 찾기</a></div>
-              <div class="hot-list" style="display:none;"><div class="num">9</div><a href="#">역삼 맛집 찾기</a></div>
-              <div class="hot-list" style="display:none;"><div class="num">10</div><a href="#">논현 맛집 찾기</a></div>
+        <div class="thema" onclick="location.href='./rank.php?name=thema'">
+          테마<br>핫플레이스
+        </div>
+        <div class="thismonth" onclick="location.href='./rank.php?name=thismonth'">
+          이 달의<br>핫플레이스
+        </div>
+      </div>
+      <div class="insta">
+        <div class="insta-tag">럽스타그램</div>
+        <div>
+          <img id="down_bt" style="display:block; padding: 5px;" src="./images/rank_down.png" />
+          <img id="up_bt" style="display:none; padding: 5px;" src="./images/rank_up.png" />
+        </div> 
+      </div>      
+      <div class="rank-area">
+        <div class="ranking5">
+          <?php 
+            $overname=$name;
+            if(strlen($name)>9){ 
+              $overname = str_replace($name,mb_substr($name,0,9,"utf-8")."...",$name);
+            }else{
+              $overname = $name;
+            }
+            for($i=0; $i<5; $i++){ 
+          ?>
+          <div class="ranking-store">
+            <div class="rank-num"><?php echo $i+1; ?></div>
+            <div class="store-img">
+              <img src="./images/77.77.jpeg" />
+            </div>
+            <div style="display:flex; flex-direction:column; padding-left: 10px;">
+              <div class="name"><?php echo $overname; ?></div>
+              <div class="flex">
+                <div class="keyword">
+                  <div class="chile-flex-1;">강남구</div>
+                </div>
+                <div class="keyword">
+                  <div class="chile-flex-1;">카페</div>
+                </div>
+              </div>
             </div>
           </div>
+          <?php
+            } 
+          ?>
         </div>
-        <div class="rank_btn">
-          <img style="display:block; padding: 5px;" id="down_bt" src="./images/rank_down.png" />
-          <img style="display:none; padding: 5px;" id="up_bt" src="./images/rank_up.png" />
+        <div class="ranking10">
+          <?php 
+            $overname=$name;
+            if(strlen($name)>9){ 
+              $overname = str_replace($name,mb_substr($name,0,9,"utf-8")."...",$name);
+            }else{
+              $overname = $name;
+            }
+            for($i=5; $i<10; $i++){ 
+          ?>
+          <div class="ranking-store">
+            <div class="rank-num"><?php echo $i+1; ?></div>
+            <div class="store-img">
+              <img src="./images/77.77.jpeg" />
+            </div>
+            <div style="display:flex; flex-direction:column; padding-left: 10px;">
+              <div class="name"><?php echo $overname; ?></div>
+              <div class="flex">
+                <div class="keyword">
+                  <div class="chile-flex-1;">강남구</div>
+                </div>
+                <div class="keyword">
+                  <div class="chile-flex-1;">카페</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <?php
+            }
+          ?>
         </div>
-      </div>
-    </div>  
-  </div>
-  <div class="footer">
-    <div class="info">
-      <div class="copyright">
-        Copyright 2018 BILLFISH Co,..,Ltd.All right reserved.
-      </div>
-      <div class="etc">
-        <a href="./search-area.php">검색가능지역</a>
-        <a href="./service-info.php">서비스정보</a>
-        <a href="./ask.php">문의하기</a>
       </div>
     </div>
-  </div>
-</div>
+  
 <?php include_once("./footer.php") ?>
