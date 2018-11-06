@@ -86,6 +86,6 @@
     </div>
   </div>
 </body>
-<?php include_once('./script/move_topjs.php'); ?>
+<?php include_once('./script/move_top_js.php'); ?>
 <?php include_once('./script/fadein_js.php'); ?>
 </html>

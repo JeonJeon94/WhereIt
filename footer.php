@@ -23,6 +23,5 @@
   <?php include_once("./script/bt_opacity_js.php") ?>
   <?php include_once("./script/input_active_js.php") ?>
   <?php include_once("./script/move_top_js.php") ?>
-  <?php include_once("./script/ask_input_active_js.php") ?>
-  <?php include_once("./script/button_click_js.php") ?>
+  <?php include_once("./script/send_click_js.php") ?>
 </html>
