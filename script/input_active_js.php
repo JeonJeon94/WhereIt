@@ -19,4 +19,8 @@
     $('#password:input').removeAttr('placeholder')
     $('#password:input').css('caretColor', '#ADCFE2')
   });
+  $('#post-mail').click(function(){
+    $('#post-mail:input').removeAttr('placeholder')
+    $('#post-mail:input').css('caretColor', '#ADCFE2')
+  });
 </script>
