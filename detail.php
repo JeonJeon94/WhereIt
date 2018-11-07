@@ -2,7 +2,10 @@
 
 <?php include_once('./head.php'); ?>
     <div class="move-top">
-      <img src="./images/up_arrow.png" /><br>TOP
+      <img id="top" src="./images/top.png" />
+      <img id="hover" src="./images/top-hover.png" />
+      <img id="click" src="./images/top-click.png" />
+      <br>TOP
     </div>
     <div class="main">
       <div class="detail-main">

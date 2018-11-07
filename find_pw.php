@@ -3,10 +3,10 @@
 <?php include_once('./head.php') ?>
     <div class="main">
       <div class="find-center">
-        <div style="font-size:32px; margin-bottom: 40px;">
+        <div style="font-size:36px; margin-bottom:30px;">
           <b>비밀번호</b>를 잊으셨나요?
         </div>
-        <div style="margin-bottom:75px;">
+        <div style="margin-bottom:75px; font-size:18px;">
           회원가입 시 인증하신 이메일 주소를 입력해주세요.
         </div>
         <div class="find-form">

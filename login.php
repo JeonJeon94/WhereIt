@@ -16,8 +16,8 @@
               <div style="margin-right:10px;">  
                 <a href="./find_pw.php">비밀번호 찾기</a>
               </div>
-              <div style="border-left:1px solid #ebdaeb; padding:0px 10px; ">
-                <a href="./new_user.php">회원가입</a>
+              <div style="border-left:1px solid #ebdaeb; padding-left:10px; ">
+                <a href="./signup.php">회원가입</a>
               </div>
             </div>
             <div class="login-btn">

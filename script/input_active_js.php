@@ -15,12 +15,24 @@
     $('#e-mail:input').removeAttr('placeholder')
     $('#e-mail:input').css('caretColor', '#ADCFE2')
   });
-  $('#password').click(function(){
-    $('#password:input').removeAttr('placeholder')
-    $('#password:input').css('caretColor', '#ADCFE2')
+  $('#sign-pw').click(function(){
+    $('#sign-pw:input').removeAttr('placeholder')
+    $('#sign-pw:input').css('caretColor', '#ADCFE2')
   });
   $('#post-mail').click(function(){
     $('#post-mail:input').removeAttr('placeholder')
     $('#post-mail:input').css('caretColor', '#ADCFE2')
+  });
+  $('#sign-mail').click(function(){
+    $('#sign-mail:input').removeAttr('placeholder')
+    $('#sign-mail:input').css('caretColor', '#ADCFE2')
+  });
+  $('#username').click(function(){
+    $('#username:input').removeAttr('placeholder')
+    $('#username:input').css('caretColor', '#ADCFE2')
+  });
+  $('#get-mail').click(function(){
+    $('#get-mail:input').removeAttr('placeholder')
+    $('#get-mail:input').css('caretColor', '#ADCFE2')
   });
 </script>

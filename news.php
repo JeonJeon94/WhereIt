@@ -5,7 +5,10 @@
 
 <?php include_once('./head.php'); ?>
     <div class="move-top">
-      <img src="./images/up_arrow.png" /><br>TOP
+      <img id="top" src="./images/top.png" />
+      <img id="hover" src="./images/top-hover.png" />
+      <img id="click" src="./images/top-click.png" />
+      <br>TOP
     </div>
     <div class="main">
       <div class="news-list">
@@ -26,7 +29,12 @@
               언제나 새롭고 맛있는 곳을 추구하는 인스타그래머들은 강남역에서<br>
               어디를 갈까? 추억을 남길 수 있는 장소를 레모네이드가 찾아 보았다.
             </div>
-            <div class="more">VIEW MORE <img src="./images/nav_arrow_right.png"></div>
+            <div class="more">
+              <div id="text">
+                VIEW MORE
+              </div>
+              <img src="./images/more.png">
+            </div>
           </div>
         </div>
         <?php } ?>

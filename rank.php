@@ -10,14 +10,14 @@ $name="이플로네의 하루입니다.";
           요즘 뜨는<br>핫플레이스
         </div>
         <div class="thema" onclick="location.href='./rank.php?name=thema'">
-          테마<br>핫플레이스
+          <b style="border-bottom:3px solid black; padding-bottom:60px;">테마</b><br>핫플레이스
         </div>
         <div class="thismonth" onclick="location.href='./rank.php?name=thismonth'">
           이 달의<br>핫플레이스
         </div>
       </div>
       <div class="insta">
-        <div class="insta-tag">럽스타그램</div>
+        <div class="insta-tag">#럽스타그램</div>
         <div>
           <img id="down_bt" style="display:block; padding: 5px;" src="./images/rank_down.png" />
           <img id="up_bt" style="display:none; padding: 5px;" src="./images/rank_up.png" />

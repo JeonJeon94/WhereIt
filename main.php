@@ -30,11 +30,10 @@
     <div class="search-form">
       <div class="where-top">
         <div class="where">
-          <div style="display:flex;">
-            <div style="font-weight:bold;">찾으시는 곳</div>
-            <div>이</div>
+          <div>
+            <b>찾으시는 곳</b>이<br>
+            있으신가요?
           </div>
-          <div>있으신가요?</div>
         </div>
         <div class="where-form">  
           <form class="form" method="POST" action="search.php">

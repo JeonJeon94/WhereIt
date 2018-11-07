@@ -7,17 +7,18 @@ $name="핫플레이스 이름입니다"
 ?>
 <?php include_once("./head.php") ?>
     <div class="move-top">
-      <img src="./images/up_arrow.png" /><br>TOP
+      <img id="top" src="./images/top.png" />
+      <img id="hover" src="./images/top-hover.png" />
+      <img id="click" src="./images/top-click.png" />
+      <br>TOP
     </div>
     <div class="main">
       <div class="search-center">
         <div class="main-top">
           <div style="font-size: 2em;">
             <div>
-              가장 인기있는
-            </div>
-            <div style="font-weight:bold">
-              핫플레이스
+              가장 인기있는<br>
+              <b>핫플레이스</b>
             </div>
           </div> 
           <div class="search-time">
