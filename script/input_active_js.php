@@ -35,4 +35,16 @@
     $('#get-mail:input').removeAttr('placeholder')
     $('#get-mail:input').css('caretColor', '#ADCFE2')
   });
+  $('#new_pw').click(function(){
+    $('#new_pw:input').removeAttr('placeholder')
+    $('#new_pw:input').css('caretColor', '#ADCFE2')
+  });
+  $('#new_pw2').click(function(){
+    $('#new_pw2:input').removeAttr('placeholder')
+    $('#new_pw2:input').css('caretColor', '#ADCFE2')
+  });
+  $('#password').click(function(){
+    $('#password:input').removeAttr('placeholder')
+    $('#password:input').css('caretColor', '#ADCFE2')
+  });
 </script>

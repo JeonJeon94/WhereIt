@@ -50,6 +50,19 @@ body {
           flex-direction: column;
 }
 
+.default-page .all .modal-container {
+  display: none;
+  position: fixed;
+  z-index: 9;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
 .default-page .all .move-top {
   position: fixed;
   bottom: 100px;
@@ -371,7 +384,7 @@ body {
 
 .default-page .footer .info .etc a {
   text-decoration: none;
-  padding-left: 75px;
+  margin-left: 75px;
   color: #a39aa3;
 }
 
@@ -620,7 +633,7 @@ body {
   background-color: #d8a3d2;
 }
 
-.search-page .all, .ranking-page .all, .detail-page .all, .magazine-page .all, .asking-page .all, .login-page .all, .find-page .all, .sign-page .all {
+.search-page .all, .ranking-page .all, .detail-page .all, .magazine-page .all, .asking-page .all, .login-page .all, .find-page .all, .sign-page .all, .edit-pw-page .all, .mypage-page .all, .myinfo-page .all, .userule-page .all {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -634,7 +647,7 @@ body {
           flex-direction: column;
 }
 
-.search-page .where-form2, .ranking-page .where-form2, .detail-page .where-form2, .magazine-page .where-form2, .asking-page .where-form2, .login-page .where-form2, .find-page .where-form2, .sign-page .where-form2 {
+.search-page .where-form2, .ranking-page .where-form2, .detail-page .where-form2, .magazine-page .where-form2, .asking-page .where-form2, .login-page .where-form2, .find-page .where-form2, .sign-page .where-form2, .edit-pw-page .where-form2, .mypage-page .where-form2, .myinfo-page .where-form2, .userule-page .where-form2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -646,7 +659,7 @@ body {
           justify-content: center;
 }
 
-.search-page .where-form2 .form, .ranking-page .where-form2 .form, .detail-page .where-form2 .form, .magazine-page .where-form2 .form, .asking-page .where-form2 .form, .login-page .where-form2 .form, .find-page .where-form2 .form, .sign-page .where-form2 .form {
+.search-page .where-form2 .form, .ranking-page .where-form2 .form, .detail-page .where-form2 .form, .magazine-page .where-form2 .form, .asking-page .where-form2 .form, .login-page .where-form2 .form, .find-page .where-form2 .form, .sign-page .where-form2 .form, .edit-pw-page .where-form2 .form, .mypage-page .where-form2 .form, .myinfo-page .where-form2 .form, .userule-page .where-form2 .form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -658,13 +671,13 @@ body {
           justify-content: center;
 }
 
-.search-page .where-form2 .form .search-word, .ranking-page .where-form2 .form .search-word, .detail-page .where-form2 .form .search-word, .magazine-page .where-form2 .form .search-word, .asking-page .where-form2 .form .search-word, .login-page .where-form2 .form .search-word, .find-page .where-form2 .form .search-word, .sign-page .where-form2 .form .search-word {
+.search-page .where-form2 .form .search-word, .ranking-page .where-form2 .form .search-word, .detail-page .where-form2 .form .search-word, .magazine-page .where-form2 .form .search-word, .asking-page .where-form2 .form .search-word, .login-page .where-form2 .form .search-word, .find-page .where-form2 .form .search-word, .sign-page .where-form2 .form .search-word, .edit-pw-page .where-form2 .form .search-word, .mypage-page .where-form2 .form .search-word, .myinfo-page .where-form2 .form .search-word, .userule-page .where-form2 .form .search-word {
   width: 400px;
   position: relative;
   margin-right: 150px;
 }
 
-.search-page .where-form2 .form .search-word #search-word2, .ranking-page .where-form2 .form .search-word #search-word2, .detail-page .where-form2 .form .search-word #search-word2, .magazine-page .where-form2 .form .search-word #search-word2, .asking-page .where-form2 .form .search-word #search-word2, .login-page .where-form2 .form .search-word #search-word2, .find-page .where-form2 .form .search-word #search-word2, .sign-page .where-form2 .form .search-word #search-word2 {
+.search-page .where-form2 .form .search-word #search-word2, .ranking-page .where-form2 .form .search-word #search-word2, .detail-page .where-form2 .form .search-word #search-word2, .magazine-page .where-form2 .form .search-word #search-word2, .asking-page .where-form2 .form .search-word #search-word2, .login-page .where-form2 .form .search-word #search-word2, .find-page .where-form2 .form .search-word #search-word2, .sign-page .where-form2 .form .search-word #search-word2, .edit-pw-page .where-form2 .form .search-word #search-word2, .mypage-page .where-form2 .form .search-word #search-word2, .myinfo-page .where-form2 .form .search-word #search-word2, .userule-page .where-form2 .form .search-word #search-word2 {
   position: absolute;
   font-size: 14px;
   padding-left: 20px;
@@ -676,19 +689,19 @@ body {
           box-sizing: border-box;
 }
 
-.search-page .where-form2 .form .search-word #search2, .ranking-page .where-form2 .form .search-word #search2, .detail-page .where-form2 .form .search-word #search2, .magazine-page .where-form2 .form .search-word #search2, .asking-page .where-form2 .form .search-word #search2, .login-page .where-form2 .form .search-word #search2, .find-page .where-form2 .form .search-word #search2, .sign-page .where-form2 .form .search-word #search2 {
+.search-page .where-form2 .form .search-word #search2, .ranking-page .where-form2 .form .search-word #search2, .detail-page .where-form2 .form .search-word #search2, .magazine-page .where-form2 .form .search-word #search2, .asking-page .where-form2 .form .search-word #search2, .login-page .where-form2 .form .search-word #search2, .find-page .where-form2 .form .search-word #search2, .sign-page .where-form2 .form .search-word #search2, .edit-pw-page .where-form2 .form .search-word #search2, .mypage-page .where-form2 .form .search-word #search2, .myinfo-page .where-form2 .form .search-word #search2, .userule-page .where-form2 .form .search-word #search2 {
   position: absolute;
   top: 15px;
   right: 15px;
   max-height: 20px;
 }
 
-.search-page .main, .ranking-page .main, .detail-page .main, .magazine-page .main, .asking-page .main, .login-page .main, .find-page .main, .sign-page .main {
+.search-page .main, .ranking-page .main, .detail-page .main, .magazine-page .main, .asking-page .main, .login-page .main, .find-page .main, .sign-page .main, .edit-pw-page .main, .mypage-page .main, .myinfo-page .main, .userule-page .main {
   width: 1200px;
   margin: 0 auto;
 }
 
-.search-page .main .search-center, .ranking-page .main .search-center, .detail-page .main .search-center, .magazine-page .main .search-center, .asking-page .main .search-center, .login-page .main .search-center, .find-page .main .search-center, .sign-page .main .search-center {
+.search-page .main .search-center, .ranking-page .main .search-center, .detail-page .main .search-center, .magazine-page .main .search-center, .asking-page .main .search-center, .login-page .main .search-center, .find-page .main .search-center, .sign-page .main .search-center, .edit-pw-page .main .search-center, .mypage-page .main .search-center, .myinfo-page .main .search-center, .userule-page .main .search-center {
   width: 1000px;
   margin: 0 auto;
   display: -webkit-box;
@@ -700,7 +713,7 @@ body {
           flex-direction: column;
 }
 
-.search-page .main .search-center .main-top, .ranking-page .main .search-center .main-top, .detail-page .main .search-center .main-top, .magazine-page .main .search-center .main-top, .asking-page .main .search-center .main-top, .login-page .main .search-center .main-top, .find-page .main .search-center .main-top, .sign-page .main .search-center .main-top {
+.search-page .main .search-center .main-top, .ranking-page .main .search-center .main-top, .detail-page .main .search-center .main-top, .magazine-page .main .search-center .main-top, .asking-page .main .search-center .main-top, .login-page .main .search-center .main-top, .find-page .main .search-center .main-top, .sign-page .main .search-center .main-top, .edit-pw-page .main .search-center .main-top, .mypage-page .main .search-center .main-top, .myinfo-page .main .search-center .main-top, .userule-page .main .search-center .main-top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -710,7 +723,7 @@ body {
   padding: 50px 0px;
 }
 
-.search-page .main .search-center .main-top .search-time, .ranking-page .main .search-center .main-top .search-time, .detail-page .main .search-center .main-top .search-time, .magazine-page .main .search-center .main-top .search-time, .asking-page .main .search-center .main-top .search-time, .login-page .main .search-center .main-top .search-time, .find-page .main .search-center .main-top .search-time, .sign-page .main .search-center .main-top .search-time {
+.search-page .main .search-center .main-top .search-time, .ranking-page .main .search-center .main-top .search-time, .detail-page .main .search-center .main-top .search-time, .magazine-page .main .search-center .main-top .search-time, .asking-page .main .search-center .main-top .search-time, .login-page .main .search-center .main-top .search-time, .find-page .main .search-center .main-top .search-time, .sign-page .main .search-center .main-top .search-time, .edit-pw-page .main .search-center .main-top .search-time, .mypage-page .main .search-center .main-top .search-time, .myinfo-page .main .search-center .main-top .search-time, .userule-page .main .search-center .main-top .search-time {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -724,24 +737,24 @@ body {
   height: 30px;
 }
 
-.search-page .main .search-center .main-top .search-time a, .ranking-page .main .search-center .main-top .search-time a, .detail-page .main .search-center .main-top .search-time a, .magazine-page .main .search-center .main-top .search-time a, .asking-page .main .search-center .main-top .search-time a, .login-page .main .search-center .main-top .search-time a, .find-page .main .search-center .main-top .search-time a, .sign-page .main .search-center .main-top .search-time a {
+.search-page .main .search-center .main-top .search-time a, .ranking-page .main .search-center .main-top .search-time a, .detail-page .main .search-center .main-top .search-time a, .magazine-page .main .search-center .main-top .search-time a, .asking-page .main .search-center .main-top .search-time a, .login-page .main .search-center .main-top .search-time a, .find-page .main .search-center .main-top .search-time a, .sign-page .main .search-center .main-top .search-time a, .edit-pw-page .main .search-center .main-top .search-time a, .mypage-page .main .search-center .main-top .search-time a, .myinfo-page .main .search-center .main-top .search-time a, .userule-page .main .search-center .main-top .search-time a {
   text-decoration: none;
   color: gray;
   margin-right: 25px;
 }
 
-.search-page .main .search-center .main-top .search-time a:hover, .ranking-page .main .search-center .main-top .search-time a:hover, .detail-page .main .search-center .main-top .search-time a:hover, .magazine-page .main .search-center .main-top .search-time a:hover, .asking-page .main .search-center .main-top .search-time a:hover, .login-page .main .search-center .main-top .search-time a:hover, .find-page .main .search-center .main-top .search-time a:hover, .sign-page .main .search-center .main-top .search-time a:hover {
+.search-page .main .search-center .main-top .search-time a:hover, .ranking-page .main .search-center .main-top .search-time a:hover, .detail-page .main .search-center .main-top .search-time a:hover, .magazine-page .main .search-center .main-top .search-time a:hover, .asking-page .main .search-center .main-top .search-time a:hover, .login-page .main .search-center .main-top .search-time a:hover, .find-page .main .search-center .main-top .search-time a:hover, .sign-page .main .search-center .main-top .search-time a:hover, .edit-pw-page .main .search-center .main-top .search-time a:hover, .mypage-page .main .search-center .main-top .search-time a:hover, .myinfo-page .main .search-center .main-top .search-time a:hover, .userule-page .main .search-center .main-top .search-time a:hover {
   text-decoration: none;
   color: black;
 }
 
-.search-page .main .search-center .main-top .search-time a:active, .ranking-page .main .search-center .main-top .search-time a:active, .detail-page .main .search-center .main-top .search-time a:active, .magazine-page .main .search-center .main-top .search-time a:active, .asking-page .main .search-center .main-top .search-time a:active, .login-page .main .search-center .main-top .search-time a:active, .find-page .main .search-center .main-top .search-time a:active, .sign-page .main .search-center .main-top .search-time a:active {
+.search-page .main .search-center .main-top .search-time a:active, .ranking-page .main .search-center .main-top .search-time a:active, .detail-page .main .search-center .main-top .search-time a:active, .magazine-page .main .search-center .main-top .search-time a:active, .asking-page .main .search-center .main-top .search-time a:active, .login-page .main .search-center .main-top .search-time a:active, .find-page .main .search-center .main-top .search-time a:active, .sign-page .main .search-center .main-top .search-time a:active, .edit-pw-page .main .search-center .main-top .search-time a:active, .mypage-page .main .search-center .main-top .search-time a:active, .myinfo-page .main .search-center .main-top .search-time a:active, .userule-page .main .search-center .main-top .search-time a:active {
   text-decoration: none;
   color: black;
   font-weight: bold;
 }
 
-.search-page .main .search-center .main-top .search-time a:visited, .ranking-page .main .search-center .main-top .search-time a:visited, .detail-page .main .search-center .main-top .search-time a:visited, .magazine-page .main .search-center .main-top .search-time a:visited, .asking-page .main .search-center .main-top .search-time a:visited, .login-page .main .search-center .main-top .search-time a:visited, .find-page .main .search-center .main-top .search-time a:visited, .sign-page .main .search-center .main-top .search-time a:visited {
+.search-page .main .search-center .main-top .search-time a:visited, .ranking-page .main .search-center .main-top .search-time a:visited, .detail-page .main .search-center .main-top .search-time a:visited, .magazine-page .main .search-center .main-top .search-time a:visited, .asking-page .main .search-center .main-top .search-time a:visited, .login-page .main .search-center .main-top .search-time a:visited, .find-page .main .search-center .main-top .search-time a:visited, .sign-page .main .search-center .main-top .search-time a:visited, .edit-pw-page .main .search-center .main-top .search-time a:visited, .mypage-page .main .search-center .main-top .search-time a:visited, .myinfo-page .main .search-center .main-top .search-time a:visited, .userule-page .main .search-center .main-top .search-time a:visited {
   text-decoration: none;
   color: black;
   font-weight: bold;
@@ -749,7 +762,7 @@ body {
   padding-bottom: 2px;
 }
 
-.search-page .main .search-center .search-list, .ranking-page .main .search-center .search-list, .detail-page .main .search-center .search-list, .magazine-page .main .search-center .search-list, .asking-page .main .search-center .search-list, .login-page .main .search-center .search-list, .find-page .main .search-center .search-list, .sign-page .main .search-center .search-list {
+.search-page .main .search-center .search-list, .ranking-page .main .search-center .search-list, .detail-page .main .search-center .search-list, .magazine-page .main .search-center .search-list, .asking-page .main .search-center .search-list, .login-page .main .search-center .search-list, .find-page .main .search-center .search-list, .sign-page .main .search-center .search-list, .edit-pw-page .main .search-center .search-list, .mypage-page .main .search-center .search-list, .myinfo-page .main .search-center .search-list, .userule-page .main .search-center .search-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -762,11 +775,11 @@ body {
           flex-direction: column;
 }
 
-.search-page .main .search-center .search-list .hideme, .ranking-page .main .search-center .search-list .hideme, .detail-page .main .search-center .search-list .hideme, .magazine-page .main .search-center .search-list .hideme, .asking-page .main .search-center .search-list .hideme, .login-page .main .search-center .search-list .hideme, .find-page .main .search-center .search-list .hideme, .sign-page .main .search-center .search-list .hideme {
+.search-page .main .search-center .search-list .hideme, .ranking-page .main .search-center .search-list .hideme, .detail-page .main .search-center .search-list .hideme, .magazine-page .main .search-center .search-list .hideme, .asking-page .main .search-center .search-list .hideme, .login-page .main .search-center .search-list .hideme, .find-page .main .search-center .search-list .hideme, .sign-page .main .search-center .search-list .hideme, .edit-pw-page .main .search-center .search-list .hideme, .mypage-page .main .search-center .search-list .hideme, .myinfo-page .main .search-center .search-list .hideme, .userule-page .main .search-center .search-list .hideme {
   opacity: 0;
 }
 
-.search-page .main .search-center .search-list .list-line, .ranking-page .main .search-center .search-list .list-line, .detail-page .main .search-center .search-list .list-line, .magazine-page .main .search-center .search-list .list-line, .asking-page .main .search-center .search-list .list-line, .login-page .main .search-center .search-list .list-line, .find-page .main .search-center .search-list .list-line, .sign-page .main .search-center .search-list .list-line {
+.search-page .main .search-center .search-list .list-line, .ranking-page .main .search-center .search-list .list-line, .detail-page .main .search-center .search-list .list-line, .magazine-page .main .search-center .search-list .list-line, .asking-page .main .search-center .search-list .list-line, .login-page .main .search-center .search-list .list-line, .find-page .main .search-center .search-list .list-line, .sign-page .main .search-center .search-list .list-line, .edit-pw-page .main .search-center .search-list .list-line, .mypage-page .main .search-center .search-list .list-line, .myinfo-page .main .search-center .search-list .list-line, .userule-page .main .search-center .search-list .list-line {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -775,21 +788,21 @@ body {
       flex-wrap: wrap;
 }
 
-.search-page .main .search-center .search-list .list-line .store-list, .ranking-page .main .search-center .search-list .list-line .store-list, .detail-page .main .search-center .search-list .list-line .store-list, .magazine-page .main .search-center .search-list .list-line .store-list, .asking-page .main .search-center .search-list .list-line .store-list, .login-page .main .search-center .search-list .list-line .store-list, .find-page .main .search-center .search-list .list-line .store-list, .sign-page .main .search-center .search-list .list-line .store-list {
+.search-page .main .search-center .search-list .list-line .store-list, .ranking-page .main .search-center .search-list .list-line .store-list, .detail-page .main .search-center .search-list .list-line .store-list, .magazine-page .main .search-center .search-list .list-line .store-list, .asking-page .main .search-center .search-list .list-line .store-list, .login-page .main .search-center .search-list .list-line .store-list, .find-page .main .search-center .search-list .list-line .store-list, .sign-page .main .search-center .search-list .list-line .store-list, .edit-pw-page .main .search-center .search-list .list-line .store-list, .mypage-page .main .search-center .search-list .list-line .store-list, .myinfo-page .main .search-center .search-list .list-line .store-list, .userule-page .main .search-center .search-list .list-line .store-list {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   margin-bottom: 30px;
 }
 
-.search-page .main .search-center .search-list .list-line .store-list .img-container, .ranking-page .main .search-center .search-list .list-line .store-list .img-container, .detail-page .main .search-center .search-list .list-line .store-list .img-container, .magazine-page .main .search-center .search-list .list-line .store-list .img-container, .asking-page .main .search-center .search-list .list-line .store-list .img-container, .login-page .main .search-center .search-list .list-line .store-list .img-container, .find-page .main .search-center .search-list .list-line .store-list .img-container, .sign-page .main .search-center .search-list .list-line .store-list .img-container {
+.search-page .main .search-center .search-list .list-line .store-list .img-container, .ranking-page .main .search-center .search-list .list-line .store-list .img-container, .detail-page .main .search-center .search-list .list-line .store-list .img-container, .magazine-page .main .search-center .search-list .list-line .store-list .img-container, .asking-page .main .search-center .search-list .list-line .store-list .img-container, .login-page .main .search-center .search-list .list-line .store-list .img-container, .find-page .main .search-center .search-list .list-line .store-list .img-container, .sign-page .main .search-center .search-list .list-line .store-list .img-container, .edit-pw-page .main .search-center .search-list .list-line .store-list .img-container, .mypage-page .main .search-center .search-list .list-line .store-list .img-container, .myinfo-page .main .search-center .search-list .list-line .store-list .img-container, .userule-page .main .search-center .search-list .list-line .store-list .img-container {
   width: 232px;
   height: 232px;
   overflow: hidden;
   border-radius: 10px;
 }
 
-.search-page .main .search-center .search-list .list-line .store-list .img-container > img, .ranking-page .main .search-center .search-list .list-line .store-list .img-container > img, .detail-page .main .search-center .search-list .list-line .store-list .img-container > img, .magazine-page .main .search-center .search-list .list-line .store-list .img-container > img, .asking-page .main .search-center .search-list .list-line .store-list .img-container > img, .login-page .main .search-center .search-list .list-line .store-list .img-container > img, .find-page .main .search-center .search-list .list-line .store-list .img-container > img, .sign-page .main .search-center .search-list .list-line .store-list .img-container > img {
+.search-page .main .search-center .search-list .list-line .store-list .img-container > img, .ranking-page .main .search-center .search-list .list-line .store-list .img-container > img, .detail-page .main .search-center .search-list .list-line .store-list .img-container > img, .magazine-page .main .search-center .search-list .list-line .store-list .img-container > img, .asking-page .main .search-center .search-list .list-line .store-list .img-container > img, .login-page .main .search-center .search-list .list-line .store-list .img-container > img, .find-page .main .search-center .search-list .list-line .store-list .img-container > img, .sign-page .main .search-center .search-list .list-line .store-list .img-container > img, .edit-pw-page .main .search-center .search-list .list-line .store-list .img-container > img, .mypage-page .main .search-center .search-list .list-line .store-list .img-container > img, .myinfo-page .main .search-center .search-list .list-line .store-list .img-container > img, .userule-page .main .search-center .search-list .list-line .store-list .img-container > img {
   width: 100%;
   height: 100%;
   padding-bottom: 10px;
@@ -798,30 +811,31 @@ body {
   transition: all 0.5s;
 }
 
-.search-page .main .search-center .search-list .list-line .store-list .img-container > img:hover, .ranking-page .main .search-center .search-list .list-line .store-list .img-container > img:hover, .detail-page .main .search-center .search-list .list-line .store-list .img-container > img:hover, .magazine-page .main .search-center .search-list .list-line .store-list .img-container > img:hover, .asking-page .main .search-center .search-list .list-line .store-list .img-container > img:hover, .login-page .main .search-center .search-list .list-line .store-list .img-container > img:hover, .find-page .main .search-center .search-list .list-line .store-list .img-container > img:hover, .sign-page .main .search-center .search-list .list-line .store-list .img-container > img:hover {
+.search-page .main .search-center .search-list .list-line .store-list .img-container > img:hover, .ranking-page .main .search-center .search-list .list-line .store-list .img-container > img:hover, .detail-page .main .search-center .search-list .list-line .store-list .img-container > img:hover, .magazine-page .main .search-center .search-list .list-line .store-list .img-container > img:hover, .asking-page .main .search-center .search-list .list-line .store-list .img-container > img:hover, .login-page .main .search-center .search-list .list-line .store-list .img-container > img:hover, .find-page .main .search-center .search-list .list-line .store-list .img-container > img:hover, .sign-page .main .search-center .search-list .list-line .store-list .img-container > img:hover, .edit-pw-page .main .search-center .search-list .list-line .store-list .img-container > img:hover, .mypage-page .main .search-center .search-list .list-line .store-list .img-container > img:hover, .myinfo-page .main .search-center .search-list .list-line .store-list .img-container > img:hover, .userule-page .main .search-center .search-list .list-line .store-list .img-container > img:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
 
-.search-page .main .search-center .search-list .list-line .store-list .store-name, .ranking-page .main .search-center .search-list .list-line .store-list .store-name, .detail-page .main .search-center .search-list .list-line .store-list .store-name, .magazine-page .main .search-center .search-list .list-line .store-list .store-name, .asking-page .main .search-center .search-list .list-line .store-list .store-name, .login-page .main .search-center .search-list .list-line .store-list .store-name, .find-page .main .search-center .search-list .list-line .store-list .store-name, .sign-page .main .search-center .search-list .list-line .store-list .store-name {
+.search-page .main .search-center .search-list .list-line .store-list .store-name, .ranking-page .main .search-center .search-list .list-line .store-list .store-name, .detail-page .main .search-center .search-list .list-line .store-list .store-name, .magazine-page .main .search-center .search-list .list-line .store-list .store-name, .asking-page .main .search-center .search-list .list-line .store-list .store-name, .login-page .main .search-center .search-list .list-line .store-list .store-name, .find-page .main .search-center .search-list .list-line .store-list .store-name, .sign-page .main .search-center .search-list .list-line .store-list .store-name, .edit-pw-page .main .search-center .search-list .list-line .store-list .store-name, .mypage-page .main .search-center .search-list .list-line .store-list .store-name, .myinfo-page .main .search-center .search-list .list-line .store-list .store-name, .userule-page .main .search-center .search-list .list-line .store-list .store-name {
   font-weight: bold;
-  font-size: 15px;
+  font-size: 17px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
-.search-page .main .search-center .search-list .list-line .store-list .views, .ranking-page .main .search-center .search-list .list-line .store-list .views, .detail-page .main .search-center .search-list .list-line .store-list .views, .magazine-page .main .search-center .search-list .list-line .store-list .views, .asking-page .main .search-center .search-list .list-line .store-list .views, .login-page .main .search-center .search-list .list-line .store-list .views, .find-page .main .search-center .search-list .list-line .store-list .views, .sign-page .main .search-center .search-list .list-line .store-list .views {
+.search-page .main .search-center .search-list .list-line .store-list .views, .ranking-page .main .search-center .search-list .list-line .store-list .views, .detail-page .main .search-center .search-list .list-line .store-list .views, .magazine-page .main .search-center .search-list .list-line .store-list .views, .asking-page .main .search-center .search-list .list-line .store-list .views, .login-page .main .search-center .search-list .list-line .store-list .views, .find-page .main .search-center .search-list .list-line .store-list .views, .sign-page .main .search-center .search-list .list-line .store-list .views, .edit-pw-page .main .search-center .search-list .list-line .store-list .views, .mypage-page .main .search-center .search-list .list-line .store-list .views, .myinfo-page .main .search-center .search-list .list-line .store-list .views, .userule-page .main .search-center .search-list .list-line .store-list .views {
   color: #d8a3d2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-right: 5px;
 }
 
-.search-page .main .search-center .search-list .list-line .store-list .keyword, .ranking-page .main .search-center .search-list .list-line .store-list .keyword, .detail-page .main .search-center .search-list .list-line .store-list .keyword, .magazine-page .main .search-center .search-list .list-line .store-list .keyword, .asking-page .main .search-center .search-list .list-line .store-list .keyword, .login-page .main .search-center .search-list .list-line .store-list .keyword, .find-page .main .search-center .search-list .list-line .store-list .keyword, .sign-page .main .search-center .search-list .list-line .store-list .keyword {
+.search-page .main .search-center .search-list .list-line .store-list .keyword, .ranking-page .main .search-center .search-list .list-line .store-list .keyword, .detail-page .main .search-center .search-list .list-line .store-list .keyword, .magazine-page .main .search-center .search-list .list-line .store-list .keyword, .asking-page .main .search-center .search-list .list-line .store-list .keyword, .login-page .main .search-center .search-list .list-line .store-list .keyword, .find-page .main .search-center .search-list .list-line .store-list .keyword, .sign-page .main .search-center .search-list .list-line .store-list .keyword, .edit-pw-page .main .search-center .search-list .list-line .store-list .keyword, .mypage-page .main .search-center .search-list .list-line .store-list .keyword, .myinfo-page .main .search-center .search-list .list-line .store-list .keyword, .userule-page .main .search-center .search-list .list-line .store-list .keyword {
   margin-right: 10px;
   font-size: 13px;
   min-width: 59px;
@@ -1407,18 +1421,14 @@ body {
 }
 
 .asking-page .main .ask-main #notice {
-  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 0 0 9999px;
-          box-shadow: rgba(0, 0, 0, 0.5) 0 0 0 9999px;
-  position: absolute;
   display: none;
   border: 0px solid white;
   background-color: white;
   width: 500px;
   height: 220px;
-  z-index: 999;
   border-radius: 10px;
   text-align: center;
-  margin: 120px 150px 0px 150px;
+  margin: 350px auto;
 }
 
 .asking-page .main .ask-main #notice #home {
@@ -1640,17 +1650,13 @@ body {
 .find-page .notice {
   display: none;
   text-align: center;
-  position: absolute;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 0 0 9999px;
-          box-shadow: rgba(0, 0, 0, 0.5) 0 0 0 9999px;
   border: 0px solid white;
   background-color: white;
   width: 600px;
   height: 240px;
-  z-index: 999;
   border-radius: 10px;
   text-align: center;
-  margin: 120px 100px 0px 100px;
+  margin: 380px auto;
 }
 
 .find-page .notice #home {
@@ -1850,7 +1856,7 @@ body {
   border-radius: 51px;
   padding-left: 30px;
   padding-right: 30px;
-  margin-bottom: 126px;
+  margin-bottom: 116px;
   border: 1px solid #d0c0d1;
   background-color: #F9F5F8;
   -webkit-box-sizing: border-box;
@@ -1882,21 +1888,17 @@ body {
 
 .sign-page .main .accept-contents {
   display: none;
-  position: absolute;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 0 0 9999px;
-          box-shadow: rgba(0, 0, 0, 0.5) 0 0 0 9999px;
   width: 660px;
   height: 600px;
   border: 0px solid white !important;
   background-color: white;
-  z-index: 999;
   border-radius: 10px;
   text-align: center;
-  margin: 0 auto;
+  margin: 170px auto;
   padding: 30px 50px;
 }
 
-.sign-page .main .accept-contents #view-accept {
+.sign-page .main .accept-contents .contents #view-accept {
   font-size: 20px;
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -1904,39 +1906,27 @@ body {
   text-align: left;
 }
 
-.sign-page .main .accept-contents #confirm-btn {
-  width: 200px;
-  height: 46px;
-  color: white;
-  background-color: #504f57;
-  font-size: 18px;
-  border: 0px solid #504f57;
-  border-radius: 50px;
-  font-weight: bold;
-  letter-spacing: 2px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.sign-page .main .accept-contents #confirm-btn:hover {
-  background-color: #d0c1d0;
-}
-
-.sign-page .main .accept-contents #confirm-btn:active {
-  background-color: #d8a3d2;
-}
-
-.sign-page .main .accept-contents .contents-box {
+.sign-page .main .accept-contents .contents .box {
   width: 660px;
   height: 200px;
   border: 2px solid #ebdaeb;
   border-radius: 10px;
-  margin: 15px auto 25px auto;
+  font-size: 15px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 20px;
-  overflow: hidden;
+  margin: 20px 0px;
+}
+
+.sign-page .main .accept-contents .contents .box .contents-box {
+  width: 600px;
+  height: 160px;
+  border: 0px solid #ebdaeb;
+  margin: 20px auto;
   font-size: 14px;
+  overflow-x: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-right: 50px;
 }
 
 .sign-page .main .accept-contents .contents .checkbox {
@@ -1963,6 +1953,29 @@ body {
 .sign-page .main .accept-contents .contents .checkbox #checkbox {
   float: left;
   height: 22px;
+}
+
+.sign-page .main .accept-contents #confirm-btn {
+  width: 200px;
+  height: 46px;
+  color: white;
+  background-color: #504f57;
+  font-size: 18px;
+  border: 0px solid #504f57;
+  border-radius: 50px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 10px;
+}
+
+.sign-page .main .accept-contents #confirm-btn:hover {
+  background-color: #d0c1d0;
+}
+
+.sign-page .main .accept-contents #confirm-btn:active {
+  background-color: #d8a3d2;
 }
 
 .sign-page .main .signup-end {
@@ -1999,5 +2012,417 @@ body {
 
 .sign-page .main .signup-end .home-btn #home-btn:active {
   background-color: #d8a3d2;
+}
+
+.edit-pw-page .edit-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 120px auto 175px auto;
+  width: 800px;
+  text-align: center;
+  width: 600px;
+}
+
+.edit-pw-page .edit-center .edit-form #new_pw {
+  width: 400px;
+  height: 49px;
+  font-size: 14px;
+  border-radius: 51px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-bottom: 15px;
+  border: 1px solid #d0c0d1;
+  background-color: #F9F5F8;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #504f57;
+}
+
+.edit-pw-page .edit-center .edit-form #new_pw2 {
+  width: 400px;
+  height: 49px;
+  font-size: 14px;
+  border-radius: 51px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-bottom: 70px;
+  border: 1px solid #d0c0d1;
+  background-color: #F9F5F8;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #504f57;
+}
+
+.edit-pw-page .edit-center .edit-form #new-btn {
+  width: 200px;
+  height: 49px;
+  color: white;
+  background-color: #504f57;
+  font-size: 18px;
+  border: 0px solid #504f57;
+  border-radius: 51px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.edit-pw-page .edit-center .edit-form #new-btn:hover {
+  background-color: #d0c1d0;
+}
+
+.edit-pw-page .edit-center .edit-form #new-btn:active {
+  background-color: #d8a3d2;
+}
+
+.edit-pw-page .edit-center .notice {
+  display: none;
+  text-align: center;
+  border: 0px solid white;
+  background-color: white;
+  width: 600px;
+  height: 260px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 400px auto;
+}
+
+.edit-pw-page .edit-center .notice #home {
+  width: 200px;
+  height: 45px;
+  color: white;
+  background-color: #504f57;
+  font-size: 18px;
+  border: 0px solid #504f57;
+  border-radius: 50px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.edit-pw-page .edit-center .notice #home:hover {
+  background-color: #d0c1d0;
+}
+
+.edit-pw-page .edit-center .notice #home:active {
+  background-color: #d8a3d2;
+}
+
+.mypage-page .main .mypage, .myinfo-page .main .mypage, .userule-page .main .mypage {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.mypage-page .main .mypage .mypage-top, .myinfo-page .main .mypage .mypage-top, .userule-page .main .mypage .mypage-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 50px auto;
+}
+
+.mypage-page .main .mypage .mypage-top .my-list, .myinfo-page .main .mypage .mypage-top .my-list, .userule-page .main .mypage .mypage-top .my-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.mypage-page .main .mypage .mypage-top .my-list .favorite, .mypage-page .main .mypage .mypage-top .my-list .user-info, .mypage-page .main .mypage .mypage-top .my-list .use-rule, .myinfo-page .main .mypage .mypage-top .my-list .favorite, .myinfo-page .main .mypage .mypage-top .my-list .user-info, .myinfo-page .main .mypage .mypage-top .my-list .use-rule, .userule-page .main .mypage .mypage-top .my-list .favorite, .userule-page .main .mypage .mypage-top .my-list .user-info, .userule-page .main .mypage .mypage-top .my-list .use-rule {
+  margin-right: 20px;
+  font-size: 14px;
+  color: gray;
+  cursor: default;
+}
+
+.mypage-page .main .mypage .mypage-top .my-list .favorite .margin, .mypage-page .main .mypage .mypage-top .my-list .user-info .margin, .mypage-page .main .mypage .mypage-top .my-list .use-rule .margin, .myinfo-page .main .mypage .mypage-top .my-list .favorite .margin, .myinfo-page .main .mypage .mypage-top .my-list .user-info .margin, .myinfo-page .main .mypage .mypage-top .my-list .use-rule .margin, .userule-page .main .mypage .mypage-top .my-list .favorite .margin, .userule-page .main .mypage .mypage-top .my-list .user-info .margin, .userule-page .main .mypage .mypage-top .my-list .use-rule .margin {
+  display: none;
+  width: 30px;
+  border-bottom: 2px solid black;
+  margin: 0px auto;
+  padding-bottom: 10px;
+}
+
+.mypage-page .main .mypage .mypage-top .my-list .favorite .favorite-text:hover + .margin, .mypage-page .main .mypage .mypage-top .my-list .user-info .favorite-text:hover + .margin, .mypage-page .main .mypage .mypage-top .my-list .use-rule .favorite-text:hover + .margin, .myinfo-page .main .mypage .mypage-top .my-list .favorite .favorite-text:hover + .margin, .myinfo-page .main .mypage .mypage-top .my-list .user-info .favorite-text:hover + .margin, .myinfo-page .main .mypage .mypage-top .my-list .use-rule .favorite-text:hover + .margin, .userule-page .main .mypage .mypage-top .my-list .favorite .favorite-text:hover + .margin, .userule-page .main .mypage .mypage-top .my-list .user-info .favorite-text:hover + .margin, .userule-page .main .mypage .mypage-top .my-list .use-rule .favorite-text:hover + .margin {
+  display: block;
+}
+
+.mypage-page .main .mypage .mypage-top .my-list .favorite .user-info-text:hover + .margin, .mypage-page .main .mypage .mypage-top .my-list .user-info .user-info-text:hover + .margin, .mypage-page .main .mypage .mypage-top .my-list .use-rule .user-info-text:hover + .margin, .myinfo-page .main .mypage .mypage-top .my-list .favorite .user-info-text:hover + .margin, .myinfo-page .main .mypage .mypage-top .my-list .user-info .user-info-text:hover + .margin, .myinfo-page .main .mypage .mypage-top .my-list .use-rule .user-info-text:hover + .margin, .userule-page .main .mypage .mypage-top .my-list .favorite .user-info-text:hover + .margin, .userule-page .main .mypage .mypage-top .my-list .user-info .user-info-text:hover + .margin, .userule-page .main .mypage .mypage-top .my-list .use-rule .user-info-text:hover + .margin {
+  display: block;
+}
+
+.mypage-page .main .mypage .mypage-top .my-list .favorite .use-rule-text:hover + .margin, .mypage-page .main .mypage .mypage-top .my-list .user-info .use-rule-text:hover + .margin, .mypage-page .main .mypage .mypage-top .my-list .use-rule .use-rule-text:hover + .margin, .myinfo-page .main .mypage .mypage-top .my-list .favorite .use-rule-text:hover + .margin, .myinfo-page .main .mypage .mypage-top .my-list .user-info .use-rule-text:hover + .margin, .myinfo-page .main .mypage .mypage-top .my-list .use-rule .use-rule-text:hover + .margin, .userule-page .main .mypage .mypage-top .my-list .favorite .use-rule-text:hover + .margin, .userule-page .main .mypage .mypage-top .my-list .user-info .use-rule-text:hover + .margin, .userule-page .main .mypage .mypage-top .my-list .use-rule .use-rule-text:hover + .margin {
+  display: block;
+}
+
+.mypage-page .main .mypage .mypage-top .my-list .favorite-text:hover, .mypage-page .main .mypage .mypage-top .my-list .user-info-text:hover, .mypage-page .main .mypage .mypage-top .my-list .use-rule-text:hover, .myinfo-page .main .mypage .mypage-top .my-list .favorite-text:hover, .myinfo-page .main .mypage .mypage-top .my-list .user-info-text:hover, .myinfo-page .main .mypage .mypage-top .my-list .use-rule-text:hover, .userule-page .main .mypage .mypage-top .my-list .favorite-text:hover, .userule-page .main .mypage .mypage-top .my-list .user-info-text:hover, .userule-page .main .mypage .mypage-top .my-list .use-rule-text:hover {
+  color: black;
+  font-weight: bold;
+}
+
+.mypage-page .main .list-line, .myinfo-page .main .list-line, .userule-page .main .list-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.mypage-page .main .list-line .store-list, .myinfo-page .main .list-line .store-list, .userule-page .main .list-line .store-list {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-bottom: 30px;
+}
+
+.mypage-page .main .list-line .store-list .img-container, .myinfo-page .main .list-line .store-list .img-container, .userule-page .main .list-line .store-list .img-container {
+  width: 232px;
+  height: 232px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.mypage-page .main .list-line .store-list .img-container > img, .myinfo-page .main .list-line .store-list .img-container > img, .userule-page .main .list-line .store-list .img-container > img {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 10px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.mypage-page .main .list-line .store-list .img-container > img:hover, .myinfo-page .main .list-line .store-list .img-container > img:hover, .userule-page .main .list-line .store-list .img-container > img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.mypage-page .main .list-line .store-list .store-name, .myinfo-page .main .list-line .store-list .store-name, .userule-page .main .list-line .store-list .store-name {
+  font-weight: bold;
+  font-size: 18px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.mypage-page .main .list-line .store-list .views, .myinfo-page .main .list-line .store-list .views, .userule-page .main .list-line .store-list .views {
+  color: #d8a3d2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 7px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.mypage-page .main .list-line .store-list .keyword, .myinfo-page .main .list-line .store-list .keyword, .userule-page .main .list-line .store-list .keyword {
+  margin-right: 10px;
+  font-size: 13px;
+  min-width: 59px;
+  min-height: 22px;
+  border: 1px solid #d8a3d2;
+  border-radius: 5px;
+  padding: 2px 5px;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.myinfo-page .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.myinfo-page .main .myinfo {
+  height: 560px;
+  margin: auto;
+}
+
+.myinfo-page .main .myinfo .user-mail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.myinfo-page .main .myinfo .user-id {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.myinfo-page .main .myinfo .logout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  color: #E5C4E3;
+  cursor: default;
+}
+
+.myinfo-page .main .myinfo .logout #logout {
+  margin-bottom: 50px;
+}
+
+.myinfo-page .main .myinfo .edit-btn {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.myinfo-page .main .myinfo .edit-btn #edit {
+  width: 200px;
+  height: 45px;
+  color: white;
+  background-color: #504f57;
+  font-size: 18px;
+  border: 0px solid #504f57;
+  border-radius: 50px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.myinfo-page .main .myinfo .edit-btn #edit:hover {
+  background-color: #d0c1d0;
+}
+
+.myinfo-page .main .myinfo .edit-btn #edit:active {
+  background-color: #d8a3d2;
+}
+
+.myinfo-page .main .edit-info {
+  display: none;
+  height: 560px;
+  margin: 0 auto;
+}
+
+.myinfo-page .main .edit-info #edit-form #password, .myinfo-page .main .edit-info #edit-form #new_pw, .myinfo-page .main .edit-info #edit-form #new_pw2, .myinfo-page .main .edit-info #edit-form #username {
+  width: 400px;
+  height: 49px;
+  font-size: 14px;
+  border-radius: 51px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border: 1px solid #d0c0d1;
+  background-color: #F9F5F8;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #504f57;
+}
+
+.myinfo-page .main .edit-info #edit-form .edit-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.myinfo-page .main .edit-info #edit-form .edit-line .line-title {
+  color: gray;
+  font-size: 15px;
+  width: 300px;
+}
+
+.myinfo-page .main .edit-info #cancel {
+  margin-right: 100px;
+}
+
+.myinfo-page .main .edit-info #save {
+  margin-right: 30px;
+}
+
+.myinfo-page .main .edit-info #save, .myinfo-page .main .edit-info #cancel {
+  width: 180px;
+  height: 50px;
+  color: white;
+  background-color: #504f57;
+  font-size: 18px;
+  border: 0px solid #504f57;
+  margin-top: 50px;
+  border-radius: 50px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.myinfo-page .main .edit-info #save:hover, .myinfo-page .main .edit-info #cancel:hover {
+  background-color: #d0c1d0;
+}
+
+.myinfo-page .main .edit-info #save:active, .myinfo-page .main .edit-info #cancel:active {
+  background-color: #d8a3d2;
+}
+
+.myinfo-page .main .logout-box {
+  display: none;
+  border: 0px solid white;
+  background-color: white;
+  width: 460px;
+  height: 220px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 430px auto;
+}
+
+.myinfo-page .main .logout-box .answer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.myinfo-page .main .logout-box .answer .yes, .myinfo-page .main .logout-box .answer .no {
+  margin: 50px 85px;
+  cursor: default;
+}
+
+.userule-page .main .contents-center {
+  height: 560px;
+}
+
+.userule-page .main .contents-center .box {
+  width: 660px;
+  height: 200px;
+  border: 2px solid #ebdaeb;
+  border-radius: 10px;
+  font-size: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+.userule-page .main .contents-center .box .contents-box {
+  width: 600px;
+  height: 160px;
+  border: 0px solid #0e080e;
+  margin: 20px auto;
+  font-size: 14px;
+  overflow-x: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-right: 50px;
 }
 /*# sourceMappingURL=style.css.map */

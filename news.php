@@ -96,4 +96,5 @@
 </body>
 <?php include_once('./script/move_top_js.php'); ?>
 <?php include_once('./script/fadein_js.php'); ?>
+<?php include_once('./script/dropdown_js.php'); ?>
 </html>

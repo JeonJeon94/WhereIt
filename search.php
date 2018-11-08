@@ -41,7 +41,7 @@ $name="핫플레이스 이름입니다"
               <div class="img-container" onclick="location.href='./detail.php'">
                 <img src="./images/food1.jpeg" />
               </div>
-              <div class="flex" style="padding:8px 4px;">
+              <div class="flex" style="padding:8px 4px; width:232px;">
                 <div class="store-name"><?php echo $overname; ?></div>
                 <div class="views">2.4k</div>
               </div>

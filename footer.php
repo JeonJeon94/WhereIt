@@ -11,7 +11,7 @@
                 <p>#강남구 #서초구 #강북구 #광진구 #성동구 #마포구</p>
               </div> -->
             </div>
-            <a href="./service-info.php">서비스정보</a>
+            <a href="">서비스정보</a>
             <a href="./ask.php">문의하기</a>
           </div>
         </div>
