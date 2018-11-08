@@ -17,12 +17,14 @@
             <input id="mail-send" type="button" value="SEND">
           </form>
         </div>
-        <div class="notice">
-          <div style="margin-top:70px; margin-bottom:30px; ">
-            입력하신 이메일로<br><b>비밀번호변경 URL</b>이 전송되었습니다.
-          </div>
-          <div>
-            <button id="home" onclick="location.href='./index.php'">HOME</button>
+        <div class="modal-container">
+          <div class="notice">
+            <div style="padding-top:70px; padding-bottom:30px; ">
+              입력하신 이메일로<br><b>비밀번호변경 URL</b>이 전송되었습니다.
+            </div>
+            <div>
+              <button id="home" onclick="location.href='./index.php'">HOME</button>
+            </div>
           </div>
         </div>
       </div>

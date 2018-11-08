@@ -33,12 +33,14 @@
             <input id="send" type="button" value="SEND">
           </form>
         </div>
-        <div id="notice">
-          <div style="padding: 80px 0px 40px 0px;">
-            문의 내용이 전달되었습니다.
-          </div>
-          <div>
-            <button id="home" onclick="location.href='./index.php'">HOME</button>
+        <div class="modal-container">
+          <div id="notice">
+            <div style="padding: 80px 0px 40px 0px;">
+              문의 내용이 전달되었습니다.
+            </div>
+            <div>
+              <button id="home" onclick="location.href='./index.php'">HOME</button>
+            </div>
           </div>
         </div>
       </div>
