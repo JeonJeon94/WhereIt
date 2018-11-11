@@ -37,9 +37,9 @@
               </div>
               <div class="sns-btn">
                 <div class="btn-box">
-                  <img src="./images/sns/sns_naver.png"/>
+                  <div id="naverIdLogin"></div>
                 </div>
-                <div class="text-box">네이버</div> 
+                <div class="text-box">네이버</div>
               </div>
               <div class="sns-btn">
                 <div class="btn-box">
