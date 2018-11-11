@@ -40,11 +40,11 @@
                 <div id="accept">
                   이용약관
                 </div>
-                <div id="agree">
+                <div id="agree3">
                   동의함
                 </div>
-                <div class="checkbox">
-                  <img src="images/box.png"  onclick="this.src='./images/box-check.png'"/>
+                <div class="checkbox3">
+                  <img src="images/box.png"/>
                 </div>
               </div>
             </form> 
@@ -93,10 +93,10 @@
                 <div id="view-accept"style="font-size:20px; flex:1; text-align:left;">
                   이용약관
                 </div>
-                <div class="checkbox">
-                  <div id="agree">동의함</div>
-                  <div id="checkbox">
-                    <img src="images/box.png"  onclick="this.src='./images/box-check.png'"/>
+                <div class="checkbox1">
+                  <div id="agree1">동의함</div>
+                  <div id="checkbox1">
+                    <img src="images/box.png"/>
                   </div>
                 </div>
               </div>
@@ -155,10 +155,10 @@
                 <div style="font-size:20px; flex:1; text-align:left;">
                   개인정보 이용 약관
                 </div>
-                <div class="checkbox">
-                  <div id="agree">동의함</div>
-                  <div id="checkbox">
-                    <img src="images/box.png"  onclick="this.src='./images/box-check.png'"/>
+                <div class="checkbox2">
+                  <div id="agree2">동의함</div>
+                  <div id="checkbox2">
+                    <img src="images/box.png"/>
                   </div>
                 </div>
               </div>

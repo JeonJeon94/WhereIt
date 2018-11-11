@@ -24,4 +24,7 @@
   <?php include_once("./script/input_active_js.php") ?>
   <?php include_once("./script/move_top_js.php") ?>
   <?php include_once("./script/send_click_js.php") ?>
+  <?php include_once("./script/slide_js.php") ?>
+  <?php include_once("./script/naver_login_js.php") ?>
+  <?php include_once("./script/click_agree_js.php") ?>
 </html>

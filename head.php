@@ -13,6 +13,7 @@ if(isset($_POST['search'])){
   <title>Where It</title>
   <link rel="stylesheet" type="text/css" href="./css/style.css?ver=1.1" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.0.js" charset="utf-8"></script>
 </head>
 <body class="default-page <?=$page?>-page">
 <div class="all">
