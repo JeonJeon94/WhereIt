@@ -30,7 +30,7 @@ body{
   .all{
     display: flex;
     flex:1;
-    height: 100vh;
+    height: inherit;
     flex-direction: column;
 
     .modal-container{
@@ -110,8 +110,12 @@ body{
           display: flex;
           width: 190px;
 
-          img{
-            margin-right: 15px;
+          a{
+            cursor: default;
+        
+            img{
+              margin-right: 15px;
+            }
           }
         }
         .logo-copy{
@@ -127,6 +131,7 @@ body{
           a{
             text-decoration: none;
             color: black;
+            cursor: default;
           }
         }
       }
@@ -148,6 +153,7 @@ body{
             a{
               text-decoration: none;
               color: black;
+              cursor: default;
             }
           }
         }
@@ -158,6 +164,7 @@ body{
           a{
             text-decoration: none;
             color: black;
+            cursor: default;
           }
         }
         .hot-search{
@@ -195,6 +202,7 @@ body{
                   padding: 0px 40px 0px 15px;
                   text-decoration: none;
                   color: black;
+                  cursor: default;
                 }
                 &:hover{
                   font-weight: bold;
@@ -214,6 +222,7 @@ body{
                   padding: 0px 40px 0px 15px;
                   text-decoration: none;
                   color: black;
+                  cursor: default;
                 }
                 a:hover{
                   font-weight: bold;
@@ -267,9 +276,11 @@ body{
           text-decoration: none;
           margin-left: 75px;
           color: #a39aa3;
+          cursor: default;
         }
         .area-ok{
-          color: #a39aa3;   
+          color: #a39aa3;
+          cursor: default;
         }
       }
     }
@@ -298,83 +309,109 @@ body{
   }
   .main{
     display: flex;
-    flex: 5;
+    flex: 1;
     flex-direction: column;
     width: 100%;
 
-    .picture-slide{
-      display: flex;
-      flex:5;
-      justify-content: center;
+    #slider{
+      position: relative;
+      overflow: hidden;
+      margin: 0 auto;
+      
+      .slides{
+        margin: 0;
+        padding: 0;
+      
+      }
+      .slide{
+        float: left;
+        list-style-type: none;
+      }
 
-      .picture{
+      .slider-nav-btn{
         position: absolute;
-        display: flex;
-        flex:1;
+        height: 19em;
+        bottom: 0em;
+        width: 100%;
+        cursor: default;
 
-        .slides{
-          display: flex;
-          flex:1;
-          margin-left: 20px;
-          margin-right: 20px;
+        #slider-nav-prv{
+          height: 1.5em;
+          line-height: 1.5em;
+          width: 1.5em;
+          text-align: center;
+          position: absolute;
+          left: 0.5em;
+          background: white;
+        }
+        #slider-nav-nxt{
+          height: 1.5em;
+          line-height: 1.5em;
+          width: 1.5em;
+          text-align: center;
+          position: absolute;
+          right: 0.5em;
+          background: white;
+        }
+        #slider-nav-prv:hover, #slider-nav-nxt:hover{
+          color:white;
+          background: black;
+        }
+      }
+      #slider-nav{
+        position: absolute;
+        height: 2em;
+        bottom: 0em;
+        width: 100%;
+        cursor: default;
+        
+        // #slider-nav-prv{
+        //   height: 1.5em;
+        //   line-height: 1.5em;
+        //   width: 1.5em;
+        //   text-align: center;
+        //   position: absolute;
+        //   left: 0.5em;
+        //   background: white;
+        // }
+        // #slider-nav-nxt{
+        //   height: 1.5em;
+        //   line-height: 1.5em;
+        //   width: 1.5em;
+        //   text-align: center;
+        //   position: absolute;
+        //   right: 0.5em;
+        //   background: white;
+        // }
+        // #slider-nav-prv:hover, #slider-nav-nxt:hover{
+        //   color:white;
+        //   background: black;
+        // }
+        #slider-nav-dot-con{
+          text-align: center;
 
-          img{
-            border-radius: 40px;
+          .slider-nav-dot{
+            list-style: none;
+            border: 1px solid white;
+            box-sizing: border-box;
+            width: 9px;
+            height: 9px;
+            display: inline-block;
+            border-radius: 50%;
+            vertical-align: middle;
+            margin: 0px 3px;
+          }
+          .slider-nav-dot:hover{
+            background: white;
           }
         }
       }
-    }
-    .right{
-      right:340px;
-    }
-    .left{
-      left:340px;
-    }
-    .arrow{
-      cursor: pointer;
-      position: absolute;
-      top:47%;
-
-      #prev_bt, #next_bt{
-        opacity: 0.7;
-      }
-      #prev_arrow{
-        position: absolute;
-        top:20%;
-        left:28%;
-        z-index:2;
-      }
-      #next_arrow{
-        position: absolute;
-        top:20%;
-        right:28%;
-        z-index:2;
-      }
-    }
-    .dot {
-      cursor: pointer;
-      position: relative;
-      top: 90%;
-      height: 7px;
-      width: 7px;
-      border:1px solid white;
-      margin: 0 4px;
-      border-radius: 50%;
-      display: inline-block;
-      transition: background-color 0.6s ease;
-
-      &:hover{
-        background-color: white;
-      }
-    }
-    .active{
-      background-color: white;
     }
     .search-form{
       display: flex;
       flex:1;
       width: 1200px;
-      margin: 0 auto;
+      margin: 25px auto;
 
       .where-top{
         display:flex;
@@ -698,6 +735,13 @@ body{
           bottom: 0px;
         }
       }
+    }
+    .detail-map{
+      width:1050px;
+      padding: 10px;
+      height: 0; 
+      border: 0;
+      transition: all 0.5s;
     }
     .detail-picture{
       display:flex;
@@ -1128,6 +1172,7 @@ body{
           a{
             text-decoration: none;
             color: black;
+            cursor: default;
           }
         }
         .login-btn{
@@ -1170,6 +1215,9 @@ body{
                 margin: 6px auto;
                 padding: 16px;
                 box-sizing: border-box;
+              }
+              #naverIdLogin{
+
               }
               .text-box{
                 font-size: 13px;
@@ -1361,7 +1409,7 @@ body{
             justify-content:center; 
             margin-bottom: 50px;
 
-            .checkbox{
+            .checkbox3{
               padding-top: 1px;
             }
             #accept{
@@ -1370,7 +1418,7 @@ body{
               cursor: default;
               font-size: 14px;
             }
-            #agree{
+            #agree3{
               padding:0px 10px;
               color: gray;
               font-size: 14px;
@@ -1481,18 +1529,18 @@ body{
             padding-right: 50px;
           }
         }
-        .checkbox{
+        .checkbox1, .checkbox2{
           display: flex;
           flex:1;
           justify-content: flex-end;
           align-items: center;
           
-          #agree{
+          #agree1, #agree2{
             float:left; 
             padding-right: 10px;
             color: gray;
           }
-          #checkbox{
+          #checkbox1, #checkbox2{
             float:left; 
             height:22px;
           }
