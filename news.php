@@ -12,10 +12,9 @@
     </div>
     <div class="main">
       <div class="news-list">
-        <?php for($i=0; $i<3; $i++) { ?>
         <div class="list-item">
           <div class="item-picture">
-            <img src="./images/cafe<?php echo $i+1;?>.jpg" />
+            <img src="./images/cafe1.jpg" />
           </div>
           <div class="item-info">
             <div class="info-date">
@@ -37,7 +36,54 @@
             </div>
           </div>
         </div>
-        <?php } ?>
+        <div class="list-item2">
+          <div class="item-picture">
+            <img src="./images/cafe2.jpg" />
+          </div>
+          <div class="item-info">
+            <div class="info-date">
+              2018.08.02
+            </div>
+            <div class="theme-title">
+              강남역 인근에서<br>풀코스로 놀기
+            </div>
+            <div class="text">
+              인파가 많은 강남역의 큰길은 프렌차이즈 업체들이 즐비해있다.<br>
+              언제나 새롭고 맛있는 곳을 추구하는 인스타그래머들은 강남역에서<br>
+              어디를 갈까? 추억을 남길 수 있는 장소를 레모네이드가 찾아 보았다.
+            </div>
+            <div class="more">
+              <div id="text">
+                VIEW MORE
+              </div>
+              <img src="./images/more.png">
+            </div>
+          </div>
+        </div>
+        <div class="list-item3">
+          <div class="item-picture">
+            <img src="./images/cafe3.jpg" />
+          </div>
+          <div class="item-info">
+            <div class="info-date">
+              2018.08.02
+            </div>
+            <div class="theme-title">
+              강남역 인근에서<br>풀코스로 놀기
+            </div>
+            <div class="text">
+              인파가 많은 강남역의 큰길은 프렌차이즈 업체들이 즐비해있다.<br>
+              언제나 새롭고 맛있는 곳을 추구하는 인스타그래머들은 강남역에서<br>
+              어디를 갈까? 추억을 남길 수 있는 장소를 레모네이드가 찾아 보았다.
+            </div>
+            <div class="more">
+              <div id="text">
+                VIEW MORE
+              </div>
+              <img src="./images/more.png">
+            </div>
+          </div>
+        </div>
       </div>
       <div class="news-detail">
         <div class="detail-date">

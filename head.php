@@ -9,10 +9,10 @@ if(!empty($_POST['search'])){
     $search = "";
   }
 }
-if(!empty($_GET['name'])){
-  $name=$_GET['name'];
+if(!empty($_GET['id'])){
+  $id=$_GET['id'];
 }else{
-  $name="";
+  $id="";
 }
 ?>
 <!DOCTYPE html>
@@ -29,7 +29,7 @@ if(!empty($_GET['name'])){
   <script src="./OwlCarousel2/docs/assets/vendors/jquery.min.js" type="text/javascript"></script>
   <script src="./OwlCarousel2/dist/owl.carousel.js" type="text/javascript"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
-  <!-- <script src="http://13.124.4.4/gen_api.js"></script> -->
+  <script src="http://13.124.4.4/gen_api.js"></script>
 </head>
 <body class="default-page <?=$page?>-page">
 <div class="all">

@@ -28,7 +28,7 @@
     </div>
 <script>
   $(function(){
-    api_mongo_test("<?php echo $search; ?>",function(data){
+    api_search_data("<?php echo $search; ?>",function(data){
       var slot_template = _.template($("#store-slot").html());
 
       for(var i =0; i < data.payload.length; i++){
@@ -46,8 +46,8 @@
 
 <script id="store-slot" type="text/template">
   <div class="store-list">
-    <div class="img-container" onclick="location.href='./detail.php?name=<%=Name%>'">
-      <img alt="food-img" src="<%=imgs[0].store_info[0].link%>" onerror="this.src='./images/desktop_detail_default.png'"/>
+    <div class="img-container" onclick="location.href='./detail.php?id=<%=_id%>'">
+      <img alt="food-img" src="<%=main_img%>" onerror="this.src='./images/desktop_detail_default.png'"/>
     </div>
     <div class="flex" style="padding:8px 4px; width:232px;">
       <div class="store-name"><%=Name%></div>

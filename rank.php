@@ -38,8 +38,9 @@
           ?>
           <div class="ranking-store">
             <div class="rank-num"><?php
-              $number = '';
-              $number = '0'+(string)($i+1);
+              $_ = $i+1;
+              $number = '0' . '' . $_;
+              echo "<script>console.log( 'Debug Objects: " . $number . "' );</script>";
               echo $number; 
             ?></div>
             <div class="store-img">
@@ -67,12 +68,12 @@
           ?>
           <div class="ranking-store">
             <div class="rank-num"><?php
-              $number = '';
-              if($i<10) {
-                $number = '0'+(string)($i+1);
+              if($i<9) {
+                $_ = $i+1;
+                $number = '0' . '' . $_;
                 echo $number;
               }else{
-                echo $i;
+                echo $i+1;
               }
             ?></div>
             <div class="store-img">
