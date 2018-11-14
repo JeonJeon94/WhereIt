@@ -1,36 +1,19 @@
-<?php $page="ranking-theme"; ?>
+<?php $page="ranking-thismonth"; ?>
 
 <?php include_once("./head.php") ?>
     <div class="main">
-      <div class="title">
-        <div class="nowdays" onclick="location.href='./rank-nowdays.php'">
-          요즘 뜨는<br><b>핫플레이스</b>
-        </div>
+      <div class="title" style="margin-bottom:30px;">
         <div class="theme" onclick="location.href='./rank.php'">
-          <b>테마</b><br>핫플레이스
-          <div class="margin"></div>
+          테마<br><b>핫플레이스</b>
         </div>
         <div class="thismonth" onclick="location.href='./rank-thismonth.php'">
           이 달의<br><b>핫플레이스</b>
+          <div class="margin"></div>
         </div>
-      </div>
-      <div class="insta">
-        <div class="insta-container">
-          <div class="insta-tag">
-            <div style="flex:0 1 auto;">
-              <div class="insta-list">
-                <div class="insta-text-h" style="padding-top:3px;"><a href="">#럽스타그램</a></div>
-                <div class="insta-text" style="display:none; padding:3px 0;"><a href="">#럽스타그램</a></div>
-                <div class="insta-text" style="display:none; padding-bottom:3px;"><a href="">#럽스타그램</a></div>
-              </div>
-            </div>
-          </div>
-          <div class="insta-btn">
-            <img id="in-down_bt" style="display:block; padding:5px;" src="./images/rank_down.png" />
-            <img id="in-up_bt" style="display:none; padding:5px;" src="./images/rank_up.png" />
-          </div>
-        </div> 
-      </div>      
+        <div class="nowdays" onclick="location.href='./rank-nowdays.php'">
+          요즘 뜨는<br><b>핫플레이스</b>
+        </div>
+      </div>     
       <div class="rank-area">
         <div class="ranking5">
           <?php 
@@ -40,10 +23,10 @@
             <div class="rank-num"><?php
               $number = '';
               $number = '0'+(string)($i+1);
-              echo $number; 
+              echo $number;
             ?></div>
             <div class="store-img">
-              <img src="./images/foodimg1.jpeg" onclick="location.href='detail.php'" />
+              <img src="./images/foodimg2.jpeg" onclick="location.href='detail.php'" />
             </div>
             <div style="display:flex; flex-direction:column; padding-left: 10px; padding-bottom: 5px;">
               <div class="name"  onclick="location.href='detail.php'" >건대 소두마리</div>

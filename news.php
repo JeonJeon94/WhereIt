@@ -21,7 +21,7 @@
             <div class="info-date">
               2018.08.02
             </div>
-            <div class="thema-title">
+            <div class="theme-title">
               강남역 인근에서<br>풀코스로 놀기
             </div>
             <div class="text">
@@ -95,6 +95,6 @@
   </div>
 </body>
 <?php include_once('./script/move_top_js.php'); ?>
-<?php include_once('./script/fadein_js.php'); ?>
+<?php include_once('./script/news_more_js.php'); ?>
 <?php include_once('./script/dropdown_js.php'); ?>
 </html>
