@@ -119,7 +119,7 @@ body{
     .move-top:active{
       position: fixed;
       bottom: 100px;
-      right: 200px;
+      right: 100px;
       text-align: center;
       z-index: 999;    
       cursor: default;
@@ -884,10 +884,13 @@ body{
             padding: 10px 0px;
 
             .rank-num{
-              padding-right:20px; 
+              padding-right:30px; 
               font-size:36px;
               width: 43px;
               text-align: center;
+              font-weight:bold;
+              color: #D0C1D0;
+              letter-spacing: 8px;
             }
             .store-img img{
               width: 77px;
@@ -981,7 +984,7 @@ body{
       margin: 0px 100px;
       width: 1000px;
     
-      .list-item{
+      .list-item, .list-item2, .list-item3 {
         animation: fadeInUp 3s;
         display: flex;
         padding-bottom: 50px;

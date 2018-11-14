@@ -1,7 +1,5 @@
 <?php $page='mypage' ?>
 
-<?php $name="건국대학교 2호선 맛집" ?>
-
 <?php include_once('./head.php') ?>
     <div class="move-top">
       <img id="top" src="./images/top.png" />
@@ -37,14 +35,6 @@
             </div>
           </div>
         </div>
-        <?php 
-            $overname=$name;
-          if(strlen($name)>9){ 
-            $overname = str_replace($name,mb_substr($name,0,9,"utf-8")."...",$name);
-          }else{
-            $overname = $name;
-          }
-        ?>
         <div class="favorite-list">
           <div class="list-line">
             <?php for($i=0; $i < 12; $i++){ ?>
@@ -53,7 +43,7 @@
                 <img src="./images/food1.jpeg" />
               </div>
               <div class="flex" style="padding:8px 4px; width:232px">
-                <div class="store-name"><?php echo $overname; ?></div>
+                <div class="store-name">건대 소두마리</div>
                 <div class="views">2.4k</div>
               </div>
               <div class="flex" style="padding-left: 4px;">
