@@ -1,9 +1,46 @@
 @charset "utf-8";
-@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(http://fonts.googleapis.com/css?family=Montserrat); 
+@keyframes fadein {
+  from {
+      opacity:0;
+  }
+  to {
+      opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 50%, 0);
+    transform: translate3d(0, 50%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
 
 body{
   margin: 0;
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "Montserrat", "Noto Sans KR", sans-serif;
   overflow-x: overlay;
   overflow-y: overlay;
 }
@@ -48,10 +85,11 @@ body{
     .move-top{
       position: fixed;
       bottom: 100px;
-      right: 200px;
+      right: 100px;
       text-align: center;
       z-index: 999;    
       cursor: default;
+      letter-spacing: 3px;
       
       #hover{
         display: none;
@@ -63,7 +101,7 @@ body{
     .move-top:hover{
       position: fixed;
       bottom: 100px;
-      right: 200px;
+      right: 100px;
       text-align: center;
       z-index: 999;    
       cursor: default;
@@ -211,7 +249,7 @@ body{
                   display: flex;
                   flex: 0 1 auto;
                   color: #d8a3d2;
-                  padding-right: 0px;
+                  padding-top:2px;
                 }
               }
               .hot-list{
@@ -224,14 +262,14 @@ body{
                   color: black;
                   cursor: default;
                 }
-                a:hover{
+                &:hover{
                   font-weight: bold;
                 }
                 .num{
                   display: flex;
                   flex: 0 1 auto;
                   color: #d8a3d2;
-                  padding-right: 0px;
+                  padding-top:2px;
                 }
               }
             }
@@ -279,8 +317,39 @@ body{
           cursor: default;
         }
         .area-ok{
-          color: #a39aa3;
+          color: #8D818C;
           cursor: default;
+           
+          #tooltip{
+            position: relative;
+            display: inline-block;
+          }
+          .tooltip-content{
+            position: absolute;
+            bottom: 0;
+            margin-bottom: 75px;
+            width: 350px;
+            height: auto;
+            background-color: #faf6f9;
+            border: 1px solid #ebdaeb;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow:10px 10px 30px 2px rgba(80,79,87, 0.5);
+            z-index: 1;
+            line-height: 30px;
+            visibility: hidden;
+            ::after{
+              position: absolute;
+              content: '';
+              left: 0;
+              bottom: -30px;
+              width: 0;
+              height: 0;
+              border: 15px solid transparent;
+              border-top-color: #faf6f9;
+              margin-left: 21px;
+            }
+          }
         }
       }
     }
@@ -312,100 +381,10 @@ body{
     flex: 1;
     flex-direction: column;
     width: 100%;
-
-    #slider{
-      position: relative;
-      overflow: hidden;
-      margin: 0 auto;
-      
-      .slides{
-        margin: 0;
-        padding: 0;
-      
-      }
-      .slide{
-        float: left;
-        list-style-type: none;
-      }
-
-      .slider-nav-btn{
-        position: absolute;
-        height: 19em;
-        bottom: 0em;
-        width: 100%;
-        cursor: default;
-
-        #slider-nav-prv{
-          height: 1.5em;
-          line-height: 1.5em;
-          width: 1.5em;
-          text-align: center;
-          position: absolute;
-          left: 0.5em;
-          background: white;
-        }
-        #slider-nav-nxt{
-          height: 1.5em;
-          line-height: 1.5em;
-          width: 1.5em;
-          text-align: center;
-          position: absolute;
-          right: 0.5em;
-          background: white;
-        }
-        #slider-nav-prv:hover, #slider-nav-nxt:hover{
-          color:white;
-          background: black;
-        }
-      }
-      #slider-nav{
-        position: absolute;
-        height: 2em;
-        bottom: 0em;
-        width: 100%;
-        cursor: default;
-        
-        // #slider-nav-prv{
-        //   height: 1.5em;
-        //   line-height: 1.5em;
-        //   width: 1.5em;
-        //   text-align: center;
-        //   position: absolute;
-        //   left: 0.5em;
-        //   background: white;
-        // }
-        // #slider-nav-nxt{
-        //   height: 1.5em;
-        //   line-height: 1.5em;
-        //   width: 1.5em;
-        //   text-align: center;
-        //   position: absolute;
-        //   right: 0.5em;
-        //   background: white;
-        // }
-        // #slider-nav-prv:hover, #slider-nav-nxt:hover{
-        //   color:white;
-        //   background: black;
-        // }
-        #slider-nav-dot-con{
-          text-align: center;
-
-          .slider-nav-dot{
-            list-style: none;
-            border: 1px solid white;
-            box-sizing: border-box;
-            width: 9px;
-            height: 9px;
-            display: inline-block;
-            border-radius: 50%;
-            vertical-align: middle;
-            margin: 0px 3px;
-          }
-          .slider-nav-dot:hover{
-            background: white;
-          }
-        }
-      }
+    .item img{
+      max-height: 610px;
+      min-height: 610px;
+      border-radius: 10px;
     }
     .search-form{
       display: flex;
@@ -485,8 +464,7 @@ body{
     }
   }
 }
-
-.search-page, .ranking-page, .detail-page, .magazine-page, .asking-page, .login-page, .find-page, .sign-page, .edit-pw-page, .mypage-page, .myinfo-page, .userule-page{
+.search-page, .ranking-theme-page, .ranking-nowdays-page, .ranking-thismonth-page, .detail-page, .magazine-page, .asking-page, .login-page, .find-page, .sign-page, .edit-pw-page, .mypage-page, .myinfo-page, .userule-page{
   .all{
     display: flex;
     flex:1;
@@ -530,6 +508,7 @@ body{
   .main{
     width: 1200px;
     margin: 0 auto;
+    
 
     .search-center{
       width:  1000px;
@@ -547,7 +526,7 @@ body{
           flex: 1;
           justify-content: flex-end;
           padding-right: 4%;
-          height: 30px;
+          height: 34px;
         
           a{
             text-decoration: none;
@@ -558,19 +537,6 @@ body{
             text-decoration: none;
             color: black;
           }
-          a:active{
-            text-decoration: none;
-            color: black;
-            font-weight: bold;
-          }
-          a:visited{
-            text-decoration: none;
-            color: black;
-            font-weight: bold;
-            border-bottom: 2px solid black;
-            padding-bottom: 2px;
-          }
-
         }
       }
       .search-list{
@@ -578,13 +544,11 @@ body{
         flex: 8;
         flex-direction: column;
 
-        .hideme{
-          opacity: 0;
-        }
         .list-line{
           display: flex;
           margin-bottom: 20px;
           flex-wrap: wrap;
+          animation: fadeInUp 3s;
 
           .store-list{
             flex:1;
@@ -600,7 +564,7 @@ body{
                 width:100%; 
                 height:100%;
                 padding-bottom: 10px;
-                cursor: pointer;
+                cursor: default;
                 transition:all 0.5s;
 
                 &:hover{
@@ -639,12 +603,14 @@ body{
 }
 .detail-page{
   .detail-main{
+    font-family: "Noto Sans KR", sans-serif !important;
     width: 1100px;
     margin: 0 auto;
 
     .main-top{
       display:flex;
       margin: 50px 2px;
+      font-family: "Noto Sans KR", sans-serif !important;
 
       .photo{
         width: 232px;
@@ -655,7 +621,7 @@ body{
         >img{
           width:100%; 
           height:100%;
-          cursor: pointer;
+          cursor: default;
           transition:all 0.5s;
 
           &:hover{
@@ -744,6 +710,7 @@ body{
       transition: all 0.5s;
     }
     .detail-picture{
+      animation: fadeInUp 2s;
       display:flex;
       flex-wrap:wrap;
 
@@ -760,7 +727,7 @@ body{
           >img{
             width:100%; 
             height:100%;
-            cursor: pointer;
+            cursor: default;
             transition:all 0.5s;
 
             &:hover{
@@ -772,7 +739,70 @@ body{
     }
   }
 }
-.ranking-page{
+.ranking-thismonth-page{
+  .nowdays, .theme{
+    font-size: 36px;
+    color: gray; 
+    padding: 30px 80px;
+    cursor: default;
+  }
+  .thismonth{
+    font-size: 36px;
+    color:black;
+    padding: 30px 80px;
+    cursor: default;
+    
+    .margin{
+      border-bottom:4px solid black;
+      width:50px;
+      margin: 0 auto;
+      padding: 8px 0; 
+    }
+  }
+}
+.ranking-nowdays-page{
+  .theme, .thismonth{
+    font-size: 36px;
+    color: gray; 
+    padding: 30px 80px;
+    cursor: default;
+  }
+  .nowdays{
+    font-size: 36px;
+    color:black;
+    padding: 30px 80px;
+    cursor: default;
+
+    .margin{
+      border-bottom:4px solid black;
+      width:50px;
+      margin: 0 auto;
+      padding: 8px 0; 
+    }
+  }
+}
+.ranking-theme-page{
+  .nowdays, .thismonth{
+    font-size: 36px;
+    color: gray; 
+    padding: 30px 80px;
+    cursor: default;
+  }
+  .theme{
+    font-size: 36px;
+    color:black;
+    padding: 30px 80px;
+    cursor: default;
+
+    .margin{
+      border-bottom:4px solid black;
+      width:50px;
+      margin: 0 auto;
+      padding: 8px 0; 
+    }
+  }
+}
+.ranking-theme-page, .ranking-thismonth-page, .ranking-nowdays-page{
 
   .all{
 
@@ -791,38 +821,53 @@ body{
         text-align: center;
         justify-content: center;
         
-        .nowdays, .thismonth{
-          font-size: 36px;
-          color: gray; 
-          padding: 40px 80px;
-        }
-        .thema{
-          font-size: 36px;
-          color:black;
-          padding: 40px 80px;
-        }
+        
       }
       .insta{
         display: flex;
         justify-content: center;
-        margin-top: 10px;
+        margin-top: 6px;
+        max-height: 24px;
 
-        .insta-tag{
-          padding-right:10px;
-          padding-left: 15px;
-          color: #D8A3D2;
-          font-size: 14px;
-          font-weight: bold;
+        .insta-container{
+          display: flex;
+          padding-left: 10px;
+          
+          .insta-btn{
+            padding-top:10px; 
+            padding-left:3px;
+          }
+          .insta-tag{
+            display: flex;
+            z-index: 2;
+
+            .insta-list{
+              display: flex;
+              flex-direction: column;
+              border-radius: 5px;
+              padding: 0 2px 0 0;
+              background-color: white;
+            }
+            .insta-list a{
+              padding-right:10px;
+              padding-left: 10px;
+              color: #D8A3D2;
+              font-size: 14px;
+              font-weight: bold;
+              text-decoration: none;
+              cursor: default;
+            }
+          }
         }
       }
       .rank-area{
-        padding-top: 10px;
+        margin: 0 auto;
         display: flex;
         width: 800px;
         flex: 1;
-        margin:0 auto;
         box-sizing: border-box;
-        padding-bottom: 30px;
+        padding: 20px 0px;
+        animation: fadeInUp 1s;
 
         .ranking5{
           border-right: 1px solid #9cc7dd;
@@ -836,7 +881,7 @@ body{
           .ranking-store{
             display: flex;
             align-items: center;
-            padding-bottom: 30px;
+            padding: 10px 0px;
 
             .rank-num{
               padding-right:20px; 
@@ -845,12 +890,15 @@ body{
               text-align: center;
             }
             .store-img img{
+              width: 77px;
+              height: 77px;
               border-radius: 5px;
               margin:0 auto;
             }
             .name{
               padding-bottom: 5px;
               font-size: 18px;
+              cursor: default;
             }
             .keyword{
               margin-right: 10px;
@@ -934,6 +982,7 @@ body{
       width: 1000px;
     
       .list-item{
+        animation: fadeInUp 3s;
         display: flex;
         padding-bottom: 50px;
 
@@ -951,8 +1000,9 @@ body{
             font-size: 18px;
             color: #b9bbc4;
             padding-bottom: 20px;
+            letter-spacing: 3px;
           }
-          .thema-title{
+          .theme-title{
             font-size: 36px;
             padding-bottom: 20px;
           }
@@ -967,11 +1017,13 @@ body{
             cursor: default;
             
             #text{
-              font-size:18px;
+              font-size:16px;
+              letter-spacing: 4px;
+              font-weight: bold;
             }
             >img{              
               color:#d8a3d2 !important;
-              padding-top: 7px;
+              padding-top: 3px;
               padding-left: 10px; 
               width: 9px;
               height: 15px;
@@ -990,12 +1042,13 @@ body{
 }
 .asking-page{
   .main{
+    font-family: "Noto Sans KR", sans-serif !important;
     width: 1200px;
     margin: 0 auto;
     .ask-main{
       width:800px; 
       display: flex; 
-      margin: 100px auto;
+      margin: 95px auto;
       
       .send-help{
         display: flex;
@@ -1012,9 +1065,11 @@ body{
         .admin-adress{
           color: gray;
           padding-bottom: 30px;
+          font-weight: 500;
         }
         .admin-phone, .admin-e-mail{
           color: gray;
+          font-weight: 500;
         }
       }
       .support{
@@ -1320,7 +1375,7 @@ body{
     .sign-center{
       display: flex;
       flex-direction: column;
-      margin: 20px auto 140px auto;
+      margin: 30px auto 140px auto;
       width: 800px;
       text-align: center;
 
@@ -1331,6 +1386,8 @@ body{
           font-size: 40px;
           margin-bottom: 30px;
           color: #CFBFCF;
+          font-weight: bold;
+          letter-spacing: 10px;
         }
         .sign-form{
 
@@ -1384,10 +1441,13 @@ body{
       .page-num2{
         margin-top: 130px;  
         display: none;
+
         .num{
           font-size: 40px;
           margin-bottom: 30px;
           color: #CFBFCF;
+          font-weight: bold;
+          letter-spacing: 10px;
         }
         .sign-form{
 
@@ -1454,6 +1514,8 @@ body{
           font-size: 40px;
           margin-bottom: 30px;
           color: #CFBFCF;
+          font-weight: bold;
+          letter-spacing: 10px;
         }
         .sign-form{
 
@@ -1543,6 +1605,7 @@ body{
           #checkbox1, #checkbox2{
             float:left; 
             height:22px;
+            padding-top: 5px;
           }
         }
       }
@@ -1734,57 +1797,70 @@ body{
         }
       }
     }
-    .list-line{
-      display: flex;
-      margin-bottom: 20px;
-      flex-wrap: wrap;
+    .favorite-list{
 
-      .store-list{
-        flex:1;
-        margin-bottom: 30px;
+      .list-line{
+        display: flex;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+        animation: fadeInUp 3s;
 
-        .img-container{
-          width: 232px;
-          height: 232px;
-          overflow: hidden;
-          border-radius: 10px;
-          
-          >img{
-            width:100%; 
-            height:100%;
-            padding-bottom: 10px;
-            cursor: pointer;
-            transition:all 0.5s;
+        .store-list{
+          flex:1;
+          margin-bottom: 30px;
 
-            &:hover{
-              transform: scale(1.2);
+          .img-container{
+            width: 232px;
+            height: 232px;
+            overflow: hidden;
+            border-radius: 10px;
+            
+            >img{
+              width:100%; 
+              height:100%;
+              padding-bottom: 10px;
+              cursor: default;
+              transition:all 0.5s;
+
+              &:hover{
+                transform: scale(1.2);
+              }
             }
           }
-        }
-        .store-name{
-          font-weight:bold;
-          font-size: 18px;
-          flex:1;
-        }
-        .views{
-          color:#d8a3d2; 
-          display:flex; 
-          padding-right: 7px;
-          justify-content:center;
-        }
-        .keyword{
-          margin-right: 10px;
-          font-size: 13px;
-          min-width: 59px;
-          min-height: 22px;
-          border: 1px solid #d8a3d2;
-          border-radius: 5px;
-          padding: 2px 5px;
-          text-align: center;
-          align-items: center;
-          box-sizing: border-box;
+          .store-name{
+            font-weight:bold;
+            font-size: 18px;
+            flex:1;
+          }
+          .views{
+            color:#d8a3d2; 
+            display:flex; 
+            padding-right: 7px;
+            justify-content:center;
+          }
+          .keyword{
+            margin-right: 10px;
+            font-size: 13px;
+            min-width: 59px;
+            min-height: 22px;
+            border: 1px solid #d8a3d2;
+            border-radius: 5px;
+            padding: 2px 5px;
+            text-align: center;
+            align-items: center;
+            box-sizing: border-box;
+          }
         }
       }
+    }
+  }
+}
+.mypage-page{
+  .favorite{
+    color: black !important;
+    font-weight: bold !important;
+    .margin{
+      display: block !important;
     }
   }
 }
@@ -1792,6 +1868,13 @@ body{
   .main{
     display:flex;
 
+    .user-info{
+      color: black !important;
+      font-weight: bold !important;
+      .margin{
+        display: block !important;
+      }
+    }
     .myinfo{
       height: 560px;
       margin: auto;
@@ -1919,6 +2002,13 @@ body{
 }
 .userule-page{
   .main{
+    .use-rule{
+      color: black !important;
+      font-weight: bold !important;
+      .margin{
+        display: block !important;
+      }
+    }
     .contents-center{
       height: 560px;
       .box{
