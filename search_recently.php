@@ -25,6 +25,10 @@
           </div>
         </div>
         <div class="search-list">
+          <div class="no-search">
+            검색된 <b>내용</b>이 없습니다.<br>
+            다른 <b>"검색어"</b>로 검색해주세요.
+          </div>
           <div class="list-line">
           </div>
         </div>
@@ -33,18 +37,26 @@
 
 
 <script>
+  function nosearch(){
+    $('.no-search').css('display', 'block')
+  }
   $(function(){
     api_search_data("<?php echo $search; ?>",function(data){
       var slot_template = _.template($("#store-slot").html());
 
-      for(var i =0; i < data.payload.length; i++){
-        var row = data.payload[i]
-        let nameDump = row.Name
-        nameDump = nameDump.length>8 ? nameDump.slice(0,8)+"..." : nameDump
-        row.Name = nameDump
-        try{
-          $(".list-line").append( slot_template(row) )
-        }catch(err){}  
+      if(data.payload.length == 0 ){
+        nosearch();
+      }else{
+        for(var i =0; i < data.payload.length; i++){
+          
+          var row = data.payload[i]
+          let nameDump = row.Name
+          nameDump = nameDump.length>8 ? nameDump.slice(0,8)+"..." : nameDump
+          row.Name = nameDump
+          try{
+            $(".list-line").append( slot_template(row) )
+          }catch(err){}  
+        }
       }
     })
   })
