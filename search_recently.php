@@ -41,24 +41,27 @@
     $('.no-search').css('display', 'block')
   }
   $(function(){
-    api_search_data("<?php echo $search; ?>",function(data){
-      var slot_template = _.template($("#store-slot").html());
-
-      if(data.payload.length == 0 ){
-        nosearch();
-      }else{
-        for(var i =0; i < data.payload.length; i++){
-          
-          var row = data.payload[i]
-          let nameDump = row.Name
-          nameDump = nameDump.length>8 ? nameDump.slice(0,8)+"..." : nameDump
-          row.Name = nameDump
-          try{
-            $(".list-line").append( slot_template(row) )
-          }catch(err){}  
+    var searchWord = "<?php echo $search; ?>";
+    if(searchWord == "" || searchWord == " "){
+      nosearch();
+    } else{
+      api_search_data(searchWord,function(data){
+        var slot_template = _.template($("#store-slot").html());
+        if(data.payload.length == 0 ){
+          nosearch();
+        }else{
+          for(var i =0; i < data.payload.length; i++){
+            var row = data.payload[i]
+            let nameDump = row.Name
+            nameDump = nameDump.length>8 ? nameDump.slice(0,8)+"..." : nameDump
+            row.Name = nameDump
+            try{
+              $(".list-line").append( slot_template(row) )
+            }catch(err){}  
+          }
         }
-      }
-    })
+      })
+    }
   })
 </script>
 
