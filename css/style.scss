@@ -543,6 +543,7 @@ body{
         display: flex;
         flex: 8;
         flex-direction: column;
+        min-height: 575px;
 
         .list-line{
           display: flex;
@@ -553,6 +554,8 @@ body{
           .store-list{
             flex:1;
             margin-bottom: 30px;
+            max-width: 250px;
+            max-height: 298px;
 
             .img-container{
               width: 232px;
@@ -717,6 +720,8 @@ body{
       .store-list{
         flex:1;
         margin-bottom: 40px;
+        max-width: 275px;
+        max-height: 232px;
 
         .img-container{
           width: 232px;
@@ -1811,7 +1816,9 @@ body{
         .store-list{
           flex:1;
           margin-bottom: 30px;
-
+          max-width: 250px;
+          max-height: 298px;
+        
           .img-container{
             width: 232px;
             height: 232px;
@@ -1880,7 +1887,7 @@ body{
     }
     .myinfo{
       height: 560px;
-      margin: auto;
+      margin: 10px auto;
 
       .user-mail{
         display: flex;
@@ -2014,6 +2021,7 @@ body{
     }
     .contents-center{
       height: 560px;
+      margin-bottom: 10px;
       .box{
         width: 660px;
         height: 200px;

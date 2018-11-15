@@ -26,10 +26,10 @@
               echo $number;
              ?></div>
             <div class="store-img">
-              <img src="./images/foodimg3.jpeg" onclick="location.href='detail.php'" />
+              <img src="./images/foodimg3.jpeg" onclick="location.href='detail.php?id=<?php echo $id; ?>'" />
             </div>
             <div style="display:flex; flex-direction:column; padding-left: 10px; padding-bottom: 5px;">
-              <div class="name"  onclick="location.href='detail.php'" >건대 소두마리</div>
+              <div class="name"  onclick="location.href='detail.php?id=<?php echo $id; ?>'" >건대 소두마리</div>
               <div class="flex">
                 <div class="keyword">
                   <div class="chile-flex-1;">강남구</div>
@@ -59,10 +59,10 @@
             }
             ?></div>
             <div class="store-img">
-              <img src="./images/77.77.jpeg" />
+              <img src="./images/77.77.jpeg" onclick="location.href='detail.php?id=<?php echo $id; ?>'" />
             </div>
             <div style="display:flex; flex-direction:column; padding-left: 10px;">
-              <div class="name">건대 소두마리</div>
+              <div class="name" onclick="location.href='detail.php?id=<?php echo $id; ?>'">건대 소두마리</div>
               <div class="flex">
                 <div class="keyword">
                   <div class="chile-flex-1;">강남구</div>

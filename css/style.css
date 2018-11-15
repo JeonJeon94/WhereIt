@@ -764,6 +764,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  min-height: 575px;
 }
 
 .search-page .main .search-center .search-list .list-line, .ranking-theme-page .main .search-center .search-list .list-line, .ranking-nowdays-page .main .search-center .search-list .list-line, .ranking-thismonth-page .main .search-center .search-list .list-line, .detail-page .main .search-center .search-list .list-line, .magazine-page .main .search-center .search-list .list-line, .asking-page .main .search-center .search-list .list-line, .login-page .main .search-center .search-list .list-line, .find-page .main .search-center .search-list .list-line, .sign-page .main .search-center .search-list .list-line, .edit-pw-page .main .search-center .search-list .list-line, .mypage-page .main .search-center .search-list .list-line, .myinfo-page .main .search-center .search-list .list-line, .userule-page .main .search-center .search-list .list-line {
@@ -782,6 +783,8 @@ body {
       -ms-flex: 1;
           flex: 1;
   margin-bottom: 30px;
+  max-width: 250px;
+  max-height: 298px;
 }
 
 .search-page .main .search-center .search-list .list-line .store-list .img-container, .ranking-theme-page .main .search-center .search-list .list-line .store-list .img-container, .ranking-nowdays-page .main .search-center .search-list .list-line .store-list .img-container, .ranking-thismonth-page .main .search-center .search-list .list-line .store-list .img-container, .detail-page .main .search-center .search-list .list-line .store-list .img-container, .magazine-page .main .search-center .search-list .list-line .store-list .img-container, .asking-page .main .search-center .search-list .list-line .store-list .img-container, .login-page .main .search-center .search-list .list-line .store-list .img-container, .find-page .main .search-center .search-list .list-line .store-list .img-container, .sign-page .main .search-center .search-list .list-line .store-list .img-container, .edit-pw-page .main .search-center .search-list .list-line .store-list .img-container, .mypage-page .main .search-center .search-list .list-line .store-list .img-container, .myinfo-page .main .search-center .search-list .list-line .store-list .img-container, .userule-page .main .search-center .search-list .list-line .store-list .img-container {
@@ -995,6 +998,8 @@ body {
       -ms-flex: 1;
           flex: 1;
   margin-bottom: 40px;
+  max-width: 275px;
+  max-height: 232px;
 }
 
 .detail-page .detail-main .detail-picture .store-list .img-container {
@@ -2297,6 +2302,8 @@ body {
       -ms-flex: 1;
           flex: 1;
   margin-bottom: 30px;
+  max-width: 250px;
+  max-height: 298px;
 }
 
 .mypage-page .main .favorite-list .list-line .store-list .img-container, .myinfo-page .main .favorite-list .list-line .store-list .img-container, .userule-page .main .favorite-list .list-line .store-list .img-container {
@@ -2381,7 +2388,7 @@ body {
 
 .myinfo-page .main .myinfo {
   height: 560px;
-  margin: auto;
+  margin: 10px auto;
 }
 
 .myinfo-page .main .myinfo .user-mail {
@@ -2541,6 +2548,7 @@ body {
 
 .userule-page .main .contents-center {
   height: 560px;
+  margin-bottom: 10px;
 }
 
 .userule-page .main .contents-center .box {

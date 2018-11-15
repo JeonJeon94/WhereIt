@@ -19,7 +19,6 @@ if(!empty($_GET['id'])){
 <html>
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content='width=device-width , initial-scale=1'>
   <title>Where It</title>
   <link rel="stylesheet" href="./css/style.css?ver=1.1"  type="text/css" />
   <link rel="stylesheet" href="./OwlCarousel2/dist/assets/owl.carousel.css" type="text/css">
