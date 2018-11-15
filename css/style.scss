@@ -545,6 +545,11 @@ body{
         flex-direction: column;
         min-height: 575px;
 
+        .no-search{
+          display:none;
+          text-align: center;
+          font-size: 18px;
+        }
         .list-line{
           display: flex;
           margin-bottom: 20px;

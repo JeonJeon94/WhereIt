@@ -767,6 +767,12 @@ body {
   min-height: 575px;
 }
 
+.search-page .main .search-center .search-list .no-search, .ranking-theme-page .main .search-center .search-list .no-search, .ranking-nowdays-page .main .search-center .search-list .no-search, .ranking-thismonth-page .main .search-center .search-list .no-search, .detail-page .main .search-center .search-list .no-search, .magazine-page .main .search-center .search-list .no-search, .asking-page .main .search-center .search-list .no-search, .login-page .main .search-center .search-list .no-search, .find-page .main .search-center .search-list .no-search, .sign-page .main .search-center .search-list .no-search, .edit-pw-page .main .search-center .search-list .no-search, .mypage-page .main .search-center .search-list .no-search, .myinfo-page .main .search-center .search-list .no-search, .userule-page .main .search-center .search-list .no-search {
+  display: none;
+  text-align: center;
+  font-size: 18px;
+}
+
 .search-page .main .search-center .search-list .list-line, .ranking-theme-page .main .search-center .search-list .list-line, .ranking-nowdays-page .main .search-center .search-list .list-line, .ranking-thismonth-page .main .search-center .search-list .list-line, .detail-page .main .search-center .search-list .list-line, .magazine-page .main .search-center .search-list .list-line, .asking-page .main .search-center .search-list .list-line, .login-page .main .search-center .search-list .list-line, .find-page .main .search-center .search-list .list-line, .sign-page .main .search-center .search-list .list-line, .edit-pw-page .main .search-center .search-list .list-line, .mypage-page .main .search-center .search-list .list-line, .myinfo-page .main .search-center .search-list .list-line, .userule-page .main .search-center .search-list .list-line {
   display: -webkit-box;
   display: -ms-flexbox;
