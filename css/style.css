@@ -132,6 +132,7 @@ body {
   text-align: center;
   z-index: 999;
   cursor: default;
+  letter-spacing: 3px;
 }
 
 .default-page .all .move-top:hover #top {
