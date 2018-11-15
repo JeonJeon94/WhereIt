@@ -26,7 +26,7 @@
         </div>
         <div class="search-list">
           <div class="no-search">
-            검색된 <b>내용</b>이 없습니다.<br>
+            <b>"<?php echo $search; ?>"</b> 로 검색된 내용이 없습니다.<br>
             다른 <b>"검색어"</b>로 검색해주세요.
           </div>
           <div class="list-line">
