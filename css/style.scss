@@ -1,7 +1,7 @@
 @charset "utf-8";
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
 @import url(http://fonts.googleapis.com/css?family=Montserrat); 
-@keyframes fadein {
+@keyframes fadeIn {
   from {
       opacity:0;
   }
@@ -35,6 +35,20 @@
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes dot {
+  0% {
+      transform: scale(0);
+  }
+  35% {
+      transform: scale(1);
+  }
+  70% {
+      transform: scale(0);
+  }
+  100% {
+      transform: scale(0);
   }
 }
 
@@ -88,7 +102,7 @@ body{
       right: 100px;
       text-align: center;
       z-index: 999;    
-      cursor: default;
+      cursor: pointer;
       letter-spacing: 3px;
       
       #hover{
@@ -104,7 +118,7 @@ body{
       right: 100px;
       text-align: center;
       z-index: 999;    
-      cursor: default;
+      cursor: pointer;
       letter-spacing: 3px;
 
       #top{
@@ -123,7 +137,7 @@ body{
       right: 100px;
       text-align: center;
       z-index: 999;    
-      cursor: default;
+      cursor: pointer;
 
       #top{
         display: none;
@@ -150,7 +164,7 @@ body{
           width: 190px;
 
           a{
-            cursor: default;
+            cursor: pointer;
         
             img{
               margin-right: 15px;
@@ -170,7 +184,7 @@ body{
           a{
             text-decoration: none;
             color: black;
-            cursor: default;
+            cursor: pointer;
           }
         }
       }
@@ -192,7 +206,7 @@ body{
             a{
               text-decoration: none;
               color: black;
-              cursor: default;
+              cursor: pointer;
             }
           }
         }
@@ -203,7 +217,7 @@ body{
           a{
             text-decoration: none;
             color: black;
-            cursor: default;
+            cursor: pointer;
           }
         }
         .hot-search{
@@ -241,7 +255,7 @@ body{
                   padding: 0px 40px 0px 15px;
                   text-decoration: none;
                   color: black;
-                  cursor: default;
+                  cursor: pointer;
                 }
                 &:hover{
                   font-weight: bold;
@@ -261,7 +275,7 @@ body{
                   padding: 0px 40px 0px 15px;
                   text-decoration: none;
                   color: black;
-                  cursor: default;
+                  cursor: pointer;
                 }
                 &:hover{
                   font-weight: bold;
@@ -315,11 +329,11 @@ body{
           text-decoration: none;
           margin-left: 75px;
           color: #a39aa3;
-          cursor: default;
+          cursor: pointer;
         }
         .area-ok{
           color: #8D818C;
-          cursor: default;
+          cursor: pointer;
            
           #tooltip{
             position: relative;
@@ -432,6 +446,7 @@ body{
                 box-sizing: border-box;
               }
               #search{
+                cursor: pointer;
                 position: absolute;
                 top: 15px;
                 right: 25px;
@@ -498,6 +513,7 @@ body{
           box-sizing: border-box;
         }
         #search2{
+          cursor:pointer;
           position: absolute;
           top: 15px;
           right: 15px;
@@ -510,7 +526,38 @@ body{
     width: 1200px;
     margin: 0 auto;
     
-
+    .loading {
+      position: relative;
+      width: 50px;
+      height: 50px;
+      margin: 0 auto;
+      padding: 10px;
+    }
+    
+    .dot div {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 10px;
+      height: 10px;
+      margin: auto;
+      border-radius: 10px;
+      background-color: #D0C1D0;
+      transform: scale(0);
+      animation: dot 1.5s linear infinite;
+    }
+    
+    .dot div:nth-child(1) {
+      left: -50px;
+      animation-delay: -0.1s;
+    }
+    
+    .dot div:nth-child(3) {
+      right: -50px;
+      animation-delay: 0.1s;
+    }
     .search-center{
       width:  1000px;
       margin:0 auto;
@@ -555,6 +602,7 @@ body{
           display: flex;
           margin-bottom: 20px;
           flex-wrap: wrap;
+          animation: fadeIn 3s;
           animation: fadeInUp 3s;
 
           .store-list{
@@ -573,7 +621,7 @@ body{
                 width:100%; 
                 height:100%;
                 padding-bottom: 10px;
-                cursor: default;
+                cursor: pointer;
                 transition:all 0.5s;
 
                 &:hover{
@@ -630,7 +678,7 @@ body{
         >img{
           width:100%; 
           height:100%;
-          cursor: default;
+          cursor: pointer;
           transition:all 0.5s;
 
           &:hover{
@@ -719,7 +767,8 @@ body{
       transition: all 0.5s;
     }
     .detail-picture{
-      animation: fadeInUp 2s;
+      animation: fadeIn 3s;
+      animation: fadeInUp 3s;
       display:flex;
       flex-wrap:wrap;
 
@@ -738,7 +787,7 @@ body{
           >img{
             width:100%; 
             height:100%;
-            cursor: default;
+            cursor: pointer;
             transition:all 0.5s;
 
             &:hover{
@@ -755,13 +804,13 @@ body{
     font-size: 36px;
     color: gray; 
     padding: 30px 80px;
-    cursor: default;
+    cursor: pointer;
   }
   .thismonth{
     font-size: 36px;
     color:black;
     padding: 30px 80px;
-    cursor: default;
+    cursor: pointer;
     
     .margin{
       border-bottom:4px solid black;
@@ -776,13 +825,13 @@ body{
     font-size: 36px;
     color: gray; 
     padding: 30px 80px;
-    cursor: default;
+    cursor: pointer;
   }
   .nowdays{
     font-size: 36px;
     color:black;
     padding: 30px 80px;
-    cursor: default;
+    cursor: pointer;
 
     .margin{
       border-bottom:4px solid black;
@@ -797,13 +846,13 @@ body{
     font-size: 36px;
     color: gray; 
     padding: 30px 80px;
-    cursor: default;
+    cursor: pointer;
   }
   .theme{
     font-size: 36px;
     color:black;
     padding: 30px 80px;
-    cursor: default;
+    cursor: pointer;
 
     .margin{
       border-bottom:4px solid black;
@@ -866,7 +915,7 @@ body{
               font-size: 14px;
               font-weight: bold;
               text-decoration: none;
-              cursor: default;
+              cursor: pointer;
             }
           }
         }
@@ -878,6 +927,7 @@ body{
         flex: 1;
         box-sizing: border-box;
         padding: 20px 0px;
+        animation: fadeIn 1s;
         animation: fadeInUp 1s;
 
         .ranking5{
@@ -908,11 +958,12 @@ body{
               height: 77px;
               border-radius: 5px;
               margin:0 auto;
+              cursor: pointer;
             }
             .name{
               padding-bottom: 5px;
               font-size: 18px;
-              cursor: default;
+              cursor: pointer;
             }
             .keyword{
               margin-right: 10px;
@@ -1028,7 +1079,7 @@ body{
             bottom: 20px;
             right: -15px;
             display: flex;
-            cursor: default;
+            cursor: pointer;
             
             #text{
               font-size:16px;
@@ -1241,7 +1292,7 @@ body{
           a{
             text-decoration: none;
             color: black;
-            cursor: default;
+            cursor: pointer;
           }
         }
         .login-btn{
@@ -1284,6 +1335,7 @@ body{
                 margin: 6px auto;
                 padding: 16px;
                 box-sizing: border-box;
+                cursor: pointer;
               }
               #naverIdLogin{
 
@@ -1485,18 +1537,19 @@ body{
 
             .checkbox3{
               padding-top: 1px;
+              cursor: pointer;
             }
             #accept{
               border-bottom: 2px solid black;
               padding-bottom: 4px;
-              cursor: default;
+              cursor: pointer;
               font-size: 14px;
             }
             #agree3{
               padding:0px 10px;
               color: gray;
               font-size: 14px;
-              cursor: default;
+              cursor: pointer;
             }
           }
           #next-btn2{  
@@ -1610,6 +1663,7 @@ body{
           flex:1;
           justify-content: flex-end;
           align-items: center;
+          cursor: pointer;
           
           #agree1, #agree2{
             float:left; 
@@ -1785,7 +1839,7 @@ body{
             margin-right: 20px;
             font-size: 14px; 
             color: gray;
-            cursor: default;
+            cursor: pointer;
              
             .margin{
               display: none;
@@ -1817,6 +1871,7 @@ body{
         display: flex;
         margin-bottom: 20px;
         flex-wrap: wrap;
+        animation: fadeIn 3s;
         animation: fadeInUp 3s;
 
         .store-list{
@@ -1835,7 +1890,7 @@ body{
               width:100%; 
               height:100%;
               padding-bottom: 10px;
-              cursor: default;
+              cursor: pointer;
               transition:all 0.5s;
 
               &:hover{
@@ -1905,7 +1960,7 @@ body{
         display: flex;
         flex: 1;
         color: #E5C4E3;
-        cursor: default;
+        cursor: pointer;
 
         #logout{
           margin-bottom: 50px;
@@ -2010,7 +2065,7 @@ body{
 
         .yes, .no{
           margin: 50px 85px;
-          cursor: default;
+          cursor: pointer;
         }
       }
     }

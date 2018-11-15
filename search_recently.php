@@ -1,9 +1,5 @@
 <?php $page = "search"; ?>
 <?php include_once('./head.php'); ?>
-<?php 
-
-?>
-<?php include_once("./head.php") ?>
     <div class="move-top">
       <img id="top" src="./images/top.png" />
       <img id="hover" src="./images/top-hover.png" />
@@ -21,7 +17,7 @@
           </div> 
           <div class="search-time">
             <a id="all" href ="search.php?search=<?php echo $search; ?>">누적</a>
-            <a id="recently" style="color:black; font-weight:bold; border-bottom:2px solid black; padding-bottom:2px;" href ="">최근 1개월</a>
+            <a id="recently" style="color:black; font-weight:bold; border-bottom:2px solid black; padding-bottom:2px;" href ="">최근 3개월</a>
           </div>
         </div>
         <div class="search-list">
@@ -32,34 +28,91 @@
           <div class="list-line">
           </div>
         </div>
-      </div>  
+      </div>
+      <div class="loading dot">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </div>
 
 
 <script>
+  var list_length = 0
+  var data = null
+  var flag = false
   function nosearch(){
     $('.no-search').css('display', 'block')
   }
-  $(function(){
+  function Loading(){
+    if(flag === true){
+      $('.loading').css('display', 'block')
+      flag = false
+      setTimeout(() => {
+        $('.loading').css('display', 'none')
+        if(data.payload.length >= list_length)
+          flag = true
+      }, 3000);
+    }
+  }
+  function SearchResultDraw(){
     var searchWord = "<?php echo $search; ?>";
     if(searchWord == "" || searchWord == " "){
       nosearch();
     } else{
-      api_search_data(searchWord,function(data){
-        var slot_template = _.template($("#store-slot").html());
-        if(data.payload.length == 0 ){
-          nosearch();
-        }else{
-          for(var i =0; i < data.payload.length; i++){
+      if(data === null)
+        return
+      var slot_template = _.template($("#store-slot").html());
+      if(data.payload.length == 0 ){
+        nosearch();
+      }else{
+        if(list_length !== 12){
+          Loading()
+          setTimeout(() => {
+            for(var i = list_length - 12; i < list_length; i++){
+              var row = data.payload[i]
+              if(row === undefined)
+                continue
+              let nameDump = row.Name
+              nameDump = nameDump.length>8 ? nameDump.slice(0,8)+"..." : nameDump
+              row.Name = nameDump
+              try{
+                $(".list-line").append( slot_template(row) )
+              }catch(err){}  
+            }
+          }, 3000);
+        }
+        else{
+          for(var i = list_length - 12; i < list_length; i++){
             var row = data.payload[i]
+            if(row === undefined)
+              continue
             let nameDump = row.Name
             nameDump = nameDump.length>8 ? nameDump.slice(0,8)+"..." : nameDump
             row.Name = nameDump
             try{
               $(".list-line").append( slot_template(row) )
             }catch(err){}  
+            flag = true
           }
         }
+        
+      }
+    }
+  }
+  $(window).scroll(function() {
+    if($(window).scrollTop() + $(window).height() == $(document).height() && flag) {
+      list_length += 12
+      SearchResultDraw() 
+    }
+  });
+  $(function(){
+    var searchWord = "<?php echo $search; ?>";
+    if(searchWord !== "" || searchWord !== " "){
+      api_search_data(searchWord,function(res){
+          data = res
+          list_length += 12
+          SearchResultDraw()
       })
     }
   })

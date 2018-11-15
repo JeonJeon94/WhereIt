@@ -65,16 +65,16 @@
     </div>
     <div class="etc">
       <div class="month">
-        <div class="share">
+        <div class="share" style="cursor:pointer;">
           <img src="./images/share.png" />
           <div>월간 해시태그</div>
         </div>
-        <div class="usage">
+        <div class="usage" style="cursor:pointer;">
           <img src="./images/star.png"/>
           <div>사용량<br>2.55k</div>
         </div>
       </div>
-      <div class="map">
+      <div class="map" style="cursor:pointer;">
         <img src="./images/map.png"/>
       </div>
     </div>

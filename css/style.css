@@ -1,6 +1,6 @@
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
-@-webkit-keyframes fadein {
+@-webkit-keyframes fadeIn {
   from {
     opacity: 0;
   }
@@ -8,7 +8,7 @@
     opacity: 1;
   }
 }
-@keyframes fadein {
+@keyframes fadeIn {
   from {
     opacity: 0;
   }
@@ -40,6 +40,44 @@
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes dot {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  35% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  70% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes dot {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  35% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  70% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
 }
 
@@ -113,7 +151,7 @@ body {
   right: 100px;
   text-align: center;
   z-index: 999;
-  cursor: default;
+  cursor: pointer;
   letter-spacing: 3px;
 }
 
@@ -131,7 +169,7 @@ body {
   right: 100px;
   text-align: center;
   z-index: 999;
-  cursor: default;
+  cursor: pointer;
   letter-spacing: 3px;
 }
 
@@ -153,7 +191,7 @@ body {
   right: 100px;
   text-align: center;
   z-index: 999;
-  cursor: default;
+  cursor: pointer;
 }
 
 .default-page .all .move-top:active #top {
@@ -195,7 +233,7 @@ body {
 }
 
 .default-page .all .head .top .logo a {
-  cursor: default;
+  cursor: pointer;
 }
 
 .default-page .all .head .top .logo a img {
@@ -220,7 +258,7 @@ body {
 .default-page .all .head .top .login a {
   text-decoration: none;
   color: black;
-  cursor: default;
+  cursor: pointer;
 }
 
 .default-page .all .head .menu {
@@ -249,7 +287,7 @@ body {
 .default-page .all .head .menu > div .rank a {
   text-decoration: none;
   color: black;
-  cursor: default;
+  cursor: pointer;
 }
 
 .default-page .all .head .menu .news {
@@ -260,7 +298,7 @@ body {
 .default-page .all .head .menu .news a {
   text-decoration: none;
   color: black;
-  cursor: default;
+  cursor: pointer;
 }
 
 .default-page .all .head .menu .hot-search {
@@ -328,7 +366,7 @@ body {
   padding: 0px 40px 0px 15px;
   text-decoration: none;
   color: black;
-  cursor: default;
+  cursor: pointer;
 }
 
 .default-page .all .head .menu .hot-search .hot-rank .hot .hot-list-h:hover {
@@ -360,7 +398,7 @@ body {
   padding: 0px 40px 0px 15px;
   text-decoration: none;
   color: black;
-  cursor: default;
+  cursor: pointer;
 }
 
 .default-page .all .head .menu .hot-search .hot-rank .hot .hot-list:hover {
@@ -441,12 +479,12 @@ body {
   text-decoration: none;
   margin-left: 75px;
   color: #a39aa3;
-  cursor: default;
+  cursor: pointer;
 }
 
 .default-page .footer .info .etc .area-ok {
   color: #8D818C;
-  cursor: default;
+  cursor: pointer;
 }
 
 .default-page .footer .info .etc .area-ok #tooltip {
@@ -605,6 +643,7 @@ body {
 }
 
 .main-page .main .search-form .where-top .where-form .form .search-word #search {
+  cursor: pointer;
   position: absolute;
   top: 15px;
   right: 25px;
@@ -696,6 +735,7 @@ body {
 }
 
 .search-page .where-form2 .form .search-word #search2, .ranking-theme-page .where-form2 .form .search-word #search2, .ranking-nowdays-page .where-form2 .form .search-word #search2, .ranking-thismonth-page .where-form2 .form .search-word #search2, .detail-page .where-form2 .form .search-word #search2, .magazine-page .where-form2 .form .search-word #search2, .asking-page .where-form2 .form .search-word #search2, .login-page .where-form2 .form .search-word #search2, .find-page .where-form2 .form .search-word #search2, .sign-page .where-form2 .form .search-word #search2, .edit-pw-page .where-form2 .form .search-word #search2, .mypage-page .where-form2 .form .search-word #search2, .myinfo-page .where-form2 .form .search-word #search2, .userule-page .where-form2 .form .search-word #search2 {
+  cursor: pointer;
   position: absolute;
   top: 15px;
   right: 15px;
@@ -705,6 +745,43 @@ body {
 .search-page .main, .ranking-theme-page .main, .ranking-nowdays-page .main, .ranking-thismonth-page .main, .detail-page .main, .magazine-page .main, .asking-page .main, .login-page .main, .find-page .main, .sign-page .main, .edit-pw-page .main, .mypage-page .main, .myinfo-page .main, .userule-page .main {
   width: 1200px;
   margin: 0 auto;
+}
+
+.search-page .main .loading, .ranking-theme-page .main .loading, .ranking-nowdays-page .main .loading, .ranking-thismonth-page .main .loading, .detail-page .main .loading, .magazine-page .main .loading, .asking-page .main .loading, .login-page .main .loading, .find-page .main .loading, .sign-page .main .loading, .edit-pw-page .main .loading, .mypage-page .main .loading, .myinfo-page .main .loading, .userule-page .main .loading {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.search-page .main .dot div, .ranking-theme-page .main .dot div, .ranking-nowdays-page .main .dot div, .ranking-thismonth-page .main .dot div, .detail-page .main .dot div, .magazine-page .main .dot div, .asking-page .main .dot div, .login-page .main .dot div, .find-page .main .dot div, .sign-page .main .dot div, .edit-pw-page .main .dot div, .mypage-page .main .dot div, .myinfo-page .main .dot div, .userule-page .main .dot div {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 10px;
+  height: 10px;
+  margin: auto;
+  border-radius: 10px;
+  background-color: #D0C1D0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-animation: dot 1.5s linear infinite;
+          animation: dot 1.5s linear infinite;
+}
+
+.search-page .main .dot div:nth-child(1), .ranking-theme-page .main .dot div:nth-child(1), .ranking-nowdays-page .main .dot div:nth-child(1), .ranking-thismonth-page .main .dot div:nth-child(1), .detail-page .main .dot div:nth-child(1), .magazine-page .main .dot div:nth-child(1), .asking-page .main .dot div:nth-child(1), .login-page .main .dot div:nth-child(1), .find-page .main .dot div:nth-child(1), .sign-page .main .dot div:nth-child(1), .edit-pw-page .main .dot div:nth-child(1), .mypage-page .main .dot div:nth-child(1), .myinfo-page .main .dot div:nth-child(1), .userule-page .main .dot div:nth-child(1) {
+  left: -50px;
+  -webkit-animation-delay: -0.1s;
+          animation-delay: -0.1s;
+}
+
+.search-page .main .dot div:nth-child(3), .ranking-theme-page .main .dot div:nth-child(3), .ranking-nowdays-page .main .dot div:nth-child(3), .ranking-thismonth-page .main .dot div:nth-child(3), .detail-page .main .dot div:nth-child(3), .magazine-page .main .dot div:nth-child(3), .asking-page .main .dot div:nth-child(3), .login-page .main .dot div:nth-child(3), .find-page .main .dot div:nth-child(3), .sign-page .main .dot div:nth-child(3), .edit-pw-page .main .dot div:nth-child(3), .mypage-page .main .dot div:nth-child(3), .myinfo-page .main .dot div:nth-child(3), .userule-page .main .dot div:nth-child(3) {
+  right: -50px;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
 }
 
 .search-page .main .search-center, .ranking-theme-page .main .search-center, .ranking-nowdays-page .main .search-center, .ranking-thismonth-page .main .search-center, .detail-page .main .search-center, .magazine-page .main .search-center, .asking-page .main .search-center, .login-page .main .search-center, .find-page .main .search-center, .sign-page .main .search-center, .edit-pw-page .main .search-center, .mypage-page .main .search-center, .myinfo-page .main .search-center, .userule-page .main .search-center {
@@ -781,6 +858,8 @@ body {
   margin-bottom: 20px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-animation: fadeIn 3s;
+          animation: fadeIn 3s;
   -webkit-animation: fadeInUp 3s;
           animation: fadeInUp 3s;
 }
@@ -805,7 +884,7 @@ body {
   width: 100%;
   height: 100%;
   padding-bottom: 10px;
-  cursor: default;
+  cursor: pointer;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
@@ -874,7 +953,7 @@ body {
 .detail-page .detail-main .main-top .photo > img {
   width: 100%;
   height: 100%;
-  cursor: default;
+  cursor: pointer;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
@@ -991,8 +1070,10 @@ body {
 }
 
 .detail-page .detail-main .detail-picture {
-  -webkit-animation: fadeInUp 2s;
-          animation: fadeInUp 2s;
+  -webkit-animation: fadeIn 3s;
+          animation: fadeIn 3s;
+  -webkit-animation: fadeInUp 3s;
+          animation: fadeInUp 3s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1019,7 +1100,7 @@ body {
 .detail-page .detail-main .detail-picture .store-list .img-container > img {
   width: 100%;
   height: 100%;
-  cursor: default;
+  cursor: pointer;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
@@ -1033,14 +1114,14 @@ body {
   font-size: 36px;
   color: gray;
   padding: 30px 80px;
-  cursor: default;
+  cursor: pointer;
 }
 
 .ranking-thismonth-page .thismonth {
   font-size: 36px;
   color: black;
   padding: 30px 80px;
-  cursor: default;
+  cursor: pointer;
 }
 
 .ranking-thismonth-page .thismonth .margin {
@@ -1054,14 +1135,14 @@ body {
   font-size: 36px;
   color: gray;
   padding: 30px 80px;
-  cursor: default;
+  cursor: pointer;
 }
 
 .ranking-nowdays-page .nowdays {
   font-size: 36px;
   color: black;
   padding: 30px 80px;
-  cursor: default;
+  cursor: pointer;
 }
 
 .ranking-nowdays-page .nowdays .margin {
@@ -1075,14 +1156,14 @@ body {
   font-size: 36px;
   color: gray;
   padding: 30px 80px;
-  cursor: default;
+  cursor: pointer;
 }
 
 .ranking-theme-page .theme {
   font-size: 36px;
   color: black;
   padding: 30px 80px;
-  cursor: default;
+  cursor: pointer;
 }
 
 .ranking-theme-page .theme .margin {
@@ -1172,7 +1253,7 @@ body {
   font-size: 14px;
   font-weight: bold;
   text-decoration: none;
-  cursor: default;
+  cursor: pointer;
 }
 
 .ranking-theme-page .all .main .rank-area, .ranking-thismonth-page .all .main .rank-area, .ranking-nowdays-page .all .main .rank-area {
@@ -1187,6 +1268,8 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 20px 0px;
+  -webkit-animation: fadeIn 1s;
+          animation: fadeIn 1s;
   -webkit-animation: fadeInUp 1s;
           animation: fadeInUp 1s;
 }
@@ -1236,12 +1319,13 @@ body {
   height: 77px;
   border-radius: 5px;
   margin: 0 auto;
+  cursor: pointer;
 }
 
 .ranking-theme-page .all .main .rank-area .ranking5 .ranking-store .name, .ranking-theme-page .all .main .rank-area .ranking10 .ranking-store .name, .ranking-thismonth-page .all .main .rank-area .ranking5 .ranking-store .name, .ranking-thismonth-page .all .main .rank-area .ranking10 .ranking-store .name, .ranking-nowdays-page .all .main .rank-area .ranking5 .ranking-store .name, .ranking-nowdays-page .all .main .rank-area .ranking10 .ranking-store .name {
   padding-bottom: 5px;
   font-size: 18px;
-  cursor: default;
+  cursor: pointer;
 }
 
 .ranking-theme-page .all .main .rank-area .ranking5 .ranking-store .keyword, .ranking-theme-page .all .main .rank-area .ranking10 .ranking-store .keyword, .ranking-thismonth-page .all .main .rank-area .ranking5 .ranking-store .keyword, .ranking-thismonth-page .all .main .rank-area .ranking10 .ranking-store .keyword, .ranking-nowdays-page .all .main .rank-area .ranking5 .ranking-store .keyword, .ranking-nowdays-page .all .main .rank-area .ranking10 .ranking-store .keyword {
@@ -1388,7 +1472,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  cursor: default;
+  cursor: pointer;
 }
 
 .magazine-page .main .news-list .list-item .item-info .more #text, .magazine-page .main .news-list .list-item2 .item-info .more #text, .magazine-page .main .news-list .list-item3 .item-info .more #text {
@@ -1642,7 +1726,7 @@ body {
 .login-page .main .login-center .login-form .login-help a {
   text-decoration: none;
   color: black;
-  cursor: default;
+  cursor: pointer;
 }
 
 .login-page .main .login-center .login-form .login-btn #login-btn {
@@ -1694,6 +1778,7 @@ body {
   padding: 16px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  cursor: pointer;
 }
 
 .login-page .main .login-center .login-form .sns-login .sns-login-btn .sns-btn .text-box {
@@ -1920,12 +2005,13 @@ body {
 
 .sign-page .main .sign-center .page-num2 .sign-form .accept .checkbox3 {
   padding-top: 1px;
+  cursor: pointer;
 }
 
 .sign-page .main .sign-center .page-num2 .sign-form .accept #accept {
   border-bottom: 2px solid black;
   padding-bottom: 4px;
-  cursor: default;
+  cursor: pointer;
   font-size: 14px;
 }
 
@@ -1933,7 +2019,7 @@ body {
   padding: 0px 10px;
   color: gray;
   font-size: 14px;
-  cursor: default;
+  cursor: pointer;
 }
 
 .sign-page .main .sign-center .page-num2 .sign-form #next-btn2 {
@@ -2064,6 +2150,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 
 .sign-page .main .accept-contents .contents .checkbox1 #agree1, .sign-page .main .accept-contents .contents .checkbox1 #agree2, .sign-page .main .accept-contents .contents .checkbox2 #agree1, .sign-page .main .accept-contents .contents .checkbox2 #agree2 {
@@ -2265,7 +2352,7 @@ body {
   margin-right: 20px;
   font-size: 14px;
   color: gray;
-  cursor: default;
+  cursor: pointer;
 }
 
 .mypage-page .main .mypage .mypage-top .my-list .favorite .margin, .mypage-page .main .mypage .mypage-top .my-list .user-info .margin, .mypage-page .main .mypage .mypage-top .my-list .use-rule .margin, .myinfo-page .main .mypage .mypage-top .my-list .favorite .margin, .myinfo-page .main .mypage .mypage-top .my-list .user-info .margin, .myinfo-page .main .mypage .mypage-top .my-list .use-rule .margin, .userule-page .main .mypage .mypage-top .my-list .favorite .margin, .userule-page .main .mypage .mypage-top .my-list .user-info .margin, .userule-page .main .mypage .mypage-top .my-list .use-rule .margin {
@@ -2300,6 +2387,8 @@ body {
   margin-bottom: 20px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-animation: fadeIn 3s;
+          animation: fadeIn 3s;
   -webkit-animation: fadeInUp 3s;
           animation: fadeInUp 3s;
 }
@@ -2324,7 +2413,7 @@ body {
   width: 100%;
   height: 100%;
   padding-bottom: 10px;
-  cursor: default;
+  cursor: pointer;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
@@ -2418,7 +2507,7 @@ body {
       -ms-flex: 1;
           flex: 1;
   color: #E5C4E3;
-  cursor: default;
+  cursor: pointer;
 }
 
 .myinfo-page .main .myinfo .logout #logout {
@@ -2541,7 +2630,7 @@ body {
 
 .myinfo-page .main .logout-box .answer .yes, .myinfo-page .main .logout-box .answer .no {
   margin: 50px 85px;
-  cursor: default;
+  cursor: pointer;
 }
 
 .userule-page .main .use-rule {
