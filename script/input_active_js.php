@@ -3,6 +3,9 @@
     $('#search-word:input').removeAttr('placeholder')
     $('#search-word:input').css('caretColor', '#d8a3d2')
   });
+  $('#search-word2').click(function(){
+    $('#search-word2:input').css('caretColor', '#d8a3d2')
+  });
   $('#title').click(function(){
     $('#title:input').removeAttr('placeholder')
     $('#title:input').css('caretColor', '#ADCFE2')
