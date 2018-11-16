@@ -24,15 +24,20 @@
       var slot_template = _.template($("#detail-slot").html());
       var row = data.payload
       var hastag = []
-      for(var i=0;i<row.hasgtag.length;i++){
-        if(row.hasgtag[i] === " ")
-          continue
-        hastag.push(row.hasgtag[i])
+      for(var i=0; i<row.hasgtag.length; i++){
+        if(row.hasgtag[i] === " "){
+            continue
+          hastag.push(row.hasgtag[i])
+        }
+      }
+      if(row.imgs.length === 0){
+        row.imgs[0] = {}
+        row.imgs[0].link = './images/desktop_detail_default.png'
       }
       row.hasgtag = hastag
       try{
-        $(".main-top").append( slot_template(row) )
-      }catch(err){}  
+        $(".main-top").append(slot_template(row))
+      }catch(err){console.log(err)}  
     })
   })
 </script>
@@ -88,7 +93,8 @@
         var rows = data.payload.imgs[i]
         try{
         $(".detail-picture").append( slot_template(rows) )
-        }catch(err){}
+        }catch(err){
+        }
       }
     })
   })
