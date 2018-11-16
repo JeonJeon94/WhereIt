@@ -26,8 +26,8 @@
             </div>
           </div>
           <div class="insta-btn">
-            <img id="in-down_bt" style="display:block; padding:5px;" src="./images/rank_down.png" />
-            <img id="in-up_bt" style="display:none; padding:5px;" src="./images/rank_up.png" />
+            <img id="in-down_bt" src="./images/rank_down.png" />
+            <img id="in-up_bt" src="./images/rank_up.png" />
           </div>
         </div> 
       </div>      

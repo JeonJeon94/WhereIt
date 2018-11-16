@@ -10,7 +10,7 @@
                 <p style="font-size:18px; margin:0 0 20px 0;"><b>검색 가능</b>한 지역</p>
                 <p>#강남 #삼청동 #샤로수길 #양재 #북촌 #익선동 #역삼 #홍대 #이태원 #신사동 #청담</p>
               </div>
-              <span id="tooltip">검색가능구역</span>
+              <span id="tooltip">검색가능지역</span>
             </div>
             <a href="">서비스정보</a>
             <a href="./ask.php">문의하기</a>

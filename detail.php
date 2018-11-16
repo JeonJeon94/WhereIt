@@ -42,7 +42,7 @@
       <img src="<%=imgs[0].link%>" onerror="this.src='./images/desktop_detail_default.png'"/>
     </div>
     <div class="info">
-      <div class="flex" style="padding-bottom:15px;">
+      <div class="flex" style="padding-bottom:15px; padding-top:15px;">
         <div class="keyword">
           <div class="child-flex-1"><%=collect_region%></div>
         </div>
@@ -67,11 +67,11 @@
       <div class="month">
         <div class="share" style="cursor:pointer;">
           <img src="./images/share.png" />
-          <div>월간 해시태그</div>
+          <div style="padding-top:10px; font-size:15px; font-weight:500;">월간 해시태그</div>
         </div>
         <div class="usage" style="cursor:pointer;">
           <img src="./images/star.png"/>
-          <div>사용량<br>2.55k</div>
+          <div style="padding-top:10px; font-size:15px; font-weight:500;">사용량<br>2.55K</div>
         </div>
       </div>
       <div class="map" style="cursor:pointer;">

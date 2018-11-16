@@ -25,7 +25,7 @@
             </div>
           </form>
           <div class="sns-login">
-            <div style="margin-bottom:20px;">
+            <div style="margin-bottom:20px; color:#504f57;">
               <div>혹은 <b>소셜계정</b>으로 간편하게 로그인하세요!</div>
             </div>
             <div class="sns-login-btn">

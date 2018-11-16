@@ -10,7 +10,7 @@
     <div class="main">
       <div class="mypage">
         <div class="mypage-top">
-          <div style="font-size: 36px;">
+          <div style="font-size: 36px; color:#504f57; font-family: 'Noto Sans KR', sans-serif;">
             <b>MY</b><br>
             페이지
           </div>
@@ -44,7 +44,7 @@
               </div>
               <div class="flex" style="padding:8px 4px; width:232px">
                 <div class="store-name">건대 소두마리</div>
-                <div class="views">2.4k</div>
+                <div class="views">2.4K</div>
               </div>
               <div class="flex" style="padding-left: 4px;">
                 <div class="keyword">

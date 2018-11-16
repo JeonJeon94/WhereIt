@@ -10,7 +10,7 @@
       <div class="search-center">
         <div class="main-top">
           <div style="font-size: 2em;">
-            <div>
+            <div style="color:#504f57;">
               가장 인기있는<br>
               <b>핫플레이스</b>
             </div>
@@ -106,12 +106,14 @@
   });
   $(function(){
     var searchWord = "<?php echo $search; ?>";
-    if(searchWord !== "" || searchWord !== " "){
+    if(searchWord !== "" && searchWord !== " "){
       api_search_data(searchWord,function(res){
           data = res
           list_length += 12
           SearchResultDraw()
       })
+    } else{
+      nosearch();
     }
   })
 </script>
@@ -121,9 +123,9 @@
     <div class="img-container" onclick="location.href='./detail.php?id=<%=_id%>'">
       <img alt="food-img" src="<%=main_img%>" onerror="this.src='./images/desktop_detail_default.png'"/>
     </div>
-    <div class="flex" style="padding:8px 4px; width:232px;">
+    <div class="flex" style="padding:5px 5px; width:232px;">
       <div class="store-name"><%=Name%></div>
-      <div class="views">2.4k</div>
+      <div class="views">2.40K</div>
     </div>
     <div class="flex" style="padding-left: 4px;">
       <div class="keyword">

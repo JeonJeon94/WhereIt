@@ -10,7 +10,7 @@
       <div class="search-center">
         <div class="main-top">
           <div style="font-size: 2em;">
-            <div>
+            <div style="color:#504f57;">
               가장 인기있는<br>
               <b>핫플레이스</b>
             </div>
@@ -125,7 +125,7 @@
     </div>
     <div class="flex" style="padding:8px 4px; width:232px;">
       <div class="store-name"><%=Name%></div>
-      <div class="views">2.4k</div>
+      <div class="views">2.40K</div>
     </div>
     <div class="flex" style="padding-left: 4px;">
       <div class="keyword">

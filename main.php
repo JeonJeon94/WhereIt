@@ -23,7 +23,7 @@
     <div class="search-form">
       <div class="where-top">
         <div class="where">
-          <div>
+          <div style="color:#504f57;">
             <b>찾으시는 곳</b>이<br>
             있으신가요?
           </div>

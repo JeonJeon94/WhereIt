@@ -4,7 +4,7 @@
     <div class="main">
       <div class="mypage">
         <div class="mypage-top">
-          <div style="font-size: 36px;">
+          <div style="font-size: 36px; font-family:'Noto Sans KR', sans-serif; color:#504f57;">
             <b>MY</b><br>
             페이지
           </div>

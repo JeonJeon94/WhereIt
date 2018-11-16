@@ -7,10 +7,10 @@
           <div class="num">
             01
           </div>
-          <div style="font-size:36px; margin-bottom:50px; font-weight:bold;">
+          <div style="font-size:36px; margin-bottom:50px; font-weight:bold; color:#504f57;">
             회원가입
           </div>
-          <div style="margin-bottom:40px;">
+          <div style="margin-bottom:40px; color:#504f57;">
             회원가입에 필요한 <b>이메일</b>과<b>비밀번호</b>를 입력해주세요.
           </div>
           <div class="sign-form">
@@ -27,10 +27,10 @@
           <div class="num">
             02
           </div>
-          <div style="font-size:36px; margin-bottom:50px; font-weight:bold">
+          <div style="font-size:36px; margin-bottom:50px; font-weight:bold; color:#504f57;">
             회원가입
           </div>
-          <div style="margin-bottom:40px;">
+          <div style="margin-bottom:40px; color:#504f57;">
             회원님만의 <b>멋진 닉네임</b>을 만들어주세요.
           </div>
           <div class="sign-form">
@@ -57,10 +57,10 @@
           <div class="num">
             03
           </div>
-          <div style="font-size:36px; margin-bottom:50px; font-weight:bold;">
+          <div style="font-size:36px; margin-bottom:50px; font-weight:bold; color:#504f57;">
             회원가입
           </div>
-          <div style="margin-bottom:26px;">
+          <div style="margin-bottom:26px; color:#504f57;">
             인증 후 회원가입이 완료됩니다.<br>
             입력하신 이메일로 <b>인증url</b>이 발송됩니다.
           </div>
@@ -78,7 +78,7 @@
             <div class="end">
               회원가입이 <b>완료</b>되었습니다.
             </div>
-            <div style="margin-bottom: 100px;">
+            <div style="margin-bottom: 100px; color:#504f57; color:#504f57;">
               입력하신 이메일에서 <b>인증절차를 마무리</b> 해주세요.
             </div>
             <div class="home-btn">
@@ -90,7 +90,7 @@
           <div class="accept-contents">
             <div class="contents">
               <div class="flex" style="align-items:center;">
-                <div id="view-accept"style="font-size:20px; flex:1; text-align:left;">
+                <div id="view-accept"style="font-size:20px; flex:1; text-align:left; color:#504f57;">
                   이용약관
                 </div>
                 <div class="checkbox1">
@@ -152,7 +152,7 @@
             </div>
             <div class="contents">
               <div class="flex" style="align-items:center;">
-                <div style="font-size:20px; flex:1; text-align:left;">
+                <div style="font-size:20px; flex:1; text-align:left; color:#504f57;">
                   개인정보 이용 약관
                 </div>
                 <div class="checkbox2">
