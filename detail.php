@@ -15,11 +15,17 @@
       </div>
       <div class="detail-picture">.
       </div>
+      <div class="loading dot">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </div>
   </div>
 </div>
 <script>
   $(function(){
+    $(window).scrollTop(0)
     api_shop_detail('<?php echo $id; ?>',function(data){
       var slot_template = _.template($("#detail-slot").html());
       var row = data.payload
@@ -86,18 +92,49 @@
 </script>
 
 <script>
-  $(function(){
+  var img_pivot = 0
+  var flag = true
+  function setImage(){
     api_shop_detail('<?php echo $id; ?>',function(data){
       var slot_template = _.template($("#picture-slot").html());
-      for(var i =0; i < data.payload.imgs.length; i++){
+      if(data.payload.imgs.length < img_pivot){
+        return
+      }
+      for(var i =img_pivot; i < img_pivot+12; i++){
         var rows = data.payload.imgs[i]
         try{
         $(".detail-picture").append( slot_template(rows) )
         }catch(err){
         }
       }
+      Loading()
     })
+    img_pivot += 12
+  }
+
+  function Loading(){
+    if(flag === true){
+      $('.loading').css('display', 'block')
+      flag = false
+      setTimeout(() => {
+        $('.loading').css('display', 'none')
+          flag = true
+      }, 3000);
+    }
+  }
+
+  $(window).scroll(function() {
+    if($(window).scrollTop() + $(window).height() == $(document).height() && flag) {
+      setImage()
+    }
+  });
+
+  $(function(){
+    if(flag)
+      setImage()
   })
+
+
 </script>
 
 <script id="picture-slot" type="text/template">
