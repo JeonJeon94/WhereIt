@@ -67,7 +67,7 @@
     -ms-user-select: none;
     user-select: none; }
   
-  .owl-carousel .owl-nav button.owl-prev{
+  .owl-carousel .owl-nav .owl-prev{
     background: none;
     border: none;
     padding: 0 !important;
@@ -76,25 +76,25 @@
     left: 20%;
     margin: 0;
   }
-  .owl-carousel .owl-nav button.owl-prev #aa{
+  .owl-carousel .owl-nav .owl-prev #aa{
     opacity: 0.7;
   }
-  .owl-carousel .owl-nav button.owl-prev #aa-a{
+  .owl-carousel .owl-nav .owl-prev #aa-a{
     position: absolute;
     top: 15px;
     left: 20px;
   }
-  .owl-carousel .owl-nav button.owl-prev:hover{
+  .owl-carousel .owl-nav .owl-prev:hover{
     background: none;
     cursor: default;
   }
-  .owl-carousel .owl-nav button.owl-prev:hover #aa{
+  .owl-carousel .owl-nav .owl-prev:hover #aa{
     opacity: 0.8;
   }
-  .owl-carousel .owl-nav button.owl-prev:active #aa{
+  .owl-carousel .owl-nav .owl-prev:active #aa{
     opacity: 1;
   }
-  .owl-carousel .owl-nav button.owl-next{
+  .owl-carousel .owl-nav .owl-next{
     background: none;
     border: none;
     padding: 0 !important;
@@ -103,22 +103,22 @@
     right: 20%;
     margin: 0;
   }
-  .owl-carousel .owl-nav button.owl-next #bb{
+  .owl-carousel .owl-nav .owl-next #bb{
     opacity: 0.7;
   }
-  .owl-carousel .owl-nav button.owl-next #bb-b{
+  .owl-carousel .owl-nav .owl-next #bb-b{
     position: absolute;
     top: 15px;
     right: 20px;
   }
-  .owl-carousel .owl-nav button.owl-next:hover{
+  .owl-carousel .owl-nav .owl-next:hover{
     background: none;
     cursor: default;
   }
-  .owl-carousel .owl-nav button.owl-next:hover #bb{
+  .owl-carousel .owl-nav .owl-next:hover #bb{
     opacity: 0.8;
   }
-  .owl-carousel .owl-nav button.owl-next:active #bb{
+  .owl-carousel .owl-nav .owl-next:active #bb{
     opacity: 1;
   }
   .owl-carousel button.owl-dot {

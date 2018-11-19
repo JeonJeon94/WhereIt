@@ -2967,7 +2967,7 @@
       '<img id="bb"src="./images/nav_bt.png" />'+'<img id="bb-b"src="./images/nav_arrow_right.png" />'
 		],
 		navSpeed: false,
-		navElement: 'button type="button" role="presentation"',
+		navElement: 'div role="presentation"',
 		navContainer: false,
 		navContainerClass: 'owl-nav',
 		navClass: [

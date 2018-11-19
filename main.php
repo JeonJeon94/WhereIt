@@ -9,13 +9,13 @@
   <div class="main">
     <div>
       <div class="owl-carousel owl-theme">
-        <div class="item">
+        <div class="item" style="width:1200px;">
           <img src="./images/foodimg3.jpeg">
         </div>
-        <div class="item">
+        <div class="item" style="width:1200px;">
           <img src="./images/foodimg2.jpeg">
         </div>
-        <div class="item">
+        <div class="item" style="width:1200px;">
           <img src="./images/foodimg1.jpeg">
         </div>
       </div>
