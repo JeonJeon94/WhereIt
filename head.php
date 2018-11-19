@@ -66,9 +66,9 @@ if(!empty($_GET['id'])){
           <div class="hot-word">
             인기검색어
           </div>
-          <div class="rank-container" style="display:flex;">
+          <div class="rank-container" style="display:flex; width:193px; height:44px;">
           <div class="hot-rank">
-            <div style="flex:0 1 auto;">
+            <div style="flex:1;">
               <div class="hot">
                 <div class="hot-list-h"><div class="num">1</div><a href="search.php?search=강남">강남</a></div>
                 <div class="hot-list" style="display:none;"><div class="num">2</div><a href="search.php?search=서초">서초</a></div>

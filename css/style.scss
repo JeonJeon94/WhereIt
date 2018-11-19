@@ -68,6 +68,9 @@ body{
 }
 
 .default-page{
+  input::-ms-clear{
+    display:none;
+  }
   input:focus{
     outline:none;
   }
@@ -87,6 +90,8 @@ body{
     flex:2;
   }
   .all{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     flex:1;
     height: inherit;
@@ -108,11 +113,13 @@ body{
       position: fixed;
       bottom: 100px;
       right: 100px;
-      text-align: center;
       z-index: 999;    
       cursor: pointer;
       letter-spacing: 3px;
-      
+
+      #top{
+        padding-left: 12px;
+      }
       #hover{
         display: none;
       }
@@ -124,7 +131,6 @@ body{
       position: fixed;
       bottom: 100px;
       right: 100px;
-      text-align: center;
       z-index: 999;    
       cursor: pointer;
       letter-spacing: 3px;
@@ -133,6 +139,7 @@ body{
         display: none;
       }
       #hover{
+        padding-left: 12px;
         display: inline-block;
       }
       #click{
@@ -143,7 +150,6 @@ body{
       position: fixed;
       bottom: 100px;
       right: 100px;
-      text-align: center;
       z-index: 999;    
       cursor: pointer;
 
@@ -154,10 +160,13 @@ body{
         display: none;
       }
       #click{
+        padding-left: 12px;
         display: inline-block;
       }
     }
     .head{
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
       width: 100%;
       flex-direction: column;
@@ -187,7 +196,6 @@ body{
           display: flex;
           justify-content: center;
           font-size: 14px;
-          width: 40px;
           
           a{
             text-decoration: none;
@@ -245,13 +253,12 @@ body{
           
           .hot-rank{
             display: flex;
-            height: 44px;
+            flex:1;
             margin-top: 0px;
             z-index: 2;
           
             .hot{
               flex-direction: column;
-              display: flex;
               border-radius: 5px;
               margin: 0 auto;
               padding: 0px 25px;
@@ -260,12 +267,11 @@ body{
           
               .hot-list-h{
                 display: flex;
-                flex:7;
                 padding-bottom:12px; 
                 padding-top: 11px;
                 align-items: center;
                 a{
-                  padding: 0px 40px 0px 20px;
+                  padding-left: 20px;
                   text-decoration: none;
                   color: #504f57;
                   cursor: pointer;
@@ -284,11 +290,10 @@ body{
               }
               .hot-list{
                 display: flex;
-                flex:7;
                 padding-bottom: 12px;
                 align-items: center;
                 a{
-                  padding: 0px 40px 0px 20px;
+                  padding-left: 20px;
                   text-decoration: none;
                   color: #504f57;
                   cursor: pointer;
@@ -317,70 +322,74 @@ body{
         }
       }  
     }
-  }
-  .footer{
-    display: flex;
-    max-height: 70px;
-    width: 100%;
-    background-color: #F1EDF0;
-
-    .info{
+    .footer{
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      width: 1200px;
-      font-size: 14px;
-      margin: 25px auto;
-
-      .copyright{
+      max-height: 70px;
+      width: 100%;
+      background-color: #F1EDF0;
+  
+      .info{
         display: flex;
-        align-items: center;
-        flex-shrink: 0;
-        color: #a39aa3;
-      }
-      .etc{
-        padding-left: 60px;
-        display: flex;
-        flex:1;
-        align-items: center;
-        justify-content: flex-end;
-
-        a{
-          text-decoration: none;
-          margin-left: 75px;
+        width: 1200px;
+        font-size: 14px;
+        margin: 25px auto;
+        max-height: 20px;
+  
+        .copyright{
+          display: flex;
+          align-items: center;
+          flex-shrink: 0;
           color: #a39aa3;
-          cursor: pointer;
         }
-        .area-ok{
-          color: #8D818C;
-          cursor: pointer;
-           
-          #tooltip{
-            position: relative;
-            display: inline-block;
+        .etc{
+          padding-left: 60px;
+          display: flex;
+          flex:1;
+          align-items: center;
+          justify-content: flex-end;
+  
+          a{
+            text-decoration: none;
+            margin-left: 75px;
+            color: #a39aa3;
+            cursor: pointer;
           }
-          .tooltip-content{
-            position: absolute;
-            bottom: 0;
-            margin-bottom: 75px;
-            width: 350px;
-            height: auto;
-            background-color: #faf6f9;
-            border: 1px solid #ebdaeb;
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow:10px 10px 30px 2px rgba(80,79,87, 0.5);
-            z-index: 1;
-            line-height: 30px;
-            visibility: hidden;
-            ::after{
+          .area-ok{
+            color: #8D818C;
+            cursor: pointer;
+             
+            #tooltip{
+              color: #a39aa3;
+              position: relative;
+              display: inline-block;
+            }
+            .tooltip-content{
               position: absolute;
-              content: '';
-              left: 0;
-              bottom: -30px;
-              width: 0;
-              height: 0;
-              border: 15px solid transparent;
-              border-top-color: #faf6f9;
-              margin-left: 21px;
+              bottom: 0;
+              margin-bottom: 75px;
+              width: 350px;
+              height: auto;
+              background-color: #faf6f9;
+              border: 1px solid #ebdaeb;
+              border-radius: 10px;
+              padding: 30px;
+              box-shadow:10px 10px 30px 2px rgba(80,79,87, 0.5);
+              z-index: 1;
+              line-height: 30px;
+              visibility: hidden;
+              ::after{
+                position: absolute;
+                content: '';
+                left: 0;
+                bottom: -30px;
+                width: 0;
+                height: 0;
+                border: 15px solid transparent;
+                border-top-color: #faf6f9;
+                margin-left: 21px;
+              }
             }
           }
         }
@@ -392,7 +401,7 @@ body{
 
 .main-page{
   .head{
-    margin-bottom: 20px;
+    margin-bottom: 31px;
 
     .where-form2{
       display:none;
@@ -411,9 +420,7 @@ body{
     }
   }
   .main{
-    display: flex;
-    flex: 1;
-    flex-direction: column;
+    
     width: 100%;
     .item img{
       max-height: 610px;
@@ -434,10 +441,10 @@ body{
 
         .where{
           display: flex;
-          width: 180px;
+          width: 190px;
           flex-direction: column;
           font-size: 30px;
-          margin-right: 50px;
+          margin-right: 40px;
         }
         .where-form{
           display: flex;
@@ -473,7 +480,6 @@ body{
               }
             }
             #search-btn{
-              display: flex;
               height: 50px;
               width: 200px;
               font-size: 14px;
@@ -486,7 +492,19 @@ body{
               box-sizing: border-box;
               letter-spacing: 3px;
               font-family: "Montserrat-bold", sans-serif;
-              
+
+
+              width: 180px;
+            height: 49px;
+            color: white;
+            background-color: #504f57;
+            font-size: 14px;
+            border: 0px solid #504f57;
+            border-radius: 51px;
+            font-family: "Montserrat-bold", sans-serif;
+            letter-spacing: 2px;
+            box-sizing: border-box;
+              //http://13.209.76.121/search.php
               &:hover{
                 background-color: #d0c1d0;
               }
@@ -589,6 +607,7 @@ body{
         display: flex;
         flex: 1;
         padding:35px 0px;
+        min-height: 78px;
 
         .search-time{
           display: flex;
@@ -944,9 +963,7 @@ body{
       }
     }
     .main{
-      flex: 5;
-      flex-direction: column;
-
+      
       .title{
         display: flex;
         text-align: center;
@@ -1097,7 +1114,7 @@ body{
       }
       .main-photo{
         width: 100%;
-        height: fit-content;
+        height: 471px;
         overflow: hidden;
         padding-bottom: 15px;
         
@@ -1114,7 +1131,7 @@ body{
       }
       .sub-photo{
         width: 100%;
-        height: fit-content;
+        height: 471px;
         overflow: hidden;
 
         >img{
@@ -1270,6 +1287,7 @@ body{
           box-sizing: border-box;
           color: #504f57;
           resize: none;
+          overflow: hidden;
           caret-color: #ADCFE2;
         }
         #send{
