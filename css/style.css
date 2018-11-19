@@ -811,13 +811,6 @@ body {
 .search-page .main .search-center, .ranking-theme-page .main .search-center, .ranking-nowdays-page .main .search-center, .ranking-thismonth-page .main .search-center, .detail-page .main .search-center, .magazine-page .main .search-center, .asking-page .main .search-center, .login-page .main .search-center, .find-page .main .search-center, .sign-page .main .search-center, .edit-pw-page .main .search-center, .mypage-page .main .search-center, .myinfo-page .main .search-center, .userule-page .main .search-center {
   width: 1100px;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 .search-page .main .search-center .main-top, .ranking-theme-page .main .search-center .main-top, .ranking-nowdays-page .main .search-center .main-top, .ranking-thismonth-page .main .search-center .main-top, .detail-page .main .search-center .main-top, .magazine-page .main .search-center .main-top, .asking-page .main .search-center .main-top, .login-page .main .search-center .main-top, .find-page .main .search-center .main-top, .sign-page .main .search-center .main-top, .edit-pw-page .main .search-center .main-top, .mypage-page .main .search-center .main-top, .myinfo-page .main .search-center .main-top, .userule-page .main .search-center .main-top {
@@ -896,6 +889,8 @@ body {
   margin-bottom: 20px;
   max-width: 275px;
   max-height: 292px;
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
 }
 
 .search-page .main .search-center .search-list .list-line .store-list .img-container, .ranking-theme-page .main .search-center .search-list .list-line .store-list .img-container, .ranking-nowdays-page .main .search-center .search-list .list-line .store-list .img-container, .ranking-thismonth-page .main .search-center .search-list .list-line .store-list .img-container, .detail-page .main .search-center .search-list .list-line .store-list .img-container, .magazine-page .main .search-center .search-list .list-line .store-list .img-container, .asking-page .main .search-center .search-list .list-line .store-list .img-container, .login-page .main .search-center .search-list .list-line .store-list .img-container, .find-page .main .search-center .search-list .list-line .store-list .img-container, .sign-page .main .search-center .search-list .list-line .store-list .img-container, .edit-pw-page .main .search-center .search-list .list-line .store-list .img-container, .mypage-page .main .search-center .search-list .list-line .store-list .img-container, .myinfo-page .main .search-center .search-list .list-line .store-list .img-container, .userule-page .main .search-center .search-list .list-line .store-list .img-container {
@@ -1161,6 +1156,8 @@ body {
   margin-bottom: 40px;
   max-width: 275px;
   max-height: 232px;
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
 }
 
 .detail-page .detail-main .detail-picture .store-list .img-container {
@@ -2498,6 +2495,8 @@ body {
   margin-bottom: 20px;
   max-width: 275px;
   max-height: 292px;
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
 }
 
 .mypage-page .main .favorite-list .list-line .store-list .img-container, .myinfo-page .main .favorite-list .list-line .store-list .img-container, .userule-page .main .favorite-list .list-line .store-list .img-container {

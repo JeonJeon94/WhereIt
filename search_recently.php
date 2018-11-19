@@ -48,7 +48,7 @@
     if(flag === true){
       $('.loading').css('display', 'block')
       flag = false
-      setTimeout(() => {
+      setTimeout(function(){
         $('.loading').css('display', 'none')
         if(data.payload.length >= list_length)
           flag = true
@@ -68,7 +68,7 @@
       }else{
         if(list_length !== 12){
           Loading()
-          setTimeout(() => {
+          setTimeout(function(){
             for(var i = list_length - 12; i < list_length; i++){
               var row = data.payload[i]
               if(row === undefined)

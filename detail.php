@@ -116,7 +116,7 @@
     if(flag === true){
       $('.loading').css('display', 'block')
       flag = false
-      setTimeout(() => {
+      setTimeout(function(){
         $('.loading').css('display', 'none')
           flag = true
       }, 3000);
