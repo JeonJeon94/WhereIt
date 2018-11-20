@@ -480,31 +480,18 @@ body{
               }
             }
             #search-btn{
-              height: 50px;
-              width: 200px;
+              height: 49px;
+              width: 190px;
               font-size: 14px;
               border: 0px solid #504f57;
               border-radius: 51px;
               background-color: #504f57;
               color: white;
-              letter-spacing: 2px;
               justify-content: center;
               box-sizing: border-box;
               letter-spacing: 3px;
               font-family: "Montserrat-bold", sans-serif;
 
-
-              width: 180px;
-            height: 49px;
-            color: white;
-            background-color: #504f57;
-            font-size: 14px;
-            border: 0px solid #504f57;
-            border-radius: 51px;
-            font-family: "Montserrat-bold", sans-serif;
-            letter-spacing: 2px;
-            box-sizing: border-box;
-            
               &:hover{
                 background-color: #d0c1d0;
               }
@@ -640,14 +627,13 @@ body{
           display: flex;
           margin-bottom: 20px;
           flex-wrap: wrap;
-          animation: fadeIn 3s;
-          animation: fadeInUp 3s;
 
           .store-list{
             flex:1;
             margin-bottom: 20px;
             max-width: 275px;
             max-height: 292px;
+            animation: fadeInUp 1s;
             flex-basis: auto;
 
             .img-container{
@@ -853,12 +839,11 @@ body{
       transition: all 0.5s;
     }
     .detail-picture{
-      animation: fadeIn 3s;
-      animation: fadeInUp 3s;
       display:flex;
       flex-wrap:wrap;
 
       .store-list{
+        animation: fadeInUp 1s;
         flex:1;
         margin-bottom: 40px;
         max-width: 275px;
@@ -1024,8 +1009,7 @@ body{
         flex: 1;
         box-sizing: border-box;
         padding: 20px 0px;
-        animation: fadeIn 1s;
-        animation: fadeInUp 1s;
+        min-height: 545px;
 
         .ranking5{
           border-right: 1px solid #e1eae9;
@@ -1037,9 +1021,10 @@ body{
           flex-direction: column;
 
           .ranking-store{
-            display: flex;
+            display: none;
             align-items: center;
             padding: 10px 0px;
+            animation: fadeInUp 1s;
 
             .rank-num{
               padding-right:30px; 
@@ -1149,7 +1134,7 @@ body{
       margin: 0px 100px;
       width: 1000px;
     
-      .list-item, .list-item2, .list-item3 {
+      .list-item{
         animation: fadeInUp 3s;
         display: flex;
         padding-bottom: 50px;
@@ -1985,7 +1970,6 @@ body{
         display: flex;
         margin-bottom: 20px;
         flex-wrap: wrap;
-        animation: fadeIn 3s;
         animation: fadeInUp 3s;
 
         .store-list{

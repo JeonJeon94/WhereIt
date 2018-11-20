@@ -40,7 +40,6 @@
             <div class="rank-num"><?php
               $_ = $i+1;
               $number = '0' . '' . $_;
-              echo "<script>console.log( 'Debug Objects: " . $number . "' );</script>";
               echo $number; 
             ?></div>
             <div class="store-img">
@@ -98,4 +97,22 @@
       </div>
     </div>
   
+<script>
+
+  var rank = $('.ranking-store')
+  
+  $(document).ready(function(){
+    for(var n=0; n < 10; n++){
+      ani_load(n)
+    }
+  });
+
+  function ani_load(n){
+    setTimeout(function() {
+      $(rank[n]).css('display','flex')
+    }, n * 200);
+  }
+
+</script>
+
 <?php include_once("./footer.php") ?>

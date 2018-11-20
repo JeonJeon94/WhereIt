@@ -666,14 +666,13 @@ body {
 }
 
 .main-page .main .search-form .where-top .where-form .form #search-btn {
-  height: 50px;
-  width: 200px;
+  height: 49px;
+  width: 190px;
   font-size: 14px;
   border: 0px solid #504f57;
   border-radius: 51px;
   background-color: #504f57;
   color: white;
-  letter-spacing: 2px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -681,16 +680,6 @@ body {
           box-sizing: border-box;
   letter-spacing: 3px;
   font-family: "Montserrat-bold", sans-serif;
-  width: 180px;
-  height: 49px;
-  color: white;
-  background-color: #504f57;
-  font-size: 14px;
-  border: 0px solid #504f57;
-  border-radius: 51px;
-  font-family: "Montserrat-bold", sans-serif;
-  letter-spacing: 2px;
-  box-sizing: border-box;
 }
 
 .main-page .main .search-form .where-top .where-form .form #search-btn:hover {
@@ -876,10 +865,6 @@ body {
   margin-bottom: 20px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-animation: fadeIn 3s;
-          animation: fadeIn 3s;
-  -webkit-animation: fadeInUp 3s;
-          animation: fadeInUp 3s;
 }
 
 .search-page .main .search-center .search-list .list-line .store-list, .ranking-theme-page .main .search-center .search-list .list-line .store-list, .ranking-nowdays-page .main .search-center .search-list .list-line .store-list, .ranking-thismonth-page .main .search-center .search-list .list-line .store-list, .detail-page .main .search-center .search-list .list-line .store-list, .magazine-page .main .search-center .search-list .list-line .store-list, .asking-page .main .search-center .search-list .list-line .store-list, .login-page .main .search-center .search-list .list-line .store-list, .find-page .main .search-center .search-list .list-line .store-list, .sign-page .main .search-center .search-list .list-line .store-list, .edit-pw-page .main .search-center .search-list .list-line .store-list, .mypage-page .main .search-center .search-list .list-line .store-list, .myinfo-page .main .search-center .search-list .list-line .store-list, .userule-page .main .search-center .search-list .list-line .store-list {
@@ -889,6 +874,8 @@ body {
   margin-bottom: 20px;
   max-width: 275px;
   max-height: 292px;
+  -webkit-animation: fadeInUp 1s;
+          animation: fadeInUp 1s;
   -ms-flex-preferred-size: auto;
       flex-basis: auto;
 }
@@ -1138,10 +1125,6 @@ body {
 }
 
 .detail-page .detail-main .detail-picture {
-  -webkit-animation: fadeIn 3s;
-          animation: fadeIn 3s;
-  -webkit-animation: fadeInUp 3s;
-          animation: fadeInUp 3s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1150,6 +1133,8 @@ body {
 }
 
 .detail-page .detail-main .detail-picture .store-list {
+  -webkit-animation: fadeInUp 1s;
+          animation: fadeInUp 1s;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -1350,10 +1335,7 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 20px 0px;
-  -webkit-animation: fadeIn 1s;
-          animation: fadeIn 1s;
-  -webkit-animation: fadeInUp 1s;
-          animation: fadeInUp 1s;
+  min-height: 545px;
 }
 
 .ranking-theme-page .all .main .rank-area .ranking5, .ranking-thismonth-page .all .main .rank-area .ranking5, .ranking-nowdays-page .all .main .rank-area .ranking5 {
@@ -1377,13 +1359,13 @@ body {
 }
 
 .ranking-theme-page .all .main .rank-area .ranking5 .ranking-store, .ranking-theme-page .all .main .rank-area .ranking10 .ranking-store, .ranking-thismonth-page .all .main .rank-area .ranking5 .ranking-store, .ranking-thismonth-page .all .main .rank-area .ranking10 .ranking-store, .ranking-nowdays-page .all .main .rank-area .ranking5 .ranking-store, .ranking-nowdays-page .all .main .rank-area .ranking10 .ranking-store {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   padding: 10px 0px;
+  -webkit-animation: fadeInUp 1s;
+          animation: fadeInUp 1s;
 }
 
 .ranking-theme-page .all .main .rank-area .ranking5 .ranking-store .rank-num, .ranking-theme-page .all .main .rank-area .ranking10 .ranking-store .rank-num, .ranking-thismonth-page .all .main .rank-area .ranking5 .ranking-store .rank-num, .ranking-thismonth-page .all .main .rank-area .ranking10 .ranking-store .rank-num, .ranking-nowdays-page .all .main .rank-area .ranking5 .ranking-store .rank-num, .ranking-nowdays-page .all .main .rank-area .ranking10 .ranking-store .rank-num {
@@ -1505,7 +1487,7 @@ body {
   width: 1000px;
 }
 
-.magazine-page .main .news-list .list-item, .magazine-page .main .news-list .list-item2, .magazine-page .main .news-list .list-item3 {
+.magazine-page .main .news-list .list-item {
   -webkit-animation: fadeInUp 3s;
           animation: fadeInUp 3s;
   display: -webkit-box;
@@ -1514,11 +1496,11 @@ body {
   padding-bottom: 50px;
 }
 
-.magazine-page .main .news-list .list-item .item-picture img, .magazine-page .main .news-list .list-item2 .item-picture img, .magazine-page .main .news-list .list-item3 .item-picture img {
+.magazine-page .main .news-list .list-item .item-picture img {
   border-radius: 10px;
 }
 
-.magazine-page .main .news-list .list-item .item-info, .magazine-page .main .news-list .list-item2 .item-info, .magazine-page .main .news-list .list-item3 .item-info {
+.magazine-page .main .news-list .list-item .item-info {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1533,26 +1515,26 @@ body {
   padding-left: 80px;
 }
 
-.magazine-page .main .news-list .list-item .item-info .info-date, .magazine-page .main .news-list .list-item2 .item-info .info-date, .magazine-page .main .news-list .list-item3 .item-info .info-date {
+.magazine-page .main .news-list .list-item .item-info .info-date {
   font-size: 18px;
   color: #b9bbc4;
   padding-bottom: 20px;
   letter-spacing: 3px;
 }
 
-.magazine-page .main .news-list .list-item .item-info .theme-title, .magazine-page .main .news-list .list-item2 .item-info .theme-title, .magazine-page .main .news-list .list-item3 .item-info .theme-title {
+.magazine-page .main .news-list .list-item .item-info .theme-title {
   font-size: 36px;
   font-weight: 500;
   padding-bottom: 20px;
   color: #504f57;
 }
 
-.magazine-page .main .news-list .list-item .item-info .text, .magazine-page .main .news-list .list-item2 .item-info .text, .magazine-page .main .news-list .list-item3 .item-info .text {
+.magazine-page .main .news-list .list-item .item-info .text {
   line-height: 25px;
   color: #504f57;
 }
 
-.magazine-page .main .news-list .list-item .item-info .more, .magazine-page .main .news-list .list-item2 .item-info .more, .magazine-page .main .news-list .list-item3 .item-info .more {
+.magazine-page .main .news-list .list-item .item-info .more {
   position: absolute;
   bottom: 20px;
   right: -15px;
@@ -1563,13 +1545,13 @@ body {
   color: #504f57;
 }
 
-.magazine-page .main .news-list .list-item .item-info .more #text, .magazine-page .main .news-list .list-item2 .item-info .more #text, .magazine-page .main .news-list .list-item3 .item-info .more #text {
+.magazine-page .main .news-list .list-item .item-info .more #text {
   font-size: 16px;
   letter-spacing: 4px;
   font-weight: bold;
 }
 
-.magazine-page .main .news-list .list-item .item-info .more > img, .magazine-page .main .news-list .list-item2 .item-info .more > img, .magazine-page .main .news-list .list-item3 .item-info .more > img {
+.magazine-page .main .news-list .list-item .item-info .more > img {
   color: #d8a3d2 !important;
   padding-top: 3px;
   padding-left: 10px;
@@ -1577,11 +1559,11 @@ body {
   height: 15px;
 }
 
-.magazine-page .main .news-list .list-item .item-info .more:hover #text, .magazine-page .main .news-list .list-item2 .item-info .more:hover #text, .magazine-page .main .news-list .list-item3 .item-info .more:hover #text {
+.magazine-page .main .news-list .list-item .item-info .more:hover #text {
   color: #d0c1d0;
 }
 
-.magazine-page .main .news-list .list-item .item-info .more:active #text, .magazine-page .main .news-list .list-item2 .item-info .more:active #text, .magazine-page .main .news-list .list-item3 .item-info .more:active #text {
+.magazine-page .main .news-list .list-item .item-info .more:active #text {
   color: #d8a3d2;
 }
 
@@ -2482,8 +2464,6 @@ body {
   margin-bottom: 20px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-animation: fadeIn 3s;
-          animation: fadeIn 3s;
   -webkit-animation: fadeInUp 3s;
           animation: fadeInUp 3s;
 }

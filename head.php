@@ -23,6 +23,7 @@ if(!empty($_GET['id'])){
   <link rel="stylesheet" href="./css/style.css?ver=1.1"  type="text/css" />
   <link rel="stylesheet" href="./OwlCarousel2/dist/assets/owl.carousel.css" type="text/css">
   <link rel="stylesheet" href="./OwlCarousel2/dist/assets/owl.theme.default.min.css" type="text/css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script type="text/javascript" src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.0.js" charset="utf-8"></script>
   <script src="./OwlCarousel2/docs/assets/vendors/jquery.min.js" type="text/javascript"></script>

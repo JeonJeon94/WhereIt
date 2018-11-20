@@ -50,9 +50,10 @@
       flag = false
       setTimeout(function(){
         $('.loading').css('display', 'none')
-        if(data.payload.length >= list_length)
+        if(data.payload.length >= list_length){
           flag = true
-      }, 3000);
+        }
+      }, 1000);
     }
   }
   function SearchResultDraw(){
@@ -66,10 +67,10 @@
       if(data.payload.length == 0 ){
         nosearch();
       }else{
-        if(list_length !== 12){
+        if(list_length !== 4){
           Loading()
           setTimeout(function(){
-            for(var i = list_length - 12; i < list_length; i++){
+            for(var i = list_length - 4; i < list_length; i++){
               var row = data.payload[i]
               if(row === undefined)
                 continue
@@ -80,10 +81,10 @@
                 $(".list-line").append( slot_template(row) )
               }catch(err){}  
             }
-          }, 3000);
+          }, 1000);
         }
         else{
-          for(var i = list_length - 12; i < list_length; i++){
+          for(var i = list_length - 4; i < list_length; i++){
             var row = data.payload[i]
             if(row === undefined)
               continue
@@ -102,25 +103,35 @@
   }
   $(window).scroll(function() {
     if($(window).scrollTop() + $(window).height() == $(document).height() && flag) {
-      list_length += 12
-      SearchResultDraw() 
+      list_length += 4
+      SearchResultDraw()
     }
   });
   $(function(){
     var searchWord = "<?php echo $search; ?>";
-    if(searchWord !== "" || searchWord !== " "){
-      api_search_data(searchWord,function(res){
-          data = res
-          list_length += 12
-          SearchResultDraw()
-      })
+    if(searchWord !== "" && searchWord !== " "){
+      for(var i=0; i <= 2; i++){
+        search_fandein(i,searchWord);
+      }
+    } else{
+      nosearch();
     }
   })
+  
+  function search_fandein(i,searchWord){
+    setTimeout(function(){
+        api_search_data(searchWord,function(res){
+            data = res
+            list_length += 4
+            SearchResultDraw()
+        })
+    },i*1300);    
+  }
 </script>
 
 <script id="store-slot" type="text/template">
   <div class="store-list">
-    <div class="img-container" onclick="location.href='./detail.php'">
+    <div class="img-container" onclick="location.href='./detail.php?id=<%=_id%>'">
       <img alt="food-img" src="<%=main_img%>" onerror="this.src='./images/desktop_detail_default.png'"/>
     </div>
     <div class="flex" style="padding:8px 4px; width:232px;">

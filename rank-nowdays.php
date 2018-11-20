@@ -80,4 +80,22 @@
       </div>
     </div>
   
+<script>
+  
+  var rank = $('.ranking-store')
+  
+  $(document).ready(function(){
+    for(var n=0; n < 10; n++){
+      ani_load(n)
+    }
+  });
+
+  function ani_load(n){
+    setTimeout(function() {
+      $(rank[n]).css('display','flex')
+    }, n * 200);
+  }
+
+</script>
+
 <?php include_once("./footer.php") ?>

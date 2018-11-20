@@ -24,9 +24,10 @@
   </div>
 </div>
 <script>
+  var storeId = '<?php echo $id; ?>'
+
   $(function(){
-    $(window).scrollTop(0)
-    api_shop_detail('<?php echo $id; ?>',function(data){
+    api_shop_detail(storeId,function(data){
       var slot_template = _.template($("#detail-slot").html());
       var row = data.payload
       var hastag = []
@@ -93,48 +94,84 @@
 
 <script>
   var img_pivot = 0
-  var flag = true
-  function setImage(){
-    api_shop_detail('<?php echo $id; ?>',function(data){
-      var slot_template = _.template($("#picture-slot").html());
-      if(data.payload.imgs.length < img_pivot){
-        return
-      }
-      for(var i =img_pivot; i < img_pivot+12; i++){
-        var rows = data.payload.imgs[i]
-        try{
-        $(".detail-picture").append( slot_template(rows) )
-        }catch(err){
+  var flag = false
+  var playing = false
+
+  function setImage(res){
+    var slot_template = _.template($("#picture-slot").html());
+    if(!playing){
+      img_pivot += 4
+      playing = true;
+      if(img_pivot === 4 || img_pivot === 8 || img_pivot ===12){
+        for(var i = img_pivot-4; i < img_pivot; i++){
+          var row = res.payload.imgs[i]
+          if(row === undefined){
+            continue
+          }
+          try{
+          $(".detail-picture").append( slot_template(row) )
+          }catch(err){}
         }
+        flag = true;
+        playing = false;
+        console.log("에바")
+      }else{
+        Loading()
+        setTimeout(function(){
+          for(var i = img_pivot -4; i < img_pivot; i++){
+            var row = res.payload.imgs[i]
+            if(row === undefined){
+              continue
+            }
+            try{
+            $(".detail-picture").append( slot_template(row) )
+            }catch(err){}
+          }
+          playing = false;
+        }, 1000)
       }
-      Loading()
-    })
-    img_pivot += 12
+    }
   }
 
   function Loading(){
+    console.log("타긴탓는ㅌ데",flag,playing)
     if(flag === true){
       $('.loading').css('display', 'block')
       flag = false
       setTimeout(function(){
         $('.loading').css('display', 'none')
-          flag = true
-      }, 3000);
+        flag = true
+      }, 1000);
     }
   }
 
   $(window).scroll(function() {
-    if($(window).scrollTop() + $(window).height() == $(document).height() && flag) {
-      setImage()
+    if($(window).scrollTop() + $(window).height() === $(document).height() && flag && !playing) {
+      api_shop_detail(storeId,function(data){
+        res = data
+        setImage(res)
+      })
     }
   });
 
   $(function(){
-    if(flag)
-      setImage()
-  })
+    var storeId ='<?php echo $id; ?>'
+    for(var i = 0; i <= 2; i++){
+      detail_fandein(i,storeId)
+    }
+  });
 
 
+
+  function detail_fandein(i,storeId){
+    setTimeout(function(){
+      api_shop_detail(storeId,function(data){
+        res = data
+        setImage(res)
+      })
+    }, i*500);
+  };
+  
 </script>
 
 <script id="picture-slot" type="text/template">
