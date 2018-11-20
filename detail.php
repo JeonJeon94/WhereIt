@@ -114,7 +114,6 @@
         }
         flag = true;
         playing = false;
-        console.log("에바")
       }else{
         Loading()
         setTimeout(function(){
@@ -134,7 +133,6 @@
   }
 
   function Loading(){
-    console.log("타긴탓는ㅌ데",flag,playing)
     if(flag === true){
       $('.loading').css('display', 'block')
       flag = false
