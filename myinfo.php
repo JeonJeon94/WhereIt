@@ -36,13 +36,13 @@
                 <div class="user-mail">
                   <div style="margin:0px 250px 30px 0px; color:gray;">이메일</div>
                   <div id="login-email">
-                    hiuyklnop@gmail.com
+                    whereit@gmail.com
                   </div>
                 </div>
                 <div class="user-id">
                   <div style="margin-right:250px; color:gray;">아이디</div>
                   <div id="login-id">
-                    hiuyklnop
+                    whereit
                   </div>
                 </div>
               </div>

@@ -11,9 +11,12 @@
       <div class="main-top">
       </div>
       <div class="map-container">
-        <iframe class="detail-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1821.8292275490492!2d127.0679270028805!3d37.541913447280834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca4e9cfeb8cdf%3A0xe2c2e87019dac86f!2z7ISc7Jq47Yq567OE7IucIOq0keynhOq1rCDtmZTslpHrj5kgOS0zOQ!5e1!3m2!1sko!2skr!4v1541928597174" allowfullscreen></iframe>
+        <img id="logo-left" src="./images/header/logo.png" />
+        <iframe id=detail-map scrolling="no" src="http://prt.map.naver.com/mashupmap/print?key=p1542878593848_-153604968"></iframe>
+        <a id=detail-site href="https://map.naver.com/?searchCoord=793de6260ef4aa30f1cb538daf1ccde0e1125a8775daaf70c407029b6b0f9f31&query=7ISc7Jq4IOyEnOy0iOq1rCDshJzstIjrjIDroZwgNDExIEdUIFRPV0VS&tab=1&lng=b896d58d9064a8e7e60e215b0f2fb68e&mapMode=0&mpx=833c4f37368d11c0e24e6c71092fcddb92d5784df699e74b3402f0b2ba6a0c37a0daea55cdf18cc028f76fa0c42796e1ae4dd4b7d1b2a78c2c1541ddee2f021a&lat=6963078383dbd6007191d60630bb9d8e&dlevel=12&enc=b64&menu=location"></a>
+        <img id="logo-right" src="./images/header/logo.png" />
       </div>
-      <div class="detail-picture">.
+      <div class="detail-picture">
       </div>
       <div class="loading dot">
         <div></div>
@@ -24,6 +27,7 @@
   </div>
 </div>
 <script>
+
   var storeId = '<?php echo $id; ?>'
 
   $(function(){
@@ -169,6 +173,8 @@
       })
     }, i*500);
   };
+
+
   
 </script>
 

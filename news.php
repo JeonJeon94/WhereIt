@@ -65,7 +65,7 @@
 
 <script>
   var news_length = 0
-  var limit = 5
+  var limit = 3
   function news_fadein(n){
     if(n < limit){
       var slot_template = _.template($("#news-slot").html());
