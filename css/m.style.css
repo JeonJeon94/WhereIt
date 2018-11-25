@@ -1,0 +1,246 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+@font-face {
+  font-family: 'Montserrat-bold';
+  font-style: bold;
+  font-weight: 700;
+  src: local("Montserrat-Bold"), url(http://fonts.gstatic.com/s/montserrat/v6/IQHow_FEYlDC4Gzy_m8fcvEr6Hm6RMS0v1dtXsGir4g.ttf) format("truetype");
+}
+
+.default-page {
+  margin: 0px;
+  font-family: "Montserrat", "Noto Sans KR", sans-serif;
+}
+
+.default-page input:focus {
+  outline: none;
+}
+
+.default-page button:focus {
+  outline: none;
+}
+
+.main-page .head .head-top {
+  height: 125px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-page .head .head-top .logo > img {
+  width: 170px;
+  height: 55px;
+  margin: 35px 0px 35px 80px;
+}
+
+.main-page .head .head-top .menu {
+  width: 22px;
+  height: 27px;
+  position: absolute;
+  right: 0;
+  margin: 49px 60px 52px 0px;
+}
+
+.main-page .head .head-top .menu .menu-bar {
+  width: 100%;
+  height: 100%;
+}
+
+.main-page .head .head-top .menu .menu-bar .slide-bar {
+  width: 22px;
+  height: 3px;
+  border-radius: 1px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #504F57;
+  background: #504F57;
+  margin-bottom: 6px;
+}
+
+.main-page .head .head-hot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+  height: 50px;
+  background: #f9f5f8;
+}
+
+.main-page .head .head-hot .rank-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 250px;
+  height: 50px;
+  margin-right: 55px;
+}
+
+.main-page .head .head-hot .rank-container .hot-ranking {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  z-index: 2;
+}
+
+.main-page .head .head-hot .rank-container .hot-ranking .hot {
+  font-size: 20px;
+  border-radius: 3px;
+  padding: 0 30px;
+}
+
+.main-page .head .head-hot .rank-container .hot-ranking .hot .hot-list-h {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 0;
+}
+
+.main-page .head .head-hot .rank-container .hot-ranking .hot .hot-list-h .num {
+  color: #D8A3D2;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.main-page .head .head-hot .rank-container .hot-ranking .hot .hot-list-h a {
+  text-decoration: none;
+  color: #504F57;
+  padding: 0 20px 0 30px;
+}
+
+.main-page .head .head-hot .rank-container .hot-ranking .hot .hot-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 0 10px 0;
+}
+
+.main-page .head .head-hot .rank-container .hot-ranking .hot .hot-list .num {
+  color: #D8A3D2;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.main-page .head .head-hot .rank-container .hot-ranking .hot .hot-list a {
+  text-decoration: none;
+  color: #504F57;
+  padding: 0 20px 0 30px;
+}
+
+.main-page .head .head-hot .rank-container .rank-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 20px;
+  height: 50px;
+  padding-left: 20px;
+}
+
+.main-page .head .head-hot .rank-container .rank-btn #down-btn {
+  display: block;
+  padding: 5px;
+}
+
+.main-page .head .head-hot .rank-container .rank-btn #up-btn {
+  display: none;
+  padding: 5px;
+}
+
+.main-page .main {
+  margin: 30px 0 60px 0;
+}
+
+.main-page .main .slide-picture {
+  width: 100%;
+  height: 100%;
+}
+
+.main-page .main .slide-picture .slide {
+  width: 902px;
+  height: 966px;
+  margin: 0 auto;
+}
+
+.main-page .main .slide-picture .slide > img {
+  width: 902px;
+  height: 966px;
+  border-radius: 40px;
+}
+
+.main-page .footer .footer-top {
+  color: #504F57;
+  font-size: 36px;
+  margin-left: 80px;
+  margin-bottom: 30px;
+}
+
+.main-page .footer .search-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+.main-page .footer .search-form > input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 800px;
+  height: 70px;
+  border: 1px solid;
+  margin: 0 auto;
+  border-radius: 40px;
+  padding-left: 30px;
+  font-size: 26px;
+  margin-bottom: 40px;
+}
+
+.main-page .footer .search-form #search-img {
+  width: 29px;
+  height: 30px;
+  position: absolute;
+  right: 85px;
+  top: 20px;
+}
+
+.main-page .footer .search-form > button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 300px;
+  margin: 0 auto;
+  height: 70px;
+  font-size: 20px;
+  letter-spacing: 4px;
+  border-radius: 40px;
+  color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #504F57;
+  border: 1px solid #504F57;
+  font-family: "Montserrat-bold", sans-serif;
+  margin-bottom: 50px;
+}
+
+.main-page .footer .search-form > button:hover {
+  background: #d0c1d0;
+}
+
+.main-page .footer .search-form > button:active {
+  background: #d8a3d2;
+}
+/*# sourceMappingURL=m.style.css.map */
