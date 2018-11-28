@@ -1,7 +1,4 @@
 <?php $page="magazine"; ?>
-<?php 
-
-?>
 
 <?php include_once('./head.php'); ?>
     <div class="move-top">

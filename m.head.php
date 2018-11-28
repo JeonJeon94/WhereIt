@@ -1,0 +1,115 @@
+<?php 
+  if(!empty($_POST['search'])){
+    $search = $_POST['search'];
+  }else{
+    $search = "";
+    if(!empty($_GET['search'])){
+      $search = $_GET['search'];
+    }else{
+      $search = "";
+    }
+  }
+  if(!empty($_GET['id'])){
+    $id=$_GET['id'];
+  }else{
+    $id="";
+  }
+?>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Where It</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./css/m.style.css?ver=1.1"  type="text/css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+  <script src="http://13.124.4.4/gen_api.js"></script>
+</head>
+<body class="default-page <?=$page?>-page">
+  <div class="slide-modal">
+    <div class="menu-slide">
+      <div id="close-icon">
+        x
+      </div>
+      <div id="login-icon">
+        <img src="./images/map.png" onclick="location.href='m.login.php'"/>
+      </div>
+      <div id="ranking-icon">
+        <img src="./images/map.png" onclick="location.href='m.rank.php'"/>
+      </div>
+      <div id="news-icon">
+        <img src="./images/map.png" onclick="location.href='m.news.php'"/>
+      </div>
+      <div id="rank-area-icon">
+        <img src="./images/map.png" />
+      </div>
+      <div class="tooltip-content">
+        <p style="font-size:36px; margin:0 0 30px 0;"><b>검색 가능</b>한 지역</p>
+        <p style="font-size:18px;">#강남 #삼청동 #샤로수길 #양재 #북촌 #익선동 #역삼 #홍대 #이태원 #신사동 #청담</p>
+      </div>
+      <div id="favorite-icon">
+        <img src="./images/map.png" onclick="location.href='m.mypage.php'"/>
+      </div>
+      <div id="contents-icon">
+        <img src="./images/map.png" onclick="location.href='m.contents.php'"/>
+      </div>
+      <div id="service-icon">
+        <img src="./images/map.png" onclick="location.href='m.service.php'"/>
+      </div>
+      <div id="ask-icon">
+        <img src="./images/map.png" onclick="location.href='m.ask.php'"/>
+      </div>
+    </div>
+  </div>
+  <div class="head">
+    <div class="head-top">
+      <div class="search-icon">
+        <img src="./images/search.png" />
+      </div>
+      <div class="logo">
+        <img src="./images/header/logo.png" onclick="location.href='m.index.php'"/>
+      </div>
+      <div class="form-container">
+        <div class="back" onclick="location.href='m.index.php'" >
+          X
+        </div>
+        <form  class="search-form2" method="POST" action="m.search.php">
+          <input type="text" name="search" value="<?php echo $search; ?>" />
+          <img id="search-img2" src="./images/search.png" onclick="submit()" />
+        </form>
+      </div>
+      <div class="menu">
+        <div class="menu-bar">
+          <div class="slide-bar"></div>
+          <div class="slide-bar"></div>
+          <div class="slide-bar"></div>
+        </div>
+      </div>
+    </div>
+    <div class="head-hot">
+      <div class="rank-container">
+        <div class="hot-ranking">
+          <div style="flex:1;"> 
+            <div class="hot">
+              <div class="hot-list-h"><div class="num">1</div><a href="m.search.php?search=강남">강남</a></div>
+              <div class="hot-list" style="display:none;"><div class="num">2</div><a href="m.search.php?search=건대">건대</a></div>
+              <div class="hot-list" style="display:none;"><div class="num">3</div><a href="m.search.php?search=동대문">동대문</a></div>
+              <div class="hot-list" style="display:none;"><div class="num">4</div><a href="m.search.php?search=마포">마포</a></div>
+              <div class="hot-list" style="display:none;"><div class="num">5</div><a href="m.search.php?search=신림">신림</a></div>
+              <div class="hot-list" style="display:none;"><div class="num">6</div><a href="m.search.php?search=강북">강북</a></div>
+              <div class="hot-list" style="display:none;"><div class="num">7</div><a href="m.search.php?search=왕십리">왕십리</a></div>
+              <div class="hot-list" style="display:none;"><div class="num">8</div><a href="m.search.php?search=잠실">잠실</a></div>
+              <div class="hot-list" style="display:none;"><div class="num">9</div><a href="m.search.php?search=이태원">이태원</a></div>
+              <div class="hot-list" style="display:none;"><div class="num">10</div><a href="m.search.php?search=홍대">홍대</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="rank-btn">
+          <img id="down-btn" src="./images/rank_down.png" />
+          <img id="up-btn" src="./images/rank_up.png" />
+        </div>
+      </div>
+    </div>
+  </div>
