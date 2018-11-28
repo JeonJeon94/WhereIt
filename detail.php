@@ -38,8 +38,8 @@
       for(var i=0; i<row.hasgtag.length; i++){
         if(row.hasgtag[i] === " "){
             continue
-          hastag.push(row.hasgtag[i])
         }
+        hastag.push(row.hasgtag[i])
       }
       if(row.imgs.length === 0){
         row.imgs[0] = {}

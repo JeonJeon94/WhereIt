@@ -30,8 +30,9 @@
       for(var i=0; i<row.hasgtag.length; i++){
         if(row.hasgtag[i] === " "){
             continue
-          hastag.push(row.hasgtag[i])
         }
+        hastag.push(row.hasgtag[i])
+        
       }
       if(row.imgs.length === 0){
         row.imgs[0] = {}
@@ -80,14 +81,16 @@
     </div>
   </div>
   <div class="store-adress">
-    <div class="hashtag">
-      <% 
-      for(var i=0; i < hasgtag.length;i++){
-      %>
-      <div id="hashtag">#<%=hasgtag[i]%></div>
-      <% } %>
+    <div style="display:flex; flex-direction:column;">
+      <div class="hashtag">
+        <% 
+        for(var i=0; i < hasgtag.length;i++){
+        %>
+        <div id="hashtag">#<%=hasgtag[i]%></div>
+        <% } %>
+      </div>
+      <div class="adress"><%=new_address%></div>
     </div>
-    <div class="adress"><%=new_address%></div>
     <div class="map" style="cursor:pointer;">
       <img src="./images/map.png"/>
     </div>
