@@ -25,6 +25,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+  <script type="text/javascript" src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.0.js" charset="utf-8"></script>
   <script src="http://13.124.4.4/gen_api.js"></script>
 </head>
 <body class="default-page <?=$page?>-page">
@@ -50,13 +51,13 @@
         <p style="font-size:18px;">#강남 #삼청동 #샤로수길 #양재 #북촌 #익선동 #역삼 #홍대 #이태원 #신사동 #청담</p>
       </div>
       <div id="favorite-icon">
-        <img src="./images/map.png" onclick="location.href='m.mypage.php'"/>
+        <img src="./images/map.png" onclick="location.href='m.favorite.php'"/>
       </div>
       <div id="contents-icon">
         <img src="./images/map.png" onclick="location.href='m.contents.php'"/>
       </div>
       <div id="service-icon">
-        <img src="./images/map.png" onclick="location.href='m.service.php'"/>
+        <img src="./images/map.png"/>
       </div>
       <div id="ask-icon">
         <img src="./images/map.png" onclick="location.href='m.ask.php'"/>
