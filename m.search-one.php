@@ -1,4 +1,4 @@
-<?php $page = "search" ?>
+<?php $page = "search-o" ?>
 
 <?php include_once("./m.head.php") ?>
 
@@ -8,12 +8,12 @@
         가장 인기있는<br><b>핫 플레이스</b>
       </div>
       <div class="search-time">
-        <a id="all"  href="m.search.php?search=<?php echo $search; ?>">누적</a>
-        <a id="recently" style="color:#504f57; font-weight:bold; border-bottom:2px solid black; padding-bottom:15px;" href="">최근 3개월</a>
+        <a id="all" style="color:#504f57; font-weight:bold; border-bottom:2px solid black; padding-bottom:15px;" href="">누적</a>
+        <a id="recently" href="m.search_recently.php?search=<?php echo $search; ?>">최근 3개월</a>
       </div>
       <div class="view-type">
-        <img id="double" src="./images/map.png" />
-        <img id="single" src="./images/map_active.png" onclick="location.href='m.search_recently-one.php?search=<?php echo $search; ?>'"/>
+        <img id="double" src="./images/map.png" onclick="location.href='m.search.php?search=<?php echo $search; ?>'"/>
+        <img id="single" src="./images/map_active.png" />
       </div>
     </div>
     <div class="search-list">
@@ -35,7 +35,6 @@
   var list_length = 0
   var data = null
   var flag = false
-
   function nosearch(){
     $('.no-search').css('display', 'block')
   }
@@ -70,7 +69,7 @@
               if(row === undefined)
                 continue
               let nameDump = row.Name
-              nameDump = nameDump.length>6 ? nameDump.slice(0,6)+"..." : nameDump
+              nameDump = nameDump.length>17 ? nameDump.slice(0,17)+"..." : nameDump
               row.Name = nameDump
               try{
                 $(".list-line").append( slot_template(row) )
@@ -84,7 +83,7 @@
             if(row === undefined)
               continue
             let nameDump = row.Name
-            nameDump = nameDump.length>6 ? nameDump.slice(0,6)+"..." : nameDump
+            nameDump = nameDump.length>17 ? nameDump.slice(0,17)+"..." : nameDump
             row.Name = nameDump
             try{
               $(".list-line").append( slot_template(row) )

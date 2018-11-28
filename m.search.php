@@ -13,7 +13,7 @@
       </div>
       <div class="view-type">
         <img id="double" src="./images/map.png" />
-        <img id="single" src="./images/map_active.png" />
+        <img id="single" src="./images/map_active.png" onclick="location.href='m.search-one.php?search=<?php echo $search; ?>'"/>
       </div>
     </div>
     <div class="search-list">
@@ -31,7 +31,7 @@
     </div>
   </div>
   
-  <script>
+<script>
   var list_length = 0
   var data = null
   var flag = false
@@ -142,4 +142,5 @@
     </div>
   </div>
 </script>
-  <?php include_once("./m.footer.php") ?>
+
+<?php include_once("./m.footer.php") ?>
