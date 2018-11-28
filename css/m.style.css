@@ -73,6 +73,8 @@
 
 .default-page {
   max-width: 960px;
+  min-width: 960px;
+  width: 100%;
   margin: 0px;
   font-family: "Montserrat", "Noto Sans KR", sans-serif;
 }
@@ -223,7 +225,7 @@
 .default-page .head .head-top .menu {
   width: 22px;
   height: 27px;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   margin: 49px 60px 52px 0px;
