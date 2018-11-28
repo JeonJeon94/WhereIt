@@ -1674,3 +1674,282 @@
     }
   }
 }
+.signup-page{
+  .main{
+    display: flex;
+    .sign-center{
+      display: flex;
+      flex-direction: column;
+      margin: 30px auto 140px auto;
+      width: 800px;
+      text-align: center;
+
+      .page-num1{
+        margin-top: 100px;
+
+        .num{
+          font-size: 40px;
+          margin-bottom: 30px;
+          color: #CFBFCF;
+          font-family: "Montserrat-bold", sans-serif;
+          letter-spacing: 10px;
+        }
+        .sign-form{
+
+          #sign-mail{
+            width: 600px;
+            height: 50px;
+            font-size: 18px;
+            border-radius: 50px;
+            padding-left: 30px;
+            padding-right: 30px;
+            margin-bottom: 15px;
+            border: 1px solid #d0c0d1;
+            background-color: #F9F5F8;
+            box-sizing: border-box;
+            color: #504f57;
+          }
+          #sign-pw{
+            width: 600px;
+            height: 50px;
+            font-size: 18px;
+            border-radius: 50px;
+            padding-left: 30px;
+            padding-right: 30px;
+            margin-bottom: 62px;
+            border: 1px solid #d0c0d1;
+            background-color: #F9F5F8;
+            box-sizing: border-box;
+            color: #504f57;
+          }
+          #next-btn1{  
+            width: 200px;
+            height: 50px;
+            color: white;
+            background-color: #504f57;
+            font-size: 18px;
+            border: 0px solid #504f57;
+            border-radius: 50px;
+            font-family: "Montserrat-bold", sans-serif;
+            letter-spacing: 3px;
+            box-sizing: border-box;
+      
+            &:active{
+              background-color: #d8a3d2;
+            }
+          }
+        }
+      }
+      .page-num2{
+        margin-top: 100px;  
+        display: none;
+
+        .num{
+          font-size: 40px;
+          margin-bottom: 30px;
+          color: #CFBFCF;
+          font-family: "Montserrat-bold", sans-serif;
+          letter-spacing: 10px;
+        }
+        .sign-form{
+
+          #username{
+            width: 600px;
+            height: 50px;
+            font-size: 18px;
+            border-radius: 50px;
+            padding-left: 30px;
+            margin-bottom: 50px;
+            border: 1px solid #d0c0d1;
+            background-color: #F9F5F8;
+            box-sizing: border-box;
+            color: #504f57;
+          }
+          .accept{
+            display:flex; 
+            justify-content:center;
+            margin-bottom: 50px;
+
+            .checkbox3{
+              padding-top: 1px;
+            }
+            #accept{
+              border-bottom: 2px solid #504f57;
+              padding-bottom: 4px;
+              font-size: 18px;
+              color:#504f57;
+            }
+            #agree3{
+              padding:0px 10px;
+              color: gray;
+              font-size: 18px;
+            }
+          }
+          #next-btn2{  
+            width: 200px;
+            height: 50px;
+            color: white;
+            background-color: #504f57;
+            font-size: 18px;
+            border: 0px solid #504f57;
+            border-radius: 50px;
+            font-family: "Montserrat-bold", sans-serif;
+            letter-spacing: 3px;
+            box-sizing: border-box;
+      
+            &:active{
+              background-color: #d8a3d2;
+            }
+          }
+        }
+      }
+      .page-num3{
+        margin-top: 100px;
+        display: none;
+
+        .num{
+          font-size: 45px;
+          margin-bottom: 30px;
+          color: #CFBFCF;
+          font-family: "Montserrat-bold", sans-serif;
+          letter-spacing: 10px;
+        }
+        .sign-form{
+
+          #get-mail{
+            width: 600px;
+            height: 50px;
+            font-size: 18px;
+            border-radius: 50px;
+            padding-left: 30px;
+            padding-right: 30px;
+            margin-bottom: 116px;
+            border: 1px solid #d0c0d1;
+            background-color: #F9F5F8;
+            box-sizing: border-box;
+            color: #504f57;
+          }
+          #send-btn{  
+            width: 200px;
+            height: 50px;
+            color: white;
+            background-color: #504f57;
+            font-size: 18px;
+            border: 0px solid #504f57;
+            border-radius: 50px;
+            font-family: "Montserrat-bold", sans-serif;
+            letter-spacing: 3px;
+            box-sizing: border-box;
+      
+            &:active{
+              background-color: #d8a3d2;
+            }
+          }
+        }
+      }
+    }
+    .accept-contents{
+      display: none;
+      border: 0px solid white !important;
+      background-color: white;
+      border-radius: 10px;
+      text-align: center;
+      width: 560px;
+      margin: 0 auto;
+
+      .contents{
+      
+        #view-accept{
+          font-size:20px; 
+          flex:1; 
+          text-align:left;
+        }
+        .box{
+          width: 560px;
+          height: 300px;
+          border: 2px solid #ebdaeb;
+          border-radius: 10px;
+          box-sizing: border-box;
+          margin: 15px 0px;
+
+          .contents-box{
+            width: 500px;
+            height: 260px;
+            border: 0px solid #ebdaeb;
+            margin: 20px auto;
+            font-size: 18px;
+            overflow-x:hidden;
+            box-sizing: border-box;
+            padding-right: 50px;
+            text-align: left;
+          }
+        }
+        .checkbox1, .checkbox2{
+          display: flex;
+          flex:1;
+          justify-content: flex-end;
+          align-items: center;
+          cursor: pointer;
+          
+          #agree1, #agree2{
+            float:left; 
+            padding-right: 10px;
+            color: gray;
+          }
+          #checkbox1, #checkbox2{
+            float:left; 
+            height:22px;
+            padding-top: 5px;
+          }
+        }
+      }
+      #confirm-btn{
+        width: 200px;
+        height: 50px;
+        color: white;
+        background-color: #504f57;
+        font-size: 18px;
+        border: 0px solid #504f57;
+        border-radius: 50px;
+        font-family: "Montserrat-bold", sans-serif;
+        letter-spacing: 3px;
+        box-sizing: border-box;
+        margin-top: 10px;
+  
+        &:active{
+          background-color: #d8a3d2;
+        }   
+      }
+    }
+    .signup-end{
+      margin-top:220px;
+      display: none;
+
+      .end{
+        font-size:45px;
+        margin-bottom: 32px;
+        color:#504f57;
+      }
+      .home-btn{
+        margin-bottom: 100px;
+
+        #home-btn{
+          width: 200px;
+          height: 50px;
+          color: white;
+          background-color: #504f57;
+          font-size: 18px;
+          border: 0px solid #504f57;
+          border-radius: 50px;
+          font-family: "Montserrat-bold", sans-serif;
+          letter-spacing: 3px;
+          box-sizing: border-box;
+    
+          &:active{
+            background-color: #d8a3d2;
+          }
+        }
+      }
+    }
+  }
+}
