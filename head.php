@@ -1,4 +1,6 @@
 <?php
+include './dbconfig.php';
+
 if(!empty($_POST['search'])){
   $search = $_POST['search'];
 }else{
@@ -13,6 +15,16 @@ if(!empty($_GET['id'])){
   $id=$_GET['id'];
 }else{
   $id="";
+}
+
+if($_SESSION['user_id']){
+  $user_id = $_SESSION['user_id'];
+  $member = sql_one("SELECT * FROM users WHERE id=$user_id");
+}
+if($NEED_LOGIN == true){
+  if(!$member){
+    alert_back("로그인을 해주세요!");
+  }
 }
 ?>
 <!DOCTYPE html>
@@ -50,7 +62,11 @@ if(!empty($_GET['id'])){
         </form>
       </div>
       <div class="login">
-        <a href="./login.php">로그인</a>
+        <?php if($member) {?>
+          <a href="./mypage.php"><?= $member[user_name]?> 님</a>
+        <?php }else{ ?>
+          <a href="./login.php">로그인</a>
+        <?php } ?>
       </div>
     </div>
     <div class="menu">

@@ -7,7 +7,7 @@
           <div class="login-title">
             로그인
           </div>
-          <form class="login" method="post" action="index.php">
+          <form class="login" method="post" action="login-check.php">
             <div class="login-input">  
               <input id="e-mail" type="text" name="user-email" placeholder="이메일" />
               <input id="password" type="password" name="password" placeholder="비밀번호" />

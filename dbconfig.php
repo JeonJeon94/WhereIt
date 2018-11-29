@@ -1,9 +1,80 @@
 <?php 
-  // phpinfo();
-  // $client = new MongoClient(
-  //   'mongodb://kay:myRealPassword@whereit-shard-00-00-rgxhe.mongodb.net:27017,whereit-shard-00-00-rgxhe.mongodb.net:27017,whereit-shard-00-00-rgxhe.mongodb.net:27017/admin?ssl=true&replicaSet=whereit-shard-0&authSource=admin&serverSelectionTryOnce=false&serverSelectionTimeoutMS=15000"');
-  // $client = new MongoDB\Driver\Manager('mongodb://root:okok2002@whereit-shard-00-00-rgxhe.mongodb.net:27017,whereit-shard-00-00-rgxhe.mongodb.net:27017,whereit-shard-00-00-rgxhe.mongodb.net:27017/admin?ssl=true&replicaSet=whereit-shard-0&authSource=admin&serverSelectionTryOnce=false&serverSelectionTimeoutMS=15000');
-  $client = new \MongoDB\Driver\Manager('mongodb://root:okok2002@whereit-shard-00-00-rgxhe.mongodb.net:27017,whereit-shard-00-00-rgxhe.mongodb.net:27017,whereit-shard-00-00-rgxhe.mongodb.net:27017/admin?ssl=true&replicaSet=whereit-shard-0&authSource=admin&serverSelectionTryOnce=false&serverSelectionTimeoutMS=15000');
-  $db = $client;
-  var_dump($db);
+  session_start();
+  
+  error_reporting(1);
+  ini_set("display_errors", 1);
+
+  $dbHost = "ec2-13-209-76-121.ap-northeast-2.compute.amazonaws.com";
+	$dbUser = "root";
+	$dbpass = "qwer1234!"; //DB패스워드를 입력해 주세요
+	$dbName = "whereit"; // DB명을 입력해 주세요.
+
+	$conn = mysqli_connect($dbHost,$dbUser,$dbpass);
+	mysqli_select_db($conn,$dbName);
+
+  mysqli_query($conn,"SET NAMES utf8mb4");
+
+  function escape_string($str){
+    global $conn;
+    return mysqli_real_escape_string($conn, $str); 
+  }
+  function sql_query($sql){
+    global $conn;
+    return mysqli_query($conn,$sql);
+  }
+  
+  function sql_fetch($result){
+    return mysqli_fetch_assoc($result);
+  }
+  
+  function sql_select($sql,$cache=null) {
+    global $redis;
+    if($cache){
+      $m = md5($sql);
+      $data = $redis->get($m);
+      if($data){
+        return json_decode(str_replace("\\\"","\"",str_replace("\\\\","\\",$data)),true);
+      }
+    }
+  
+    $res = sql_query($sql);
+    $list = array();
+    while($row = mysqli_fetch_assoc($res)) {
+      $list[] = $row;
+    }
+  
+    if($cache){
+      $data = escape_string(json_encode($list));
+      $redis->set($m, $data);
+      $redis->setTimeout($m, $cache);
+    }
+    return $list;
+  }
+  
+  function sql_one($sql){
+    global $conn;
+    $result = mysqli_query($conn,$sql);
+    return sql_fetch($result);
+  }
+
+  function php_redirect($url, $permanent = false)
+  {
+      if (headers_sent() === false)
+      {
+          header('Location: ' . $url, true, ($permanent === true) ? 301 : 302);
+      }
+
+      exit();
+  }
+  function history_back(){
+    echo "<script>window.history.back()</script>";
+    exit();	
+  }
+  function alert($msg){
+    echo "<script>alert('$msg')</script>";
+  }
+  function alert_back($msg){
+    echo "<script>alert('$msg')</script>";
+    history_back();
+  }
 ?>
