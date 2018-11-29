@@ -1,5 +1,11 @@
 <?php $page="detail"; ?>
 <?php include_once('./head.php'); ?>
+<?php 
+if($member){
+  $user_id=$member[id];
+  $favorit = sql_one("SELECT * FROM favorit WHERE shopId='$id' and user_id='$user_id'");
+}
+?>
   <div class="move-top">
     <img id="top" src="./images/top.png" />
     <img id="hover" src="./images/top-hover.png" />
@@ -27,6 +33,7 @@
   </div>
   
 <script>
+
 
   var storeId = '<?php echo $id; ?>'
 
@@ -85,8 +92,12 @@
           <img src="./images/share.png" />
           <div style="padding-top:10px; font-size:15px; font-weight:500;">월간 해시태그</div>
         </div>
-        <div class="usage" style="cursor:pointer;">
-          <img src="./images/star.png"/>
+        <div class="usage" style="cursor:pointer;" onclick='location.href="toggle_favorit.php?shopId=<?php echo $id; ?>"'>
+          <?php if($favorit){ ?>
+            <img src="./images/star_active.png"/>
+          <?php }else{ ?>
+            <img src="./images/star.png"/>
+          <?php } ?>
           <div style="padding-top:10px; font-size:15px; font-weight:500;">사용량<br>2.55K</div>
         </div>
       </div>
