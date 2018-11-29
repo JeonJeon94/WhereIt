@@ -9,5 +9,8 @@
 <?php include_once('./script/m.click-active_js.php') ?>
 <?php include_once('./script/m.naver_login_js.php') ?>
 <?php include_once('./script/m.agree_js.php') ?>
+<?php include_once('./script/m.click-icon_js.php') ?>
+<?php include_once('./script/m.rank-area_js.php') ?>
+<?php include_once('./script/slide_js.php') ?>
 
 </html>

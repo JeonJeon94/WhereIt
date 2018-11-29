@@ -3,10 +3,18 @@
 <?php include_once("./m.head.php") ?>
 
   <div class="main">
-    <div class="slide-picture">
-      <div class="slide"><img src="./images/foodimg3.jpeg" /></div>
-      <div class="slide"><img src="./images/foodimg1.jpeg" /></div>
-      <div class="slide"><img src="./images/foodimg2.jpeg" /></div>
+    <div>
+      <div class="owl-carousel owl-theme">
+        <div class="item" style="width:902px;">
+          <img src="./images/foodimg3.jpeg">
+        </div>
+        <div class="item" style="width:902px;">
+          <img src="./images/foodimg2.jpeg">
+        </div>
+        <div class="item" style="width:902px;">
+          <img src="./images/foodimg1.jpeg">
+        </div>
+      </div>
     </div>
   </div>
   <div class="footer">

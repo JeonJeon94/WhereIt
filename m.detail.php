@@ -69,13 +69,13 @@
       </div>
     </div>
     <div class="etc">
-      <div class="share" style="cursor:pointer;">
+      <div class="share">
         <img src="./images/share.png" />
       </div>
-      <div class="phone" style="cursor:pointer;">
-        <img src="./images/star.png"/>
+      <div class="phone">
+        <img src="./images/etc/phone.png"/>
       </div>
-      <div class="usage" style="cursor:pointer;">
+      <div class="usage">
         <img src="./images/star.png"/>
       </div>
     </div>

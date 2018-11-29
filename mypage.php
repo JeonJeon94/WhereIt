@@ -1,6 +1,7 @@
 <?php $page='mypage' ?>
+<?php $NEED_LOGIN = true; ?>
 
-<?php include_once('./head.php') ?>
+<?php include_once('./head.php'); ?>
     <div class="move-top">
       <img id="top" src="./images/top.png" />
       <img id="hover" src="./images/top-hover.png" />
@@ -37,8 +38,9 @@
         </div>
         <div class="favorite-list">
           <div class="list-line">
+            <h2>즐겨찾기 된 상점이 없습니다.</h2>
             <?php for($i=0; $i < 12; $i++){ ?>
-            <div class="store-list">
+            <!-- <div class="store-list">
               <div class="img-container" onclick="location.href='./detail.php'">
                 <img src="./images/food1.jpeg" />
               </div>
@@ -54,7 +56,7 @@
                   <div class="chile-flex-1;">카페</div>
                 </div>
               </div>
-            </div>
+            </div> -->
             <?php } ?>
           </div>
         </div>

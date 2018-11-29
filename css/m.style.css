@@ -225,9 +225,9 @@
 .default-page .head .head-top .menu {
   width: 22px;
   height: 27px;
-  position: fixed;
-  top: 0;
-  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: 49px 60px 52px 0px;
 }
 
@@ -274,16 +274,27 @@
   text-align: center;
 }
 
+.default-page .slide-modal .menu-slide #close-icon > img {
+  width: 20px;
+  height: 20px;
+}
+
 .default-page .slide-modal .menu-slide #login-icon, .default-page .slide-modal .menu-slide #ranking-icon, .default-page .slide-modal .menu-slide #news-icon, .default-page .slide-modal .menu-slide #rank-area-icon, .default-page .slide-modal .menu-slide #contents-icon, .default-page .slide-modal .menu-slide #service-icon, .default-page .slide-modal .menu-slide #ask-icon {
-  width: 28px;
-  margin: 50px auto;
+  text-align: center;
+  width: 75px;
+  margin: 40px auto;
+}
+
+.default-page .slide-modal .menu-slide #login-icon > img, .default-page .slide-modal .menu-slide #ranking-icon > img, .default-page .slide-modal .menu-slide #news-icon > img, .default-page .slide-modal .menu-slide #rank-area-icon > img, .default-page .slide-modal .menu-slide #contents-icon > img, .default-page .slide-modal .menu-slide #service-icon > img, .default-page .slide-modal .menu-slide #ask-icon > img {
+  width: 30px;
+  height: 30px;
 }
 
 .default-page .slide-modal .menu-slide .tooltip-content {
   position: absolute;
   width: 400px;
   height: auto;
-  top: 400px;
+  top: 380px;
   background-color: #faf6f9;
   border: 1px solid #ebdaeb;
   border-radius: 10px;
@@ -311,10 +322,15 @@
 
 .default-page .slide-modal .menu-slide #favorite-icon {
   text-align: center;
-  width: 60px;
-  margin: 50px auto 0 auto;
-  padding-bottom: 50px;
+  width: 75px;
+  margin: 40px auto 0 auto;
+  padding-bottom: 40px;
   border-bottom: 1px solid #d0c1d0;
+}
+
+.default-page .slide-modal .menu-slide #favorite-icon > img {
+  width: 30px;
+  height: 30px;
 }
 
 .default-page input:focus {
@@ -341,7 +357,12 @@
 }
 
 .main-page .head .head-top .logo {
-  display: block !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .main-page .head .head-top .logo > img {
@@ -357,8 +378,9 @@
 .main-page .head .head-top .menu {
   width: 22px;
   height: 27px;
-  position: fixed;
-  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: 49px 60px 52px 0px;
 }
 
@@ -382,21 +404,15 @@
   margin: 30px 0 60px 0;
 }
 
-.main-page .main .slide-picture {
-  width: 100%;
-  height: 100%;
-}
-
-.main-page .main .slide-picture .slide {
+.main-page .main .item {
   width: 902px;
-  height: 966px;
   margin: 0 auto;
 }
 
-.main-page .main .slide-picture .slide > img {
+.main-page .main .item > img {
   width: 902px;
   height: 966px;
-  border-radius: 40px;
+  border-radius: 10px;
 }
 
 .main-page .footer .footer-top {
@@ -514,12 +530,16 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 30px;
-  margin: 40px 0 40px 20px;
+  width: 20px;
+  margin: 50px 0 50px 30px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 30px;
+}
+
+.search-page .head .head-top .form-container .back > img, .search-o-page .head .head-top .form-container .back > img {
+  width: 20px;
+  height: 20px;
 }
 
 .search-page .head .head-top .form-container .search-form2, .search-o-page .head .head-top .form-container .search-form2 {
@@ -555,15 +575,16 @@
   width: 29px;
   height: 30px;
   position: absolute;
-  right: 225px;
+  right: 140px;
   top: 45px;
 }
 
 .search-page .head .head-top .menu, .search-o-page .head .head-top .menu {
   width: 22px;
   height: 27px;
-  position: fixed;
-  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: 49px 60px 52px 0px;
 }
 
@@ -621,6 +642,11 @@
   position: absolute;
   right: 80px;
   bottom: -100px;
+}
+
+.search-page .main .view-type > img, .search-o-page .main .view-type > img {
+  width: 30px;
+  height: 30px;
 }
 
 .search-page .main .view-type #double, .search-o-page .main .view-type #double {
@@ -699,8 +725,15 @@
   margin: 50px 30px;
 }
 
+.ranking-theme-page .search-icon > img, .ranking-nowdays-page .search-icon > img, .ranking-thismonth-page .search-icon > img, .news-page .search-icon > img, .detail-page .search-icon > img, .ask-page .search-icon > img, .login-page .search-icon > img, .find-page .search-icon > img, .signup-page .search-icon > img, .edit-pw-page .search-icon > img, .contents-page .search-icon > img, .favorite-page .search-icon > img, .mypage-page .search-icon > img {
+  width: 20px;
+  height: 20px;
+}
+
 .ranking-theme-page .logo, .ranking-nowdays-page .logo, .ranking-thismonth-page .logo, .news-page .logo, .detail-page .logo, .ask-page .logo, .login-page .logo, .find-page .logo, .signup-page .logo, .edit-pw-page .logo, .contents-page .logo, .favorite-page .logo, .mypage-page .logo {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: 35px auto;
 }
 
@@ -713,12 +746,15 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 30px;
-  margin: 40px 0 40px 20px;
+  margin: 50px 0 50px 30px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 30px;
+}
+
+.ranking-theme-page .form-container .back > img, .ranking-nowdays-page .form-container .back > img, .ranking-thismonth-page .form-container .back > img, .news-page .form-container .back > img, .detail-page .form-container .back > img, .ask-page .form-container .back > img, .login-page .form-container .back > img, .find-page .form-container .back > img, .signup-page .form-container .back > img, .edit-pw-page .form-container .back > img, .contents-page .form-container .back > img, .favorite-page .form-container .back > img, .mypage-page .form-container .back > img {
+  width: 20px;
+  height: 20px;
 }
 
 .ranking-theme-page .form-container .search-form2, .ranking-nowdays-page .form-container .search-form2, .ranking-thismonth-page .form-container .search-form2, .news-page .form-container .search-form2, .detail-page .form-container .search-form2, .ask-page .form-container .search-form2, .login-page .form-container .search-form2, .find-page .form-container .search-form2, .signup-page .form-container .search-form2, .edit-pw-page .form-container .search-form2, .contents-page .form-container .search-form2, .favorite-page .form-container .search-form2, .mypage-page .form-container .search-form2 {
@@ -754,7 +790,7 @@
   width: 29px;
   height: 30px;
   position: absolute;
-  right: 225px;
+  right: 140px;
   top: 45px;
 }
 
@@ -1169,8 +1205,18 @@
   margin: 0 auto;
 }
 
+.detail-page .detail-main .main-top .store-info .etc .share > img {
+  width: 27px;
+  height: 27px;
+}
+
 .detail-page .detail-main .main-top .store-info .etc .phone {
   margin: 0 auto;
+}
+
+.detail-page .detail-main .main-top .store-info .etc .phone > img {
+  width: 27px;
+  height: 27px;
 }
 
 .detail-page .detail-main .main-top .store-info .etc .usage {

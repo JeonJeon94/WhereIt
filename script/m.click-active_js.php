@@ -15,18 +15,18 @@
     $('.edit-info').css('display','block')
     $('.myinfo').css('display','none')
   });
-  $('#save').click(function(){
-    $('.myinfo').css('display','block')
-    $('.edit-info').css('display','none')
-  });
+  // $('#save').click(function(){
+  //   $('.myinfo').css('display','block')
+  //   $('.edit-info').css('display','none')
+  // });
   $('#cancel').click(function(){
     $('.myinfo').css('display','block')
     $('.edit-info').css('display','none')
   });
-  $('#logout').click(function(){
-    $('.logout-box').css('display','block')
-    $('.modal-container').css('display','block')
-  });
+  // $('#logout').click(function(){
+  //   $('.logout-box').css('display','block')
+  //   $('.modal-container').css('display','block')
+  // });
   $('#next-btn1').click(function(){
     $('.page-num1').css('display','none')
     $('.page-num2').css('display','block')

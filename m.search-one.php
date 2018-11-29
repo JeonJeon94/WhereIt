@@ -12,8 +12,8 @@
         <a id="recently" href="m.search_recently.php?search=<?php echo $search; ?>">최근 3개월</a>
       </div>
       <div class="view-type">
-        <img id="double" src="./images/map.png" onclick="location.href='m.search.php?search=<?php echo $search; ?>'"/>
-        <img id="single" src="./images/map_active.png" />
+        <img id="double" src="./images/etc/menu1.png" onclick="location.href='m.search.php?search=<?php echo $search; ?>'"/>
+        <img id="single" src="./images/etc/menu2-active.png" />
       </div>
     </div>
     <div class="search-list">

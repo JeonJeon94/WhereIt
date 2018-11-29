@@ -22,6 +22,10 @@
   <title>Where It</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./css/m.style.css?ver=1.1"  type="text/css" />
+  <link rel="stylesheet" href="./OwlCarousel2/dist/assets/owl.carousel.css" type="text/css">
+  <link rel="stylesheet" href="./OwlCarousel2/dist/assets/owl.theme.default.min.css" type="text/css">
+  <script src="./OwlCarousel2/docs/assets/vendors/jquery.min.js" type="text/javascript"></script>
+  <script src="./OwlCarousel2/dist/owl.carousel.js" type="text/javascript"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
@@ -32,49 +36,59 @@
   <div class="slide-modal">
     <div class="menu-slide">
       <div id="close-icon">
-        x
+        <img src="./images/etc/close.png" />
       </div>
       <div id="login-icon">
-        <img src="./images/map.png" onclick="location.href='m.login.php'"/>
+        <img src="./images/default/login.png" onclick="location.href='m.login.php'"/>
+        <div>로그인</div>
+        <img style="display:none;" src="./images/default/mypage.png" onclick="location.href='m.mypage.php'"/>
+        <div style="display:none;">마이페이지</div>
       </div>
       <div id="ranking-icon">
-        <img src="./images/map.png" onclick="location.href='m.rank.php'"/>
+        <img src="./images/default/rank.png" onclick="location.href='m.rank.php'"/>
+        <div>랭킹</div>
       </div>
       <div id="news-icon">
-        <img src="./images/map.png" onclick="location.href='m.news.php'"/>
+        <img src="./images/default/news.png" onclick="location.href='m.news.php'"/>
+        <div>매거진</div>
       </div>
       <div id="rank-area-icon">
-        <img src="./images/map.png" />
+        <img src="./images/default/area.png" />
+        <div>검색가능 지역</div>
       </div>
       <div class="tooltip-content">
         <p style="font-size:36px; margin:0 0 30px 0;"><b>검색 가능</b>한 지역</p>
         <p style="font-size:18px;">#강남 #삼청동 #샤로수길 #양재 #북촌 #익선동 #역삼 #홍대 #이태원 #신사동 #청담</p>
       </div>
       <div id="favorite-icon">
-        <img src="./images/map.png" onclick="location.href='m.favorite.php'"/>
+        <img src="./images/default/favorite.png" onclick="location.href='m.favorite.php'"/>
+        <div>즐겨찾기</div>
       </div>
       <div id="contents-icon">
-        <img src="./images/map.png" onclick="location.href='m.contents.php'"/>
+        <img src="./images/default/contents.png" onclick="location.href='m.contents.php'"/>
+        <div>이용약관</div>
       </div>
       <div id="service-icon">
-        <img src="./images/map.png"/>
+        <img src="./images/default/service.png"/>
+        <div>서비스정보</div>
       </div>
       <div id="ask-icon">
-        <img src="./images/map.png" onclick="location.href='m.ask.php'"/>
+        <img src="./images/default/ask.png" onclick="location.href='m.ask.php'"/>
+        <div>문의하기</div>
       </div>
     </div>
   </div>
   <div class="head">
     <div class="head-top">
       <div class="search-icon">
-        <img src="./images/search.png" />
+        <img src="./images/ETC/search.png" />
       </div>
       <div class="logo">
         <img src="./images/header/logo.png" onclick="location.href='m.index.php'"/>
       </div>
       <div class="form-container">
         <div class="back" onclick="location.href='m.index.php'" >
-          X
+          <img src="./images/ETC/close.png" />
         </div>
         <form  class="search-form2" method="POST" action="m.search.php">
           <input type="text" name="search" value="<?php echo $search; ?>" />

@@ -14,12 +14,10 @@
             회원가입에 필요한 <b>이메일</b>과<b>비밀번호</b>를 입력해주세요.
           </div>
           <div class="sign-form">
-            <form method="post">
+            <div style="display:flex; flex-direction:column; align-items:center;">
               <input id="sign-mail" type="text" name="sign-mail" placeholder="이메일을 입력해주세요(whereit@whereit.kr)" />
               <input id="sign-pw" type="password" name="sign-pw" placeholder="비밀번호를 입력해주세요(8자 이상 입력해주세요)" />
-            </form>  
-            <div class="next-btn">
-              <button id="next-btn1">NEXT</button>
+              <input id="next-btn1" value="NEXT" />
             </div>
           </div>
         </div>
@@ -34,23 +32,21 @@
             회원님만의 <b>멋진 닉네임</b>을 만들어주세요.
           </div>
           <div class="sign-form">
-            <form method="post">
-              <input id="username" type="text" name="username" placeholder="4~16자의 한글, 영문 또는 숫자로 입력해주세요." maxlength="16" />              
-              <div class="accept">
-                <div id="accept">
-                  이용약관
-                </div>
-                <div id="agree3">
-                  동의함
-                </div>
-                <div class="checkbox3">
-                  <img src="images/box.png"/>
-                </div>
+            <input id="username" type="text" name="username" placeholder="4~16자의 한글, 영문 또는 숫자로 입력해주세요." maxlength="16" />              
+            <div class="accept">
+              <div id="accept">
+                이용약관
               </div>
-            </form> 
+              <div id="agree3">
+                동의함
+              </div>
+              <div class="checkbox3">
+                <img src="images/box.png"/>
+              </div>
+            </div>
             <div class="next-btn">
               <button id="next-btn2">NEXT</button>
-            </div> 
+            </div>
           </div>
         </div>
         <div class="page-num3">
@@ -62,15 +58,16 @@
           </div>
           <div style="margin-bottom:26px; color:#504f57;">
             인증 후 회원가입이 완료됩니다.<br>
-            입력하신 이메일로 <b>인증url</b>이 발송됩니다.
+            입력하신 이메일로 <b>인증url</b>이 발송됩니다.<br>
+            메일로 전송된 링크를 클릭하여 인증절차를 마무리해주세요.
           </div>
           <div class="sign-form">
-            <form method="post" action="signup.php">
+            <!-- <form method="post" action="signup-post.php">
               <input id="get-mail" type="text" name="get-mail" placeholder="가입 시 입력하신 이메일을 입력해 주세요." />
             </form>
             <div class="send-btn">
               <button id="send-btn">SEND</button>
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="signup-end">
@@ -82,7 +79,7 @@
               입력하신 이메일에서 <b>인증절차를 마무리</b> 해주세요.
             </div>
             <div class="home-btn">
-              <button id="home-btn" onclick="location.href='index.php'">HOME</button>
+              <button id="home-btn" onclick="location.href='/login.php'">HOME</button>
             </div>
           </div>
         </div>

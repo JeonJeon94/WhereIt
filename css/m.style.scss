@@ -173,9 +173,7 @@
       .menu{
         width: 22px;
         height: 27px;
-        position: fixed;
-        top: 0;
-        right: 0;
+        display: flex;
         margin: 49px 60px 52px 0px;
 
         .menu-bar{
@@ -218,17 +216,28 @@
         font-size: 28px;
         margin: 45px auto 50px auto;
         text-align: center;
+
+        >img{
+          width: 20px;
+          height: 20px;
+        }
       }
 
       #login-icon, #ranking-icon, #news-icon, #rank-area-icon, #contents-icon, #service-icon, #ask-icon{
-        width: 28px;
-        margin: 50px auto;
+        text-align: center;
+        width: 75px;
+        margin: 40px auto;
+
+        >img{
+          width: 30px;
+          height: 30px;
+        }
       }
       .tooltip-content{
         position: absolute;
         width: 400px;
         height: auto;
-        top: 400px;
+        top: 380px;
         background-color: #faf6f9;
         border: 1px solid #ebdaeb;
         border-radius: 10px;
@@ -254,10 +263,15 @@
       }
       #favorite-icon{
         text-align: center;
-        width: 60px;
-        margin: 50px auto 0 auto;
-        padding-bottom: 50px;
+        width: 75px;
+        margin: 40px auto 0 auto;
+        padding-bottom: 40px;
         border-bottom: 1px solid #d0c1d0;
+        
+        >img{
+          width: 30px;
+          height: 30px;
+        }
       }
     }
   }
@@ -282,8 +296,8 @@
         display:none !important;
       }
       .logo{
-        display: block !important;
-
+        display: flex !important;
+        flex: 1;
         >img{
           width: 170px;
           height: 55px;
@@ -297,8 +311,7 @@
       .menu{
         width: 22px;
         height: 27px;
-        position: fixed;
-        right: 0;
+        display: flex;
         margin: 49px 60px 52px 0px;
 
         .menu-bar{
@@ -321,22 +334,34 @@
   .main{
     margin: 30px 0 60px 0;
 
-    .slide-picture{
-      width: 100%;
-      height: 100%;
+    .item{
+      width: 902px;
+      margin: 0 auto;
 
-      .slide{
+      >img{
         width: 902px;
         height: 966px;
-        margin: 0 auto;
-
-        >img{
-          width: 902px;
-          height: 966px;
-          border-radius: 40px;
-        }
+        border-radius: 10px;
       }
-    }
+    } 
+    
+
+    // .slide-picture{
+    //   width: 100%;
+    //   height: 100%;
+
+    //   .slide{
+    //     width: 902px;
+    //     height: 966px;
+    //     margin: 0 auto;
+
+    //     >img{
+    //       width: 902px;
+    //       height: 966px;
+    //       border-radius: 40px;
+    //     }
+    //   }
+    // }
   }
   .footer{
 
@@ -433,10 +458,14 @@
 
         .back{
           display: flex;
-          width: 30px;
-          margin: 40px 0 40px 20px;
+          width: 20px;
+          margin: 50px 0 50px 30px;
           align-items: center;
-          font-size: 30px;
+          
+          >img{
+            width: 20px;
+            height: 20px;
+          }
         }
         .search-form2{
           display: flex;
@@ -460,7 +489,7 @@
             width: 29px;
             height: 30px;
             position: absolute;
-            right: 225px;
+            right: 140px;
             top: 45px;
           }
         }
@@ -468,8 +497,7 @@
       .menu{
         width: 22px;
         height: 27px;
-        position: fixed;
-        right: 0;
+        display: flex;
         margin: 49px 60px 52px 0px;
 
         .menu-bar{
@@ -523,6 +551,10 @@
       right: 80px;
       bottom: -100px;
 
+      >img{
+        width: 30px;
+        height: 30px;
+      }
       #double{
         margin-right: 20px;
       }
@@ -591,9 +623,13 @@
   .search-icon{
     position: absolute;
     margin: 50px 30px;
+    >img{
+      width: 20px;
+      height: 20px;
+    }
   }
   .logo{
-    display: block;
+    display: flex;
     margin: 35px auto;
   }
   .form-container{
@@ -602,10 +638,13 @@
     
     .back{
       display: flex;
-      width: 30px;
-      margin: 40px 0 40px 20px;
+      margin: 50px 0 50px 30px;
       align-items: center;
-      font-size: 30px;
+
+      >img{
+        width: 20px;
+        height: 20px;
+      }
     }
     .search-form2{
       display: flex;
@@ -629,7 +668,7 @@
         width: 29px;
         height: 30px;
         position: absolute;
-        right: 225px;
+        right: 140px;
         top: 45px;
       }
     }
@@ -1000,9 +1039,19 @@
             
           .share{
             margin: 0 auto;
+            
+            >img{
+              width: 27px;
+              height: 27px;
+            }
           }
           .phone{
             margin: 0 auto;
+            
+            >img{
+              width: 27px;
+              height: 27px;
+            }
           }
           .usage{
             margin: 0 auto;

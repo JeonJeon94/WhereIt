@@ -36,19 +36,19 @@
                 <div class="user-mail">
                   <div style="margin:0px 250px 30px 0px; color:gray;">이메일</div>
                   <div id="login-email">
-                    whereit@gmail.com
+                  <?=$member[user_email]?>
                   </div>
                 </div>
                 <div class="user-id">
                   <div style="margin-right:250px; color:gray;">아이디</div>
                   <div id="login-id">
-                    whereit
+                  <?=$member[user_name]?>
                   </div>
                 </div>
               </div>
             </div>
             <div class="logout">
-              <div id="logout">로그아웃</div>
+              <div id="logout" onclick="location.href='logout.php'">로그아웃</div>
             </div>
           </div>
           <div class="edit-btn">
@@ -56,31 +56,31 @@
           </div>
         </div>
         <div class="edit-info">
-          <form id="edit-form" method="post">
+          <form id="edit-form" method="post" action="user.update.php">
             <div class="edit-line">
               <div class=line-title>이메일</div>
-              <div style="padding-left:20px; height:30px;">wereit@whereit.kr</div>
+              <div style="padding-left:20px; height:30px;"><?=$member[user_email]?></div>
             </div>
             <div class="edit-line">
               <div class=line-title>비밀번호</div>
-              <input id="password" type="text" name="password" placeholder="비밀번호를 입력해주세요." />
+              <input id="password" type="password" name="password" placeholder="비밀번호를 입력해주세요." />
             </div>
             <div class="edit-line">
               <div class=line-title>비밀번호 변경</div>
-              <input id="new_pw" type="text" name="new_pw" placeholder="비밀번호를 입력해주세요.(8자 이상 입력해주세요)" />
+              <input id="new_pw" type="password" name="new_pw" placeholder="비밀번호를 입력해주세요.(8자 이상 입력해주세요)" />
             </div>
             <div class="edit-line">
               <div class=line-title>비밀번호 확인</div>
-              <input id="new_pw2" type="text" name="new_pw2" placeholder="비밀번호를 입력해주세요.(8자 이상 입력해주세요)" />
+              <input id="new_pw2" type="password" name="new_pw2" placeholder="비밀번호를 입력해주세요.(8자 이상 입력해주세요)" />
             </div>
             <div class="edit-line">
-              <div class=line-title>아이디</div>
-              <input id="username" type="text" name="username" placeholder="아이디" />
+              <div class=line-title>닉네임</div>
+              <input id="username" type="text" name="username" placeholder="닉네임" value="<?=$member[user_name]?>" />
             </div>
           </form>
           <div style="text-align:center;">
-            <button id="save">SAVE</button>
-            <button id="cancel">CANCEL</button>
+            <button id="save" onclick="$('form').submit()">SAVE</button>
+            <button id="cancel" onclick="location.reload()">CANCEL</button>
           </div>
         </div>
       </div>

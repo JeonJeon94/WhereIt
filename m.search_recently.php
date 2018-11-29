@@ -12,8 +12,8 @@
         <a id="recently" style="color:#504f57; font-weight:bold; border-bottom:2px solid black; padding-bottom:15px;" href="">최근 3개월</a>
       </div>
       <div class="view-type">
-        <img id="double" src="./images/map.png" />
-        <img id="single" src="./images/map_active.png" onclick="location.href='m.search_recently-one.php?search=<?php echo $search; ?>'"/>
+        <img id="double" src="./images/etc/menu1-active.png" />
+        <img id="single" src="./images/etc/menu2.png" onclick="location.href='m.search_recently-one.php?search=<?php echo $search; ?>'"/>
       </div>
     </div>
     <div class="search-list">
