@@ -88,7 +88,7 @@
       </div>
       <div class="form-container">
         <div class="back" onclick="location.href='m.index.php'" >
-          <img src="./images/ect/close.png" />
+          <img src="./images/etc/close.png" />
         </div>
         <form  class="search-form2" method="POST" action="m.search.php">
           <input type="text" name="search" value="<?php echo $search; ?>" />
