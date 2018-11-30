@@ -81,14 +81,14 @@
   <div class="head">
     <div class="head-top">
       <div class="search-icon">
-        <img src="./images/ETC/search.png" />
+        <img src="./images/etc/search.png" />
       </div>
       <div class="logo">
         <img src="./images/header/logo.png" onclick="location.href='m.index.php'"/>
       </div>
       <div class="form-container">
         <div class="back" onclick="location.href='m.index.php'" >
-          <img src="./images/ETC/close.png" />
+          <img src="./images/ect/close.png" />
         </div>
         <form  class="search-form2" method="POST" action="m.search.php">
           <input type="text" name="search" value="<?php echo $search; ?>" />
