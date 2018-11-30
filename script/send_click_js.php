@@ -51,16 +51,12 @@
     $('.myinfo').css('display','none')
     $('.edit-info').css('display','block')
   });
-  // $('#save').click(function(){
-  //   $('.myinfo').css('display','block')
-  //   $('.edit-info').css('display','none')
-  // });
   $('#cancel').click(function(){
     $('.myinfo').css('display','block')
     $('.edit-info').css('display','none')
   });
-  // $('#logout').click(function(){
-  //   $('.logout-box').css('display','block')
-  //   $('.modal-container').css('display','block')
-  // });
+  $('#logout').click(function(){
+    $('.logout-box').css('display','block')
+    $('.modal-container').css('display','block')
+  });
 </script>

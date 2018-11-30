@@ -1,8 +1,3 @@
- <!-- 
-  test id    T2gAKVtQHVUdwkqP3sew
-  test pw    bxz3Ih2wFu
--->
-
 <?php $page = "main"; ?>
 
 <?php include_once('./head.php'); ?>

@@ -48,7 +48,7 @@
               </div>
             </div>
             <div class="logout">
-              <div id="logout" onclick="location.href='logout.php'">로그아웃</div>
+              <div id="logout">로그아웃</div>
             </div>
           </div>
           <div class="edit-btn">
@@ -90,7 +90,7 @@
             로그아웃하시겠습니까?
           </div>
           <div class="answer">
-            <div class="yes" onclick="location.href='index.php'">
+            <div class="yes" onclick="location.href='logout.php'">
               예
             </div>
             <div class="no" onclick="location.href='myinfo.php'">

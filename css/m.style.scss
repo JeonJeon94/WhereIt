@@ -405,15 +405,13 @@
         color: white;
         justify-content: center;
         background: #504F57;
-        border: 1px solid #504F57;
+        border: 0px solid #504F57;
         font-family: "Montserrat-bold", sans-serif;
         margin-bottom: 50px;
 
-        &:hover{
-          background: #d0c1d0;
-        }
         &:active{
           background: #d8a3d2;
+
         }
       }
     }
@@ -1327,9 +1325,7 @@
                 padding: 16px;
                 box-sizing: border-box;
               }
-              #naverIdLogin{
 
-              }
               .text-box{
                 font-size: 15px;
                 color: gray;

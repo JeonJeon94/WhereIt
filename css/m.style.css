@@ -470,13 +470,9 @@
       -ms-flex-pack: center;
           justify-content: center;
   background: #504F57;
-  border: 1px solid #504F57;
+  border: 0px solid #504F57;
   font-family: "Montserrat-bold", sans-serif;
   margin-bottom: 50px;
-}
-
-.main-page .footer .search-form > button:hover {
-  background: #d0c1d0;
 }
 
 .main-page .footer .search-form > button:active {
