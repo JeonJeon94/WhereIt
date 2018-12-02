@@ -8,6 +8,6 @@
 		}
 	);
 	
-	naverLogin.init();
+	// naverLogin.init();
 	
 </script>
