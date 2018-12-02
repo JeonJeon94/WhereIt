@@ -1,4 +1,6 @@
 <?php 
+  include './dbconfig.php';
+
   if(!empty($_POST['search'])){
     $search = $_POST['search'];
   }else{
@@ -14,6 +16,16 @@
   }else{
     $id="";
   }
+  
+  if($_SESSION['user_id']){
+    $user_id = $_SESSION['user_id'];
+    $member = sql_one("SELECT * FROM users WHERE id=$user_id");
+  }
+  if($NEED_LOGIN == true){
+    if(!$member){
+      alert_back("로그인을 해주세요!");
+    }
+  }
 ?>
 <!DOCTYPE html>
 <html>
@@ -22,10 +34,10 @@
   <title>Where It</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./css/m.style.css?ver=1.1"  type="text/css" />
-  <link rel="stylesheet" href="./OwlCarousel2/dist/assets/owl.carousel.css" type="text/css">
-  <link rel="stylesheet" href="./OwlCarousel2/dist/assets/owl.theme.default.min.css" type="text/css">
-  <script src="./OwlCarousel2/docs/assets/vendors/jquery.min.js" type="text/javascript"></script>
-  <script src="./OwlCarousel2/dist/owl.carousel.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
@@ -39,10 +51,13 @@
         <img src="./images/etc/close.png" />
       </div>
       <div id="login-icon">
-        <img src="./images/default/login.png" onclick="location.href='m.login.php'"/>
+      <?php if(!$member){?>
+        <img src='./images/default/login.png' onclick="location.href='m.login.php'"/>
         <div>로그인</div>
-        <img style="display:none;" src="./images/default/mypage.png" onclick="location.href='m.mypage.php'"/>
-        <div style="display:none;">마이페이지</div>
+      <?php }else if($member){?>
+        <img src='./images/default/mypage.png' onclick="location.href='m.mypage.php'"/>
+        <div>마이페이지</div>
+      <?php } ?>
       </div>
       <div id="ranking-icon">
         <img src="./images/default/rank.png" onclick="location.href='m.rank.php'"/>
@@ -87,7 +102,7 @@
         <img src="./images/header/logo.png" onclick="location.href='m.index.php'"/>
       </div>
       <div class="form-container">
-        <div class="back" onclick="location.href='m.index.php'" >
+        <div class="back">
           <img src="./images/etc/close.png" />
         </div>
         <form  class="search-form2" method="POST" action="m.search.php">
@@ -129,3 +144,9 @@
       </div>
     </div>
   </div>
+
+<script>
+  $('.back').click(function(){
+    window.history.back()
+  });
+</script>
