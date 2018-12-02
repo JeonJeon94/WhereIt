@@ -13,7 +13,7 @@ if(strlen($username) == 0){
   alert_back("닉네임을 입력해주세요.");
 }
 if($new_pw != $new_pw2){
-  alert_back("변경할 패스워드가 다릅니다.");
+  alert_back("변경할 비밀번호가 다릅니다.");
 }
 
 $member = sql_one("SELECT * FROM users WHERE id='$user_id' and password=PASSWORD('$password')");
@@ -27,6 +27,6 @@ if($member){
   <script>location.href='/myinfo.php'</script>
   <?php
 }else {
-  alert_back("패스워드가 다릅니다.");
+  alert_back("비밀먼호가 다릅니다.");
 }
 ?>

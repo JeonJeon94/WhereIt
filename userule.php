@@ -1,4 +1,5 @@
 <?php $page='userule' ?>
+<?php $NEED_LOGIN = true; ?>
 
 <?php include_once('./head.php') ?>
     <div class="main">

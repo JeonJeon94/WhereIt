@@ -56,12 +56,12 @@
     $result = mysqli_query($conn,$sql);
     return sql_fetch($result);
   }
-
+  
   function php_redirect($url, $permanent = false)
-  {
+  {  
       if (headers_sent() === false)
-      {
-          header('Location: ' . $url, true, ($permanent === true) ? 301 : 302);
+      { 
+        header('Location: ' . $url, true, ($permanent === true) ? 301 : 302);
       }
 
       exit();

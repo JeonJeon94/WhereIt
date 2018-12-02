@@ -63,7 +63,7 @@ if($NEED_LOGIN == true){
       </div>
       <div class="login">
         <?php if($member) {?>
-          <a href="./mypage.php"><?= $member[user_name]?> 님</a>
+          <a href="./myinfo.php"><?= $member[user_name]?> 님</a>
         <?php }else{ ?>
           <a href="./login.php">로그인</a>
         <?php } ?>

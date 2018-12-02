@@ -38,7 +38,9 @@
         </div>
         <div class="favorite-list">
           <div class="list-line">
-            <h2>즐겨찾기 된 상점이 없습니다.</h2>
+            <div style="margin:0 auto;">
+              <h2>즐겨찾기 된 상점이 없습니다.</h2>
+            </div>
             <?php for($i=0; $i < 12; $i++){ ?>
             <!-- <div class="store-list">
               <div class="img-container" onclick="location.href='./detail.php'">

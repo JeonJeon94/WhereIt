@@ -1,4 +1,5 @@
 <?php $page='myinfo' ?>
+<?php $NEED_LOGIN = true; ?>
 
 <?php include_once('./head.php') ?>
     <div class="main">
@@ -75,7 +76,7 @@
             </div>
             <div class="edit-line">
               <div class=line-title>닉네임</div>
-              <input id="username" type="text" name="username" placeholder="닉네임" value="<?=$member[user_name]?>" />
+              <input id="username" type="text" name="username" value="<?=$member[user_name]?>" />
             </div>
           </form>
           <div style="text-align:center;">
