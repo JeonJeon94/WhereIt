@@ -1,14 +1,44 @@
-<script>
+<script type="text/javascript">
 
-  $(document).ready(function(){
-    var swiper = new Swiper('.swiper-container', {
-      slidesPerView: 1,
-      spaceBetween: 30,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
+    $('.owl-carousel').owlCarousel({
+        loop:true,
+        stagePadding: 0,
+        center:true,
+        margin:20,
+        nav:true,
+        autoWidth:true,
+        responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:1
+        }
+      }
+    })
+    $('.loop').owlCarousel({
+        center: true,
+        items:2,
+        loop:true,
+        margin:50,
+        responsive:{
+            600:{
+                items:4
+            }
+        }
     });
-  });
-
+    $('.nonloop').owlCarousel({
+        center: true,
+        items:2,
+        loop:false,
+        margin:10,
+        responsive:{
+            600:{
+                items:4
+            }
+        }
+    });
 </script>

@@ -1,15 +1,19 @@
 <?php $page = "main"; ?>
-
 <?php include_once("./m.head.php"); ?>
 
   <div class="main">
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="./images/slide1.jpg" /></div>
-        <div class="swiper-slide"><img src="./images/slide2.jpg" /></div>
-        <div class="swiper-slide"><img src="./images/slide3.jpg" /></div>
+    <div>
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <img src="./images/foodimg3.jpeg">
+        </div>
+        <div class="item">
+          <img src="./images/foodimg2.jpeg">
+        </div>
+        <div class="item">
+          <img src="./images/foodimg1.jpeg">
+        </div>
       </div>
-      <div class="swiper-pagination"></div>
     </div>
   </div>
   <div class="footer">

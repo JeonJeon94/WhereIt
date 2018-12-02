@@ -34,13 +34,12 @@
   <title>Where It</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./css/m.style.css?ver=1.1"  type="text/css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
+  <link rel="stylesheet" href="./OwlCarousel3/dist/assets/owl.carousel.css" type="text/css">
+  <link rel="stylesheet" href="./OwlCarousel3/dist/assets/owl.theme.default.min.css" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+  <script src="./OwlCarousel3/docs/assets/vendors/jquery.min.js" type="text/javascript"></script>
+  <script src="./OwlCarousel3/dist/owl.carousel.js" type="text/javascript"></script>
   <script type="text/javascript" src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.0.js" charset="utf-8"></script>
   <script src="http://13.124.4.4/gen_api.js"></script>
 </head>
