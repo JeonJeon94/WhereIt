@@ -1,4 +1,6 @@
 <?php $page="favorite" ?>
+<?php $NEED_LOGIN = true; ?>
+
 <?php include_once("./m.head.php") ?>
   <div class="main">
     <div style="font-size:36px; color:#504f57; margin:40px 0 40px 40px;">
@@ -7,8 +9,11 @@
     </div>
     <div class="favorite-list">
       <div class="list-line">
+        <div style="margin:0 auto">
+          <h2>즐겨찾기 된 상점이 없습니다.</h2>
+        </div>
         <?php for($i=0; $i < 12; $i++){ ?>
-        <div class="store-list">
+        <!-- <div class="store-list">
           <div class="img-container" onclick="location.href='./m.detail.php'">
             <img src="./images/food1.jpeg" />
           </div>
@@ -24,7 +29,7 @@
               <div>카페</div>
             </div>
           </div>
-        </div>
+        </div> -->
         <?php } ?>
       </div>
     </div>

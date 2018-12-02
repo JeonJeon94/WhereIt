@@ -76,7 +76,7 @@
         <img src="./images/etc/phone.png"/>
       </div>
       <div class="usage">
-        <img src="./images/star.png"/>
+        <img src="./images/star.png" onclick='location.href="m.toggle_favorit.php?shopId=<?php echo $id; ?>"'/>
       </div>
     </div>
   </div>

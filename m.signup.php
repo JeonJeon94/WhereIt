@@ -14,10 +14,10 @@
           <b>이메일</b>과<b>비밀번호</b>를 입력해주세요.
         </div>
         <div class="sign-form">
-          <form method="post">
+          <div>
             <input id="sign-mail" type="text" name="sign-mail" placeholder="이메일을 입력해주세요(whereit@whereit.kr)" />
             <input id="sign-pw" type="password" name="sign-pw" placeholder="비밀번호를 입력해주세요(8자 이상 입력해주세요)" />
-          </form>  
+          </div>  
           <div class="next-btn">
             <button id="next-btn1">NEXT</button>
           </div>
@@ -35,7 +35,7 @@
           <br>만들어주세요.
         </div>
         <div class="sign-form">
-          <form method="post">
+          <div>
             <input id="username" type="text" name="username" placeholder="4~16자의 한글, 영문 또는 숫자로 입력해주세요." maxlength="16" />              
             <div class="accept">
               <div id="accept">
@@ -47,14 +47,14 @@
               <div class="checkbox3">
                 <img src="images/box.png"/>
               </div>
-            </div>
-          </form> 
+            </div>  
+          </div> 
           <div class="next-btn">
             <button id="next-btn2">NEXT</button>
           </div> 
         </div>
       </div>
-      <div class="page-num3">
+      <!-- <div class="page-num3">
         <div class="num">
           03
         </div>
@@ -73,7 +73,7 @@
             <button id="send-btn">SEND</button>
           </div>
         </div>
-      </div>
+      </div> -->
       <div class="signup-end">
         <div class="end-center">
           <div class="end">

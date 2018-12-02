@@ -334,34 +334,22 @@
   .main{
     margin: 30px 0 60px 0;
 
-    .item{
-      width: 902px;
-      margin: 0 auto;
+    .swiper-container{
+      width: 100%;
+      height: 966px;
 
-      >img{
-        width: 902px;
-        height: 966px;
-        border-radius: 10px;
+      .swiper-wrapper{
+
+        .swiper-slide{
+
+          >img{
+            width: 902px;
+            height: 966px;
+            border-radius: 10px;
+          }
+        }
       }
-    } 
-    
-
-    // .slide-picture{
-    //   width: 100%;
-    //   height: 100%;
-
-    //   .slide{
-    //     width: 902px;
-    //     height: 966px;
-    //     margin: 0 auto;
-
-    //     >img{
-    //       width: 902px;
-    //       height: 966px;
-    //       border-radius: 40px;
-    //     }
-    //   }
-    // }
+    }
   }
   .footer{
 
@@ -1526,10 +1514,10 @@
     .list-line{
       display: flex;
       flex-wrap: wrap;
+      animation: fadeInUp 2s;
 
       .store-list{
         margin: 20px auto;
-        animation: fadeInUp 1s;
         flex-basis: auto;
 
         .img-container{
