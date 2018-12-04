@@ -190,10 +190,4 @@
   z-index: 1;
   height: 100%;
   width: 100%; }
-  @media screen and (max-width : 560px) {
-    .owl-dots{
-      position:absolute;
-      bottom: 4%;
-      left: 43%;
-    }
-  }
+  

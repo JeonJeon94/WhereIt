@@ -48,6 +48,10 @@
 </head>
 <body class="default-page <?=$page?>-page">
   <div class="slide-modal">
+    <div class="tooltip-content">
+      <div id="content-title"><b>검색 가능</b>한 지역</div>
+      <div id="content-text">#강남 #삼청동 #샤로수길 #양재 #북촌 #익선동 #역삼 #홍대 #이태원 #신사동 #청담</div>
+    </div>
     <div class="menu-slide">
       <div id="close-icon">
         <img src="./images/etc/close.png" />
@@ -71,11 +75,7 @@
       </div>
       <div id="rank-area-icon">
         <img src="./images/default/area.png" />
-        <div>검색가능 지역</div>
-      </div>
-      <div class="tooltip-content">
-        <div id="content-title"><b>검색 가능</b>한 지역</div>
-        <div id="content-text">#강남 #삼청동 #샤로수길 #양재 #북촌 #익선동 #역삼 #홍대 #이태원 #신사동 #청담</div>
+        <div>검색가능지역</div>
       </div>
       <div id="favorite-icon">
         <img src="./images/default/favorite.png" onclick="location.href='m.favorite.php'"/>
