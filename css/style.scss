@@ -656,8 +656,9 @@ body{
             }
             .store-name{
               font-weight:400;
-              font-size: 17px;
+              font-size: 18px;
               flex:1;
+              color:#504f57
 
             }
             .views{
@@ -1922,34 +1923,38 @@ body{
         }
       }
     }
-    .notice{
-      display:none;
-      text-align: center;
-      border: 0px solid white;
-      background-color: white;
-      width: 600px;
-      height: 260px;
-      border-radius: 10px;
-      text-align: center;
-      margin: 400px auto;
-
-      #home{
-        width: 200px;
-        height: 45px;
-        color: white;
-        background-color: #504f57;
-        font-size: 18px;
-        border: 0px solid #504f57;
-        border-radius: 50px;
-        font-weight: bold;
-        letter-spacing: 2px;
-        box-sizing: border-box;
+    .modal-container{
+      display: block !important;
+      
+      .notice{
+        display:block;
+        text-align: center;
+        border: 0px solid white;
+        background-color: white;
+        width: 600px;
+        height: 260px;
+        border-radius: 10px;
+        text-align: center;
+        margin: 400px auto;
   
-        &:hover{
-          background-color: #d0c1d0;
-        }
-        &:active{
-          background-color: #d8a3d2;
+        #home{
+          width: 200px;
+          height: 45px;
+          color: white;
+          background-color: #504f57;
+          font-size: 18px;
+          border: 0px solid #504f57;
+          border-radius: 50px;
+          font-weight: bold;
+          letter-spacing: 2px;
+          box-sizing: border-box;
+    
+          &:hover{
+            background-color: #d0c1d0;
+          }
+          &:active{
+            background-color: #d8a3d2;
+          }
         }
       }
     }
@@ -2036,10 +2041,9 @@ body{
             }
           }
           .store-name{
-            font-weight:bold;
             font-size: 18px;
             flex:1;
-            font-weight:400px;
+            font-weight:400;
             color:#504f57;
 
           }
@@ -2104,7 +2108,7 @@ body{
       .logout{
         display: flex;
         flex: 1;
-        color: #E5C4E3;
+        color: #D8A3D2;
         cursor: pointer;
 
         #logout{
