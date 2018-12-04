@@ -127,7 +127,7 @@
         <div class="hot-ranking">
           <div style="flex:1;"> 
             <div class="hot">
-              <div class="hot-text" style="display:none; height:28px; margin:11px 0;">인기검색어</div>
+              <div class="hot-text" style="display:none; padding:10px;">인기검색어</div>
               <div class="hot-list-h"><div class="num">1</div><a href="m.search.php?search=강남">강남</a></div>
               <div class="hot-list" style="display:none;"><div class="num">2</div><a href="m.search.php?search=건대">건대</a></div>
               <div class="hot-list" style="display:none;"><div class="num">3</div><a href="m.search.php?search=동대문">동대문</a></div>
