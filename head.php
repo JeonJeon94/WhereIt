@@ -16,10 +16,12 @@ if(!empty($_GET['id'])){
 }else{
   $id="";
 }
-
 if($_SESSION['user_id']){
   $user_id = $_SESSION['user_id'];
   $member = sql_one("SELECT * FROM users WHERE id=$user_id");
+  if(!$member[user_name]){
+    $member[user_name] = "naver-$member[user_email]";
+  }
 }
 if($NEED_LOGIN == true){
   if(!$member){
@@ -62,8 +64,8 @@ if($NEED_LOGIN == true){
         </form>
       </div>
       <div class="login">
-        <?php if($member) {?>
-          <a href="./myinfo.php"><?= $member[user_name]?> 님</a>
+        <?php if($member) { ?> 
+          <a style="color:#D8A3D2; padding:2px 5px 0 0; font-weight:bold;" href="./myinfo.php"><?= $member[user_name]?> </a>님
         <?php }else{ ?>
           <a href="./login.php">로그인</a>
         <?php } ?>

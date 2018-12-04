@@ -1,4 +1,5 @@
 <?php $page = "main"; ?>
+
 <?php include_once("./m.head.php"); ?>
 
   <div class="main">
@@ -22,8 +23,10 @@
     </div>
     <div>
       <form  class="search-form" method="POST" action="m.search.php">
-        <input type="text" name="search" placeholder="가고싶은 지역을 입력해주세요."/>
-        <img id="search-img" src="./images/search.png" onclick="submit()" />
+        <div class="input-form">
+          <input type="text" name="search" placeholder="가고싶은 지역을 입력해주세요."/>
+          <img id="search-img" src="./images/search.png" onclick="submit()" />
+        </div>
         <button>SEARCH</button>
       </form>
     </div>

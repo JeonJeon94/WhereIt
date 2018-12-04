@@ -1,16 +1,8 @@
 <script>
   jQuery(document).ready(function($){
-    var o = false;
     var u = false;
     var y = false;
-    $(document).on("click", ".usage", function(){
-      o = !o
-      if( o == true){
-        $('.usage img').attr('src', './images/star_active.png')
-      }else{
-        $('.usage img').attr('src', './images/star.png')
-      }
-    });
+    
     $(document).on("click", ".phone", function(){
       u = !u
       if( u == true){

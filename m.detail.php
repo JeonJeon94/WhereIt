@@ -1,6 +1,12 @@
 <?php $page = "detail" ?>
-
 <?php include_once("./m.head.php") ?>
+
+<?php 
+if($member){
+  $user_id=$member[id];
+  $favorit = sql_one("SELECT * FROM favorit WHERE shopId='$id' and user_id='$user_id'");
+}
+?>
   <div class="main">
     <div class="detail-main">
       <div class="main-top">
@@ -76,7 +82,13 @@
         <img src="./images/etc/phone.png"/>
       </div>
       <div class="usage">
-        <img src="./images/star.png" onclick='location.href="m.toggle_favorit.php?shopId=<?php echo $id; ?>"'/>
+        <div onclick='location.href="m.toggle_favorit.php?shopId=<?php echo $id; ?>"'>
+          <?php if($favorit){ ?>
+            <img src="./images/star_active.png"/>
+          <?php }else{ ?>
+            <img src="./images/star.png"/>
+          <?php } ?>
+        </div>
       </div>
     </div>
   </div>

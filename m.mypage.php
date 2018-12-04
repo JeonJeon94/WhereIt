@@ -26,7 +26,7 @@
         <div style="margin-right:250px; color:#504f57; display:flex; flex:1;">이메일</div>
         <div id="login-email">
         <?=$member[user_email]?>
-        </div>s
+        </div>
       </div>
       <div class="user-id">
         <div style="margin-right:250px; color:#504f57; display:flex; flex:1;">닉네임</div>

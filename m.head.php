@@ -20,6 +20,9 @@
   if($_SESSION['user_id']){
     $user_id = $_SESSION['user_id'];
     $member = sql_one("SELECT * FROM users WHERE id=$user_id");
+    if(!$member[user_name]){
+      $member[user_name] = "naverlogin";
+    }
   }
   if($NEED_LOGIN == true){
     if(!$member){
@@ -32,7 +35,8 @@
 <head>
   <meta charset="utf-8" />
   <title>Where It</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no , target-densitydpi=medium-dpi">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
   <link rel="stylesheet" href="./css/m.style.css?ver=1.1"  type="text/css" />
   <link rel="stylesheet" href="./OwlCarousel3/dist/assets/owl.carousel.css" type="text/css">
   <link rel="stylesheet" href="./OwlCarousel3/dist/assets/owl.theme.default.min.css" type="text/css">
@@ -98,15 +102,17 @@
         <img src="./images/etc/search.png" />
       </div>
       <div class="logo">
-        <img src="./images/header/logo.png" onclick="location.href='m.index.php'"/>
+        <img src="./images/header/logo.png" onclick="location.href='main.php'"/>
       </div>
       <div class="form-container">
         <div class="back">
           <img src="./images/etc/close.png" />
         </div>
         <form  class="search-form2" method="POST" action="m.search.php">
-          <input type="text" name="search" value="<?php echo $search; ?>" />
-          <img id="search-img2" src="./images/search.png" onclick="submit()" />
+          <div class="input-container">
+            <input type="text" name="search" value="<?php echo $search; ?>" />
+            <img id="search-img2" src="./images/search.png" onclick="submit()" />
+          </div>
         </form>
       </div>
       <div class="menu">
