@@ -49,27 +49,6 @@
             </div>
           </div>
         </div>
-        <!-- <div class="page-num3">
-          <div class="num">
-            03
-          </div>
-          <div style="font-size:36px; margin-bottom:50px; font-weight:bold; color:#504f57;">
-            회원가입
-          </div>
-          <div style="margin-bottom:26px; color:#504f57;">
-            인증 후 회원가입이 완료됩니다.<br>
-            입력하신 이메일로 <b>인증url</b>이 발송됩니다.<br>
-            메일로 전송된 링크를 클릭하여 인증절차를 마무리해주세요.
-          </div>
-          <div class="sign-form"> -->
-            <!-- <form method="post" action="signup-post.php">
-              <input id="get-mail" type="text" name="get-mail" placeholder="가입 시 입력하신 이메일을 입력해 주세요." />
-            </form>
-            <div class="send-btn">
-              <button id="send-btn">SEND</button>
-            </div> -->
-          <!-- </div>
-        </div> -->
         <div class="signup-end">
           <div class="end-center">
             <div class="end">

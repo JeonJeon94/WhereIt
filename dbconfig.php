@@ -1,7 +1,7 @@
 <?php 
   session_start();
   
-  error_reporting(1);
+  error_reporting(0);
   ini_set("display_errors", 1);
 
   $dbHost = "ec2-13-209-76-121.ap-northeast-2.compute.amazonaws.com";

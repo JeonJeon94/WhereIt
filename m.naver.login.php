@@ -8,7 +8,6 @@ if(strpos($_SERVER["REQUEST_URI"], "?") == FALSE){
 </script>
 <?php
 }else{
-  
   $token = $_REQUEST["access_token"];
   $type = $_REQUEST["token_type"];
   $state = $_REQUEST["state"];
@@ -22,18 +21,19 @@ if(strpos($_SERVER["REQUEST_URI"], "?") == FALSE){
   $ret = curl_exec($s);
   $json = json_decode($ret,true);
   
-  
   $id = $json["response"]["id"];
   if($json["resultcode"] == "00"){
     // ok
     // isnert to db
+    var_dump($json);
     $sql = sql_one("SELECT id, user_email FROM users WHERE user_email = $id");
     if(!$sql){
       sql_one("INSERT INTO users SET user_email='$id', resister='naver'");
       
       $sql = sql_one("SELECT id, user_email FROM users WHERE user_email = $id");
+     
       $_SESSION['user_id']=$sql[id];
-      
+
       php_redirect("/");
 
     }else{

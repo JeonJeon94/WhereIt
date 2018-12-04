@@ -6,23 +6,20 @@ $arr_browser = array ("iPhone","iPod","IEMobile","Mobile","lgtelecom","PPC");
 for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
  if(strpos($_SERVER['HTTP_USER_AGENT'],$arr_browser[$indexi]) == true){
   // 모바일 브라우저라면  모바일 URL로 이동 
-   header("Location: ./m.edit_pwform.php?id=<?php echo $pw_search[id]?>");
+   header("Location: ./m.index.php");
    exit;
  }
 }
 
-$edit_pw=$_GET['code'];
+$login_email=$_GET['code'];
 
-$pw_search = sql_one("SELECT id FROM users WHERE reset_password = '$edit_pw'");
+$email_search = sql_one("SELECT id FROM users WHERE email_code = '$login_email'");
 
-if($pw_search){
+if($email_search){
   $true = '';
-  sql_query("UPDATE users SET
-  reset_password='$true',
-  password=''
-  WHERE id='$pw_search[id]'");
+  sql_query("UPDATE users SET email_code='$true' WHERE id='$email_search[id]'");
 ?>
-  <script>location.href='./edit_pwform.php?id=<?php echo $pw_search[id] ?>'</script>
+  <script>location.href='/index.php'</script>
 <?php
 }else{
   alert_back("잘못된 접근입니다!");
