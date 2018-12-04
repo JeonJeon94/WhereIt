@@ -35,8 +35,7 @@
 <head>
   <meta charset="utf-8" />
   <title>Where It</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no , target-densitydpi=medium-dpi">
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="./css/m.style.css?ver=1.1"  type="text/css" />
   <link rel="stylesheet" href="./OwlCarousel3/dist/assets/owl.carousel.css" type="text/css">
   <link rel="stylesheet" href="./OwlCarousel3/dist/assets/owl.theme.default.min.css" type="text/css">
@@ -110,7 +109,7 @@
         </div>
         <form  class="search-form2" method="POST" action="m.search.php">
           <div class="input-container">
-            <input type="text" name="search" value="<?php echo $search; ?>" />
+            <input id="search2-input" type="text" name="search" value="<?php echo $search; ?>" />
             <img id="search-img2" src="./images/search.png" onclick="submit()" />
           </div>
         </form>
