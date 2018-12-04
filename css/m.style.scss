@@ -51,7 +51,7 @@
 }
 
 .default-page{
-  max-width: 960px;
+  max-width: 1200px;
   min-width: 960px;
   width: 100%;
   margin: 0px;
@@ -356,24 +356,32 @@
       flex-direction: column;
       position: relative;
       
-      >input{
+      .input-form{
+        position: relative;
         display: flex;
-        width: 800px;
-        height: 70px;
-        border: 1px solid #504f57;
-        margin: 0 auto;
-        border-radius: 40px;
-        padding-left: 30px;
-        font-size: 26px;
-        margin-bottom: 40px;
+        margin: 0px auto;
+        width: 700px;
+
+        >input{
+          display: flex;
+          width: 700px;
+          height: 70px;
+          border: 1px solid #504f57;
+          margin: 0 auto;
+          border-radius: 40px;
+          padding-left: 30px;
+          font-size: 26px;
+          margin-bottom: 40px;
+        }
+        #search-img{
+          width: 29px;
+          height: 30px;
+          position: absolute;
+          right: 35px;
+          top: 20px;
+        }
       }
-      #search-img{
-        width: 29px;
-        height: 30px;
-        position: absolute;
-        right: 85px;
-        top: 20px;
-      }
+      
       >button{
         display: flex;
         width: 300px;
@@ -452,23 +460,29 @@
           flex-direction: column;
           position: relative;
           
-          >input{
+          .input-container{
             display: flex;
-            width: 600px;
-            height: 55px;
-            border: 1px solid #504f57;
-            margin: 35px auto 35px 80px;
-            border-radius: 40px;
-            padding-left: 30px;
-            font-size: 22px;
-            margin-bottom: 40px;
-          }
-          #search-img2{
-            width: 29px;
-            height: 30px;
-            position: absolute;
-            right: 140px;
-            top: 45px;
+            position: relative;
+            width:600px; 
+            height:55px;
+            margin: 35px auto;
+            
+            >input{
+              width: 600px;
+              height: 55px;
+              border: 1px solid #504f57;
+              border-radius: 40px;
+              padding-left: 30px;
+              font-size: 22px;
+              box-sizing: border-box;
+            }
+            #search-img2{
+              position: absolute;
+              width: 29px;
+              height: 30px;
+              right: 25px;
+              top: 12px;
+            }
           }
         }
       }
@@ -549,7 +563,9 @@
         flex-wrap: wrap;
 
         .store-list{
-          margin: 20px auto;
+          max-width: 420px;
+          max-height: 503px;
+          margin: 20px 30px;
           animation: fadeInUp 1s;
           flex-basis: auto;
 
@@ -1448,7 +1464,7 @@
     }
   }
   .notice{
-    display:none;
+    display:block;
     text-align: center;
     width: 600px;
     text-align: center;
@@ -1509,8 +1525,11 @@
       animation: fadeInUp 2s;
 
       .store-list{
-        margin: 20px auto;
+        margin: 20px 30px;
+        max-width: 420px;
+        max-height: 503px;
         flex-basis: auto;
+        animation: fadeInUp 1s;
 
         .img-container{
           width: 420px;

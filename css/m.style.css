@@ -72,7 +72,7 @@
 }
 
 .default-page {
-  max-width: 960px;
+  max-width: 1200px;
   min-width: 960px;
   width: 100%;
   margin: 0px;
@@ -428,11 +428,20 @@
   position: relative;
 }
 
-.main-page .footer .search-form > input {
+.main-page .footer .search-form .input-form {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 800px;
+  margin: 0px auto;
+  width: 700px;
+}
+
+.main-page .footer .search-form .input-form > input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 700px;
   height: 70px;
   border: 1px solid #504f57;
   margin: 0 auto;
@@ -442,11 +451,11 @@
   margin-bottom: 40px;
 }
 
-.main-page .footer .search-form #search-img {
+.main-page .footer .search-form .input-form #search-img {
   width: 29px;
   height: 30px;
   position: absolute;
-  right: 85px;
+  right: 35px;
   top: 20px;
 }
 
@@ -548,26 +557,33 @@
   position: relative;
 }
 
-.search-page .head .head-top .form-container .search-form2 > input, .search-o-page .head .head-top .form-container .search-form2 > input {
+.search-page .head .head-top .form-container .search-form2 .input-container, .search-o-page .head .head-top .form-container .search-form2 .input-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  width: 600px;
+  height: 55px;
+  margin: 35px auto;
+}
+
+.search-page .head .head-top .form-container .search-form2 .input-container > input, .search-o-page .head .head-top .form-container .search-form2 .input-container > input {
   width: 600px;
   height: 55px;
   border: 1px solid #504f57;
-  margin: 35px auto 35px 80px;
   border-radius: 40px;
   padding-left: 30px;
   font-size: 22px;
-  margin-bottom: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-.search-page .head .head-top .form-container .search-form2 #search-img2, .search-o-page .head .head-top .form-container .search-form2 #search-img2 {
+.search-page .head .head-top .form-container .search-form2 .input-container #search-img2, .search-o-page .head .head-top .form-container .search-form2 .input-container #search-img2 {
+  position: absolute;
   width: 29px;
   height: 30px;
-  position: absolute;
-  right: 140px;
-  top: 45px;
+  right: 25px;
+  top: 12px;
 }
 
 .search-page .head .head-top .menu, .search-o-page .head .head-top .menu {
@@ -659,7 +675,9 @@
 }
 
 .search-page .main .search-list .list-line .store-list, .search-o-page .main .search-list .list-line .store-list {
-  margin: 20px auto;
+  max-width: 420px;
+  max-height: 503px;
+  margin: 20px 30px;
   -webkit-animation: fadeInUp 1s;
           animation: fadeInUp 1s;
   -ms-flex-preferred-size: auto;
@@ -1684,7 +1702,7 @@
 }
 
 .edit-pw-page .notice {
-  display: none;
+  display: block;
   text-align: center;
   width: 600px;
   text-align: center;
@@ -1748,9 +1766,13 @@
 }
 
 .favorite-page .favorite-list .list-line .store-list {
-  margin: 20px auto;
+  margin: 20px 30px;
+  max-width: 420px;
+  max-height: 503px;
   -ms-flex-preferred-size: auto;
       flex-basis: auto;
+  -webkit-animation: fadeInUp 1s;
+          animation: fadeInUp 1s;
 }
 
 .favorite-page .favorite-list .list-line .store-list .img-container {
