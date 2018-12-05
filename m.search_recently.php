@@ -9,7 +9,7 @@
       </div>
       <div class="search-time">
         <a id="all"  href="m.search.php?search=<?php echo $search; ?>">누적</a>
-        <a id="recently" style="color:#504f57; font-weight:bold; border-bottom:2px solid black; padding-bottom:15px;" href="">최근 3개월</a>
+        <a id="recently" style="color:#504f57; font-weight:bold; border-bottom:2px solid black; padding-bottom:10px;" href="">최근 3개월</a>
       </div>
       <div class="view-type">
         <img id="double" src="./images/etc/menu1-active.png" />
@@ -129,7 +129,7 @@
     <div class="img-container" onclick="location.href='./m.detail.php?id=<%=_id%>'">
       <img alt="food-img" src="<%=main_img%>" onerror="this.src='./images/desktop_detail_default.png'"/>
     </div>
-    <div style="padding:5px 5px; display:flex;">
+    <div style="padding:5px 5px; display:flex; align-items:center;">
       <div class="store-name"><%=Name%></div>
       <div class="views">2.40K</div>
     </div>

@@ -2,11 +2,11 @@
 <?php include_once("./m.head.php") ?>
   <div class="main">
     <div class="find-center">
-      <div style="font-size:36px; margin-bottom:20px; color:#504f57">
+      <div class="find-title">
         <b>비밀번호</b>를<br>
         잊으셨나요?
       </div>
-      <div style="margin-bottom:40px; font-size:20px; color:#504f57">
+      <div class="find-text">
         회원가입 시 인증하신<br>
         이메일 주소를 입력해주세요.
       </div>
@@ -18,7 +18,7 @@
       </div>
     </div>
     <div class="notice">
-      <div style="padding-bottom:100px; font-size:36px; font-family:Noto Sans KR, sans-serif;">
+      <div style="padding:100px 0 60px 0; font-size:20px; font-family:Noto Sans KR, sans-serif;">
         입력하신 이메일로<br><b>비밀번호변경 URL</b>이<br>전송되었습니다.
       </div>
       <div>

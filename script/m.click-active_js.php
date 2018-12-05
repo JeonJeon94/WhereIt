@@ -31,12 +31,12 @@
     $('.page-num2').css('display','block')
   });
   $('#accept').click(function(){
-    $('.page-num2').css('display','none')
-    $('.accept-contents').css('display','block')
+    $('.sign-center').css('display','none')
+    $('.accept-contents').css('display','flex')
   });
   $('#confirm-btn').click(function(){
     $('.accept-contents').css('display','none')
-    $('.page-num2').css('display','block')
+    $('.sign-center').css('display','block')
   });
   $('#next-btn2').click(function(){
     if($('.checkbox3 img').attr('src') != "./images/box-check.png"){

@@ -19,9 +19,9 @@
         <div class="insta-tag">
           <div style="flex:0 1 auto;">
             <div class="insta-list">
-              <div class="insta-text-h" style="padding-top:5px;"><a href="">#럽스타그램</a></div>
-              <div class="insta-text" style="display:none; padding:5px 0;"><a href="">#럽스타그램</a></div>
-              <div class="insta-text" style="display:none; padding-bottom:5px;"><a href="">#럽스타그램</a></div>
+              <div class="insta-text-h" style="padding-top:3px;"><a href="">#럽스타그램</a></div>
+              <div class="insta-text" style="display:none; padding:3px 0;"><a href="">#럽스타그램</a></div>
+              <div class="insta-text" style="display:none; padding-bottom:3px;"><a href="">#럽스타그램</a></div>
             </div>
           </div>
         </div>
@@ -49,8 +49,8 @@
           <div class="store-name" onclick="location.href='detail.php?id=<?php echo $id; ?>'">
             건대 소두마리
           </div>
-          <div style="display:flex; flex:1; justify-content:flex-end;"> 
-            <div class="keyword" style="margin-right: 20px;">
+          <div style="display:flex;"> 
+            <div class="keyword" style="margin-right: 10px;">
               강남구
             </div>
             <div class="keyword">

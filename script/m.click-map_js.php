@@ -4,15 +4,15 @@
     $(document).on("click", ".map", function(){
       a = !a
       if(a == true){
-        $('.map img').attr('src', '/images/map_active.png')
-        $('#detail-map').css('height', '292px')
+        $('.map img').attr('src', '/images/select/area-active.png')
+        $('#detail-map').css('height', '200px')
         $('#detail-site').css('display', 'block')
         $('.map-container').css('background', '#ECECEC')
-        $('.map-container').css('height', '292px')
+        $('.map-container').css('height', '200px')
         
 
       }else{
-        $('.map img').attr('src', '/images/map.png')
+        $('.map img').attr('src', '/images/default/area.png')
         $('#detail-map').css('height', '0')
         $('#detail-site').css('display', 'none')
         setTimeout(function(){

@@ -12,8 +12,8 @@ if($member){
       <div class="main-top">
       </div>
       <div class="map-container">
-        <iframe id=detail-map scrolling="no" src="http://prt.map.naver.com/mashupmap/print?key=p1542878593848_-153604968"></iframe>
-        <a id=detail-site href="https://map.naver.com/?searchCoord=793de6260ef4aa30f1cb538daf1ccde0e1125a8775daaf70c407029b6b0f9f31&query=7ISc7Jq4IOyEnOy0iOq1rCDshJzstIjrjIDroZwgNDExIEdUIFRPV0VS&tab=1&lng=b896d58d9064a8e7e60e215b0f2fb68e&mapMode=0&mpx=833c4f37368d11c0e24e6c71092fcddb92d5784df699e74b3402f0b2ba6a0c37a0daea55cdf18cc028f76fa0c42796e1ae4dd4b7d1b2a78c2c1541ddee2f021a&lat=6963078383dbd6007191d60630bb9d8e&dlevel=12&enc=b64&menu=location"></a>
+        <iframe id=detail-map scrolling="no" src="http://prt.map.naver.com/mashupmap/print?key=p1544044052059_-1710948587"></iframe>
+        <a id=detail-site href="https://map.naver.com/?searchCoord=793de6260ef4aa30f1cb538daf1ccde0e1125a8775daaf70c407029b6b0f9f31&query=7ISc7Jq4IOyEnOy0iOq1rCDshJzstIjrjIDroZwgNDExIEdUIFRPV0VS&tab=1&lng=fa4f3287bb1d679a590999a6df78e69f&mapMode=0&mpx=833c4f37368d11c0e24e6c71092fcddb92d5784df699e74b3402f0b2ba6a0c37a0daea55cdf18cc028f76fa0c42796e1ae4dd4b7d1b2a78c2c1541ddee2f021a&lat=67538f4ee0bc8dd55435a107cd8a864e&dlevel=12&enc=b64&menu=location"></a>
       </div>
       <div class="detail-picture">
       </div>
@@ -58,7 +58,7 @@ if($member){
       <img src="<%=imgs[0].link%>" onerror="this.src='./images/desktop_detail_default.png'"/>
     </div>
     <div class="info">
-      <div style="padding-bottom:15px; padding-top:15px; display:flex;">
+      <div style="padding:15px 0 0 0; display:flex;">
         <div class="keyword">
           <div><%=collect_region%></div>
         </div>
@@ -71,7 +71,7 @@ if($member){
       </div>
       <div style="display:flex;">
         <div class="detail-text">누적 해시태그량</div>
-        <div class="detail-text" style="border-left:1px solid #d0c1d0;">2.55K</div>
+        <div class="detail-text" style="border-left:1px solid #d0c1d0; padding-left:5px;">2.55K</div>
       </div>
     </div>
     <div class="etc">
@@ -84,9 +84,9 @@ if($member){
       <div class="usage">
         <div onclick='location.href="m.toggle_favorit.php?shopId=<?php echo $id; ?>"'>
           <?php if($favorit){ ?>
-            <img src="./images/star_active.png"/>
+            <img style="width:15px; height:15px;" src="./images/star_active.png"/>
           <?php }else{ ?>
-            <img src="./images/star.png"/>
+            <img style="width:15px; height:15px;" src="./images/star.png"/>
           <?php } ?>
         </div>
       </div>
@@ -103,8 +103,8 @@ if($member){
       </div>
       <div class="adress"><%=new_address%></div>
     </div>
-    <div class="map" style="cursor:pointer;">
-      <img src="./images/map.png"/>
+    <div class="map">
+      <img src="./images/default/area.png"/>
     </div>
   </div>
 </script>

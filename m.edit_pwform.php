@@ -7,16 +7,16 @@ $state=$_GET['state'];
   <div class="main">
     <?php if($state != 'true') {?>
     <div class="edit-center">
-      <div style="font-size:36px; margin-bottom:30px;">
+      <div style="font-size:22px; margin-bottom:10px;">
         <b>비밀번호를</b><br>
         재설정해주세요.
       </div>
-      <div style="margin-bottom:30px; font-size:18px;">
-        새롭게 사용하실 비밀번호를 입력해주세요.
+      <div style="margin-bottom:40px; font-size:14px;">
+        새롭게 사용하실<br> 비밀번호를 입력해주세요.
       </div>
       <div class="edit-form">
         <form method="post" action="m.edit_pw_post.php?id=<?php echo $pw_id; ?>">
-          <div style="display:flex; flex-direction:column; align-items:center;">
+          <div style="display:flex; flex-direction:column; align-items:center; padding-bottom: 20px">
             <input id="new_pw" name="new_pw" type="password" placeholder="비밀번호" />
             <input id="new_pw2" name="new_pw2" type="password" placeholder="비밀번호 확인" />
           </div>
@@ -29,7 +29,7 @@ $state=$_GET['state'];
     <?php } ?>
     <?php if($state == 'true'){ ?>
     <div class="notice">
-      <div style="padding-top:30px; padding-bottom:100px; font-size:36px;">
+      <div style="padding-top:30px; padding-bottom:40px; font-size:25px;">
         비밀번호가<br><b>변경되었습니다.</b>
       </div>
       <div>

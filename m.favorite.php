@@ -10,7 +10,7 @@ $shop_list = sql_select("SELECT shopId FROM favorit WHERE user_id = '$member[id]
 ?>
 
   <div class="main">
-    <div style="font-size:36px; color:#504f57; margin:40px 0 40px 40px;">
+    <div class="favorit-title">
       <b>즐겨찾는</b><br>
       플레이스
     </div>
@@ -37,6 +37,9 @@ $shop_list = sql_select("SELECT shopId FROM favorit WHERE user_id = '$member[id]
         api_shop_detail(value.shopId,function(data){
           var slot_template = _.template($("#store-slot").html());
           var row = data.payload
+          let nameDump = row.Name
+              nameDump = nameDump.length>6 ? nameDump.slice(0,6)+"..." : nameDump
+              row.Name = nameDump
           try{
             $(".list-line").append( slot_template(row) )
           }catch(err){}  

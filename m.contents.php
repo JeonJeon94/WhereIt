@@ -3,10 +3,8 @@
   <div class="main">
     <div class="contents-center">
       <div class="contents">
-        <div class="flex" style="align-items:center;">
-          <div style="font-size:20px; flex:1; text-align:left; margin-bottom:20px;">
-            이용 약관
-          </div>
+        <div class="contents-title">
+          이용 약관
         </div>
         <div class="box">
           <div class="contents-box">
@@ -58,13 +56,11 @@
         </div>
       </div>
       <div class="contents">
-        <div class="flex" style="align-items:center;">
-          <div style="font-size:20px; flex:1; text-align:left; margin-bottom:20px;">
+        <div class="contents-title">
             개인정보 이용 약관
-          </div>
         </div>
         <div class="box">
-          <div class="contents-box" style="margin-bottom:100px;">
+          <div class="contents-box">
             계절이 지나가는 하늘에는
             가을로 가득 차있습니다。
 
