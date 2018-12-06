@@ -6,13 +6,13 @@
     <div>
       <div class="owl-carousel owl-theme">
         <div class="item">
-          <img src="./images/foodimg3.jpeg">
+          <img src="./images/m_foodimg3.jpg">
         </div>
         <div class="item">
-          <img src="./images/foodimg2.jpeg">
+          <img src="./images/m_foodimg2.jpg">
         </div>
         <div class="item">
-          <img src="./images/foodimg1.jpeg">
+          <img src="./images/m_foodimg1.jpg">
         </div>
       </div>
     </div>
@@ -24,7 +24,7 @@
     <div>
       <form  class="search-form" method="POST" action="m.search.php">
         <div class="input-form">
-          <input type="text" name="search" placeholder="가고싶은 지역을 입력해주세요."/>
+          <input type="text" name="search" maxlength="50" placeholder="가고싶은 지역을 입력해주세요."/>
           <img id="search-img" src="./images/search.png" onclick="submit()" />
         </div>
         <button>SEARCH</button>

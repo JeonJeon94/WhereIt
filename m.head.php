@@ -75,12 +75,13 @@
       </div>
       <div id="rank-area-icon">
         <img src="./images/default/area.png" />
-        <div>검색가능지역</div>
+        <div>검색가능<br/>지역</div>
       </div>
       <div id="favorite-icon">
         <img src="./images/default/favorite.png" onclick="location.href='m.favorite.php'"/>
         <div>즐겨찾기</div>
       </div>
+      <div class="slide-line"></div>
       <div id="contents-icon">
         <img src="./images/default/contents.png" onclick="location.href='m.contents.php'"/>
         <div>이용약관</div>
@@ -109,7 +110,7 @@
         </div>
         <form  class="search-form2" method="POST" action="m.search.php">
           <div class="input-container">
-            <input id="search2-input" type="text" name="search" value="<?php echo $search; ?>" />
+            <input id="search2-input" maxlength="50" type="text" name="search" value="<?php echo $search; ?>" />
             <img id="search-img2" src="./images/search.png" onclick="submit()" />
           </div>
         </form>
@@ -125,25 +126,25 @@
     <div class="head-hot">
       <div class="rank-container">
         <div class="hot-ranking">
-          <div style="flex:1;"> 
-            <div class="hot">
-              <div class="hot-text" style="display:none; padding:10px;">인기검색어</div>
-              <div class="hot-list-h"><div class="num">1</div><a href="m.search.php?search=강남">강남</a></div>
-              <div class="hot-list" style="display:none;"><div class="num">2</div><a href="m.search.php?search=건대">건대</a></div>
-              <div class="hot-list" style="display:none;"><div class="num">3</div><a href="m.search.php?search=동대문">동대문</a></div>
-              <div class="hot-list" style="display:none;"><div class="num">4</div><a href="m.search.php?search=마포">마포</a></div>
-              <div class="hot-list" style="display:none;"><div class="num">5</div><a href="m.search.php?search=신림">신림</a></div>
-              <div class="hot-list" style="display:none;"><div class="num">6</div><a href="m.search.php?search=강북">강북</a></div>
-              <div class="hot-list" style="display:none;"><div class="num">7</div><a href="m.search.php?search=왕십리">왕십리</a></div>
-              <div class="hot-list" style="display:none;"><div class="num">8</div><a href="m.search.php?search=잠실">잠실</a></div>
-              <div class="hot-list" style="display:none;"><div class="num">9</div><a href="m.search.php?search=이태원">이태원</a></div>
-              <div class="hot-list" style="display:none;"><div class="num">10</div><a href="m.search.php?search=홍대">홍대</a></div>
-            </div>
+          <div style="flex:1;">
+            <ul class="hot">
+              <li class="hot-text" style="display:none; padding: 5px 0px; color: #504f57;">인기검색어</li>
+              <li class="hot-list-h"><div class="num">1</div><a href="m.search.php?search=강남">강남</a></li>
+              <li class="hot-list" style="display:none;"><div class="num">2</div><a href="m.search.php?search=건대">건대</a></li>
+              <li class="hot-list" style="display:none;"><div class="num">3</div><a href="m.search.php?search=동대문">동대문</a></li>
+              <li class="hot-list" style="display:none;"><div class="num">4</div><a href="m.search.php?search=마포">마포</a></li>
+              <li class="hot-list" style="display:none;"><div class="num">5</div><a href="m.search.php?search=신림">신림</a></li>
+              <li class="hot-list" style="display:none;"><div class="num">6</div><a href="m.search.php?search=강북">강북</a></li>
+              <li class="hot-list" style="display:none;"><div class="num">7</div><a href="m.search.php?search=왕십리">왕십리</a></li>
+              <li class="hot-list" style="display:none;"><div class="num">8</div><a href="m.search.php?search=잠실">잠실</a></li>
+              <li class="hot-list" style="display:none;"><div class="num">9</div><a href="m.search.php?search=이태원">이태원</a></li>
+              <li class="hot-list" style="display:none;"><div class="num">10</div><a href="m.search.php?search=홍대">홍대</a></li>
+            </ul>
           </div>
-        </div>
-        <div class="rank-btn">
-          <img id="down-btn" src="./images/rank_down.png" />
-          <img id="up-btn" src="./images/rank_up.png" />
+          <div class="rank-btn">
+            <img id="down-btn" src="./images/rank_down.png" />
+            <img id="up-btn" src="./images/rank_up.png" />
+          </div>
         </div>
       </div>
     </div>
