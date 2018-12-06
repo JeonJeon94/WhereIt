@@ -11,7 +11,7 @@ if($member){
   $_SESSION['user_id']=$member[id];
     if($member[reset_password] == ''){
       // login success
-      php_redirect("/");
+      php_redirect("./index.php");
     }else{
       // login failed
       alert_back("이메일의 비밀번호 찾기를 확인해주세요.");
