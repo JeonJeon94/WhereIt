@@ -6,7 +6,6 @@
 $shop_count = sql_one("SELECT count(shopId) FROM favorit WHERE user_id = '$member[id]'");
 
 $shop_list = sql_select("SELECT shopId FROM favorit WHERE user_id = '$member[id]'");
-
 ?>
 
     <div class="move-top">
@@ -44,7 +43,7 @@ $shop_list = sql_select("SELECT shopId FROM favorit WHERE user_id = '$member[id]
           </div>
         </div>
         <div class="favorite-list">
-        <?php if($shop_count == 0){ ?>
+        <?php if($shop_count['count(shopId)']=='0'){ ?>
           <div class="list-line">
             <div style="margin:0 auto">
               <h2>즐겨찾기 된 상점이 없습니다.</h2>
