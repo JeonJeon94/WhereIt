@@ -34,12 +34,12 @@ if(strpos($_SERVER["REQUEST_URI"], "?") == FALSE){
      
       $_SESSION['user_id']=$sql[id];
 
-      php_redirect("/");
+      php_redirect("./m.index.php");
 
     }else{
       $_SESSION['user_id']=$sql[id];
       
-      php_redirect("/");
+      php_redirect("./m.index.php");
     }
   }else{
     // hacking!

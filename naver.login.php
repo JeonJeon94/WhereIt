@@ -34,12 +34,12 @@ if(strpos($_SERVER["REQUEST_URI"], "?") == FALSE){
       $sql = sql_one("SELECT id, user_email FROM users WHERE user_email = $id");
       $_SESSION['user_id']=$sql[id];
       
-      php_redirect("/");
+      php_redirect("./index.php");
 
     }else{
       $_SESSION['user_id']=$sql[id];
       
-      php_redirect("/");
+      php_redirect("./index.php");
     }
   }else{
     // hacking!

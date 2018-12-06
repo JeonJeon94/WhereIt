@@ -3,6 +3,6 @@ include './dbconfig.php';
 
 session_destroy();
 
-php_redirect("/");
+php_redirect("./index.php");
 
 ?>
