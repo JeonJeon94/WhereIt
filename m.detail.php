@@ -12,8 +12,7 @@ if($member){
       <div class="main-top">
       </div>
       <div class="map-container">
-        <iframe id=detail-map scrolling="no" src="http://prt.map.naver.com/mashupmap/print?key=p1544044052059_-1710948587"></iframe>
-        <a id=detail-site href="https://map.naver.com/?searchCoord=793de6260ef4aa30f1cb538daf1ccde0e1125a8775daaf70c407029b6b0f9f31&query=7ISc7Jq4IOyEnOy0iOq1rCDshJzstIjrjIDroZwgNDExIEdUIFRPV0VS&tab=1&lng=fa4f3287bb1d679a590999a6df78e69f&mapMode=0&mpx=833c4f37368d11c0e24e6c71092fcddb92d5784df699e74b3402f0b2ba6a0c37a0daea55cdf18cc028f76fa0c42796e1ae4dd4b7d1b2a78c2c1541ddee2f021a&lat=67538f4ee0bc8dd55435a107cd8a864e&dlevel=12&enc=b64&menu=location"></a>
+        <iframe id=detail-map src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1298.3578935399303!2d127.02570264252127!3d37.49770732756075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca15bd138859d%3A0x49003f4294ee5df3!2z7ISc7Jq47Yq567OE7IucIOyEnOy0iOq1rCDshJzstIg064-ZIOyEnOy0iOuMgOuhnCA0MTE!5e0!3m2!1sko!2skr!4v1544091180659" frameborder="0" style="border:0" allowfullscreen></iframe>
       </div>
       <div class="detail-picture">
       </div>
@@ -117,9 +116,9 @@ if($member){
   function setImage(res){
     var slot_template = _.template($("#picture-slot").html());
     if(!playing){
-      img_pivot += 4
+      img_pivot += 16
       playing = true;
-      if(img_pivot === 4 || img_pivot === 8 || img_pivot ===12){
+      if(img_pivot === 16 || img_pivot === 32 || img_pivot === 48){
         for(var i = img_pivot-4; i < img_pivot; i++){
           var row = res.payload.imgs[i]
           if(row === undefined){
@@ -134,7 +133,7 @@ if($member){
       }else{
         Loading()
         setTimeout(function(){
-          for(var i = img_pivot -4; i < img_pivot; i++){
+          for(var i = img_pivot -12; i < img_pivot; i++){
             var row = res.payload.imgs[i]
             if(row === undefined){
               continue
