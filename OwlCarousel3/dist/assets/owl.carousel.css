@@ -51,9 +51,9 @@
     width: 100%; }
 
     .owl-dots{
-      position:absolute;
+      position: absolute;
       bottom: 4%;
-      left: 46%;
+      left: 40%;
     }
   .owl-carousel .owl-nav.disabled,
   .owl-carousel .owl-dots.disabled {

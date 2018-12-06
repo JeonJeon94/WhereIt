@@ -82,7 +82,7 @@ $shop_list = sql_select("SELECT shopId FROM favorit WHERE user_id = '$member[id]
       <div class="store-name"><%=Name%></div>
       <div class="views">2.40K</div>
     </div>
-    <div style="padding-left:4px; display:flex;">
+    <div style="display:flex;">
       <div class="keyword">
         <div><%=collect_region%></div>
       </div>

@@ -4,16 +4,20 @@
 
   <div class="main">
     <div class="main-top">
-      <div class="text">
-        가장 인기있는<br><b>핫 플레이스</b>
+      <div class="top_layer_1">
+        <div class="text">
+          가장 인기있는<br><b>핫 플레이스</b>
+        </div>
+        <div class="search-time">
+          <a id="all"  href="m.search.php?search=<?php echo $search; ?>">누적</a>
+          <a id="recently" style="color:#504f57; font-weight:bold; border-bottom:2px solid black; padding-bottom:10px;" href="">최근 3개월</a>
+        </div>
       </div>
-      <div class="search-time">
-        <a id="all"  href="m.search.php?search=<?php echo $search; ?>">누적</a>
-        <a id="recently" style="color:#504f57; font-weight:bold; border-bottom:2px solid black; padding-bottom:10px;" href="">최근 3개월</a>
-      </div>
-      <div class="view-type">
-        <img id="double" src="./images/etc/menu1-active.png" />
-        <img id="single" src="./images/etc/menu2.png" onclick="location.href='m.search_recently-one.php?search=<?php echo $search; ?>'"/>
+      <div class="top_layer_2">
+        <div class="view-type">
+          <img id="double" src="./images/etc/menu1-active.png" />
+          <img id="single" src="./images/etc/menu2.png" onclick="location.href='m.search_recently-one.php?search=<?php echo $search; ?>'"/>
+        </div>
       </div>
     </div>
     <div class="search-list">
@@ -129,11 +133,11 @@
     <div class="img-container" onclick="location.href='./m.detail.php?id=<%=_id%>'">
       <img alt="food-img" src="<%=main_img%>" onerror="this.src='./images/desktop_detail_default.png'"/>
     </div>
-    <div style="padding:5px 5px; display:flex; align-items:center;">
+    <div style="padding:5px 0px; display:flex; align-items:center;">
       <div class="store-name"><%=Name%></div>
       <div class="views">2.40K</div>
     </div>
-    <div style="padding-left:4px; display:flex;">
+    <div style="display:flex;">
       <div class="keyword">
         <div><%=collect_region%></div>
       </div>
