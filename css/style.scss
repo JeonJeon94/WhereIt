@@ -834,42 +834,13 @@ body{
         }
       }
     }
-    .map-container{
-      position: relative;
-      text-align: center;
+    #detail-map{
+      width: 100%;
       margin: 20px auto;
       margin-right: 43px;
+      border: 0;
       height: 0;
-      
-      #logo-left, #logo-right{
-        display: none;
-        position: absolute;
-        top: 120px;
-        width: 170px;
-        height: 55px;
-      }
-      #logo-right{
-        right: 65px;
-      }
-      #logo-left{
-        left: 65px;
-      }
-
-      #detail-map{
-        width:460px;
-        padding: 0px 10px;
-        border: 0;
-        height: 0;
-        transition: all 0.5s;
-      }
-      #detail-site{
-        display: none;
-        position: absolute;
-        top: 0;
-        left: 320px;
-        width: 460px;
-        height: 292px;
-      }
+      transition: all 0.5s;
     }
 
     .detail-picture{

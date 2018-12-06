@@ -17,7 +17,7 @@
             <div style="display:flex; flex-direction:column; align-items:center;">
               <input id="sign-mail" type="text" name="sign-mail" placeholder="이메일을 입력해주세요(whereit@whereit.kr)" />
               <input id="sign-pw" type="password" name="sign-pw" placeholder="비밀번호를 입력해주세요(8자 이상 입력해주세요)" />
-              <input id="next-btn1" value="NEXT" />
+              <input id="next-btn1" type="button" value="NEXT" />
             </div>
           </div>
         </div>

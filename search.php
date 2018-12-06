@@ -65,10 +65,10 @@
       if(data.payload.length == 0 ){
         nosearch();
       }else{
-        if(list_length !== 4){
+        if(list_length !== 16){
           Loading()
           setTimeout(function(){
-            for(var i = list_length - 4; i < list_length; i++){
+            for(var i = list_length - 16; i < list_length; i++){
               var row = data.payload[i]
               if(row === undefined)
                 continue
@@ -82,7 +82,7 @@
           }, 1000);
         }
         else{
-          for(var i = list_length - 4; i < list_length; i++){
+          for(var i = list_length - 16; i < list_length; i++){
             var row = data.payload[i]
             if(row === undefined)
               continue
@@ -101,29 +101,29 @@
   }
   $(window).scroll(function() {
     if($(window).scrollTop() + $(window).height() == $(document).height() && flag) {
-      list_length += 4
+      list_length += 16
       SearchResultDraw()
     }
   });
   $(function(){
     var searchWord = "<?php echo $search; ?>";
     if(searchWord !== "" && searchWord !== " "){
-      for(var i=0; i <= 2; i++){
-        search_fandein(i,searchWord);
-      }
+      // for(var i=0; i <= 2; i++){
+      search_fandein(searchWord);
+      // }
     } else{
       nosearch();
     }
   })
   
-  function search_fandein(i,searchWord){
-    setTimeout(function(){
-        api_search_data(searchWord,function(res){
-            data = res
-            list_length += 4
-            SearchResultDraw()
-        })
-    },i*1300);    
+  function search_fandein(searchWord){
+    // setTimeout(function(){
+    api_search_data(searchWord,function(res){
+        data = res
+        list_length += 16
+        SearchResultDraw()
+    })
+    // },i*1300);    
   }
 </script>
 

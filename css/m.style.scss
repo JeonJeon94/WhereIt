@@ -203,7 +203,7 @@
         .hot-ranking{
           display: flex;
           flex: 1;
-          z-index: 2;
+          z-index: 3;
 
           .hot{
             font-size: 14px;
@@ -422,7 +422,7 @@
         display: flex;
         width: 100%;
 
-        >input{
+        #search-input{
           display: flex;
           width: 100%;
           flex: 1;

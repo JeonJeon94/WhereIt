@@ -15,13 +15,13 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
     <div>
       <div class="owl-carousel owl-theme">
         <div class="item" style="width:1200px;">
-          <img src="./images/foodimg3.jpeg">
+          <img src="./images/foodimg3.jpeg" onclick="location.href='./news.php'">
         </div>
         <div class="item" style="width:1200px;">
-          <img src="./images/foodimg2.jpeg">
+          <img src="./images/foodimg2.jpeg" onclick="location.href='./news.php'">
         </div>
         <div class="item" style="width:1200px;">
-          <img src="./images/foodimg1.jpeg">
+          <img src="./images/foodimg1.jpeg" onclick="location.href='./news.php'">
         </div>
       </div>
     </div>

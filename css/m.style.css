@@ -270,7 +270,7 @@
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  z-index: 2;
+  z-index: 3;
 }
 
 .default-page .head .head-hot .rank-container .hot-ranking .hot {
@@ -545,7 +545,7 @@
   width: 100%;
 }
 
-.main-page .footer .search-form .input-form > input {
+.main-page .footer .search-form .input-form #search-input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
