@@ -166,20 +166,16 @@ if($member){
 
   $(function(){
     var storeId ='<?php echo $id; ?>'
-    // for(var i = 0; i <= 2; i++){
-    detail_fandein(storeId)
-    // }
+      detail_fandein(storeId)
   });
 
 
 
   function detail_fandein(itoreId){
-    // setTimeout(function(){
     api_shop_detail(storeId,function(data){
       res = data
       setImage(res)
     })
-    // }, i*500);
   };
 
 
@@ -189,7 +185,7 @@ if($member){
 <script id="picture-slot" type="text/template">
   <div class="store-list">
     <div class="img-container">
-      <img src="<%=link%>" onerror="this.src='./images/desktop_detail_default.png'"/>
+      <img src="<%=link%>" onerror="this.src='./images/desktop_detail_default.png'" onclick="location.href='https://instagram.com/p/<%=code%>'"/>
     </div>
   </div>
 </script>
