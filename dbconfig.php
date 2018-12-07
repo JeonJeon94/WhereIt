@@ -74,11 +74,10 @@
     echo "<script>alert('$msg')</script>";
   }
   function alert_back($msg){
-    echo "<script>alert('$msg')</script>";
+    alert($msg);
     history_back();
   }
   function alert_redirect($msg,$url){
     alert($msg);
-    history_back();
   }
 ?>

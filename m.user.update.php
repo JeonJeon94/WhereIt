@@ -15,23 +15,23 @@ $already_username = sql_one("SELECT * FROM users where user_name ='$username'");
 
 if(mb_strlen($password,'UTF-8') != 0){
   if(mb_strlen($new_pw,'UTF-8') <8){
-    alert_redirect("변경할 비밀번호를 8자리이상 입력해주세요.",'./m.mypage.php');
+    alert_back("변경할 비밀번호를 8자리이상 입력해주세요.");
   }
   if(mb_strlen($new_pw2,'UTF-8') <8){
-    alert_redirect("변경할 비밀번호를 8자리이상 입력해주세요.",'./m.mypage.php');
+    alert_back("변경할 비밀번호를 8자리이상 입력해주세요.");
   }
   if($new_pw != $new_pw2){
-    alert_redirect("변경할 비밀번호가 다릅니다.",'./m.mypage.php');  
+    alert_back("변경할 비밀번호가 다릅니다.");  
   }
 } else{
   if(mb_strlen($username,'UTF-8') == 0){
-    alert_redirect("닉네임을 입력해주세요.",'./m.mypage.php');
+    alert_back("닉네임을 입력해주세요.");
   }
   if(mb_strlen($username,'UTF-8') > 16 || mb_strlen($username,'UTF-8') < 4){
-    alert_redirect("닉네임은 4~16자 사이로 입력해주세요.",'./m.mypage.php');
+    alert_back("닉네임은 4~16자 사이로 입력해주세요.");
   }
   if($already_username != NULL){
-    alert_redirect("이미 사용중인 닉네임 입니다.",'./m.mypage.php');  
+    alert_back("이미 사용중인 닉네임 입니다.");  
   }
   
   sql_query("UPDATE users SET 
@@ -49,6 +49,6 @@ if($member != NULL){
   ");
   history_back();
 } else{
-  alert_redirect("비밀번호가 일치하지 않습니다.",'./m.mypage.php');
+  alert_back("비밀번호가 일치하지 않습니다.");
 }
 ?>

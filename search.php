@@ -108,22 +108,18 @@
   $(function(){
     var searchWord = "<?php echo $search; ?>";
     if(searchWord !== "" && searchWord !== " "){
-      // for(var i=0; i <= 2; i++){
       search_fandein(searchWord);
-      // }
     } else{
       nosearch();
     }
   })
   
   function search_fandein(searchWord){
-    // setTimeout(function(){
     api_search_data(searchWord,function(res){
-        data = res
-        list_length += 16
-        SearchResultDraw()
+      data = res
+      list_length += 16
+      SearchResultDraw()
     })
-    // },i*1300);    
   }
 </script>
 
