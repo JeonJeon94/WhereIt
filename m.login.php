@@ -16,7 +16,7 @@
           </div>
         </form>
         <div class="sns-login">
-          <div style="margin-bottom:20px; color:#504f57;">
+          <div class="sub-text">
               <div>혹은 <b>소셜계정</b>으로 간편하게 로그인하세요!</div>
             </div>
             <div class="sns-login-btn">
@@ -53,10 +53,11 @@
             </div>
           </div>
           <div class="login-help">
-            <div style="margin-right:10px;">  
+            <div>  
               <a href="m.find_pw.php">비밀번호 찾기</a>
             </div>
-            <div style="border-left:1px solid #ebdaeb; padding-left:10px; ">
+            <div class="line"></div>
+            <div>
               <a href="m.signup.php">회원가입</a>
             </div>
           </div>

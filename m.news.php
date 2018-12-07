@@ -9,14 +9,14 @@ $data =
 function simpl_str($string,$limit_length) {
   $string_length = strlen( $string );
   if ( $limit_length <= $string_length ) {
-    $string = substr( $string, 0, $limit_length )."...";
+    $string = mb_substr( $string, 0, $limit_length )."...";
     $han_char = 0;
     for ( $i = $limit_length-1; $i>=0; $i-- ) {
       $lastword = ord( substr( $string, $i, 1 ) );
       if ( 127 > $lastword ) break;
       else $han_char++;
     }
-    if ( $han_char%2 == 1 ) $string = substr( $string, 0, $limit_length-1 ) . "...";
+    if ( $han_char%2 == 1 ) $string = mb_substr( $string, 0, $limit_length-1 ) . "...";
   }
   return $string;
 }
@@ -37,7 +37,7 @@ function simpl_str($string,$limit_length) {
           </div>
           <div class="news-content">
             <!--데이터 교체 필요-->
-            <?=simpl_str($data[0],138)?> 
+            <?=simpl_str($data[0],52)?> 
           </div>
         </div>
       </div>
@@ -105,7 +105,7 @@ function simpl_str($string,$limit_length) {
         강남역 인근에서 풀코스로 놀기
       </div>
       <div class="news-content">
-       <?=simpl_str($data[0],138)?> 
+       <?=simpl_str($data[0],52)?> 
       </div>
     </div>
   </div>

@@ -555,7 +555,7 @@
         justify-content: center;
 
         .store-list{
-          margin: 20px auto;
+          margin: 10px auto;
           animation: fadeInUp 1s;
           flex-basis: auto;
 
@@ -1184,24 +1184,23 @@
     .login-center{
       display:flex;
       flex: 1;
-      margin: 20px 0;
 
       .login-form{
         display: flex;
         flex: 1;
         flex-direction: column;
+        margin: 0px 30px;
         
         .login-title{
-          font-size: 30px;
+          font-size: 22px;
           font-weight: bold;
           color:#504f57;
-          padding-bottom: 20px;
+          margin: 75px 0px 30px 0px;
         }
         .login-input{
           display:flex;
           flex-direction:column;
           align-items: center;
-          padding: 10px;
 
           #e-mail{
             width: 100%;
@@ -1209,21 +1208,23 @@
             border-radius: 20px;
             padding: 10px 0 10px 20px;
             margin: 0 10px 10px 10px;
-            border: 1px solid #d0c0d1;
+            border: 1px solid #f6eff5;
             background-color: #F9F5F8;
             box-sizing: border-box;
             color: #504f57;
+            -webkit-box-shadow: 0 0 0 1000px #F9F5F8 inset;
           }
           #password{
             width: 100%;
             font-size: 14px;
             border-radius: 20px;
             padding: 10px 0 10px 20px;
-            margin: 0 10px 20px 10px;
-            border: 1px solid #d0c0d1;
+            margin: 0 10px 0px 10px;
+            border: 1px solid #f6eff5;
             background-color: #F9F5F8;
             box-sizing: border-box;
             color: #504f57;
+            -webkit-box-shadow: 0 0 0 1000px #F9F5F8 inset;
           }
         }
         
@@ -1232,13 +1233,16 @@
           #login-btn{
             color: white;
             background-color: #504f57;
-            font-size: 14px;
+            font-size: 10px;
             border: 0px solid #504f57;
             border-radius: 20px;
-            font-family: "Montserrat-bold", sans-serif;
-            letter-spacing: 1px;
+            font-family: "Montserrat", sans-serif;
             box-sizing: border-box;
             padding: 10px 50px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            height: 40px;
+            margin: 30px 0px;
             
             &:active{
               background-color: #d8a3d2;
@@ -1246,8 +1250,13 @@
           }
         }
         .sns-login{
-          margin-top: 30px;
-          font-size:16px;
+          font-size:12px;
+          .sub-text{
+            font-size:14px;
+            letter-spacing: -1px;
+            margin-bottom:20px;
+            color:#504f57;
+          }
 
           .sns-login-btn{
             display: flex;
@@ -1289,8 +1298,10 @@
                 }
               }
               .text-box{
-                font-size: 12px;
-                color: gray;
+                font-size: 10px;
+                color: #a89fa8;
+                font-family: "Montserrat", sans-serif;
+                font-weight: 600;
               }
             }
           }
@@ -1299,7 +1310,15 @@
           display: flex;
           justify-content: center;
           margin-top: 40px;
-          font-size:14px;
+          font-size: 10px;
+          align-items: center;
+
+          .line{
+            width: 1px;
+            height: 8px;
+            margin: 0px 5px;
+            background-color: #ebdaeb;
+          }
 
           a{
             text-decoration: none;

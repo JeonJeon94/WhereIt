@@ -718,7 +718,7 @@
 }
 
 .search-page .main .search-list .list-line .store-list, .search-o-page .main .search-list .list-line .store-list {
-  margin: 20px auto;
+  margin: 10px auto;
   -webkit-animation: fadeInUp 1s;
           animation: fadeInUp 1s;
   -ms-flex-preferred-size: auto;
@@ -1501,7 +1501,6 @@
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  margin: 20px 0;
 }
 
 .login-page .main .login-center .login-form {
@@ -1515,13 +1514,14 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin: 0px 30px;
 }
 
 .login-page .main .login-center .login-form .login-title {
-  font-size: 30px;
+  font-size: 22px;
   font-weight: bold;
   color: #504f57;
-  padding-bottom: 20px;
+  margin: 75px 0px 30px 0px;
 }
 
 .login-page .main .login-center .login-form .login-input {
@@ -1535,7 +1535,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10px;
 }
 
 .login-page .main .login-center .login-form .login-input #e-mail {
@@ -1544,11 +1543,12 @@
   border-radius: 20px;
   padding: 10px 0 10px 20px;
   margin: 0 10px 10px 10px;
-  border: 1px solid #d0c0d1;
+  border: 1px solid #f6eff5;
   background-color: #F9F5F8;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   color: #504f57;
+  -webkit-box-shadow: 0 0 0 1000px #F9F5F8 inset;
 }
 
 .login-page .main .login-center .login-form .login-input #password {
@@ -1556,25 +1556,29 @@
   font-size: 14px;
   border-radius: 20px;
   padding: 10px 0 10px 20px;
-  margin: 0 10px 20px 10px;
-  border: 1px solid #d0c0d1;
+  margin: 0 10px 0px 10px;
+  border: 1px solid #f6eff5;
   background-color: #F9F5F8;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   color: #504f57;
+  -webkit-box-shadow: 0 0 0 1000px #F9F5F8 inset;
 }
 
 .login-page .main .login-center .login-form .login-btn #login-btn {
   color: white;
   background-color: #504f57;
-  font-size: 14px;
+  font-size: 10px;
   border: 0px solid #504f57;
   border-radius: 20px;
-  font-family: "Montserrat-bold", sans-serif;
-  letter-spacing: 1px;
+  font-family: "Montserrat", sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 10px 50px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  height: 40px;
+  margin: 30px 0px;
 }
 
 .login-page .main .login-center .login-form .login-btn #login-btn:active {
@@ -1582,8 +1586,14 @@
 }
 
 .login-page .main .login-center .login-form .sns-login {
-  margin-top: 30px;
-  font-size: 16px;
+  font-size: 12px;
+}
+
+.login-page .main .login-center .login-form .sns-login .sub-text {
+  font-size: 14px;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+  color: #504f57;
 }
 
 .login-page .main .login-center .login-form .sns-login .sns-login-btn {
@@ -1644,8 +1654,10 @@
 }
 
 .login-page .main .login-center .login-form .sns-login .sns-login-btn .sns-btn .text-box {
-  font-size: 12px;
-  color: gray;
+  font-size: 10px;
+  color: #a89fa8;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
 }
 
 .login-page .main .login-center .login-form .login-help {
@@ -1656,7 +1668,17 @@
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 40px;
-  font-size: 14px;
+  font-size: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login-page .main .login-center .login-form .login-help .line {
+  width: 1px;
+  height: 8px;
+  margin: 0px 5px;
+  background-color: #ebdaeb;
 }
 
 .login-page .main .login-center .login-form .login-help a {
