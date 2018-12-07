@@ -77,4 +77,8 @@
     echo "<script>alert('$msg')</script>";
     history_back();
   }
+  function alert_redircet($msg,$url){
+    alert($msg);
+    history_back();
+  }
 ?>

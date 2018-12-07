@@ -170,20 +170,20 @@ if($member){
 
   $(function(){
     var storeId ='<?php echo $id; ?>'
-    for(var i = 0; i <= 2; i++){
-      detail_fandein(i,storeId)
-    }
+    // for(var i = 0; i <= 2; i++){
+      detail_fandein(storeId)
+    // }
   });
 
 
 
-  function detail_fandein(i,storeId){
-    setTimeout(function(){
+  function detail_fandein(storeId){
+    // setTimeout(function(){
       api_shop_detail(storeId,function(data){
         res = data
         setImage(res)
       })
-    }, i*500);
+    // }, i*500);
   };
 </script>
 

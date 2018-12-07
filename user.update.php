@@ -12,6 +12,15 @@ $username=escape_string($_POST['username']);
 if(strlen($username) == 0){
   alert_back("닉네임을 입력해주세요.");
 }
+if($password.length <8){
+  alert_back("비밀번호를 8자리이상 입력해주세요.");
+}
+if($new_pw.length <8){
+  alert_back("변경할 비밀번호를 8자리이상 입력해주세요.");
+}
+if($new_pw2.length <8){
+  alert_back("변경할 비밀번호를 8자리이상 입력해주세요.");
+}
 if($new_pw != $new_pw2){
   alert_back("변경할 비밀번호가 다릅니다.");
 }

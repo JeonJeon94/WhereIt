@@ -1,6 +1,6 @@
 <?php 
   include './dbconfig.php';
-
+  
   if(!empty($_POST['search'])){
     $search = $_POST['search'];
   }else{
@@ -28,6 +28,46 @@
     if(!$member){
       alert_back("로그인을 해주세요!");
     }
+  }
+  $rank_src = './images/default/rank.png';
+  $news_src = './images/default/news.png';
+  $favorite_src = './images/default/favorite.png';
+  $contents_src = './images/default/contents.png';
+  $service_src = './images/default/service.png';
+  $ask_src = './images/default/ask.png';
+  
+  $rank_adress='m.rank.php';
+  $news_adress='m.news.php';
+  $favorite_adress='m.favorite.php';
+  $contents_adress='m.contents.php';
+  $service_adress='m.service.php';
+  $ask_adress='m.ask.php';
+
+  switch($page){
+    case 'ranking-theme' : 
+      $rank_src = './images/select/rank-active.png';
+      break;
+    case 'ranking-thismonth' : 
+      $rank_src = './images/select/rank-active.png';
+      break;
+    case 'ranking-nowdays' : 
+      $rank_src = './images/select/rank-active.png';
+      break;
+    case 'news' :
+      $news_src = './images/select/news-active.png';
+      break;
+    case 'favorite' :
+      $favorite_src = './images/select/favorite-active.png';
+      break;
+    case 'service' :
+      $service_src = './images/select/service-active.png';
+      break;
+    case 'ask' :
+      $ask_src = './images/select/ask-active.png';
+      break;
+
+    default :
+      break;
   }
 ?>
 <!DOCTYPE html>
@@ -66,11 +106,11 @@
       <?php } ?>
       </div>
       <div id="ranking-icon">
-        <img src="./images/default/rank.png" onclick="location.href='m.rank.php'"/>
+        <img src="<?= $rank_src; ?>" onclick="location.href='<?= $rank_adress; ?>'"/>
         <div>랭킹</div>
       </div>
       <div id="news-icon">
-        <img src="./images/default/news.png" onclick="location.href='m.news.php'"/>
+        <img src="<?= $news_src; ?>" onclick="location.href='<?= $news_adress; ?>'"/>
         <div>매거진</div>
       </div>
       <div id="rank-area-icon">
@@ -78,20 +118,20 @@
         <div>검색가능<br/>지역</div>
       </div>
       <div id="favorite-icon">
-        <img src="./images/default/favorite.png" onclick="location.href='m.favorite.php'"/>
+        <img src="<?= $favorite_src; ?>" onclick="location.href='<?= $favorite_adress; ?>'"/>
         <div>즐겨찾기</div>
       </div>
       <div class="slide-line"></div>
       <div id="contents-icon">
-        <img src="./images/default/contents.png" onclick="location.href='m.contents.php'"/>
+        <img src="<?= $contents_src; ?>" onclick="location.href='<?= $contents_adress; ?>'"/>
         <div>이용약관</div>
       </div>
       <div id="service-icon">
-        <img src="./images/default/service.png"/>
+        <img src="<?= $service_src; ?>" />
         <div>서비스정보</div>
       </div>
       <div id="ask-icon">
-        <img src="./images/default/ask.png" onclick="location.href='m.ask.php'"/>
+        <img src="<?= $ask_src; ?>" onclick="location.href='<?= $ask_adress; ?>'"/>
         <div>문의하기</div>
       </div>
     </div>
