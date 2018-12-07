@@ -1,6 +1,14 @@
-<?php $page="sign" ?>
- 
+<?php $page="sign";?>
+
 <?php include_once('./head.php') ?>
+    <?php 
+      if(!empty($_GET['username'])){
+        $username_flag = $_GET['username'];
+        $email = $_GET['email'];
+        $pw = $_GET['pw'];
+        alert($email);    
+      }
+    ?>
     <div class="main">
       <div class="sign-center">
         <div class="page-num1">
@@ -15,8 +23,8 @@
           </div>
           <div class="sign-form">
             <div style="display:flex; flex-direction:column; align-items:center;">
-              <input id="sign-mail" type="text" name="sign-mail" placeholder="이메일을 입력해주세요(whereit@whereit.kr)" />
-              <input id="sign-pw" type="password" name="sign-pw" placeholder="비밀번호를 입력해주세요(8자 이상 입력해주세요)" />
+              <input id="sign-mail" type="text" name="sign-mail" placeholder="이메일을 입력해주세요(whereit@whereit.kr)" value = "<?php echo (isset($email))?$email:'';?>" />
+              <input id="sign-pw" type="password" name="sign-pw" placeholder="비밀번호를 입력해주세요(8자 이상 입력해주세요)" value = "<?php echo (isset($pw))?$pw:'';?>"/>
               <input id="next-btn1" type="button" value="NEXT" />
             </div>
           </div>
@@ -195,3 +203,9 @@
       </div>
     </div>
 <?php include_once('./footer.php') ?>
+<script>
+  <?php if(isset($username_flag)) {?>
+      $('.page-num1').css('display','none')
+      $('.page-num2').css('display','block')
+  <?php } ?>
+</script>

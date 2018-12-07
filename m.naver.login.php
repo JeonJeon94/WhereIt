@@ -28,7 +28,7 @@ if(strpos($_SERVER["REQUEST_URI"], "?") == FALSE){
     var_dump($json);
     $sql = sql_one("SELECT id, user_email FROM users WHERE user_email = $id");
     if(!$sql){
-      sql_one("INSERT INTO users SET user_email='$id', resister='naver'");
+      sql_one("INSERT INTO users SET user_email='$id', register='naver'");
       
       $sql = sql_one("SELECT id, user_email FROM users WHERE user_email = $id");
      
