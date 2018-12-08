@@ -1,5 +1,22 @@
 <script>
+  var _hot_y = 0
+  var _hot_mouse_over = false;
+  setInterval(function(){
+    if(_hot_mouse_over)
+      return ;
+
+    _hot_y++;
+    if(_hot_y >= 10)
+      _hot_y = 0;
+    $(".hot").css("transform","translateY(-"+_hot_y*34+"px)")
+  },3000)
+  
   $("#down_bt").on("mouseover", function(){
+    _hot_y =0;
+    _hot_mouse_over = true;
+    $(".hot").css("transition","none");
+    $(".hot").parent().css("overflow","visible")
+    $(".hot").css("transform","translateY(0px)")
     $(".hot-list").slideDown('fast');
     $("#down_bt").css("display",'none');
     $("#up_bt").css("display",'block');
@@ -8,11 +25,21 @@
   });
 
   $(".rank-container").on("mouseleave",function(){
+    _hot_y =0;
+    $(".hot").css("transform","translateY(0px)")
+
     $(".hot-list").slideUp('fast');
     $('#down_bt').css('display', 'block');
     $('#up_bt').css('display','none');
     $('.hot').css("background","linear-gradient( to bottom, #F1EDF0, #FAF6F9 )");
     $('.hot').css("border",'none');
+
+    setTimeout(function(){
+      _hot_mouse_over = false;
+      $(".hot").css("transition","all 0.5s");
+      $(".hot").parent().css("overflow","hidden")
+      $(".hot-list").css("display","flex")
+    },500)
   });
 
   $("#in-down_bt").on("mouseover", function(){

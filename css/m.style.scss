@@ -196,7 +196,7 @@
         display: flex;
         width: 150px;
         margin-right: 10px;
-        align-items: center;
+        // align-items: center;
 
         .hot-ranking{
           display: flex;
@@ -212,7 +212,7 @@
             list-style-type: none;
             
             .hot-list-h{
-
+              padding: 5px 0 5px 0;
               .num{
                 color: #D8A3D2;
                 font-family: "Noto Sans KR", sans-serif;
@@ -225,7 +225,8 @@
               }
             }
             .hot-list{
-              padding: 0 0 10px 0;
+              padding: 5px 0 5px 0;
+              // padding: 0 0 10px 0;
               
   
               .num{
@@ -242,6 +243,7 @@
           }
         }
         .rank-btn{
+          z-index: 10;
           display: flex;
           align-items: center;
           justify-content: flex-end;

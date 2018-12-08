@@ -5,15 +5,14 @@
   <div class="main">
     <div>
       <div class="owl-carousel owl-theme">
-        <div class="item">
-          <img src="./images/m_foodimg3.jpg">
+        <?php
+          for($i=0; $i <= 2; $i++){
+            $url = "./m.news_detail.php";
+        ?>
+        <div class="item" data-id="<?=$i?>" onclick="click_main_banner(this,'<?php echo $url ?>')" >
+          <img src="./images/m_foodimg2.jpg" >
         </div>
-        <div class="item">
-          <img src="./images/m_foodimg2.jpg">
-        </div>
-        <div class="item">
-          <img src="./images/m_foodimg1.jpg">
-        </div>
+        <?php } ?>
       </div>
     </div>
   </div>
@@ -31,5 +30,34 @@
       </form>
     </div>
   </div>
+  <script>
+    function click_main_banner(element,url){
+      var clicked = $(element).attr("data-id");
+      var max = 0
+      $(".item").each(function(){ max = $(this).attr("data-id") > max ? $(this).attr("data-id") : max })
+
+      if($(element).parent().hasClass("center")){
+        location.href=url;
+      }else{
+        var center = $(".center .item").attr("data-id")
+        console.log(center, max, clicked)
+        if(center == 0){
+          if(clicked == max){
+            return $(".owl-prev").click()
+          }
+        }
+        if(center == max){
+          if(clicked == 0){
+            return $(".owl-next").click()
+          }
+        }
+        if(center > clicked){
+          $(".owl-prev").click()
+        }else{
+          $(".owl-next").click()
+        }
+      }
+    }
+  </script>
 
 <?php include_once("./m.footer.php"); ?>

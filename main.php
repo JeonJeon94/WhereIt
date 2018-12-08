@@ -10,19 +10,19 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
  }
 }
 ?>
+
 <?php include_once('./head.php'); ?>
   <div class="main">
     <div>
-      <div class="owl-carousel owl-theme">
-        <div class="item" style="width:1200px;">
-          <img src="./images/foodimg3.jpeg" onclick="location.href='./news.php'">
+      <div class="owl-carousel owl-theme" >
+        <?php
+          for($i=0; $i <= 2; $i++){
+            $url = "./news_detail.php";
+        ?>
+        <div class="item" style="width:1200px;" data-id="<?=$i?>" onclick="click_main_banner(this,'<?php echo $url ?>')" >
+          <img src="./images/foodimg3.jpeg" >
         </div>
-        <div class="item" style="width:1200px;">
-          <img src="./images/foodimg2.jpeg" onclick="location.href='./news.php'">
-        </div>
-        <div class="item" style="width:1200px;">
-          <img src="./images/foodimg1.jpeg" onclick="location.href='./news.php'">
-        </div>
+        <?php } ?>
       </div>
     </div>
     <div class="search-form">
@@ -45,4 +45,33 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
       </div>
     </div>
   </div>
+  <script>
+    function click_main_banner(element,url){
+      var clicked = $(element).attr("data-id");
+      var max = 0
+      $(".item").each(function(){ max = $(this).attr("data-id") > max ? $(this).attr("data-id") : max })
+
+      if($(element).parent().hasClass("center")){
+        location.href=url;
+      }else{
+        var center = $(".center .item").attr("data-id")
+        console.log(center, max, clicked)
+        if(center == 0){
+          if(clicked == max){
+            return $(".owl-prev").click()
+          }
+        }
+        if(center == max){
+          if(clicked == 0){
+            return $(".owl-next").click()
+          }
+        }
+        if(center > clicked){
+          $(".owl-prev").click()
+        }else{
+          $(".owl-next").click()
+        }
+      }
+    }
+  </script>
 <?php include_once('./footer.php'); ?>
