@@ -64,9 +64,7 @@
     if( username.length < 4 || username.length > 16 ){
       return alert("닉네임은 4~16자 사이로 입력해주세요.")
     }
-    <?php email_check() ?>
-    
-    //location.href='./signup_username.php?username='+username+'&email='+email+'&pw='+pw;
+    location.href='./signup_username.php?username='+username+'&email='+email+'&pw='+pw;
   });
   $('#edit').click(function(){
     $('.myinfo').css('display','none')
@@ -76,4 +74,9 @@
     $('.logout-box').css('display','block')
     $('.modal-container').css('display','block')
   });
+  function email_check(){
+    $('.page-num1').css('display','none')
+    $('.page-num2').css('display','none')
+    $('.signup-end').css('display','block')
+  }
 </script>

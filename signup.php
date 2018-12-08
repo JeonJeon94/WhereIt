@@ -10,15 +10,6 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
  }
 }
 ?>
-<?php
-  function email_check($username){
-    $member = sql_one("SELECT id FROM users WHERE user_name = '$username'");
-
-    if($member != NULL){
-      alert_back("이미 사용중인 닉네임 입니다.");
-    }
-  }
-?>
 <?php include_once('./head.php') ?>
     <div class="main">
       <div class="sign-center">
@@ -214,3 +205,8 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
       </div>
     </div>
 <?php include_once('./footer.php') ?>
+<?php if(!empty($_GET['checksum'])){ ?>
+  <script>
+    email_check()
+  </script>  
+<?php } ?>

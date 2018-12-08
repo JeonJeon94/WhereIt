@@ -24,13 +24,10 @@
   $(function(){
     api_send_mail('<?= $email; ?>','<?= $pw; ?>','<?= $username; ?>', function(res){
       if(res.code == 1){
-        $('.page-num2').css('display','none')
-        $('.signup-end').css('display','block')
+        location.href='./signup.php?checksum=ok';
       } else if(res.code == -1){
-        alert("111111111");
         alert_back("이메일 전송에 실패했습니다, 정확한 이메일을 기입해주세요");
       } else if(res.code == -2){
-        alert("222222222");
         alert_back("이메일 전송에 실패했습니다, 정확한 이메일을 기입해주세요");
       } else{
         alert_back("가입도중 문제가 발생했습니다. 다시 시도해주세요!");
