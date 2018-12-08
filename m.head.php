@@ -138,14 +138,22 @@
   </div>
   <div class="head">
     <div class="head-top">
+    <?php if($page == 'search'){ ?>
+      <div class="search-icon" style="display:none !important;">
+    <?php }else{ ?>
       <div class="search-icon">
+    <?php } ?>
         <img src="./images/etc/search.png" />
       </div>
       <div class="logo">
         <img src="./images/header/logo.png" onclick="location.href='main.php'"/>
       </div>
       <div class="form-container">
+      <?php if($page=='search'){ ?>
+        <div class="back" onclick="location.href='./m.index.php'">
+      <?php }else{ ?>
         <div class="back">
+      <?php } ?>
           <img src="./images/etc/close.png" />
         </div>
         <form  class="search-form2" method="POST" action="m.search.php">
@@ -190,8 +198,8 @@
     </div>
   </div>
 
-<script>
+<!-- <script>
   $('.back').click(function(){
     window.history.back()
   });
-</script>
+</script> -->

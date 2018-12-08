@@ -32,9 +32,11 @@
     
     if(exptext.test(email)==false){
       return alert("이메일 형식이 올바르지 않습니다.")
+
     }else{
-      if($("#sign-pw").val().length < 9){
+      if(pw.length < 9){
       return alert("비밀번호는 8자 이상 입력해주세요.")
+      
       }else{
         $('.page-num1').css('display','none')
         $('.page-num2').css('display','block')
@@ -50,20 +52,18 @@
     $('.sign-center').css('display','block')
   });
   $('#next-btn2').click(function(){
+    let username = $("#username").val();
+    let email = $('#sign-mail').val();
+    let pw = $('#sign-pw').val();
+
     if($('.checkbox3 img').attr('src') != "./images/box-check.png"){
       return alert("약관에 동의하셔야 가입하실 수 있습니다.")
     }
-    if($("#username").val().length < 4 || $("#username").val().length > 16 ){
+    if(username.length < 4 || username.length > 16 ){
       return alert("닉네임은 4~16자 사이로 입력해주세요.")
     }
-    api_send_mail($("#sign-mail").val(),$("#sign-pw").val(), $("#username").val(), function(res){
-      if(res.code == 1){
-        $('.page-num2').css('display','none')
-        $('.signup-end').css('display','block')
-      }else{
-        return alert("가입 도중 문제가 발생했습니다. 다시 시도해주세요!")
-      }
-    })
+    location.href='./m.signup.php?username='+username+'&email='+email+'&pw='+pw;
+    
   });
   
 </script>

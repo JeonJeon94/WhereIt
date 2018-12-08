@@ -29,6 +29,7 @@
 
     if(exptext.test(email)==false){
       return alert("이메일 형식이 올바르지 않습니다.")
+      
     }else{
       if($("#sign-pw").val().length < 8){
         return alert("비밀번호는 8자 이상 입력해주세요.")
@@ -63,7 +64,9 @@
     if( username.length < 4 || username.length > 16 ){
       return alert("닉네임은 4~16자 사이로 입력해주세요.")
     }
-    location.href='./signup_username.php?username='+username+'&email='+email+'&pw='+pw;
+    <?php email_check() ?>
+    
+    //location.href='./signup_username.php?username='+username+'&email='+email+'&pw='+pw;
   });
   $('#edit').click(function(){
     $('.myinfo').css('display','none')

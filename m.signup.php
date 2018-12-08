@@ -1,4 +1,5 @@
 <?php $page="signup" ?>
+<?php include_once('./m.signup_username.php') ?>
 <?php include_once("./m.head.php") ?>
   <div class="main">
     <div class="sign-center">

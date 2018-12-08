@@ -627,7 +627,7 @@
 }
 
 .search-page .head .head-top .search-icon, .search-o-page .head .head-top .search-icon {
-  display: none;
+  display: none !important;
 }
 
 .search-page .head .head-top .logo, .search-o-page .head .head-top .logo {

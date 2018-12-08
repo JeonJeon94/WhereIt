@@ -1,14 +1,14 @@
 <?php $page="sign";?>
+<?php
+  function email_check($username){
+    $member = sql_one("SELECT id FROM users WHERE user_name = '$username'");
 
+    if($member != NULL){
+      alert_back("이미 사용중인 닉네임 입니다.");
+    }
+  }
+?>
 <?php include_once('./head.php') ?>
-    <?php 
-      if(!empty($_GET['username'])){
-        $username_flag = $_GET['username'];
-        $email = $_GET['email'];
-        $pw = $_GET['pw'];
-        alert($email);    
-      }
-    ?>
     <div class="main">
       <div class="sign-center">
         <div class="page-num1">
@@ -203,9 +203,3 @@
       </div>
     </div>
 <?php include_once('./footer.php') ?>
-<script>
-  <?php if(isset($username_flag)) {?>
-      $('.page-num1').css('display','none')
-      $('.page-num2').css('display','block')
-  <?php } ?>
-</script>
