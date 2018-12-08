@@ -197,9 +197,3 @@
       </div>
     </div>
   </div>
-
-<!-- <script>
-  $('.back').click(function(){
-    window.history.back()
-  });
-</script> -->

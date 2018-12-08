@@ -22,10 +22,15 @@ function simpl_str($string,$limit_length) {
 }
 ?>
 <?php include_once("./m.head.php") ?>
+<?php
+  // 매거진 번호로 구분
+  //$news_num = "SELECT * FROM news WHERE id"; 
+  // ?title=<php echo $news_num;>
+ ?>
   <div class="main">
     <div class="news-list">
       <div class="list-item">
-        <div class="news-picture">
+        <div class="news-picture" onclick="location.href='./m.news_detail.php'">
           <img src="./images/m_cafe1.jpg" />
         </div>
         <div class="news-info">

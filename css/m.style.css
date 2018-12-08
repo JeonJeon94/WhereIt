@@ -1059,7 +1059,9 @@
 }
 
 .news-page .main .news-detail {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-animation: fadeInUp 2s;
           animation: fadeInUp 2s;
   -webkit-box-orient: vertical;
