@@ -6,6 +6,7 @@
         center:true,
         margin:10,
         nav:true,
+        mouseDrag:false,
         autoWidth:true,
         responsive:{
         0:{
@@ -19,26 +20,4 @@
         }
       }
     })
-    $('.loop').owlCarousel({
-        center: true,
-        items:2,
-        loop:true,
-        margin:50,
-        responsive:{
-            600:{
-                items:4
-            }
-        }
-    });
-    $('.nonloop').owlCarousel({
-        center: true,
-        items:2,
-        loop:false,
-        margin:10,
-        responsive:{
-            600:{
-                items:4
-            }
-        }
-    });
 </script>

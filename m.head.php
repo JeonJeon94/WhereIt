@@ -174,19 +174,19 @@
     <div class="head-hot">
       <div class="rank-container">
         <div class="hot-ranking">
-          <div style="flex:1;">
-            <ul class="hot">
+          <div style="flex:1; overflow:hidden">
+            <ul class="hot" style="transition:all 0.5s">
               <li class="hot-text" style="display:none; padding: 5px 0px; color: #504f57;">인기검색어</li>
               <li class="hot-list-h"><div class="num">1</div><a href="m.search.php?search=강남">강남</a></li>
-              <li class="hot-list" style="display:none;"><div class="num">2</div><a href="m.search.php?search=건대">건대</a></li>
-              <li class="hot-list" style="display:none;"><div class="num">3</div><a href="m.search.php?search=동대문">동대문</a></li>
-              <li class="hot-list" style="display:none;"><div class="num">4</div><a href="m.search.php?search=마포">마포</a></li>
-              <li class="hot-list" style="display:none;"><div class="num">5</div><a href="m.search.php?search=신림">신림</a></li>
-              <li class="hot-list" style="display:none;"><div class="num">6</div><a href="m.search.php?search=강북">강북</a></li>
-              <li class="hot-list" style="display:none;"><div class="num">7</div><a href="m.search.php?search=왕십리">왕십리</a></li>
-              <li class="hot-list" style="display:none;"><div class="num">8</div><a href="m.search.php?search=잠실">잠실</a></li>
-              <li class="hot-list" style="display:none;"><div class="num">9</div><a href="m.search.php?search=이태원">이태원</a></li>
-              <li class="hot-list" style="display:none;"><div class="num">10</div><a href="m.search.php?search=홍대">홍대</a></li>
+              <li class="hot-list"><div class="num">2</div><a href="m.search.php?search=건대">건대</a></li>
+              <li class="hot-list"><div class="num">3</div><a href="m.search.php?search=동대문">동대문</a></li>
+              <li class="hot-list"><div class="num">4</div><a href="m.search.php?search=마포">마포</a></li>
+              <li class="hot-list"><div class="num">5</div><a href="m.search.php?search=신림">신림</a></li>
+              <li class="hot-list"><div class="num">6</div><a href="m.search.php?search=강북">강북</a></li>
+              <li class="hot-list"><div class="num">7</div><a href="m.search.php?search=왕십리">왕십리</a></li>
+              <li class="hot-list"><div class="num">8</div><a href="m.search.php?search=잠실">잠실</a></li>
+              <li class="hot-list"><div class="num">9</div><a href="m.search.php?search=이태원">이태원</a></li>
+              <li class="hot-list"><div class="num">10</div><a href="m.search.php?search=홍대">홍대</a></li>
             </ul>
           </div>
           <div class="rank-btn">

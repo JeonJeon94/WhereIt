@@ -87,18 +87,18 @@ if($NEED_LOGIN == true){
           </div>
           <div class="rank-container" style="display:flex; width:193px; height:44px;">
           <div class="hot-rank">
-            <div style="flex:1;">
-              <div class="hot">
+            <div style="flex:1;overflow: hidden;">
+              <div class="hot" style="transition:all 0.5s">
                 <div class="hot-list-h"><div class="num">1</div><a href="search.php?search=강남">강남</a></div>
-                <div class="hot-list" style="display:none;"><div class="num">2</div><a href="search.php?search=서초">서초</a></div>
-                <div class="hot-list" style="display:none;"><div class="num">3</div><a href="search.php?search=구의">구의</a></div>
-                <div class="hot-list" style="display:none;"><div class="num">4</div><a href="search.php?search=건대">건대</a></div>
-                <div class="hot-list" style="display:none;"><div class="num">5</div><a href="search.php?search=목동">목동</a></div>
-                <div class="hot-list" style="display:none;"><div class="num">6</div><a href="search.php?search=잠실">잠실</a></div>
-                <div class="hot-list" style="display:none;"><div class="num">7</div><a href="search.php?search=신림">신림</a></div>
-                <div class="hot-list" style="display:none;"><div class="num">8</div><a href="search.php?search=강변">강변</a></div>
-                <div class="hot-list" style="display:none;"><div class="num">9</div><a href="search.php?search=역삼">역삼</a></div>
-                <div class="hot-list" style="display:none;"><div class="num">10</div><a href="search.php?search=논현">논현</a></div>
+                <div class="hot-list"><div class="num">2</div><a href="search.php?search=서초">서초</a></div>
+                <div class="hot-list"><div class="num">3</div><a href="search.php?search=구의">구의</a></div>
+                <div class="hot-list"><div class="num">4</div><a href="search.php?search=건대">건대</a></div>
+                <div class="hot-list"><div class="num">5</div><a href="search.php?search=목동">목동</a></div>
+                <div class="hot-list"><div class="num">6</div><a href="search.php?search=잠실">잠실</a></div>
+                <div class="hot-list"><div class="num">7</div><a href="search.php?search=신림">신림</a></div>
+                <div class="hot-list"><div class="num">8</div><a href="search.php?search=강변">강변</a></div>
+                <div class="hot-list"><div class="num">9</div><a href="search.php?search=역삼">역삼</a></div>
+                <div class="hot-list"><div class="num">10</div><a href="search.php?search=논현">논현</a></div>
               </div>
             </div>
           </div>

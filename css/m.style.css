@@ -261,9 +261,6 @@
   display: flex;
   width: 150px;
   margin-right: 10px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .default-page .head .head-hot .rank-container .hot-ranking {
@@ -285,6 +282,10 @@
   list-style-type: none;
 }
 
+.default-page .head .head-hot .rank-container .hot-ranking .hot .hot-list-h {
+  padding: 5px 0 5px 0;
+}
+
 .default-page .head .head-hot .rank-container .hot-ranking .hot .hot-list-h .num {
   color: #D8A3D2;
   font-family: "Noto Sans KR", sans-serif;
@@ -298,7 +299,7 @@
 }
 
 .default-page .head .head-hot .rank-container .hot-ranking .hot .hot-list {
-  padding: 0 0 10px 0;
+  padding: 5px 0 5px 0;
 }
 
 .default-page .head .head-hot .rank-container .hot-ranking .hot .hot-list .num {
@@ -314,6 +315,7 @@
 }
 
 .default-page .head .head-hot .rank-container .rank-btn {
+  z-index: 10;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
