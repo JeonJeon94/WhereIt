@@ -24,7 +24,7 @@
   $(function(){
     api_send_mail('<?= $email; ?>','<?= $pw; ?>','<?= $username; ?>', function(res){
       if(res.code == 1){
-        location.href='./signup.php?checksum=ok';
+        location.href='./m.signup.php?checksum=ok';
 
       }if(res.code == -2){
         if(res.err.indexOf('Duplicate') >= 0 ){

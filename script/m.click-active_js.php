@@ -34,9 +34,8 @@
       return alert("이메일 형식이 올바르지 않습니다.")
 
     }else{
-      if(pw.length < 9){
-      return alert("비밀번호는 8자 이상 입력해주세요.")
-      
+      if($('#sign-pw').val().length < 8){
+        return alert("비밀번호는 8자 이상 입력해주세요.")
       }else{
         $('.page-num1').css('display','none')
         $('.page-num2').css('display','block')
@@ -62,8 +61,12 @@
     if(username.length < 4 || username.length > 16 ){
       return alert("닉네임은 4~16자 사이로 입력해주세요.")
     }
-    location.href='./m.signup.php?username='+username+'&email='+email+'&pw='+pw;
+    location.href='./m.signup_username.php?username='+username+'&email='+email+'&pw='+pw;
     
   });
-  
+  function email_check(){
+    $('.page-num1').css('display','none')
+    $('.page-num2').css('display','none')
+    $('.signup-end').css('display','block')
+  }
 </script>

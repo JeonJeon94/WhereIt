@@ -1,5 +1,4 @@
 <?php $page="signup" ?>
-<?php include_once('./m.signup_username.php') ?>
 <?php include_once("./m.head.php") ?>
   <div class="main">
     <div class="sign-center">
@@ -195,3 +194,8 @@
     </div>
   </div>
 <?php include_once("./m.footer.php") ?>
+<?php if(!empty($_GET['checksum'])){ ?>
+  <script>
+    email_check()
+  </script>  
+<?php } ?>
