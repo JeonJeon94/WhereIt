@@ -1,4 +1,5 @@
 <?php $page="edit-pw"; ?>
+
 <?php include_once('./head.php') ?>
 <?php
 $pw_id=$_GET['id'];

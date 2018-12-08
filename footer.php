@@ -20,11 +20,7 @@
     </div>
   </div>
   </body>
-  <script>
-    if ( window.history.replaceState ) {
-        window.history.replaceState( null, null, window.location.href );
-    }
-  </script>
+
   <?php include_once("./script/dropdown_js.php") ?>
   <?php include_once("./script/input_active_js.php") ?>
   <?php include_once("./script/move_top_js.php") ?>

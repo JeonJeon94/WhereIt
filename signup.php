@@ -1,4 +1,15 @@
 <?php $page="sign";?>
+<?php 
+$arr_browser = array ("iPhone","iPod","IEMobile","Mobile","lgtelecom","PPC");
+
+for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
+ if(strpos($_SERVER['HTTP_USER_AGENT'],$arr_browser[$indexi]) == true){
+  // 모바일 브라우저라면  모바일 URL로 이동 
+   header("Location: ./m.signup.php");
+   exit;
+ }
+}
+?>
 <?php
   function email_check($username){
     $member = sql_one("SELECT id FROM users WHERE user_name = '$username'");

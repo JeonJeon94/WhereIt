@@ -12,7 +12,6 @@
     alert_back("이미 사용중인 닉네임 입니다.");
   }
 ?>
-
 <script src="http://13.124.4.4/gen_api.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
