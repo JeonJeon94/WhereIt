@@ -10,8 +10,12 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
  }
 }
 ?>
-
 <?php include_once('./head.php') ?>
+<?php
+  if($user_id){
+    alert_back('잘못된 접근입니다.');
+  }
+?>
     <div class="main">
       <div class="login-center">
         <div class="login-form">

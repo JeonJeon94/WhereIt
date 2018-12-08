@@ -1055,6 +1055,19 @@
     }
   }
 }
+.info-page{
+  .main{
+    .service-info{
+      width: 100%;
+      margin-top: 40px auto;
+      
+      >img{
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
 .ask-page{
   .main{
     width: 100%;
@@ -1713,7 +1726,7 @@
           flex-direction: column;
           margin-bottom: 20px;
   
-          #password, #new_pw, #new_pw2, #username{
+          #password_ck, #new_pw_ck, #new_pw2_ck, #username{
             width: 100%;
             font-size: 14px;
             border-radius: 20px;

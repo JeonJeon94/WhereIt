@@ -56,9 +56,9 @@
       </div>
       <div class="edit">
         <form id="edit-form" method="post" action="m.user.update.php">
-          <input id="password" type="password" name="password" placeholder="기존 비밀번호를 입력해주세요." />
-          <input id="new_pw" type="password" name="new_pw" placeholder="변경하실 비밀번호를 입력해주세요." />
-          <input id="new_pw2" type="password" name="new_pw2" placeholder="변경하실 비밀번호를 한번 더 입력해주세요." />
+          <input id="password_ck" type="password" name="password" placeholder="기존 비밀번호를 입력해주세요." />
+          <input id="new_pw_ck" type="password" name="new_pw" placeholder="변경하실 비밀번호를 입력해주세요." />
+          <input id="new_pw2_ck" type="password" name="new_pw2" placeholder="변경하실 비밀번호를 한번 더 입력해주세요." />
           <input id="username" type="text" name="username" value="<?=$member[user_name]?>" />
         </form>
         <div style="text-align:center;">

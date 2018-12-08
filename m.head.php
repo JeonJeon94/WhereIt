@@ -40,7 +40,7 @@
   $news_adress='m.news.php';
   $favorite_adress='m.favorite.php';
   $contents_adress='m.contents.php';
-  $service_adress='m.service.php';
+  $service_adress='m.service-info.php';
   $ask_adress='m.ask.php';
 
   switch($page){
@@ -127,7 +127,7 @@
         <div>이용약관</div>
       </div>
       <div id="service-icon">
-        <img src="<?= $service_src; ?>" />
+        <img src="<?= $service_src; ?>" onclick="location.href='<?= $service_adress; ?>'"/>
         <div>서비스정보</div>
       </div>
       <div id="ask-icon">

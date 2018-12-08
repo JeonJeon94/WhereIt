@@ -399,7 +399,19 @@ body{
   }
 }
 
-
+.info-page{
+  .main{    
+    .service-info{
+      width: 950px;
+      height: auto;
+      margin: 0 auto;
+      
+      >img{
+        display: flex;
+      }
+    }
+  }
+}
 .main-page{
   .head{
     margin-bottom: 31px;
@@ -505,7 +517,7 @@ body{
     }
   }
 }
-.search-page, .ranking-theme-page, .ranking-nowdays-page, .ranking-thismonth-page, .detail-page, .magazine-page, .asking-page, .login-page, .find-page, .sign-page, .edit-pw-page, .mypage-page, .myinfo-page, .userule-page{
+.info-page,.search-page, .ranking-theme-page, .ranking-nowdays-page, .ranking-thismonth-page, .detail-page, .magazine-page, .asking-page, .login-page, .find-page, .sign-page, .edit-pw-page, .mypage-page, .myinfo-page, .userule-page{
   .all{
     display: flex;
     flex:1;
@@ -804,17 +816,14 @@ body{
 
         .month{
           display: flex;
-          position: absolute;
-          right: 35px;
           padding-top: 15px;
           
           .share{
-            padding-right: 5px;
             color: #a39aa3;
             text-align: center;
             img{
-              padding-left:30px;
-              width: 23px;
+              padding-left:40px;
+              width: 27px;
               height: 27px;
             }
           }
@@ -823,7 +832,7 @@ body{
             color: #a39aa3;
 
             img{
-              padding-left: 5px;
+              padding-left: 30px;
             }
           }
         }
@@ -2118,7 +2127,7 @@ body{
 
       #edit-form{
 
-        #password, #new_pw, #new_pw2, #username{
+        #password_ck, #new_pw_ck, #new_pw2_ck, #username{
           width: 400px;
           height: 49px;
           font-size: 14px;

@@ -1,4 +1,50 @@
 <script>
+  $('#e-mail').keydown(function(key){
+    if(key.keyCode == 13){
+      $('#password').focus();
+      event.preventDefault();
+    }
+  });
+  $('#sign-mail').keydown(function(key){
+    if(key.keyCode == 13){
+      $('#sign-pw').focus();
+    }
+  });
+  $('#sign-pw').keydown(function(key){
+    if(key.keyCode == 13){
+      $('#next-btn1').click();
+    }
+  });
+  $('#new_pw').keydown(function(key){
+    if(key.keyCode == 13){
+      $('#new_pw2').focus();
+    }
+  });
+  $('#new_pw2').keydown(function(key){
+    if(key.keyCode == 13){
+      $('#new-btn').click();
+    }
+  });
+  $('#new-pw2').keydown(function(key){
+    if(key.keyCode == 13){
+      $('#new-btn').click();
+    }
+  });
+  $('#password_ck').keydown(function(key){
+    if(key.keyCode == 13){
+      $('#new_pw_ck').focus();
+    }
+  });
+  $('#new_pw_ck').keydown(function(key){
+    if(key.keyCode == 13){
+      $('#new_pw2_ck').focus();
+    }
+  });
+  $('#new_pw2_ck').keydown(function(key){
+    if(key.keyCode == 13){
+      $('#username').focus();
+    }
+  });
   $('#search-input').focus(function(){
     $('#search-input:input').removeAttr('placeholder')
     $('#search-input:input').css('caretColor', '#e1eae9')
@@ -49,5 +95,17 @@
   $('#password').focus(function(){
     $('#password:input').removeAttr('placeholder')
     $('#password:input').css('caretColor', '#e1eae9')
+  });
+  $('#password_ck').focus(function(){
+    $('#password_ck:input').removeAttr('placeholder')
+    $('#password_ck:input').css('caretColor', '#e1eae9')
+  });
+  $('#new_pw_ck').focus(function(){
+    $('#new_pw_ck:input').removeAttr('placeholder')
+    $('#new_pw_ck:input').css('caretColor', '#e1eae9')
+  });
+  $('#new_pw2_ck').focus(function(){
+    $('#new_pw2_ck:input').removeAttr('placeholder')
+    $('#new_pw2_ck:input').css('caretColor', '#e1eae9')
   });
 </script>

@@ -106,8 +106,8 @@ if($member){
         </div>
       </div>
       <div>
-        <div style="padding-top:10px; font-size:15px; font-weight:500;">월간 해시태그 사용량</div>
-        <div style="padding-top:10px; font-size:15px; font-weight:500;">2.55K</div>
+        <div style="padding-top:10px; font-size:14px; font-weight:500; color:#a39aa3;">월간 해시태그 사용량</div>
+        <div style="padding-right:80px; font-size:14px; font-weight:500; float:right; color:#a39aa3;">2.55K</div>
       </div>
       <div class="map" style="cursor:pointer;">
         <img src="./images/map.png"/>
@@ -125,14 +125,14 @@ if($member){
     if(!playing){
       img_pivot += 16
       playing = true;
-      if(img_pivot === 16){
+      if(img_pivot !== 16){
         for(var i = img_pivot-16; i < img_pivot; i++){
           var row = res.payload.imgs[i]
           if(row === undefined){
             continue
           }
           try{
-          $(".detail-picture").append( slot_template(row) )
+            $(".detail-picture").append( slot_template(row) )
           }catch(err){}
         }
         flag = true;
@@ -146,7 +146,7 @@ if($member){
               continue
             }
             try{
-            $(".detail-picture").append( slot_template(row) )
+              $(".detail-picture").append( slot_template(row) )
             }catch(err){}
           }
           playing = false;

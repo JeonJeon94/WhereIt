@@ -75,15 +75,15 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
             </div>
             <div class="edit-line">
               <div class=line-title>비밀번호</div>
-              <input id="password" type="password" name="password" placeholder="비밀번호를 입력해주세요." />
+              <input id="password_ck" type="password" name="password" placeholder="비밀번호를 입력해주세요." />
             </div>
             <div class="edit-line">
               <div class=line-title>비밀번호 변경</div>
-              <input id="new_pw" type="password" name="new_pw" placeholder="비밀번호를 입력해주세요.(8자 이상 입력해주세요)" />
+              <input id="new_pw_ck" type="password" name="new_pw" placeholder="비밀번호를 입력해주세요.(8자 이상 입력해주세요)" />
             </div>
             <div class="edit-line">
               <div class=line-title>비밀번호 확인</div>
-              <input id="new_pw2" type="password" name="new_pw2" placeholder="비밀번호를 입력해주세요.(8자 이상 입력해주세요)" />
+              <input id="new_pw2_ck" type="password" name="new_pw2" placeholder="비밀번호를 입력해주세요.(8자 이상 입력해주세요)" />
             </div>
             <div class="edit-line">
               <div class=line-title>닉네임</div>

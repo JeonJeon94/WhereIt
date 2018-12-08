@@ -546,6 +546,18 @@ body {
   margin-left: 21px;
 }
 
+.info-page .main .service-info {
+  width: 950px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.info-page .main .service-info > img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .main-page .head {
   margin-bottom: 31px;
 }
@@ -691,7 +703,7 @@ body {
   background-color: #d8a3d2;
 }
 
-.search-page .all, .ranking-theme-page .all, .ranking-nowdays-page .all, .ranking-thismonth-page .all, .detail-page .all, .magazine-page .all, .asking-page .all, .login-page .all, .find-page .all, .sign-page .all, .edit-pw-page .all, .mypage-page .all, .myinfo-page .all, .userule-page .all {
+.info-page .all, .search-page .all, .ranking-theme-page .all, .ranking-nowdays-page .all, .ranking-thismonth-page .all, .detail-page .all, .magazine-page .all, .asking-page .all, .login-page .all, .find-page .all, .sign-page .all, .edit-pw-page .all, .mypage-page .all, .myinfo-page .all, .userule-page .all {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -705,7 +717,7 @@ body {
           flex-direction: column;
 }
 
-.search-page .where-form2, .ranking-theme-page .where-form2, .ranking-nowdays-page .where-form2, .ranking-thismonth-page .where-form2, .detail-page .where-form2, .magazine-page .where-form2, .asking-page .where-form2, .login-page .where-form2, .find-page .where-form2, .sign-page .where-form2, .edit-pw-page .where-form2, .mypage-page .where-form2, .myinfo-page .where-form2, .userule-page .where-form2 {
+.info-page .where-form2, .search-page .where-form2, .ranking-theme-page .where-form2, .ranking-nowdays-page .where-form2, .ranking-thismonth-page .where-form2, .detail-page .where-form2, .magazine-page .where-form2, .asking-page .where-form2, .login-page .where-form2, .find-page .where-form2, .sign-page .where-form2, .edit-pw-page .where-form2, .mypage-page .where-form2, .myinfo-page .where-form2, .userule-page .where-form2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -717,7 +729,7 @@ body {
           justify-content: center;
 }
 
-.search-page .where-form2 .form, .ranking-theme-page .where-form2 .form, .ranking-nowdays-page .where-form2 .form, .ranking-thismonth-page .where-form2 .form, .detail-page .where-form2 .form, .magazine-page .where-form2 .form, .asking-page .where-form2 .form, .login-page .where-form2 .form, .find-page .where-form2 .form, .sign-page .where-form2 .form, .edit-pw-page .where-form2 .form, .mypage-page .where-form2 .form, .myinfo-page .where-form2 .form, .userule-page .where-form2 .form {
+.info-page .where-form2 .form, .search-page .where-form2 .form, .ranking-theme-page .where-form2 .form, .ranking-nowdays-page .where-form2 .form, .ranking-thismonth-page .where-form2 .form, .detail-page .where-form2 .form, .magazine-page .where-form2 .form, .asking-page .where-form2 .form, .login-page .where-form2 .form, .find-page .where-form2 .form, .sign-page .where-form2 .form, .edit-pw-page .where-form2 .form, .mypage-page .where-form2 .form, .myinfo-page .where-form2 .form, .userule-page .where-form2 .form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -729,13 +741,13 @@ body {
           justify-content: center;
 }
 
-.search-page .where-form2 .form .search-word, .ranking-theme-page .where-form2 .form .search-word, .ranking-nowdays-page .where-form2 .form .search-word, .ranking-thismonth-page .where-form2 .form .search-word, .detail-page .where-form2 .form .search-word, .magazine-page .where-form2 .form .search-word, .asking-page .where-form2 .form .search-word, .login-page .where-form2 .form .search-word, .find-page .where-form2 .form .search-word, .sign-page .where-form2 .form .search-word, .edit-pw-page .where-form2 .form .search-word, .mypage-page .where-form2 .form .search-word, .myinfo-page .where-form2 .form .search-word, .userule-page .where-form2 .form .search-word {
+.info-page .where-form2 .form .search-word, .search-page .where-form2 .form .search-word, .ranking-theme-page .where-form2 .form .search-word, .ranking-nowdays-page .where-form2 .form .search-word, .ranking-thismonth-page .where-form2 .form .search-word, .detail-page .where-form2 .form .search-word, .magazine-page .where-form2 .form .search-word, .asking-page .where-form2 .form .search-word, .login-page .where-form2 .form .search-word, .find-page .where-form2 .form .search-word, .sign-page .where-form2 .form .search-word, .edit-pw-page .where-form2 .form .search-word, .mypage-page .where-form2 .form .search-word, .myinfo-page .where-form2 .form .search-word, .userule-page .where-form2 .form .search-word {
   width: 400px;
   position: relative;
   margin-right: 150px;
 }
 
-.search-page .where-form2 .form .search-word #search-word2, .ranking-theme-page .where-form2 .form .search-word #search-word2, .ranking-nowdays-page .where-form2 .form .search-word #search-word2, .ranking-thismonth-page .where-form2 .form .search-word #search-word2, .detail-page .where-form2 .form .search-word #search-word2, .magazine-page .where-form2 .form .search-word #search-word2, .asking-page .where-form2 .form .search-word #search-word2, .login-page .where-form2 .form .search-word #search-word2, .find-page .where-form2 .form .search-word #search-word2, .sign-page .where-form2 .form .search-word #search-word2, .edit-pw-page .where-form2 .form .search-word #search-word2, .mypage-page .where-form2 .form .search-word #search-word2, .myinfo-page .where-form2 .form .search-word #search-word2, .userule-page .where-form2 .form .search-word #search-word2 {
+.info-page .where-form2 .form .search-word #search-word2, .search-page .where-form2 .form .search-word #search-word2, .ranking-theme-page .where-form2 .form .search-word #search-word2, .ranking-nowdays-page .where-form2 .form .search-word #search-word2, .ranking-thismonth-page .where-form2 .form .search-word #search-word2, .detail-page .where-form2 .form .search-word #search-word2, .magazine-page .where-form2 .form .search-word #search-word2, .asking-page .where-form2 .form .search-word #search-word2, .login-page .where-form2 .form .search-word #search-word2, .find-page .where-form2 .form .search-word #search-word2, .sign-page .where-form2 .form .search-word #search-word2, .edit-pw-page .where-form2 .form .search-word #search-word2, .mypage-page .where-form2 .form .search-word #search-word2, .myinfo-page .where-form2 .form .search-word #search-word2, .userule-page .where-form2 .form .search-word #search-word2 {
   position: absolute;
   font-size: 14px;
   padding-left: 20px;
@@ -747,7 +759,7 @@ body {
           box-sizing: border-box;
 }
 
-.search-page .where-form2 .form .search-word #search2, .ranking-theme-page .where-form2 .form .search-word #search2, .ranking-nowdays-page .where-form2 .form .search-word #search2, .ranking-thismonth-page .where-form2 .form .search-word #search2, .detail-page .where-form2 .form .search-word #search2, .magazine-page .where-form2 .form .search-word #search2, .asking-page .where-form2 .form .search-word #search2, .login-page .where-form2 .form .search-word #search2, .find-page .where-form2 .form .search-word #search2, .sign-page .where-form2 .form .search-word #search2, .edit-pw-page .where-form2 .form .search-word #search2, .mypage-page .where-form2 .form .search-word #search2, .myinfo-page .where-form2 .form .search-word #search2, .userule-page .where-form2 .form .search-word #search2 {
+.info-page .where-form2 .form .search-word #search2, .search-page .where-form2 .form .search-word #search2, .ranking-theme-page .where-form2 .form .search-word #search2, .ranking-nowdays-page .where-form2 .form .search-word #search2, .ranking-thismonth-page .where-form2 .form .search-word #search2, .detail-page .where-form2 .form .search-word #search2, .magazine-page .where-form2 .form .search-word #search2, .asking-page .where-form2 .form .search-word #search2, .login-page .where-form2 .form .search-word #search2, .find-page .where-form2 .form .search-word #search2, .sign-page .where-form2 .form .search-word #search2, .edit-pw-page .where-form2 .form .search-word #search2, .mypage-page .where-form2 .form .search-word #search2, .myinfo-page .where-form2 .form .search-word #search2, .userule-page .where-form2 .form .search-word #search2 {
   cursor: pointer;
   position: absolute;
   top: 15px;
@@ -755,12 +767,12 @@ body {
   max-height: 20px;
 }
 
-.search-page .main, .ranking-theme-page .main, .ranking-nowdays-page .main, .ranking-thismonth-page .main, .detail-page .main, .magazine-page .main, .asking-page .main, .login-page .main, .find-page .main, .sign-page .main, .edit-pw-page .main, .mypage-page .main, .myinfo-page .main, .userule-page .main {
+.info-page .main, .search-page .main, .ranking-theme-page .main, .ranking-nowdays-page .main, .ranking-thismonth-page .main, .detail-page .main, .magazine-page .main, .asking-page .main, .login-page .main, .find-page .main, .sign-page .main, .edit-pw-page .main, .mypage-page .main, .myinfo-page .main, .userule-page .main {
   width: 1200px;
   margin: 0 auto;
 }
 
-.search-page .main .loading, .ranking-theme-page .main .loading, .ranking-nowdays-page .main .loading, .ranking-thismonth-page .main .loading, .detail-page .main .loading, .magazine-page .main .loading, .asking-page .main .loading, .login-page .main .loading, .find-page .main .loading, .sign-page .main .loading, .edit-pw-page .main .loading, .mypage-page .main .loading, .myinfo-page .main .loading, .userule-page .main .loading {
+.info-page .main .loading, .search-page .main .loading, .ranking-theme-page .main .loading, .ranking-nowdays-page .main .loading, .ranking-thismonth-page .main .loading, .detail-page .main .loading, .magazine-page .main .loading, .asking-page .main .loading, .login-page .main .loading, .find-page .main .loading, .sign-page .main .loading, .edit-pw-page .main .loading, .mypage-page .main .loading, .myinfo-page .main .loading, .userule-page .main .loading {
   position: relative;
   width: 50px;
   height: 50px;
@@ -769,7 +781,7 @@ body {
   display: none;
 }
 
-.search-page .main .dot div, .ranking-theme-page .main .dot div, .ranking-nowdays-page .main .dot div, .ranking-thismonth-page .main .dot div, .detail-page .main .dot div, .magazine-page .main .dot div, .asking-page .main .dot div, .login-page .main .dot div, .find-page .main .dot div, .sign-page .main .dot div, .edit-pw-page .main .dot div, .mypage-page .main .dot div, .myinfo-page .main .dot div, .userule-page .main .dot div {
+.info-page .main .dot div, .search-page .main .dot div, .ranking-theme-page .main .dot div, .ranking-nowdays-page .main .dot div, .ranking-thismonth-page .main .dot div, .detail-page .main .dot div, .magazine-page .main .dot div, .asking-page .main .dot div, .login-page .main .dot div, .find-page .main .dot div, .sign-page .main .dot div, .edit-pw-page .main .dot div, .mypage-page .main .dot div, .myinfo-page .main .dot div, .userule-page .main .dot div {
   position: absolute;
   left: 0;
   right: 0;
@@ -786,24 +798,24 @@ body {
           animation: dot 1.5s linear infinite;
 }
 
-.search-page .main .dot div:nth-child(1), .ranking-theme-page .main .dot div:nth-child(1), .ranking-nowdays-page .main .dot div:nth-child(1), .ranking-thismonth-page .main .dot div:nth-child(1), .detail-page .main .dot div:nth-child(1), .magazine-page .main .dot div:nth-child(1), .asking-page .main .dot div:nth-child(1), .login-page .main .dot div:nth-child(1), .find-page .main .dot div:nth-child(1), .sign-page .main .dot div:nth-child(1), .edit-pw-page .main .dot div:nth-child(1), .mypage-page .main .dot div:nth-child(1), .myinfo-page .main .dot div:nth-child(1), .userule-page .main .dot div:nth-child(1) {
+.info-page .main .dot div:nth-child(1), .search-page .main .dot div:nth-child(1), .ranking-theme-page .main .dot div:nth-child(1), .ranking-nowdays-page .main .dot div:nth-child(1), .ranking-thismonth-page .main .dot div:nth-child(1), .detail-page .main .dot div:nth-child(1), .magazine-page .main .dot div:nth-child(1), .asking-page .main .dot div:nth-child(1), .login-page .main .dot div:nth-child(1), .find-page .main .dot div:nth-child(1), .sign-page .main .dot div:nth-child(1), .edit-pw-page .main .dot div:nth-child(1), .mypage-page .main .dot div:nth-child(1), .myinfo-page .main .dot div:nth-child(1), .userule-page .main .dot div:nth-child(1) {
   left: -50px;
   -webkit-animation-delay: -0.1s;
           animation-delay: -0.1s;
 }
 
-.search-page .main .dot div:nth-child(3), .ranking-theme-page .main .dot div:nth-child(3), .ranking-nowdays-page .main .dot div:nth-child(3), .ranking-thismonth-page .main .dot div:nth-child(3), .detail-page .main .dot div:nth-child(3), .magazine-page .main .dot div:nth-child(3), .asking-page .main .dot div:nth-child(3), .login-page .main .dot div:nth-child(3), .find-page .main .dot div:nth-child(3), .sign-page .main .dot div:nth-child(3), .edit-pw-page .main .dot div:nth-child(3), .mypage-page .main .dot div:nth-child(3), .myinfo-page .main .dot div:nth-child(3), .userule-page .main .dot div:nth-child(3) {
+.info-page .main .dot div:nth-child(3), .search-page .main .dot div:nth-child(3), .ranking-theme-page .main .dot div:nth-child(3), .ranking-nowdays-page .main .dot div:nth-child(3), .ranking-thismonth-page .main .dot div:nth-child(3), .detail-page .main .dot div:nth-child(3), .magazine-page .main .dot div:nth-child(3), .asking-page .main .dot div:nth-child(3), .login-page .main .dot div:nth-child(3), .find-page .main .dot div:nth-child(3), .sign-page .main .dot div:nth-child(3), .edit-pw-page .main .dot div:nth-child(3), .mypage-page .main .dot div:nth-child(3), .myinfo-page .main .dot div:nth-child(3), .userule-page .main .dot div:nth-child(3) {
   right: -50px;
   -webkit-animation-delay: 0.1s;
           animation-delay: 0.1s;
 }
 
-.search-page .main .search-center, .ranking-theme-page .main .search-center, .ranking-nowdays-page .main .search-center, .ranking-thismonth-page .main .search-center, .detail-page .main .search-center, .magazine-page .main .search-center, .asking-page .main .search-center, .login-page .main .search-center, .find-page .main .search-center, .sign-page .main .search-center, .edit-pw-page .main .search-center, .mypage-page .main .search-center, .myinfo-page .main .search-center, .userule-page .main .search-center {
+.info-page .main .search-center, .search-page .main .search-center, .ranking-theme-page .main .search-center, .ranking-nowdays-page .main .search-center, .ranking-thismonth-page .main .search-center, .detail-page .main .search-center, .magazine-page .main .search-center, .asking-page .main .search-center, .login-page .main .search-center, .find-page .main .search-center, .sign-page .main .search-center, .edit-pw-page .main .search-center, .mypage-page .main .search-center, .myinfo-page .main .search-center, .userule-page .main .search-center {
   width: 1100px;
   margin: 0 auto;
 }
 
-.search-page .main .search-center .main-top, .ranking-theme-page .main .search-center .main-top, .ranking-nowdays-page .main .search-center .main-top, .ranking-thismonth-page .main .search-center .main-top, .detail-page .main .search-center .main-top, .magazine-page .main .search-center .main-top, .asking-page .main .search-center .main-top, .login-page .main .search-center .main-top, .find-page .main .search-center .main-top, .sign-page .main .search-center .main-top, .edit-pw-page .main .search-center .main-top, .mypage-page .main .search-center .main-top, .myinfo-page .main .search-center .main-top, .userule-page .main .search-center .main-top {
+.info-page .main .search-center .main-top, .search-page .main .search-center .main-top, .ranking-theme-page .main .search-center .main-top, .ranking-nowdays-page .main .search-center .main-top, .ranking-thismonth-page .main .search-center .main-top, .detail-page .main .search-center .main-top, .magazine-page .main .search-center .main-top, .asking-page .main .search-center .main-top, .login-page .main .search-center .main-top, .find-page .main .search-center .main-top, .sign-page .main .search-center .main-top, .edit-pw-page .main .search-center .main-top, .mypage-page .main .search-center .main-top, .myinfo-page .main .search-center .main-top, .userule-page .main .search-center .main-top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -814,7 +826,7 @@ body {
   min-height: 78px;
 }
 
-.search-page .main .search-center .main-top .search-time, .ranking-theme-page .main .search-center .main-top .search-time, .ranking-nowdays-page .main .search-center .main-top .search-time, .ranking-thismonth-page .main .search-center .main-top .search-time, .detail-page .main .search-center .main-top .search-time, .magazine-page .main .search-center .main-top .search-time, .asking-page .main .search-center .main-top .search-time, .login-page .main .search-center .main-top .search-time, .find-page .main .search-center .main-top .search-time, .sign-page .main .search-center .main-top .search-time, .edit-pw-page .main .search-center .main-top .search-time, .mypage-page .main .search-center .main-top .search-time, .myinfo-page .main .search-center .main-top .search-time, .userule-page .main .search-center .main-top .search-time {
+.info-page .main .search-center .main-top .search-time, .search-page .main .search-center .main-top .search-time, .ranking-theme-page .main .search-center .main-top .search-time, .ranking-nowdays-page .main .search-center .main-top .search-time, .ranking-thismonth-page .main .search-center .main-top .search-time, .detail-page .main .search-center .main-top .search-time, .magazine-page .main .search-center .main-top .search-time, .asking-page .main .search-center .main-top .search-time, .login-page .main .search-center .main-top .search-time, .find-page .main .search-center .main-top .search-time, .sign-page .main .search-center .main-top .search-time, .edit-pw-page .main .search-center .main-top .search-time, .mypage-page .main .search-center .main-top .search-time, .myinfo-page .main .search-center .main-top .search-time, .userule-page .main .search-center .main-top .search-time {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -828,18 +840,18 @@ body {
   padding-right: 20px;
 }
 
-.search-page .main .search-center .main-top .search-time a, .ranking-theme-page .main .search-center .main-top .search-time a, .ranking-nowdays-page .main .search-center .main-top .search-time a, .ranking-thismonth-page .main .search-center .main-top .search-time a, .detail-page .main .search-center .main-top .search-time a, .magazine-page .main .search-center .main-top .search-time a, .asking-page .main .search-center .main-top .search-time a, .login-page .main .search-center .main-top .search-time a, .find-page .main .search-center .main-top .search-time a, .sign-page .main .search-center .main-top .search-time a, .edit-pw-page .main .search-center .main-top .search-time a, .mypage-page .main .search-center .main-top .search-time a, .myinfo-page .main .search-center .main-top .search-time a, .userule-page .main .search-center .main-top .search-time a {
+.info-page .main .search-center .main-top .search-time a, .search-page .main .search-center .main-top .search-time a, .ranking-theme-page .main .search-center .main-top .search-time a, .ranking-nowdays-page .main .search-center .main-top .search-time a, .ranking-thismonth-page .main .search-center .main-top .search-time a, .detail-page .main .search-center .main-top .search-time a, .magazine-page .main .search-center .main-top .search-time a, .asking-page .main .search-center .main-top .search-time a, .login-page .main .search-center .main-top .search-time a, .find-page .main .search-center .main-top .search-time a, .sign-page .main .search-center .main-top .search-time a, .edit-pw-page .main .search-center .main-top .search-time a, .mypage-page .main .search-center .main-top .search-time a, .myinfo-page .main .search-center .main-top .search-time a, .userule-page .main .search-center .main-top .search-time a {
   text-decoration: none;
   color: gray;
   margin-right: 25px;
 }
 
-.search-page .main .search-center .main-top .search-time a:hover, .ranking-theme-page .main .search-center .main-top .search-time a:hover, .ranking-nowdays-page .main .search-center .main-top .search-time a:hover, .ranking-thismonth-page .main .search-center .main-top .search-time a:hover, .detail-page .main .search-center .main-top .search-time a:hover, .magazine-page .main .search-center .main-top .search-time a:hover, .asking-page .main .search-center .main-top .search-time a:hover, .login-page .main .search-center .main-top .search-time a:hover, .find-page .main .search-center .main-top .search-time a:hover, .sign-page .main .search-center .main-top .search-time a:hover, .edit-pw-page .main .search-center .main-top .search-time a:hover, .mypage-page .main .search-center .main-top .search-time a:hover, .myinfo-page .main .search-center .main-top .search-time a:hover, .userule-page .main .search-center .main-top .search-time a:hover {
+.info-page .main .search-center .main-top .search-time a:hover, .search-page .main .search-center .main-top .search-time a:hover, .ranking-theme-page .main .search-center .main-top .search-time a:hover, .ranking-nowdays-page .main .search-center .main-top .search-time a:hover, .ranking-thismonth-page .main .search-center .main-top .search-time a:hover, .detail-page .main .search-center .main-top .search-time a:hover, .magazine-page .main .search-center .main-top .search-time a:hover, .asking-page .main .search-center .main-top .search-time a:hover, .login-page .main .search-center .main-top .search-time a:hover, .find-page .main .search-center .main-top .search-time a:hover, .sign-page .main .search-center .main-top .search-time a:hover, .edit-pw-page .main .search-center .main-top .search-time a:hover, .mypage-page .main .search-center .main-top .search-time a:hover, .myinfo-page .main .search-center .main-top .search-time a:hover, .userule-page .main .search-center .main-top .search-time a:hover {
   text-decoration: none;
   color: #504f57;
 }
 
-.search-page .main .search-center .search-list, .ranking-theme-page .main .search-center .search-list, .ranking-nowdays-page .main .search-center .search-list, .ranking-thismonth-page .main .search-center .search-list, .detail-page .main .search-center .search-list, .magazine-page .main .search-center .search-list, .asking-page .main .search-center .search-list, .login-page .main .search-center .search-list, .find-page .main .search-center .search-list, .sign-page .main .search-center .search-list, .edit-pw-page .main .search-center .search-list, .mypage-page .main .search-center .search-list, .myinfo-page .main .search-center .search-list, .userule-page .main .search-center .search-list {
+.info-page .main .search-center .search-list, .search-page .main .search-center .search-list, .ranking-theme-page .main .search-center .search-list, .ranking-nowdays-page .main .search-center .search-list, .ranking-thismonth-page .main .search-center .search-list, .detail-page .main .search-center .search-list, .magazine-page .main .search-center .search-list, .asking-page .main .search-center .search-list, .login-page .main .search-center .search-list, .find-page .main .search-center .search-list, .sign-page .main .search-center .search-list, .edit-pw-page .main .search-center .search-list, .mypage-page .main .search-center .search-list, .myinfo-page .main .search-center .search-list, .userule-page .main .search-center .search-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -853,13 +865,13 @@ body {
   min-height: 605px;
 }
 
-.search-page .main .search-center .search-list .no-search, .ranking-theme-page .main .search-center .search-list .no-search, .ranking-nowdays-page .main .search-center .search-list .no-search, .ranking-thismonth-page .main .search-center .search-list .no-search, .detail-page .main .search-center .search-list .no-search, .magazine-page .main .search-center .search-list .no-search, .asking-page .main .search-center .search-list .no-search, .login-page .main .search-center .search-list .no-search, .find-page .main .search-center .search-list .no-search, .sign-page .main .search-center .search-list .no-search, .edit-pw-page .main .search-center .search-list .no-search, .mypage-page .main .search-center .search-list .no-search, .myinfo-page .main .search-center .search-list .no-search, .userule-page .main .search-center .search-list .no-search {
+.info-page .main .search-center .search-list .no-search, .search-page .main .search-center .search-list .no-search, .ranking-theme-page .main .search-center .search-list .no-search, .ranking-nowdays-page .main .search-center .search-list .no-search, .ranking-thismonth-page .main .search-center .search-list .no-search, .detail-page .main .search-center .search-list .no-search, .magazine-page .main .search-center .search-list .no-search, .asking-page .main .search-center .search-list .no-search, .login-page .main .search-center .search-list .no-search, .find-page .main .search-center .search-list .no-search, .sign-page .main .search-center .search-list .no-search, .edit-pw-page .main .search-center .search-list .no-search, .mypage-page .main .search-center .search-list .no-search, .myinfo-page .main .search-center .search-list .no-search, .userule-page .main .search-center .search-list .no-search {
   display: none;
   text-align: center;
   font-size: 18px;
 }
 
-.search-page .main .search-center .search-list .list-line, .ranking-theme-page .main .search-center .search-list .list-line, .ranking-nowdays-page .main .search-center .search-list .list-line, .ranking-thismonth-page .main .search-center .search-list .list-line, .detail-page .main .search-center .search-list .list-line, .magazine-page .main .search-center .search-list .list-line, .asking-page .main .search-center .search-list .list-line, .login-page .main .search-center .search-list .list-line, .find-page .main .search-center .search-list .list-line, .sign-page .main .search-center .search-list .list-line, .edit-pw-page .main .search-center .search-list .list-line, .mypage-page .main .search-center .search-list .list-line, .myinfo-page .main .search-center .search-list .list-line, .userule-page .main .search-center .search-list .list-line {
+.info-page .main .search-center .search-list .list-line, .search-page .main .search-center .search-list .list-line, .ranking-theme-page .main .search-center .search-list .list-line, .ranking-nowdays-page .main .search-center .search-list .list-line, .ranking-thismonth-page .main .search-center .search-list .list-line, .detail-page .main .search-center .search-list .list-line, .magazine-page .main .search-center .search-list .list-line, .asking-page .main .search-center .search-list .list-line, .login-page .main .search-center .search-list .list-line, .find-page .main .search-center .search-list .list-line, .sign-page .main .search-center .search-list .list-line, .edit-pw-page .main .search-center .search-list .list-line, .mypage-page .main .search-center .search-list .list-line, .myinfo-page .main .search-center .search-list .list-line, .userule-page .main .search-center .search-list .list-line {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -868,7 +880,7 @@ body {
       flex-wrap: wrap;
 }
 
-.search-page .main .search-center .search-list .list-line .store-list, .ranking-theme-page .main .search-center .search-list .list-line .store-list, .ranking-nowdays-page .main .search-center .search-list .list-line .store-list, .ranking-thismonth-page .main .search-center .search-list .list-line .store-list, .detail-page .main .search-center .search-list .list-line .store-list, .magazine-page .main .search-center .search-list .list-line .store-list, .asking-page .main .search-center .search-list .list-line .store-list, .login-page .main .search-center .search-list .list-line .store-list, .find-page .main .search-center .search-list .list-line .store-list, .sign-page .main .search-center .search-list .list-line .store-list, .edit-pw-page .main .search-center .search-list .list-line .store-list, .mypage-page .main .search-center .search-list .list-line .store-list, .myinfo-page .main .search-center .search-list .list-line .store-list, .userule-page .main .search-center .search-list .list-line .store-list {
+.info-page .main .search-center .search-list .list-line .store-list, .search-page .main .search-center .search-list .list-line .store-list, .ranking-theme-page .main .search-center .search-list .list-line .store-list, .ranking-nowdays-page .main .search-center .search-list .list-line .store-list, .ranking-thismonth-page .main .search-center .search-list .list-line .store-list, .detail-page .main .search-center .search-list .list-line .store-list, .magazine-page .main .search-center .search-list .list-line .store-list, .asking-page .main .search-center .search-list .list-line .store-list, .login-page .main .search-center .search-list .list-line .store-list, .find-page .main .search-center .search-list .list-line .store-list, .sign-page .main .search-center .search-list .list-line .store-list, .edit-pw-page .main .search-center .search-list .list-line .store-list, .mypage-page .main .search-center .search-list .list-line .store-list, .myinfo-page .main .search-center .search-list .list-line .store-list, .userule-page .main .search-center .search-list .list-line .store-list {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -881,14 +893,14 @@ body {
       flex-basis: auto;
 }
 
-.search-page .main .search-center .search-list .list-line .store-list .img-container, .ranking-theme-page .main .search-center .search-list .list-line .store-list .img-container, .ranking-nowdays-page .main .search-center .search-list .list-line .store-list .img-container, .ranking-thismonth-page .main .search-center .search-list .list-line .store-list .img-container, .detail-page .main .search-center .search-list .list-line .store-list .img-container, .magazine-page .main .search-center .search-list .list-line .store-list .img-container, .asking-page .main .search-center .search-list .list-line .store-list .img-container, .login-page .main .search-center .search-list .list-line .store-list .img-container, .find-page .main .search-center .search-list .list-line .store-list .img-container, .sign-page .main .search-center .search-list .list-line .store-list .img-container, .edit-pw-page .main .search-center .search-list .list-line .store-list .img-container, .mypage-page .main .search-center .search-list .list-line .store-list .img-container, .myinfo-page .main .search-center .search-list .list-line .store-list .img-container, .userule-page .main .search-center .search-list .list-line .store-list .img-container {
+.info-page .main .search-center .search-list .list-line .store-list .img-container, .search-page .main .search-center .search-list .list-line .store-list .img-container, .ranking-theme-page .main .search-center .search-list .list-line .store-list .img-container, .ranking-nowdays-page .main .search-center .search-list .list-line .store-list .img-container, .ranking-thismonth-page .main .search-center .search-list .list-line .store-list .img-container, .detail-page .main .search-center .search-list .list-line .store-list .img-container, .magazine-page .main .search-center .search-list .list-line .store-list .img-container, .asking-page .main .search-center .search-list .list-line .store-list .img-container, .login-page .main .search-center .search-list .list-line .store-list .img-container, .find-page .main .search-center .search-list .list-line .store-list .img-container, .sign-page .main .search-center .search-list .list-line .store-list .img-container, .edit-pw-page .main .search-center .search-list .list-line .store-list .img-container, .mypage-page .main .search-center .search-list .list-line .store-list .img-container, .myinfo-page .main .search-center .search-list .list-line .store-list .img-container, .userule-page .main .search-center .search-list .list-line .store-list .img-container {
   width: 232px;
   height: 232px;
   overflow: hidden;
   border-radius: 5px;
 }
 
-.search-page .main .search-center .search-list .list-line .store-list .img-container > img, .ranking-theme-page .main .search-center .search-list .list-line .store-list .img-container > img, .ranking-nowdays-page .main .search-center .search-list .list-line .store-list .img-container > img, .ranking-thismonth-page .main .search-center .search-list .list-line .store-list .img-container > img, .detail-page .main .search-center .search-list .list-line .store-list .img-container > img, .magazine-page .main .search-center .search-list .list-line .store-list .img-container > img, .asking-page .main .search-center .search-list .list-line .store-list .img-container > img, .login-page .main .search-center .search-list .list-line .store-list .img-container > img, .find-page .main .search-center .search-list .list-line .store-list .img-container > img, .sign-page .main .search-center .search-list .list-line .store-list .img-container > img, .edit-pw-page .main .search-center .search-list .list-line .store-list .img-container > img, .mypage-page .main .search-center .search-list .list-line .store-list .img-container > img, .myinfo-page .main .search-center .search-list .list-line .store-list .img-container > img, .userule-page .main .search-center .search-list .list-line .store-list .img-container > img {
+.info-page .main .search-center .search-list .list-line .store-list .img-container > img, .search-page .main .search-center .search-list .list-line .store-list .img-container > img, .ranking-theme-page .main .search-center .search-list .list-line .store-list .img-container > img, .ranking-nowdays-page .main .search-center .search-list .list-line .store-list .img-container > img, .ranking-thismonth-page .main .search-center .search-list .list-line .store-list .img-container > img, .detail-page .main .search-center .search-list .list-line .store-list .img-container > img, .magazine-page .main .search-center .search-list .list-line .store-list .img-container > img, .asking-page .main .search-center .search-list .list-line .store-list .img-container > img, .login-page .main .search-center .search-list .list-line .store-list .img-container > img, .find-page .main .search-center .search-list .list-line .store-list .img-container > img, .sign-page .main .search-center .search-list .list-line .store-list .img-container > img, .edit-pw-page .main .search-center .search-list .list-line .store-list .img-container > img, .mypage-page .main .search-center .search-list .list-line .store-list .img-container > img, .myinfo-page .main .search-center .search-list .list-line .store-list .img-container > img, .userule-page .main .search-center .search-list .list-line .store-list .img-container > img {
   width: 100%;
   height: 100%;
   padding-bottom: 10px;
@@ -897,12 +909,12 @@ body {
   transition: all 0.5s;
 }
 
-.search-page .main .search-center .search-list .list-line .store-list .img-container > img:hover, .ranking-theme-page .main .search-center .search-list .list-line .store-list .img-container > img:hover, .ranking-nowdays-page .main .search-center .search-list .list-line .store-list .img-container > img:hover, .ranking-thismonth-page .main .search-center .search-list .list-line .store-list .img-container > img:hover, .detail-page .main .search-center .search-list .list-line .store-list .img-container > img:hover, .magazine-page .main .search-center .search-list .list-line .store-list .img-container > img:hover, .asking-page .main .search-center .search-list .list-line .store-list .img-container > img:hover, .login-page .main .search-center .search-list .list-line .store-list .img-container > img:hover, .find-page .main .search-center .search-list .list-line .store-list .img-container > img:hover, .sign-page .main .search-center .search-list .list-line .store-list .img-container > img:hover, .edit-pw-page .main .search-center .search-list .list-line .store-list .img-container > img:hover, .mypage-page .main .search-center .search-list .list-line .store-list .img-container > img:hover, .myinfo-page .main .search-center .search-list .list-line .store-list .img-container > img:hover, .userule-page .main .search-center .search-list .list-line .store-list .img-container > img:hover {
+.info-page .main .search-center .search-list .list-line .store-list .img-container > img:hover, .search-page .main .search-center .search-list .list-line .store-list .img-container > img:hover, .ranking-theme-page .main .search-center .search-list .list-line .store-list .img-container > img:hover, .ranking-nowdays-page .main .search-center .search-list .list-line .store-list .img-container > img:hover, .ranking-thismonth-page .main .search-center .search-list .list-line .store-list .img-container > img:hover, .detail-page .main .search-center .search-list .list-line .store-list .img-container > img:hover, .magazine-page .main .search-center .search-list .list-line .store-list .img-container > img:hover, .asking-page .main .search-center .search-list .list-line .store-list .img-container > img:hover, .login-page .main .search-center .search-list .list-line .store-list .img-container > img:hover, .find-page .main .search-center .search-list .list-line .store-list .img-container > img:hover, .sign-page .main .search-center .search-list .list-line .store-list .img-container > img:hover, .edit-pw-page .main .search-center .search-list .list-line .store-list .img-container > img:hover, .mypage-page .main .search-center .search-list .list-line .store-list .img-container > img:hover, .myinfo-page .main .search-center .search-list .list-line .store-list .img-container > img:hover, .userule-page .main .search-center .search-list .list-line .store-list .img-container > img:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
 
-.search-page .main .search-center .search-list .list-line .store-list .store-name, .ranking-theme-page .main .search-center .search-list .list-line .store-list .store-name, .ranking-nowdays-page .main .search-center .search-list .list-line .store-list .store-name, .ranking-thismonth-page .main .search-center .search-list .list-line .store-list .store-name, .detail-page .main .search-center .search-list .list-line .store-list .store-name, .magazine-page .main .search-center .search-list .list-line .store-list .store-name, .asking-page .main .search-center .search-list .list-line .store-list .store-name, .login-page .main .search-center .search-list .list-line .store-list .store-name, .find-page .main .search-center .search-list .list-line .store-list .store-name, .sign-page .main .search-center .search-list .list-line .store-list .store-name, .edit-pw-page .main .search-center .search-list .list-line .store-list .store-name, .mypage-page .main .search-center .search-list .list-line .store-list .store-name, .myinfo-page .main .search-center .search-list .list-line .store-list .store-name, .userule-page .main .search-center .search-list .list-line .store-list .store-name {
+.info-page .main .search-center .search-list .list-line .store-list .store-name, .search-page .main .search-center .search-list .list-line .store-list .store-name, .ranking-theme-page .main .search-center .search-list .list-line .store-list .store-name, .ranking-nowdays-page .main .search-center .search-list .list-line .store-list .store-name, .ranking-thismonth-page .main .search-center .search-list .list-line .store-list .store-name, .detail-page .main .search-center .search-list .list-line .store-list .store-name, .magazine-page .main .search-center .search-list .list-line .store-list .store-name, .asking-page .main .search-center .search-list .list-line .store-list .store-name, .login-page .main .search-center .search-list .list-line .store-list .store-name, .find-page .main .search-center .search-list .list-line .store-list .store-name, .sign-page .main .search-center .search-list .list-line .store-list .store-name, .edit-pw-page .main .search-center .search-list .list-line .store-list .store-name, .mypage-page .main .search-center .search-list .list-line .store-list .store-name, .myinfo-page .main .search-center .search-list .list-line .store-list .store-name, .userule-page .main .search-center .search-list .list-line .store-list .store-name {
   font-weight: 400;
   font-size: 18px;
   -webkit-box-flex: 1;
@@ -911,7 +923,7 @@ body {
   color: #504f57;
 }
 
-.search-page .main .search-center .search-list .list-line .store-list .views, .ranking-theme-page .main .search-center .search-list .list-line .store-list .views, .ranking-nowdays-page .main .search-center .search-list .list-line .store-list .views, .ranking-thismonth-page .main .search-center .search-list .list-line .store-list .views, .detail-page .main .search-center .search-list .list-line .store-list .views, .magazine-page .main .search-center .search-list .list-line .store-list .views, .asking-page .main .search-center .search-list .list-line .store-list .views, .login-page .main .search-center .search-list .list-line .store-list .views, .find-page .main .search-center .search-list .list-line .store-list .views, .sign-page .main .search-center .search-list .list-line .store-list .views, .edit-pw-page .main .search-center .search-list .list-line .store-list .views, .mypage-page .main .search-center .search-list .list-line .store-list .views, .myinfo-page .main .search-center .search-list .list-line .store-list .views, .userule-page .main .search-center .search-list .list-line .store-list .views {
+.info-page .main .search-center .search-list .list-line .store-list .views, .search-page .main .search-center .search-list .list-line .store-list .views, .ranking-theme-page .main .search-center .search-list .list-line .store-list .views, .ranking-nowdays-page .main .search-center .search-list .list-line .store-list .views, .ranking-thismonth-page .main .search-center .search-list .list-line .store-list .views, .detail-page .main .search-center .search-list .list-line .store-list .views, .magazine-page .main .search-center .search-list .list-line .store-list .views, .asking-page .main .search-center .search-list .list-line .store-list .views, .login-page .main .search-center .search-list .list-line .store-list .views, .find-page .main .search-center .search-list .list-line .store-list .views, .sign-page .main .search-center .search-list .list-line .store-list .views, .edit-pw-page .main .search-center .search-list .list-line .store-list .views, .mypage-page .main .search-center .search-list .list-line .store-list .views, .myinfo-page .main .search-center .search-list .list-line .store-list .views, .userule-page .main .search-center .search-list .list-line .store-list .views {
   color: #d8a3d2;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -926,7 +938,7 @@ body {
   font-weight: 500;
 }
 
-.search-page .main .search-center .search-list .list-line .store-list .keyword, .ranking-theme-page .main .search-center .search-list .list-line .store-list .keyword, .ranking-nowdays-page .main .search-center .search-list .list-line .store-list .keyword, .ranking-thismonth-page .main .search-center .search-list .list-line .store-list .keyword, .detail-page .main .search-center .search-list .list-line .store-list .keyword, .magazine-page .main .search-center .search-list .list-line .store-list .keyword, .asking-page .main .search-center .search-list .list-line .store-list .keyword, .login-page .main .search-center .search-list .list-line .store-list .keyword, .find-page .main .search-center .search-list .list-line .store-list .keyword, .sign-page .main .search-center .search-list .list-line .store-list .keyword, .edit-pw-page .main .search-center .search-list .list-line .store-list .keyword, .mypage-page .main .search-center .search-list .list-line .store-list .keyword, .myinfo-page .main .search-center .search-list .list-line .store-list .keyword, .userule-page .main .search-center .search-list .list-line .store-list .keyword {
+.info-page .main .search-center .search-list .list-line .store-list .keyword, .search-page .main .search-center .search-list .list-line .store-list .keyword, .ranking-theme-page .main .search-center .search-list .list-line .store-list .keyword, .ranking-nowdays-page .main .search-center .search-list .list-line .store-list .keyword, .ranking-thismonth-page .main .search-center .search-list .list-line .store-list .keyword, .detail-page .main .search-center .search-list .list-line .store-list .keyword, .magazine-page .main .search-center .search-list .list-line .store-list .keyword, .asking-page .main .search-center .search-list .list-line .store-list .keyword, .login-page .main .search-center .search-list .list-line .store-list .keyword, .find-page .main .search-center .search-list .list-line .store-list .keyword, .sign-page .main .search-center .search-list .list-line .store-list .keyword, .edit-pw-page .main .search-center .search-list .list-line .store-list .keyword, .mypage-page .main .search-center .search-list .list-line .store-list .keyword, .myinfo-page .main .search-center .search-list .list-line .store-list .keyword, .userule-page .main .search-center .search-list .list-line .store-list .keyword {
   margin-right: 10px;
   font-size: 13px;
   min-width: 59px;
@@ -1087,20 +1099,17 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: absolute;
-  right: 35px;
   padding-top: 15px;
 }
 
 .detail-page .detail-main .main-top .etc .month .share {
-  padding-right: 5px;
   color: #a39aa3;
   text-align: center;
 }
 
 .detail-page .detail-main .main-top .etc .month .share img {
-  padding-left: 30px;
-  width: 23px;
+  padding-left: 40px;
+  width: 27px;
   height: 27px;
 }
 
@@ -1110,7 +1119,7 @@ body {
 }
 
 .detail-page .detail-main .main-top .etc .month .usage img {
-  padding-left: 5px;
+  padding-left: 30px;
 }
 
 .detail-page .detail-main .main-top .etc .map {
@@ -2650,7 +2659,7 @@ body {
   margin: 0 auto;
 }
 
-.myinfo-page .main .edit-info #edit-form #password, .myinfo-page .main .edit-info #edit-form #new_pw, .myinfo-page .main .edit-info #edit-form #new_pw2, .myinfo-page .main .edit-info #edit-form #username {
+.myinfo-page .main .edit-info #edit-form #password_ck, .myinfo-page .main .edit-info #edit-form #new_pw_ck, .myinfo-page .main .edit-info #edit-form #new_pw2_ck, .myinfo-page .main .edit-info #edit-form #username {
   width: 400px;
   height: 49px;
   font-size: 14px;

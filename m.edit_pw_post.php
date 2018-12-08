@@ -6,6 +6,10 @@ $user_id = $_GET['id'];
 $new_pw=escape_string($_POST['new_pw']);
 $new_pw2=escape_string($_POST['new_pw2']);
 
+
+if(mb_strlen($new_pw)<8 || mb_strlen($new_pw2)<8){
+  alert_back("비밀번호는 8자리로 설정해주세요.");
+}
 if($new_pw != $new_pw2){
   alert_back("변경할 비밀번호가 다릅니다.");
 }

@@ -1347,6 +1347,16 @@
   border-radius: 10px;
 }
 
+.info-page .main .service-info {
+  width: 100%;
+  margin-top: 40px auto;
+}
+
+.info-page .main .service-info > img {
+  width: 100%;
+  height: auto;
+}
+
 .ask-page .main {
   width: 100%;
 }
@@ -2157,7 +2167,7 @@
   margin-bottom: 20px;
 }
 
-.mypage-page .main .edit-info .edit #edit-form #password, .mypage-page .main .edit-info .edit #edit-form #new_pw, .mypage-page .main .edit-info .edit #edit-form #new_pw2, .mypage-page .main .edit-info .edit #edit-form #username {
+.mypage-page .main .edit-info .edit #edit-form #password_ck, .mypage-page .main .edit-info .edit #edit-form #new_pw_ck, .mypage-page .main .edit-info .edit #edit-form #new_pw2_ck, .mypage-page .main .edit-info .edit #edit-form #username {
   width: 100%;
   font-size: 14px;
   border-radius: 20px;

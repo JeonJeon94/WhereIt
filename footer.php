@@ -12,7 +12,7 @@
               </div>
               <span id="tooltip">검색가능지역</span>
             </div>
-            <a href="">서비스정보</a>
+            <a href="./service_info.php">서비스정보</a>
             <a href="./ask.php">문의하기</a>
           </div>
         </div>

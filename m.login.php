@@ -1,5 +1,10 @@
 <?php $page="login" ?>
 <?php include_once("./m.head.php") ?>
+<?php 
+  if($user_id){
+    alert_back("잘못된 접근입니다.");
+  }
+?>
   <div class="main">
     <div class="login-center">
       <div class="login-form">

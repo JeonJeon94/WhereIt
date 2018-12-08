@@ -118,14 +118,14 @@ if($member){
     if(!playing){
       img_pivot += 16
       playing = true;
-      if(img_pivot === 16 || img_pivot === 32 || img_pivot === 48){
-        for(var i = img_pivot-4; i < img_pivot; i++){
+      if(img_pivot === 16){
+        for(var i = img_pivot-16; i < img_pivot; i++){
           var row = res.payload.imgs[i]
           if(row === undefined){
             continue
           }
           try{
-          $(".detail-picture").append( slot_template(row) )
+            $(".detail-picture").append( slot_template(row) )
           }catch(err){}
         }
         flag = true;
@@ -133,13 +133,13 @@ if($member){
       }else{
         Loading()
         setTimeout(function(){
-          for(var i = img_pivot -12; i < img_pivot; i++){
+          for(var i = img_pivot -16; i < img_pivot; i++){
             var row = res.payload.imgs[i]
             if(row === undefined){
               continue
             }
             try{
-            $(".detail-picture").append( slot_template(row) )
+              $(".detail-picture").append( slot_template(row) )
             }catch(err){}
           }
           playing = false;
