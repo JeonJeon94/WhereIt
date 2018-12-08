@@ -26,7 +26,7 @@
       if(res.code == 1){
         location.href='./signup.php?checksum=ok';
 
-      }if(res.code == -2){
+      }else if(res.code == -2){
         if(res.err.indexOf('Duplicate') >= 0 ){
           alert_back("이미 가입되어 있는 이메일입니다.");
         }else{
