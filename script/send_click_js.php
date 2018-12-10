@@ -18,10 +18,14 @@
     }else{
       api_forget_password($('#post-mail').val(), function(res){
         if(res.code == 1){
-          $('.notice').css('display','block')
-          $('.modal-container').css('display','block')
+          if(res.payload == false){
+            alert("존재하지 않는 이메일입니다. 이메일을 확인해주세요.")
+          }else{
+            $('.notice').css('display','block')
+            $('.modal-container').css('display','block')
+          }
         }else{
-          alert("이메일이 올바르지 않습니다!")
+            alert("이메일이 올바르지 않습니다!")
         }
       })
     }

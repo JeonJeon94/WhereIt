@@ -20,7 +20,6 @@
     </div>
   </div>
   </body>
-
   <?php include_once("./script/dropdown_js.php") ?>
   <?php include_once("./script/input_active_js.php") ?>
   <?php include_once("./script/move_top_js.php") ?>
@@ -29,5 +28,4 @@
   <?php include_once("./script/click_agree_js.php") ?>
   <?php include_once("./script/tooltip_js.php") ?>
   <?php include_once("./script/slide_js.php") ?>
-
 </html>
