@@ -24,6 +24,8 @@ if(strpos($_SERVER["REQUEST_URI"], "?") == FALSE){
   
   
   $id = $json["response"]["id"];
+
+  var_dump($id);
   if($json["resultcode"] == "00"){
     // ok
     // isnert to db
@@ -43,6 +45,7 @@ if(strpos($_SERVER["REQUEST_URI"], "?") == FALSE){
     }
   }else{
     // hacking!
+    echo 'dfsfsdf';
     return ;
   }
 }
