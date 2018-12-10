@@ -74,6 +74,9 @@
 <html>
 <head>
   <meta charset="utf-8" />
+  <meta name="google-signin-scope" content="profile email">
+  <meta name="google-signin-client_id" content="676011647989-m5l1qeheu73dtfqvfcgkbcj3jf86tpif.apps.googleusercontent.com">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
   <title>Where It</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="./css/m.style.css?ver=1.1"  type="text/css" />
@@ -85,6 +88,7 @@
   <script src="./OwlCarousel3/dist/owl.carousel.js" type="text/javascript"></script>
   <script type="text/javascript" src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.0.js" charset="utf-8"></script>
   <script src="http://13.124.4.4/gen_api.js"></script>
+  <script src="/kakao_sdk.js"></script>
 </head>
 <body class="default-page <?=$page?>-page">
   <div class="slide-modal">

@@ -25,31 +25,31 @@
               <div>혹은 <b>소셜계정</b>으로 간편하게 로그인하세요!</div>
             </div>
             <div class="sns-login-btn">
-              <div class="sns-btn">
+              <!-- <div class="sns-btn">
                 <div class="btn-box">
                   <img src="./images/sns/sns_insta.png"/>
                 </div>
                 <div class="text-box">인스타그램</div> 
-              </div>
+              </div> -->
               <div class="sns-btn">
                 <div class="btn-box">
                   <div id="naverIdLogin"></div>
                 </div>
                 <div class="text-box">네이버</div>
               </div>
-              <div class="sns-btn">
+              <div class="sns-btn" onclick="loginWithKakao()">
                 <div class="btn-box">
                   <img src="./images/sns/sns_kakao.png"/>
                 </div>
                 <div class="text-box">카카오톡</div> 
               </div>
-              <div class="sns-btn">
+              <div class="sns-btn" onclick="facebook_click()">
                 <div class="btn-box">
                   <img src="./images/sns/sns_facebook.png"/>
                 </div>
                 <div class="text-box">페이스북</div>
               </div>
-              <div class="sns-btn">
+              <div class="sns-btn" onclick="google_login()">
                 <div class="btn-box">
                   <img src="./images/sns/sns_google.png"/>
                 </div>
@@ -69,4 +69,65 @@
         </div>
       </div>
     </div>
+
+<script>
+Kakao.init('9559803eb8b03204730f88ea12db70b8');
+
+function loginWithKakao(){
+  Kakao.Auth.login({
+    success: function(authObj) {
+      // alert(JSON.stringify(authObj));
+      location.href='/kakao_callback.php?access_token='+authObj.access_token
+    },
+    fail: function(err) {
+    }
+  });
+}
+
+window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '320990375412532',
+    cookie     : true,
+    xfbml      : true,
+    version    : 'v3.2'
+  });
+    
+  FB.AppEvents.logPageView();   
+    
+};
+
+(function(d, s, id){
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "https://connect.facebook.net/en_US/sdk.js";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+function facebook_click(){
+  FB.login(function(response) {
+    // handle the response
+  }, {scope: 'public_profile,email'});
+}
+
+$(function(){
+  gapi.load('auth2', function() {
+    auth2 = gapi.auth2.init({
+      client_id: '676011647989-m5l1qeheu73dtfqvfcgkbcj3jf86tpif.apps.googleusercontent.com',
+      fetch_basic_profile: false,
+      scope: 'profile'
+    });
+
+  });
+})
+
+function google_login(){
+    // Sign the user in, and then retrieve their ID.
+    auth2.signIn().then(function() {
+      console.log(auth2.currentUser.get().getId());
+    });
+
+}
+</script>
+
     <?php include_once("./m.footer.php") ?>

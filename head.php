@@ -20,7 +20,7 @@ if($_SESSION['user_id']){
   $user_id = $_SESSION['user_id'];
   $member = sql_one("SELECT * FROM users WHERE id=$user_id");
   if(!$member[user_name]){
-    $member[user_name] = "naver-$member[user_email]";
+    $member[user_name] = "$member[register]-$member[user_email]";
   }
 }
 if($NEED_LOGIN == true){
@@ -33,6 +33,10 @@ if($NEED_LOGIN == true){
 <html>
 <head>
   <meta charset="utf-8" />
+  <meta name="google-signin-scope" content="profile email">
+  <meta name="google-signin-client_id" content="676011647989-m5l1qeheu73dtfqvfcgkbcj3jf86tpif.apps.googleusercontent.com">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+
   <title>Where It</title>
   <link rel="stylesheet" href="./css/style.css?ver=1.1"  type="text/css" />
   <link rel="stylesheet" href="./OwlCarousel2/dist/assets/owl.carousel.css" type="text/css">
@@ -44,6 +48,7 @@ if($NEED_LOGIN == true){
   <script src="./OwlCarousel2/dist/owl.carousel.js" type="text/javascript"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
   <script src="http://13.124.4.4/gen_api.js"></script>
+  <script src="/kakao_sdk.js"></script>
 </head>
 <body class="default-page <?=$page?>-page">
 <div class="all">
