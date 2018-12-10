@@ -21,7 +21,7 @@
     $user_id = $_SESSION['user_id'];
     $member = sql_one("SELECT * FROM users WHERE id=$user_id");
     if(!$member[user_name]){
-      $member[user_name] = "naverlogin";
+      $member[user_name] = "$member[register]-$member[user_email]";
     }
   }
   if($NEED_LOGIN == true){
