@@ -31,7 +31,10 @@
     $(".hot-list").slideUp('fast');
     $('#down_bt').css('display', 'block');
     $('#up_bt').css('display','none');
-    $('.hot').css("background","linear-gradient( to bottom, #F1EDF0, #FAF6F9 )");
+    setTimeout(function(){
+      $('.hot').css("background","none");
+    },100);
+    $('.hot').css("opacity",'1');
     $('.hot').css("border",'none');
 
     setTimeout(function(){

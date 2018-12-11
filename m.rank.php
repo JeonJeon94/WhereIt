@@ -46,7 +46,7 @@
               echo $i+1;
             }
           ?></div>
-          <div class="store-name" onclick="location.href='detail.php?id=<?php echo $id; ?>'">
+          <div class="store-name" onclick="location.href='m.detail.php?id=5bb6c27ae0f1d504108ba16c'">
             건대 소두마리
           </div>
           <div style="display:flex;"> 
@@ -59,7 +59,7 @@
           </div>
         </div>
         <div class="store-img">
-          <img src="./images/cafe1.jpg"  onclick="location.href='m.detail.php?id=<?php echo $id; ?>'" />
+          <img src="./images/cafe1.jpg"  onclick="location.href='m.detail.php?id=5bb6c27ae0f1d504108ba16c'" />
         </div>
       </div>
       <?php

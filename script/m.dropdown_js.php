@@ -47,7 +47,8 @@
         $(".hot-list-h").css("padding","5px 0px 5px 0")
         $(".hot").css("transition","all 0.5s")
         $(".hot").parent().css("overflow","hidden")
-        $(".hot-list, .hot-list-h").css("display","list-item")
+        $(".hot-list").css("display","list-item")
+        $(".hot-list-h").css("display","list-item")
       },200)
     }
   });

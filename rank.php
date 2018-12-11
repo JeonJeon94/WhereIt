@@ -53,10 +53,10 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
               echo $number; 
             ?></div>
             <div class="store-img">
-              <img src="./images/foodimg1.jpeg" onclick="location.href='detail.php?id=<?php echo $id; ?>'" />
+              <img src="./images/foodimg1.jpeg" onclick="location.href='detail.php?id=5bb6c27ae0f1d504108ba16c'" />
             </div>
             <div style="display:flex; flex-direction:column; padding-left: 10px; padding-bottom: 5px;">
-              <div class="name"  onclick="location.href='detail.php?id=<?php echo $id; ?>'" >건대 소두마리</div>
+              <div class="name"  onclick="location.href='detail.php?id=5bb6c27ae0f1d504108ba16c'" >건대 소두마리</div>
               <div class="flex">
                 <div class="keyword">
                   <div class="chile-flex-1;">강남구</div>
@@ -86,10 +86,10 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
               }
             ?></div>
             <div class="store-img">
-              <img src="./images/77.77.jpeg"  onclick="location.href='detail.php?id=<?php echo $id; ?>'" />
+              <img src="./images/77.77.jpeg"  onclick="location.href='detail.php?id=5bb6c27ae0f1d504108ba16c'" />
             </div>
             <div style="display:flex; flex-direction:column; padding-left: 10px;">
-              <div class="name"  onclick="location.href='detail.php?id=<?php echo $id; ?>'" >건대 소두마리</div>
+              <div class="name"  onclick="location.href='detail.php?id=5bb6c27ae0f1d504108ba16c'" >건대 소두마리</div>
               <div class="flex">
                 <div class="keyword">
                   <div class="chile-flex-1;">강남구</div>

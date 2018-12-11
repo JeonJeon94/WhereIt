@@ -6,9 +6,9 @@
           </div>
           <div class="etc">
             <div class="area-ok">
-              <div class="tooltip-content">
-                <p style="font-size:18px; margin:0 0 20px 0;"><b>검색 가능</b>한 지역</p>
-                <p>#강남 #삼청동 #샤로수길 #양재 #북촌 #익선동 #역삼 #홍대 #이태원 #신사동 #청담</p>
+              <div class="tooltip-content" id="tooltip-content">
+                <p id="tooltip-content" style="font-size:18px; margin:0 0 20px 0;"><b>검색 가능</b>한 지역</p>
+                <p id="tooltip-content">#강남 #삼청동 #샤로수길 #양재 #북촌 #익선동 #역삼 #홍대 #이태원 #신사동 #청담</p>
               </div>
               <span id="tooltip">검색가능지역</span>
             </div>

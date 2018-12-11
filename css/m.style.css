@@ -732,11 +732,22 @@
 .search-page .main .search-list .list-line .store-list .img-container, .search-o-page .main .search-list .list-line .store-list .img-container {
   width: 170px;
   height: 170px;
+  overflow: hidden;
+  position: relative;
 }
 
 .search-page .main .search-list .list-line .store-list .img-container > img, .search-o-page .main .search-list .list-line .store-list .img-container > img {
-  width: 100%;
+  position: absolute;
+  margin: auto;
   height: 100%;
+  width: 100%;
+  left: -100%;
+  right: -100%;
+  top: -100%;
+  bottom: -100%;
+  cursor: pointer;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 5px;
 }
 
@@ -1124,7 +1135,10 @@
 
 .detail-page .main .detail-main {
   font-family: "Noto Sans KR", sans-serif !important;
-  width: 90%;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1177,6 +1191,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 90%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1197,12 +1212,22 @@
 .detail-page .main .detail-main .main-top .store-info .photo {
   width: 75px;
   height: 75px;
-  padding: 10px 0;
+  overflow: hidden;
+  position: relative;
 }
 
 .detail-page .main .detail-main .main-top .store-info .photo > img {
-  width: 100%;
+  position: absolute;
+  margin: auto;
   height: 100%;
+  width: 100%;
+  left: -100%;
+  right: -100%;
+  top: -100%;
+  bottom: -100%;
+  cursor: pointer;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 5px;
 }
 
@@ -1324,6 +1349,7 @@
 
 .detail-page .main .detail-main .map-container {
   position: relative;
+  width: 90%;
   text-align: center;
   margin: 5px 0;
   height: 0;
@@ -1341,6 +1367,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  widows: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1354,17 +1381,28 @@
   display: flex;
   -webkit-animation: fadeInUp 1s;
           animation: fadeInUp 1s;
-  margin: 10px auto;
+  margin: 10px;
 }
 
 .detail-page .main .detail-main .detail-picture .store-list .img-container {
   width: 180px;
   height: 180px;
+  overflow: hidden;
+  position: relative;
 }
 
 .detail-page .main .detail-main .detail-picture .store-list .img-container > img {
-  width: 100%;
+  position: absolute;
+  margin: auto;
   height: 100%;
+  width: 100%;
+  left: -100%;
+  right: -100%;
+  top: -100%;
+  bottom: -100%;
+  cursor: pointer;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 10px;
 }
 
@@ -1581,7 +1619,6 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   color: #504f57;
-  -webkit-box-shadow: 0 0 0 1000px #F9F5F8 inset;
 }
 
 .login-page .main .login-center .login-form .login-input #password {
@@ -1595,7 +1632,6 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   color: #504f57;
-  -webkit-box-shadow: 0 0 0 1000px #F9F5F8 inset;
 }
 
 .login-page .main .login-center .login-form .login-btn #login-btn {
@@ -1982,11 +2018,22 @@
 .favorite-page .main .favorite-list .list-line .store-list .img-container {
   width: 150px;
   height: 150px;
+  position: relative;
+  overflow: hidden;
 }
 
 .favorite-page .main .favorite-list .list-line .store-list .img-container > img {
-  width: 100%;
+  position: absolute;
+  margin: auto;
   height: 100%;
+  width: 100%;
+  left: -100%;
+  right: -100%;
+  top: -100%;
+  bottom: -100%;
+  cursor: pointer;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 5px;
 }
 

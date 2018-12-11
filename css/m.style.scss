@@ -196,7 +196,6 @@
         display: flex;
         width: 150px;
         margin-right: 10px;
-        // align-items: center;
 
         .hot-ranking{
           display: flex;
@@ -226,8 +225,6 @@
             }
             .hot-list{
               padding: 5px 0 5px 0;
-              // padding: 0 0 10px 0;
-              
   
               .num{
                 color: #D8A3D2;
@@ -566,10 +563,21 @@
 
           .img-container{
             width: 170px;
-            height: 170px;            
+            height: 170px;     
+            overflow: hidden;
+            position: relative;
+
             >img{
-              width:100%; 
-              height:100%;
+              position: absolute;
+              margin: auto;
+              height: 100%;
+              width: 100%;
+              left: -100%;
+              right: -100%;
+              top: -100%;
+              bottom: -100%;
+              cursor: pointer;
+              object-fit: cover;
               border-radius: 5px;
             }
           }
@@ -877,7 +885,8 @@
 
     .detail-main{
       font-family: "Noto Sans KR", sans-serif !important;
-      width: 90%;
+      width: 100%;
+      align-items: center;
       display: flex;
       flex-direction: column;
       margin: 0 auto;
@@ -917,6 +926,7 @@
       }
       .main-top{
         display:flex;
+        width: 90%;
         flex-direction: column;
         padding: 20px 5px;
         border-bottom: 1px solid #E1EAE9;
@@ -930,11 +940,20 @@
           .photo{
             width: 75px;
             height: 75px;
-            padding: 10px 0;
+            overflow: hidden;
+            position: relative;
           
             >img{
-              width:100%; 
-              height:100%;
+              position: absolute;
+              margin: auto;
+              height: 100%;
+              width: 100%;
+              left: -100%;
+              right: -100%;
+              top: -100%;
+              bottom: -100%;
+              cursor: pointer;
+              object-fit: cover;
               border-radius: 5px;
             }
           }
@@ -1034,6 +1053,7 @@
       }
       .map-container{
         position: relative;
+        width: 90%;
         text-align: center;
         margin: 5px 0;
         height: 0;
@@ -1048,21 +1068,32 @@
 
       .detail-picture{
         display:flex;
+        widows: 100%;
         justify-content: center;
         flex-wrap:wrap;
 
         .store-list{
           display: flex;
           animation: fadeInUp 1s;
-          margin: 10px auto;
+          margin: 10px;
 
           .img-container{
             width: 180px;
             height: 180px;
+            overflow: hidden;
+            position: relative;
             
             >img{
-              width:100%; 
-              height:100%;
+              position: absolute;
+              margin: auto;
+              height: 100%;
+              width: 100%;
+              left: -100%;
+              right: -100%;
+              top: -100%;
+              bottom: -100%;
+              cursor: pointer;
+              object-fit: cover;
               border-radius: 10px;
             }
           }
@@ -1241,7 +1272,6 @@
             background-color: #F9F5F8;
             box-sizing: border-box;
             color: #504f57;
-            -webkit-box-shadow: 0 0 0 1000px #F9F5F8 inset;
           }
           #password{
             width: 100%;
@@ -1253,7 +1283,6 @@
             background-color: #F9F5F8;
             box-sizing: border-box;
             color: #504f57;
-            -webkit-box-shadow: 0 0 0 1000px #F9F5F8 inset;
           }
         }
         
@@ -1572,10 +1601,20 @@
           .img-container{
             width: 150px;
             height: 150px;
+            position: relative;
+            overflow: hidden;
             
             >img{
-              width:100%; 
-              height:100%;
+              position: absolute;
+              margin: auto;
+              height: 100%;
+              width: 100%;
+              left: -100%;
+              right: -100%;
+              top: -100%;
+              bottom: -100%;
+              cursor: pointer;
+              object-fit: cover;
               border-radius: 5px;
             }
           }

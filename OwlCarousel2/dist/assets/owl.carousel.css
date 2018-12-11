@@ -78,11 +78,13 @@
   }
   .owl-carousel .owl-nav .owl-prev #aa{
     opacity: 0.7;
+    cursor: pointer;
   }
   .owl-carousel .owl-nav .owl-prev #aa-a{
     position: absolute;
     top: 15px;
     left: 20px;
+    cursor: pointer;
   }
   .owl-carousel .owl-nav .owl-prev:hover{
     background: none;
@@ -105,11 +107,15 @@
   }
   .owl-carousel .owl-nav .owl-next #bb{
     opacity: 0.7;
+    cursor: pointer;
+
   }
   .owl-carousel .owl-nav .owl-next #bb-b{
     position: absolute;
     top: 15px;
     right: 20px;
+    cursor: pointer;
+
   }
   .owl-carousel .owl-nav .owl-next:hover{
     background: none;
