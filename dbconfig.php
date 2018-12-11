@@ -4,7 +4,7 @@
   error_reporting(0);
   ini_set("display_errors", 1);
 
-  $dbHost = "ec2-13-209-76-121.ap-northeast-2.compute.amazonaws.com";
+  $dbHost = "54.180.107.55";
 	$dbUser = "root";
 	$dbpass = "qwer1234!"; //DB패스워드를 입력해 주세요
 	$dbName = "whereit"; // DB명을 입력해 주세요.
