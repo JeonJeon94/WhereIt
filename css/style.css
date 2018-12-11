@@ -549,7 +549,7 @@ body {
 .info-page .main .service-info {
   width: 950px;
   height: auto;
-  margin: 0 auto;
+  margin: 0 auto 100px auto;
 }
 
 .info-page .main .service-info > img {
@@ -663,7 +663,7 @@ body {
   padding-left: 20px;
   font-size: 14px;
   height: 49px;
-  border: 1px solid #c9c9cc;
+  border: 1px solid #737473;
   border-radius: 51px;
   width: 600px;
   -webkit-box-sizing: border-box;
@@ -752,7 +752,7 @@ body {
   font-size: 14px;
   padding-left: 20px;
   height: 49px;
-  border: 1px solid #c9c9cc;
+  border: 1px solid #737473;
   border-radius: 51px;
   width: 400px;
   -webkit-box-sizing: border-box;

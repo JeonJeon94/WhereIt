@@ -514,7 +514,7 @@
 }
 
 .main-page .main .item > img {
-  width: 280px;
+  width: 340px;
   height: auto;
   border-radius: 15px;
 }
@@ -560,7 +560,7 @@
       -ms-flex: 1;
           flex: 1;
   color: #a39aa3;
-  border: 1px solid #c9c9cc;
+  border: 1px solid #737473;
   border-radius: 20px;
   padding: 10px 30px 10px 14px;
   font-size: 14px;
@@ -604,8 +604,8 @@
 }
 
 .search-o-page .store-list .img-container {
-  width: 290px !important;
-  height: 290px !important;
+  width: 320px !important;
+  height: 320px !important;
 }
 
 .search-o-page .store-list .img-container > img {
@@ -617,7 +617,7 @@
 }
 
 .search-o-page .store-list .views {
-  font-size: 18px !important;
+  font-size: 15px !important;
 }
 
 .search-o-page .store-list .keyword {
@@ -656,11 +656,12 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 10px 18px;
+  padding: 15px 40px 30px 40px;
 }
 
 .search-page .main .main-top .top_layer_1 .text, .search-o-page .main .main-top .top_layer_1 .text {
-  font-size: 20px;
+  font-size: 22px;
+  line-height: 30px;
   color: #504f57;
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -688,7 +689,8 @@
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  padding-right: 25px;
+  padding-right: 45px;
+  padding-bottom: 10px;
 }
 
 .search-page .main .main-top .top_layer_2 .view-type > img, .search-o-page .main .main-top .top_layer_2 .view-type > img {
@@ -728,8 +730,8 @@
 }
 
 .search-page .main .search-list .list-line .store-list .img-container, .search-o-page .main .search-list .list-line .store-list .img-container {
-  width: 150px;
-  height: 150px;
+  width: 170px;
+  height: 170px;
 }
 
 .search-page .main .search-list .list-line .store-list .img-container > img, .search-o-page .main .search-list .list-line .store-list .img-container > img {
@@ -757,7 +759,6 @@
           justify-content: center;
   font-size: 12px;
   font-family: "Noto Sans KR", sans-serif;
-  font-weight: 500;
 }
 
 .search-page .main .search-list .list-line .store-list .keyword, .search-o-page .main .search-list .list-line .store-list .keyword {
@@ -794,13 +795,13 @@
           flex: 1;
   font-size: 18px;
   color: #c5c5c7;
-  padding: 10px 5px;
+  padding: 30px 5px 20px 5px;
 }
 
 .ranking-thismonth-page .thismonth {
   font-size: 18px;
   color: #504f57;
-  padding: 10px 5px;
+  padding: 30px 5px 20px 5px;
 }
 
 .ranking-nowdays-page .theme, .ranking-nowdays-page .thismonth {
@@ -816,13 +817,13 @@
           flex: 1;
   font-size: 18px;
   color: #c5c5c7;
-  padding: 10px 5px;
+  padding: 30px 5px 20px 5px;
 }
 
 .ranking-nowdays-page .nowdays {
   font-size: 18px;
   color: #504f57;
-  padding: 10px 5px;
+  padding: 30px 5px 20px 5px;
 }
 
 .ranking-theme-page .nowdays, .ranking-theme-page .thismonth {
@@ -838,13 +839,13 @@
           flex: 1;
   font-size: 18px;
   color: #c5c5c7;
-  padding: 10px 5px;
+  padding: 30px 5px 20px 5px;
 }
 
 .ranking-theme-page .theme {
   font-size: 18px;
   color: #504f57;
-  padding: 10px 5px;
+  padding: 30px 5px 20px 5px;
 }
 
 .ranking-theme-page .insta {
@@ -944,7 +945,7 @@
 
 .ranking-theme-page .main .rank-area .ranking-store, .ranking-thismonth-page .main .rank-area .ranking-store, .ranking-nowdays-page .main .rank-area .ranking-store {
   width: 100%;
-  margin: 10px auto;
+  margin: 30px auto 0px auto;
   -webkit-animation: fadeInUp 2s;
           animation: fadeInUp 2s;
 }
@@ -1123,6 +1124,15 @@
 
 .detail-page .main .detail-main {
   font-family: "Noto Sans KR", sans-serif !important;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
 }
 
 .detail-page .main .detail-main .loading {
@@ -1172,7 +1182,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 20px 5px;
-  border-bottom: 2px solid #E1EAE9;
+  border-bottom: 1px solid #E1EAE9;
   margin-bottom: 10px;
   font-family: "Noto Sans KR", sans-serif !important;
 }
@@ -1256,12 +1266,21 @@
   padding: 15px 0 0 0;
 }
 
-.detail-page .main .detail-main .main-top .store-info .etc .share, .detail-page .main .detail-main .main-top .store-info .etc .phone, .detail-page .main .detail-main .main-top .store-info .etc .usage {
+.detail-page .main .detail-main .main-top .store-info .etc .share, .detail-page .main .detail-main .main-top .store-info .etc .phone {
   margin: 0 auto;
-  padding-right: 8px;
+  padding-right: 12px;
 }
 
-.detail-page .main .detail-main .main-top .store-info .etc .share > img, .detail-page .main .detail-main .main-top .store-info .etc .phone > img, .detail-page .main .detail-main .main-top .store-info .etc .usage > img {
+.detail-page .main .detail-main .main-top .store-info .etc .share > img, .detail-page .main .detail-main .main-top .store-info .etc .phone > img {
+  width: 15px;
+  height: 15px;
+}
+
+.detail-page .main .detail-main .main-top .store-info .etc .usage {
+  margin: 0 auto;
+}
+
+.detail-page .main .detail-main .main-top .store-info .etc .usage > img {
   width: 15px;
   height: 15px;
 }
@@ -1294,7 +1313,7 @@
 
 .detail-page .main .detail-main .main-top .store-adress .map {
   position: absolute;
-  right: 20px;
+  right: 5px;
   bottom: 0;
 }
 
@@ -1306,7 +1325,7 @@
 .detail-page .main .detail-main .map-container {
   position: relative;
   text-align: center;
-  margin: 10px auto;
+  margin: 5px 0;
   height: 0;
 }
 
@@ -1339,8 +1358,8 @@
 }
 
 .detail-page .main .detail-main .detail-picture .store-list .img-container {
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 180px;
 }
 
 .detail-page .main .detail-main .detail-picture .store-list .img-container > img {

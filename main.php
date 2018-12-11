@@ -20,7 +20,7 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
             $url = "./news_detail.php";
         ?>
         <div class="item" style="width:1200px;" data-id="<?=$i?>" onclick="click_main_banner(this,'<?php echo $url ?>')" >
-          <img src="./images/foodimg3.jpeg" >
+          <img src="./images/whereit_img_main_01.png" >
         </div>
         <?php } ?>
       </div>

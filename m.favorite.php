@@ -51,7 +51,7 @@ $shop_list = sql_select("SELECT shopId FROM favorit WHERE user_id = '$member[id]
 <script id="store-slot" type="text/template">
   <div class="store-list">
     <div class="img-container" onclick="location.href='./m.detail.php?id=<%=_id%>'">
-      <img alt="food-img" src="<%=imgs[0].link%>" onerror="this.src='./images/desktop_detail_default.png'"/>
+      <img alt="food-img" src="<%=imgs[0].link%>" onerror="this.src='./images/whereit_img_loading_m.png'"/>
     </div>
     <div style="padding:5px 5px; display:flex;">
       <div class="store-name"><%=Name%></div>

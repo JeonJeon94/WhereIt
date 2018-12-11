@@ -56,7 +56,7 @@ if($member){
       }
       if(row.imgs.length === 0){
         row.imgs[0] = {}
-        row.imgs[0].link = './images/desktop_detail_default.png'
+        row.imgs[0].link = './images/whereit_img_loading_p.png'
       }
       row.hasgtag = hastag
       try{
@@ -68,7 +68,7 @@ if($member){
 
 <script id="detail-slot" type="text/template">
     <div class="photo">
-      <img src="<%=imgs[0].link%>" onerror="this.src='./images/desktop_detail_default.png'"/>
+      <img src="<%=imgs[0].link%>" onerror="this.src='./images/whereit_img_loading_p.png'"/>
     </div>
     <div class="info">
       <div class="flex" style="padding-bottom:15px; padding-top:15px;">
@@ -196,7 +196,7 @@ if($member){
 <script id="picture-slot" type="text/template">
   <div class="store-list">
     <div class="img-container">
-      <img src="<%=link%>" onerror="this.src='./images/desktop_detail_default.png'" onclick="location.href='https://instagram.com/p/<%=code%>'"/>
+      <img src="<%=link%>" onerror="this.src='./images/whereit_img_loading_p.png'" onclick="location.href='https://instagram.com/p/<%=code%>'"/>
     </div>
   </div>
 </script>

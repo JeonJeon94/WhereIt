@@ -394,7 +394,7 @@
     .item{
 
       >img{
-        width: 280px;
+        width: 340px;
         height: auto;
         border-radius: 15px;
       }
@@ -424,7 +424,7 @@
           display: flex;
           flex: 1;
           color:#a39aa3;
-          border: 1px solid #c9c9cc;
+          border: 1px solid #737473;
           border-radius: 20px;
           padding:10px 30px 10px 14px;
           font-size: 14px;
@@ -467,8 +467,8 @@
     margin: 10px auto !important;
 
     .img-container{
-      width: 290px !important;
-      height: 290px !important;
+      width: 320px !important;
+      height: 320px !important;
       
       >img{
         border-radius: 10px !important;
@@ -478,7 +478,7 @@
       font-size: 18px !important; 
     }
     .views{
-      font-size: 18px !important;
+      font-size: 15px !important;
     }
     .keyword{
       font-size: 14px !important;
@@ -507,9 +507,10 @@
       flex-direction: column;
       .top_layer_1{
         display: flex;
-        padding: 10px 18px;
+        padding: 15px 40px 30px 40px;
         .text{
-          font-size: 20px;
+          font-size: 22px;
+          line-height: 30px;
           color: #504f57;
           flex: 1;
           padding-left: 7px;
@@ -531,7 +532,9 @@
       .top_layer_2{
         display: flex;
         justify-content: flex-end;
-        padding-right: 25px;
+        padding-right: 45px;
+        padding-bottom: 10px;
+
         .view-type{
           >img{
             width: 16px;
@@ -562,8 +565,8 @@
           flex-basis: auto;
 
           .img-container{
-            width: 150px;
-            height: 150px;            
+            width: 170px;
+            height: 170px;            
             >img{
               width:100%; 
               height:100%;
@@ -584,7 +587,6 @@
             justify-content:center;
             font-size: 12px;
             font-family: "Noto Sans KR", sans-serif;
-            font-weight: 500;
 
           }
           .keyword{
@@ -623,12 +625,12 @@
     flex:1;
     font-size: 18px;
     color: #c5c5c7; 
-    padding: 10px 5px;
+    padding: 30px 5px 20px 5px;
   }
   .thismonth{
     font-size: 18px;
     color: #504f57;;
-    padding: 10px 5px;
+    padding: 30px 5px 20px 5px;
   }
 }
 .ranking-nowdays-page{
@@ -639,12 +641,12 @@
     flex:1;
     font-size: 18px;
     color: #c5c5c7; 
-    padding: 10px 5px;
+    padding: 30px 5px 20px 5px;
   }
   .nowdays{
     font-size: 18px;
     color:#504f57;
-    padding: 10px 5px;
+    padding: 30px 5px 20px 5px;
   }
 }
 .ranking-theme-page{
@@ -655,12 +657,12 @@
     flex:1;
     font-size: 18px;
     color: #c5c5c7; 
-    padding: 10px 5px;
+    padding: 30px 5px 20px 5px;
   }
   .theme{
     font-size: 18px;
     color:#504f57;
-    padding: 10px 5px;
+    padding: 30px 5px 20px 5px;
   }
   .insta{
     display: flex;
@@ -727,7 +729,7 @@
 
       .ranking-store{
         width: 100%;
-        margin: 10px auto;
+        margin: 30px auto 0px auto;
         animation: fadeInUp 2s;
 
         .store-info{
@@ -875,6 +877,10 @@
 
     .detail-main{
       font-family: "Noto Sans KR", sans-serif !important;
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
 
       .loading {
         position: relative;
@@ -913,7 +919,7 @@
         display:flex;
         flex-direction: column;
         padding: 20px 5px;
-        border-bottom: 2px solid #E1EAE9;
+        border-bottom: 1px solid #E1EAE9;
         margin-bottom: 10px;
         font-family: "Noto Sans KR", sans-serif !important;
         
@@ -976,9 +982,17 @@
             position: relative;
             padding: 15px 0 0 0;
               
-            .share, .phone, .usage {
+            .share, .phone{
               margin: 0 auto;
-              padding-right: 8px;
+              padding-right: 12px;
+            
+              >img{
+                width: 15px;
+                height: 15px;
+              }
+            } 
+            .usage{
+              margin: 0 auto;
 
               >img{
                 width: 15px;
@@ -1008,7 +1022,7 @@
           }
           .map{
             position: absolute;
-            right: 20px;
+            right: 5px;
             bottom: 0;
 
             >img{
@@ -1021,7 +1035,7 @@
       .map-container{
         position: relative;
         text-align: center;
-        margin: 10px auto;
+        margin: 5px 0;
         height: 0;
         
         #detail-map{
@@ -1043,8 +1057,8 @@
           margin: 10px auto;
 
           .img-container{
-            width: 150px;
-            height: 150px;
+            width: 180px;
+            height: 180px;
             
             >img{
               width:100%; 

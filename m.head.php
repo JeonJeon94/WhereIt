@@ -40,7 +40,7 @@
   $news_adress='m.news.php';
   $favorite_adress='m.favorite.php';
   $contents_adress='m.contents.php';
-  $service_adress='m.service-info.php';
+  $service_adress='m.service_info.php';
   $ask_adress='m.ask.php';
 
   switch($page){
@@ -80,6 +80,8 @@
   <title>Where It</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="./css/m.style.css?ver=1.1"  type="text/css" />
+  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="./OwlCarousel3/dist/assets/owl.carousel.css" type="text/css">
   <link rel="stylesheet" href="./OwlCarousel3/dist/assets/owl.theme.default.min.css" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

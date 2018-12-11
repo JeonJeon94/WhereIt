@@ -13,7 +13,7 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
 <?php include_once('./head.php') ?>
     <div class="main">
       <div class="service-info">
-        <img src="images/info.png" />
+        <img src="images/whererit_service_img.png" />
       </div>
     </div>
 <?php include_once('./footer.php') ?>

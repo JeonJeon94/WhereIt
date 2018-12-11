@@ -137,7 +137,7 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
 <script id="store-slot" type="text/template">
   <div class="store-list">
     <div class="img-container" onclick="location.href='./detail.php?id=<%=_id%>'">
-      <img alt="food-img" src="<%=main_img%>" onerror="this.src='./images/desktop_detail_default.png'"/>
+      <img alt="food-img" src="<%=main_img%>" onerror="this.src='./images/whereit_img_loading_p.png'"/>
     </div>
     <div class="flex" style="padding:5px 5px; width:232px;">
       <div class="store-name"><%=Name%></div>

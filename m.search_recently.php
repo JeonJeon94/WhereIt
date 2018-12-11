@@ -127,7 +127,7 @@
 <script id="store-slot" type="text/template">
   <div class="store-list">
     <div class="img-container" onclick="location.href='./m.detail.php?id=<%=_id%>'">
-      <img alt="food-img" src="<%=main_img%>" onerror="this.src='./images/desktop_detail_default.png'"/>
+      <img alt="food-img" src="<%=main_img%>" onerror="this.src='./images/whereit_img_loading_m.png'"/>
     </div>
     <div style="padding:5px 0px; display:flex; align-items:center;">
       <div class="store-name"><%=Name%></div>

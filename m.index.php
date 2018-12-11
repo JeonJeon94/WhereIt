@@ -10,7 +10,7 @@
             $url = "./m.news_detail.php";
         ?>
         <div class="item" data-id="<?=$i?>" onclick="click_main_banner(this,'<?php echo $url ?>')" >
-          <img src="./images/m_foodimg2.jpg" >
+          <img src="./images/whereit_img_main_02.png" >
         </div>
         <?php } ?>
       </div>
