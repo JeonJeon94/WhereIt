@@ -43,7 +43,6 @@ if(strpos($_SERVER["REQUEST_URI"], "?") == FALSE){
     }
   }else{
     // hacking!
-    echo 'dfsfsdf';
     return ;
   }
 }
