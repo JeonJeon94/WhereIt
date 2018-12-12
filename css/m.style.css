@@ -284,6 +284,15 @@
 
 .default-page .head .head-hot .rank-container .hot-ranking .hot .hot-list-h {
   padding: 5px 0 5px 0;
+  height: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .default-page .head .head-hot .rank-container .hot-ranking .hot .hot-list-h .num {
@@ -300,6 +309,15 @@
 
 .default-page .head .head-hot .rank-container .hot-ranking .hot .hot-list {
   padding: 5px 0 5px 0;
+  height: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .default-page .head .head-hot .rank-container .hot-ranking .hot .hot-list .num {

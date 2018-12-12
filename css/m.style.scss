@@ -212,6 +212,11 @@
             
             .hot-list-h{
               padding: 5px 0 5px 0;
+              height: 30px;
+              box-sizing: border-box;
+              display: flex;
+              align-items: center;
+              
               .num{
                 color: #D8A3D2;
                 font-family: "Noto Sans KR", sans-serif;
@@ -225,7 +230,11 @@
             }
             .hot-list{
               padding: 5px 0 5px 0;
-  
+              height: 30px;
+              box-sizing: border-box;
+              display: flex;
+              align-items: center;
+
               .num{
                 color: #D8A3D2;
                 font-family: "Noto Sans KR", sans-serif;

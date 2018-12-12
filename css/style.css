@@ -1761,6 +1761,7 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin-left: 200px;
+  cursor: pointer;
 }
 
 .asking-page .main .ask-main .support #send:hover {
@@ -1992,6 +1993,7 @@ body {
   letter-spacing: 2px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  cursor: pointer;
 }
 
 .find-page .find-center .find-form #mail-send:hover {
@@ -2715,6 +2717,7 @@ body {
   letter-spacing: 2px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  cursor: pointer;
 }
 
 .myinfo-page .main .myinfo .edit-btn #edit:hover {
@@ -2782,6 +2785,7 @@ body {
   letter-spacing: 2px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  cursor: pointer;
 }
 
 .myinfo-page .main .edit-info #save:hover, .myinfo-page .main .edit-info #cancel:hover {

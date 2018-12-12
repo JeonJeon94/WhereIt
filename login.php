@@ -81,14 +81,16 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
         </div>
       </div>
     </div>
+
 <script>
+  
 Kakao.init('9559803eb8b03204730f88ea12db70b8');
 
 function loginWithKakao(){
   Kakao.Auth.login({
     success: function(authObj) {
       // alert(JSON.stringify(authObj));
-      location.href='/kakao_callback.php?access_token='+authObj.access_token
+      location.href='./kakao_callback.php?access_token='+authObj.access_token
     },
     fail: function(err) {
     }
@@ -128,16 +130,16 @@ $(function(){
       fetch_basic_profile: false,
       scope: 'profile'
     });
-
   });
 })
 
 function google_login(){
-    // Sign the user in, and then retrieve their ID.
-    auth2.signIn().then(function() {
-      console.log(auth2.currentUser.get().getId());
-    });
-
+  // Sign the user in, and then retrieve their ID.
+  auth2.signIn().then(function() {
+    console.log(auth2.currentUser.get().getId());
+  });
 }
+
 </script>
+
 <?php include_once('./footer.php') ?>
