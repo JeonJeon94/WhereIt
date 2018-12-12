@@ -136,7 +136,7 @@ $(function(){
 function google_login(){
   // Sign the user in, and then retrieve their ID.
   auth2.signIn().then(function() {
-    console.log(auth2.currentUser.get().getId());
+    location.href='/google_callback.php?id='+auth2.currentUser.get().getId()
   });
 }
 </script>
