@@ -671,6 +671,26 @@ body {
           box-sizing: border-box;
 }
 
+.main-page .main .search-form .where-top .where-form .form .search-word #search-word::-webkit-input-placeholder {
+  color: #a39aa3;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.main-page .main .search-form .where-top .where-form .form .search-word #search-word:-ms-input-placeholder {
+  color: #a39aa3;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.main-page .main .search-form .where-top .where-form .form .search-word #search-word::-ms-input-placeholder {
+  color: #a39aa3;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.main-page .main .search-form .where-top .where-form .form .search-word #search-word::placeholder {
+  color: #a39aa3;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
 .main-page .main .search-form .where-top .where-form .form .search-word #search {
   cursor: pointer;
   position: absolute;
@@ -950,11 +970,11 @@ body {
 
 .info-page .main .search-center .search-list .list-line .store-list .keyword, .search-page .main .search-center .search-list .list-line .store-list .keyword, .ranking-theme-page .main .search-center .search-list .list-line .store-list .keyword, .ranking-nowdays-page .main .search-center .search-list .list-line .store-list .keyword, .ranking-thismonth-page .main .search-center .search-list .list-line .store-list .keyword, .detail-page .main .search-center .search-list .list-line .store-list .keyword, .magazine-page .main .search-center .search-list .list-line .store-list .keyword, .asking-page .main .search-center .search-list .list-line .store-list .keyword, .login-page .main .search-center .search-list .list-line .store-list .keyword, .find-page .main .search-center .search-list .list-line .store-list .keyword, .sign-page .main .search-center .search-list .list-line .store-list .keyword, .edit-pw-page .main .search-center .search-list .list-line .store-list .keyword, .mypage-page .main .search-center .search-list .list-line .store-list .keyword, .myinfo-page .main .search-center .search-list .list-line .store-list .keyword, .userule-page .main .search-center .search-list .list-line .store-list .keyword {
   margin-right: 5px;
-  font-size: 13px;
-  min-width: 59px;
-  min-height: 22px;
-  border: 1px solid #d8a3d2;
-  border-radius: 4px;
+  font-size: 12px;
+  min-width: 4.5em;
+  min-height: 1.5em;
+  border-radius: 3px;
+  border: 1px solid #ebdaeb;
   padding: 2px 5px;
   text-align: center;
   -webkit-box-align: center;
@@ -1062,11 +1082,11 @@ body {
 
 .detail-page .detail-main .main-top .info .keyword {
   margin-right: 5px;
-  font-size: 13px;
-  min-width: 59px;
-  min-height: 20px;
-  border: 1px solid #d8a3d2;
-  border-radius: 4px;
+  font-size: 12px;
+  min-width: 4.5em;
+  min-height: 1.5em;
+  border-radius: 3px;
+  border: 1px solid #ebdaeb;
   padding: 1px 5px;
   text-align: center;
   -webkit-box-align: center;
@@ -1270,7 +1290,7 @@ body {
 .ranking-theme-page .theme {
   font-size: 36px;
   color: #504f57;
-  padding: 30px 80px;
+  padding: 30px 80px 25px 80px;
   cursor: pointer;
 }
 
@@ -1441,20 +1461,20 @@ body {
 }
 
 .ranking-theme-page .all .main .rank-area .ranking5 .ranking-store .name, .ranking-theme-page .all .main .rank-area .ranking10 .ranking-store .name, .ranking-thismonth-page .all .main .rank-area .ranking5 .ranking-store .name, .ranking-thismonth-page .all .main .rank-area .ranking10 .ranking-store .name, .ranking-nowdays-page .all .main .rank-area .ranking5 .ranking-store .name, .ranking-nowdays-page .all .main .rank-area .ranking10 .ranking-store .name {
-  padding-bottom: 8px;
-  font-size: 18px;
-  font-weight: 500;
+  padding-bottom: 7px;
+  font-size: 16px;
+  font-weight: 700;
   cursor: pointer;
   color: #504f57;
 }
 
 .ranking-theme-page .all .main .rank-area .ranking5 .ranking-store .keyword, .ranking-theme-page .all .main .rank-area .ranking10 .ranking-store .keyword, .ranking-thismonth-page .all .main .rank-area .ranking5 .ranking-store .keyword, .ranking-thismonth-page .all .main .rank-area .ranking10 .ranking-store .keyword, .ranking-nowdays-page .all .main .rank-area .ranking5 .ranking-store .keyword, .ranking-nowdays-page .all .main .rank-area .ranking10 .ranking-store .keyword {
   margin-right: 5px;
-  font-size: 13px;
-  min-width: 59px;
-  min-height: 20px;
-  border: 1px solid #d8a3d2;
-  border-radius: 4px;
+  font-size: 12px;
+  min-width: 4.5em;
+  min-height: 1.5em;
+  border-radius: 3px;
+  border: 1px solid #ebdaeb;
   padding: 1px 5px;
   text-align: center;
   -webkit-box-align: center;
@@ -1680,7 +1700,7 @@ body {
 }
 
 .asking-page .main .ask-main .send-help .help {
-  padding-bottom: 220px;
+  padding-bottom: 11em;
   color: #504f57;
 }
 
@@ -2629,11 +2649,11 @@ body {
 
 .mypage-page .main .favorite-list .list-line .store-list .keyword, .myinfo-page .main .favorite-list .list-line .store-list .keyword, .userule-page .main .favorite-list .list-line .store-list .keyword {
   margin-right: 5px;
-  font-size: 13px;
-  min-width: 59px;
-  min-height: 22px;
-  border: 1px solid #d8a3d2;
-  border-radius: 4px;
+  font-size: 12px;
+  min-width: 4.5em;
+  min-height: 1.5em;
+  border-radius: 3px;
+  border: 1px solid #ebdaeb;
   padding: 2px 5px;
   text-align: center;
   -webkit-box-align: center;

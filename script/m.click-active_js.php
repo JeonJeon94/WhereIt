@@ -1,5 +1,5 @@
 <script>
-  $("#search-btn").click(function(){
+  $("#ask-btn").click(function(){
     $(".main").css("display","none")
     $(".modal-container").css("display","block")
   })

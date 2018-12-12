@@ -12,7 +12,7 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
 ?>
 <?php include_once("./head.php") ?>
     <div class="main">
-      <div class="title" style="margin-bottom:30px;">
+      <div class="title">
         <div class="theme" onclick="location.href='./rank.php'">
           테마<br><b>핫플레이스</b>
         </div>

@@ -6,13 +6,19 @@
     <div>
       <div class="owl-carousel owl-theme">
         <?php
-          for($i=0; $i <= 2; $i++){
+          // for($i=0; $i <= 2; $i++){
             $url = "./m.news_detail.php";
         ?>
         <div class="item" data-id="<?=$i?>" onclick="click_main_banner(this,'<?php echo $url ?>')" >
           <img src="./images/whereit_img_main_02.png" >
         </div>
-        <?php } ?>
+        <div class="item" data-id="<?=$i?>" onclick="click_main_banner(this,'<?php echo $url ?>')" >
+          <img src="./images/whereit_img_main_005.png" >
+        </div>
+        <div class="item" data-id="<?=$i?>" onclick="click_main_banner(this,'<?php echo $url ?>')" >
+          <img src="./images/whereit_img_main_006.png" >
+        </div>
+        <?php //} ?>
       </div>
     </div>
   </div>

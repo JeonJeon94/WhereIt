@@ -26,7 +26,7 @@
           <input id="ask-email" type="text" name="ask-email" placeholder="이메일" />
           <textarea id="ask-contents" type="text" name="ask-contents"></textarea>
           <div class="ask-btn">
-          <input id="search-btn" type="button" value="SEARCH" />
+          <input id="ask-btn" type="button" value="SEND" />
           <div>
         </form>
       </div>

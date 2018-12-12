@@ -3,7 +3,7 @@
 <?php include_once("./m.head.php") ?>
 
   <div class="main">
-    <div class="title" style="margin-bottom:30px;">
+    <div class="title">
       <div class="theme" onclick="location.href='./m.rank.php'">
         테마<br><b>핫플레이스</b>
       </div>
@@ -33,8 +33,8 @@
           <div class="store-name" onclick="location.href='detail.php?id=<?php echo $id; ?>'">
             건대 소두마리
           </div>
-          <div style="display:flex; flex:1; justify-content:flex-end;"> 
-            <div class="keyword" style="margin-right: 20px;">
+          <div style="display:flex; flex:1; justify-content:flex-end; align-items:center;"> 
+            <div class="keyword" style="margin-right: 10px;">
               강남구
             </div>
             <div class="keyword">

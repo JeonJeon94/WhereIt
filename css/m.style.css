@@ -1,5 +1,5 @@
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,500,600);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800);
 @font-face {
   font-family: 'Montserrat-bold';
   font-style: bold;
@@ -608,7 +608,7 @@
   background: #504F57;
   border: 0px solid #504F57;
   font-family: "Montserrat", sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   margin-top: 20px;
   letter-spacing: 3px;
 }
@@ -660,6 +660,18 @@
   display: flex !important;
 }
 
+.search-page .main, .search-o-page .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+  width: 88%;
+}
+
 .search-page .main .main-top, .search-o-page .main .main-top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -668,13 +680,14 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100%;
 }
 
 .search-page .main .main-top .top_layer_1, .search-o-page .main .main-top .top_layer_1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 15px 40px 30px 40px;
+  padding: 15px 0 30px 0;
 }
 
 .search-page .main .main-top .top_layer_1 .text, .search-o-page .main .main-top .top_layer_1 .text {
@@ -684,7 +697,6 @@
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  padding-left: 7px;
 }
 
 .search-page .main .main-top .top_layer_1 .search-time #all, .search-o-page .main .main-top .top_layer_1 .search-time #all {
@@ -707,7 +719,6 @@
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  padding-right: 45px;
   padding-bottom: 10px;
 }
 
@@ -731,16 +742,15 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0px 20px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .search-page .main .search-list .list-line .store-list, .search-o-page .main .search-list .list-line .store-list {
-  margin: 10px auto;
+  margin: 15px 0;
   -webkit-animation: fadeInUp 1s;
           animation: fadeInUp 1s;
   -ms-flex-preferred-size: auto;
@@ -819,12 +829,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   font-size: 18px;
   color: #c5c5c7;
-  padding: 30px 5px 20px 5px;
+  padding: 30px 0 20px 0;
 }
 
 .ranking-thismonth-page .thismonth {
@@ -841,12 +848,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   font-size: 18px;
   color: #c5c5c7;
-  padding: 30px 5px 20px 5px;
+  padding: 30px 0 20px 0;
 }
 
 .ranking-nowdays-page .nowdays {
@@ -863,12 +867,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   font-size: 18px;
   color: #c5c5c7;
-  padding: 30px 5px 20px 5px;
+  padding: 30px 0 20px 0;
 }
 
 .ranking-theme-page .theme {
@@ -959,6 +960,9 @@
   display: flex;
   text-align: center;
   width: 90%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .ranking-theme-page .main .rank-area, .ranking-thismonth-page .main .rank-area, .ranking-nowdays-page .main .rank-area {
@@ -983,10 +987,10 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 10px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 10px;
 }
 
 .ranking-theme-page .main .rank-area .ranking-store .store-info .store-name, .ranking-thismonth-page .main .rank-area .ranking-store .store-info .store-name, .ranking-nowdays-page .main .rank-area .ranking-store .store-info .store-name {
@@ -1004,7 +1008,7 @@
 .ranking-theme-page .main .rank-area .ranking-store .store-info .rank-num, .ranking-thismonth-page .main .rank-area .ranking-store .store-info .rank-num, .ranking-nowdays-page .main .rank-area .ranking-store .store-info .rank-num {
   font-family: 'Montserrat-bold', sans-serif;
   padding-right: 10px;
-  font-size: 25px;
+  font-size: 35px;
   text-align: center;
   font-weight: bold;
   color: #D0C1D0;
@@ -1024,7 +1028,7 @@
 .ranking-theme-page .main .rank-area .ranking-store .store-img > img, .ranking-thismonth-page .main .rank-area .ranking-store .store-img > img, .ranking-nowdays-page .main .rank-area .ranking-store .store-img > img {
   width: 100%;
   height: 100%;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .news-page .main .news-list {
@@ -1214,7 +1218,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 20px 5px;
+  padding: 20px 0;
   border-bottom: 1px solid #E1EAE9;
   margin-bottom: 10px;
   font-family: "Noto Sans KR", sans-serif !important;
@@ -1224,7 +1228,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 10px 0;
+  padding: 7px 0;
 }
 
 .detail-page .main .detail-main .main-top .store-info .photo {
@@ -1278,12 +1282,12 @@
   color: #504f57;
   font-weight: 500;
   font-size: 18px;
-  padding-top: 5px;
+  padding-top: 2px;
 }
 
 .detail-page .main .detail-main .main-top .store-info .info .detail-text {
   padding: 0 5px 0 0;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;
   color: #d0c1d0;
 }
@@ -1306,12 +1310,12 @@
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  padding: 15px 0 0 0;
+  padding: 3px 3px 0 0;
 }
 
 .detail-page .main .detail-main .main-top .store-info .etc .share, .detail-page .main .detail-main .main-top .store-info .etc .phone {
   margin: 0 auto;
-  padding-right: 12px;
+  padding-right: 15px;
 }
 
 .detail-page .main .detail-main .main-top .store-info .etc .share > img, .detail-page .main .detail-main .main-top .store-info .etc .phone > img {
@@ -1339,7 +1343,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
 }
 
 .detail-page .main .detail-main .main-top .store-adress .hashtag #hashtag {
@@ -1356,7 +1360,7 @@
 
 .detail-page .main .detail-main .main-top .store-adress .map {
   position: absolute;
-  right: 5px;
+  right: 3px;
   bottom: 0;
 }
 
@@ -1385,10 +1389,10 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  widows: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  width: 90%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -1399,7 +1403,7 @@
   display: flex;
   -webkit-animation: fadeInUp 1s;
           animation: fadeInUp 1s;
-  margin: 10px;
+  margin: 6px 0;
 }
 
 .detail-page .main .detail-main .detail-picture .store-list .img-container {
@@ -1421,12 +1425,11 @@
   cursor: pointer;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .info-page .main .service-info {
   width: 100%;
-  margin-top: 40px auto;
 }
 
 .info-page .main .service-info > img {
@@ -1455,13 +1458,15 @@
 .ask-page .main .ask-center .ask-title {
   font-size: 20px;
   color: #504f57;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  padding-left: 7px;
 }
 
 .ask-page .main .ask-center .ask-text {
   font-size: 15px;
   color: #504f57;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  padding-left: 7px;
 }
 
 .ask-page .main .ask-center .ask-form .ask {
@@ -1479,7 +1484,7 @@
   width: 100%;
   font-size: 14px;
   border-radius: 20px;
-  padding: 10px 0 10px 20px;
+  padding: 8px 0 8px 20px;
   margin-bottom: 10px;
   border: 1px solid #f6eff5;
   background-color: #F9F5F8;
@@ -1493,8 +1498,8 @@
   width: 100%;
   font-size: 14px;
   border-radius: 20px;
-  padding: 10px 0 10px 20px;
-  margin-bottom: 10px;
+  padding: 8px 0 8px 20px;
+  margin-bottom: 20px;
   border: 1px solid #f6eff5;
   background-color: #F9F5F8;
   -webkit-box-sizing: border-box;
@@ -1509,7 +1514,7 @@
   font-size: 14px;
   border-radius: 20px;
   padding: 10px 0 10px 20px;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
   border: 1px solid #f6eff5;
   background-color: #F9F5F8;
   -webkit-box-sizing: border-box;
@@ -1526,7 +1531,7 @@
           justify-content: center;
 }
 
-.ask-page .main .ask-center .ask-form .ask .ask-btn #search-btn {
+.ask-page .main .ask-center .ask-form .ask .ask-btn #ask-btn {
   font-family: "Montserrat-bold", sans-serif;
   color: white;
   background-color: #504f57;
@@ -1540,7 +1545,7 @@
   padding: 10px 50px;
 }
 
-.ask-page .main .ask-center .ask-form .ask .ask-btn #search-btn:active {
+.ask-page .main .ask-center .ask-form .ask .ask-btn #ask-btn:active {
   background: #d8a3d2;
 }
 
@@ -1662,7 +1667,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 10px 50px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 2px;
   height: 40px;
   margin: 30px 0px;

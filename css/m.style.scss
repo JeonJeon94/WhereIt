@@ -1,6 +1,6 @@
 @charset "utf-8";
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,500,600);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800);
 @font-face{
   font-family: 'Montserrat-bold';
   font-style: bold;
@@ -456,7 +456,7 @@
         background: #504F57;
         border: 0px solid #504F57;
         font-family: "Montserrat", sans-serif;
-        font-weight: 600;
+        font-weight: 700;
         margin-top: 20px;
         letter-spacing: 3px;
 
@@ -508,18 +508,24 @@
     }
   }
   .main{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 88%;
+
     .main-top{
       display: flex;
       flex-direction: column;
+      width: 100%;
+
       .top_layer_1{
         display: flex;
-        padding: 15px 40px 30px 40px;
+        padding: 15px 0 30px 0;
         .text{
           font-size: 22px;
           line-height: 30px;
           color: #504f57;
           flex: 1;
-          padding-left: 7px;
         }
         .search-time{
           #all{
@@ -538,7 +544,6 @@
       .top_layer_2{
         display: flex;
         justify-content: flex-end;
-        padding-right: 45px;
         padding-bottom: 10px;
 
         .view-type{
@@ -561,12 +566,11 @@
       }
       .list-line{
         display: flex;
-        padding: 0px 20px;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-between;
 
         .store-list{
-          margin: 10px auto;
+          margin: 15px 0;
           animation: fadeInUp 1s;
           flex-basis: auto;
 
@@ -639,10 +643,9 @@
   .nowdays, .theme{
     display:flex;
     flex-direction: column;
-    flex:1;
     font-size: 18px;
     color: #c5c5c7; 
-    padding: 30px 5px 20px 5px;
+    padding: 30px 0 20px 0;
   }
   .thismonth{
     font-size: 18px;
@@ -655,10 +658,9 @@
   .theme, .thismonth{
     display:flex;
     flex-direction: column;
-    flex:1;
     font-size: 18px;
     color: #c5c5c7; 
-    padding: 30px 5px 20px 5px;
+    padding: 30px 0 20px 0;
   }
   .nowdays{
     font-size: 18px;
@@ -671,10 +673,9 @@
   .nowdays, .thismonth{
     display:flex;
     flex-direction: column;
-    flex:1;
     font-size: 18px;
     color: #c5c5c7; 
-    padding: 30px 5px 20px 5px;
+    padding: 30px 0 20px 0;
   }
   .theme{
     font-size: 18px;
@@ -738,6 +739,7 @@
       display: flex;
       text-align: center;
       width: 90%;
+      justify-content: space-between;
     }
     .rank-area{
       display: flex;
@@ -751,8 +753,8 @@
 
         .store-info{
           display: flex;
-          align-items: center;
           margin-bottom: 10px;
+          align-items: center;
 
           .store-name{
             font-size: 18px;
@@ -764,7 +766,7 @@
           .rank-num{
             font-family: 'Montserrat-bold', sans-serif;
             padding-right: 10px; 
-            font-size: 25px;
+            font-size: 35px;
             text-align: center;
             font-weight:bold;
             color: #D0C1D0;
@@ -785,7 +787,7 @@
           >img{
             width: 100%;
             height: 100%;
-            border-radius: 10px;
+            border-radius: 5px;
           }
         }
       }
@@ -937,14 +939,14 @@
         display:flex;
         width: 90%;
         flex-direction: column;
-        padding: 20px 5px;
+        padding: 20px 0;
         border-bottom: 1px solid #E1EAE9;
         margin-bottom: 10px;
         font-family: "Noto Sans KR", sans-serif !important;
         
         .store-info{
           display: flex;
-          padding: 10px 0;
+          padding: 7px 0;
 
           .photo{
             width: 75px;
@@ -986,11 +988,11 @@
               color:#504f57;
               font-weight: 500;
               font-size: 18px;
-              padding-top: 5px
+              padding-top: 2px
             }
             .detail-text{
               padding:0 5px 0 0;
-              font-size: 13px;
+              font-size: 12px;
               font-weight:500;
               color:#d0c1d0;
             }
@@ -1008,11 +1010,11 @@
           .etc{
             display: flex;
             position: relative;
-            padding: 15px 0 0 0;
+            padding: 3px 3px 0 0;
               
             .share, .phone{
               margin: 0 auto;
-              padding-right: 12px;
+              padding-right: 15px;
             
               >img{
                 width: 15px;
@@ -1035,7 +1037,7 @@
 
           .hashtag{
             display: flex;
-            padding-bottom: 10px;
+            padding-bottom: 5px;
 
             #hashtag{
               font-size:15px;
@@ -1050,7 +1052,7 @@
           }
           .map{
             position: absolute;
-            right: 5px;
+            right: 3px;
             bottom: 0;
 
             >img{
@@ -1077,14 +1079,14 @@
 
       .detail-picture{
         display:flex;
-        widows: 100%;
-        justify-content: center;
+        width: 90%;
+        justify-content: space-between;
         flex-wrap:wrap;
 
         .store-list{
           display: flex;
           animation: fadeInUp 1s;
-          margin: 10px;
+          margin: 6px 0;
 
           .img-container{
             width: 180px;
@@ -1103,7 +1105,7 @@
               bottom: -100%;
               cursor: pointer;
               object-fit: cover;
-              border-radius: 10px;
+              border-radius: 5px;
             }
           }
         }
@@ -1115,7 +1117,6 @@
   .main{
     .service-info{
       width: 100%;
-      margin-top: 40px auto;
       
       >img{
         width: 100%;
@@ -1137,12 +1138,14 @@
       .ask-title{
         font-size: 20px;
         color:#504f57;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
+        padding-left: 7px;
       }
       .ask-text{
         font-size: 15px; 
         color:#504f57;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
+        padding-left: 7px;
       }
       .ask-form{
         
@@ -1155,7 +1158,7 @@
             width: 100%;
             font-size: 14px;
             border-radius: 20px;
-            padding: 10px 0 10px 20px;
+            padding: 8px 0 8px 20px;
             margin-bottom: 10px;
             border: 1px solid #f6eff5;
             background-color: #F9F5F8;
@@ -1167,8 +1170,8 @@
             width: 100%;
             font-size: 14px;
             border-radius: 20px;
-            padding: 10px 0 10px 20px;
-            margin-bottom: 10px;
+            padding: 8px 0 8px 20px;
+            margin-bottom: 20px;
             border: 1px solid #f6eff5;
             background-color: #F9F5F8;
             box-sizing: border-box;
@@ -1181,7 +1184,7 @@
             font-size: 14px;
             border-radius: 20px;
             padding: 10px 0 10px 20px;
-            margin-bottom: 10px;
+            margin-bottom: 40px;
             border: 1px solid #f6eff5;
             background-color: #F9F5F8;
             box-sizing: border-box;
@@ -1191,7 +1194,7 @@
             display: flex;
             justify-content: center;
 
-            #search-btn{
+            #ask-btn{
               font-family:"Montserrat-bold", sans-serif;
               color: white;
               background-color: #504f57;
@@ -1306,7 +1309,7 @@
             font-family: "Montserrat", sans-serif;
             box-sizing: border-box;
             padding: 10px 50px;
-            font-weight: 600;
+            font-weight: 700;
             letter-spacing: 2px;
             height: 40px;
             margin: 30px 0px;

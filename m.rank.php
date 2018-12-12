@@ -49,7 +49,7 @@
           <div class="store-name" onclick="location.href='m.detail.php?id=5bb6c27ae0f1d504108ba16c'">
             건대 소두마리
           </div>
-          <div style="display:flex;"> 
+          <div style="display:flex; align-items:center;"> 
             <div class="keyword" style="margin-right: 10px;">
               강남구
             </div>

@@ -12,7 +12,7 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
 ?>
 <?php include_once("./head.php") ?>
     <div class="main">
-      <div class="title" style="margin-bottom:30px;">
+      <div class="title">
         <div class="thismonth" onclick="location.href='./rank-thismonth.php'">
           이 달의<br><b>핫플레이스</b>
         </div>

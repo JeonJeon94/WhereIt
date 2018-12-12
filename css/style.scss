@@ -481,7 +481,13 @@ body{
                 border-radius: 51px;
                 width: 600px;
                 box-sizing: border-box;
+
+                &::placeholder{
+                color:#a39aa3;
+                font-family: "Noto Sans KR", sans-serif;
+                }
               }
+
               #search{
                 cursor: pointer;
                 position: absolute;
@@ -694,11 +700,11 @@ body{
             }
             .keyword{
               margin-right: 5px;
-              font-size: 13px;
-              min-width: 59px;
-              min-height: 22px;
-              border: 1px solid #d8a3d2;
-              border-radius: 4px;
+              font-size: 12px;
+              min-width: 4.5em;
+              min-height: 1.5em;
+              border-radius: 3px;
+              border: 1px solid #ebdaeb;
               padding: 2px 5px;
               text-align: center;
               align-items: center;
@@ -788,11 +794,11 @@ body{
 
         .keyword{
           margin-right: 5px;
-          font-size: 13px;
-          min-width: 59px;
-          min-height: 20px;
-          border: 1px solid #d8a3d2;
-          border-radius: 4px;
+          font-size: 12px;
+          min-width: 4.5em;
+          min-height: 1.5em;
+          border-radius: 3px;
+          border: 1px solid #ebdaeb;
           padding: 1px 5px;
           text-align: center;
           align-items: center;
@@ -963,7 +969,7 @@ body{
   .theme{
     font-size: 36px;
     color:#504f57;
-    padding: 30px 80px;
+    padding: 30px 80px 25px 80px;
     cursor: pointer;
 
     .margin{
@@ -1092,19 +1098,19 @@ body{
               cursor: pointer;
             }
             .name{
-              padding-bottom: 8px;
-              font-size: 18px;
-              font-weight: 500;
+              padding-bottom: 7px;
+              font-size: 16px;
+              font-weight: 700;
               cursor: pointer;
               color:#504f57;
             }
             .keyword{
               margin-right: 5px;
-              font-size: 13px;
-              min-width: 59px;
-              min-height: 20px;
-              border: 1px solid #d8a3d2;
-              border-radius: 4px;
+              font-size: 12px;
+              min-width: 4.5em;
+              min-height: 1.5em;
+              border-radius: 3px;
+              border: 1px solid #ebdaeb;
               padding: 1px 5px;
               text-align: center;
               align-items: center;
@@ -1291,7 +1297,7 @@ body{
           color:#504f57;
         }
         .help{
-          padding-bottom: 220px;
+          padding-bottom: 11em;
           color:#504f57;
         }
         .admin-adress{
@@ -2107,11 +2113,11 @@ body{
           }
           .keyword{
             margin-right: 5px;
-            font-size: 13px;
-            min-width: 59px;
-            min-height: 22px;
-            border: 1px solid #d8a3d2;
-            border-radius: 4px;
+            font-size: 12px;
+            min-width: 4.5em;
+            min-height: 1.5em;
+            border-radius: 3px;
+            border: 1px solid #ebdaeb;
             padding: 2px 5px;
             text-align: center;
             align-items: center;

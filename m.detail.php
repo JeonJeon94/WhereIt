@@ -57,7 +57,7 @@ if($member){
       <img src="<%=imgs[0].link%>" onerror="this.src='./images/whereit_img_loading_m.png'"/>
     </div>
     <div class="info">
-      <div style="padding:15px 0 0 0; display:flex;">
+      <div style="padding:3px 0 0 0; display:flex;">
         <div class="keyword">
           <div><%=collect_region%></div>
         </div>
