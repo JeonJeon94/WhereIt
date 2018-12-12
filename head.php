@@ -1,33 +1,35 @@
 <?php
-include './dbconfig.php';
+  include './dbconfig.php';
 
-if(!empty($_POST['search'])){
-  $search = $_POST['search'];
-}else{
-  $search = "";
-  if(!empty($_GET['search'])){
-    $search = $_GET['search'];
+  if(!empty($_POST['search'])){
+    $search1 = json_encode($_POST['search']);
+    $search = json_decode($search1);
   }else{
     $search = "";
+    
+    if(!empty($_GET['search'])){
+      $search = $_GET['search'];
+    }else{
+      $search = "";
+    }
   }
-}
-if(!empty($_GET['id'])){
-  $id=$_GET['id'];
-}else{
-  $id="";
-}
-if($_SESSION['user_id']){
-  $user_id = $_SESSION['user_id'];
-  $member = sql_one("SELECT * FROM users WHERE id=$user_id");
-  if(!$member[user_name]){
-    $member[user_name] = "$member[register]-$member[user_email]";
+  if(!empty($_GET['id'])){
+    $id=$_GET['id'];
+  }else{
+    $id="";
   }
-}
-if($NEED_LOGIN == true){
-  if(!$member){
-    alert_back("로그인을 해주세요!");
+  if($_SESSION['user_id']){
+    $user_id = $_SESSION['user_id'];
+    $member = sql_one("SELECT * FROM users WHERE id=$user_id");
+    if(!$member[user_name]){
+      $member[user_name] = "$member[register]-$member[user_email]";
+    }
   }
-}
+  if($NEED_LOGIN == true){
+    if(!$member){
+      alert_back("로그인을 해주세요!");
+    }
+  }
 ?>
 <!DOCTYPE html>
 <html>

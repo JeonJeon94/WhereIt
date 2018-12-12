@@ -2,9 +2,11 @@
   include './dbconfig.php';
   
   if(!empty($_POST['search'])){
-    $search = $_POST['search'];
+    $search1 = json_encode($_POST['search']);
+    $search = json_decode($search1);
   }else{
     $search = "";
+
     if(!empty($_GET['search'])){
       $search = $_GET['search'];
     }else{
