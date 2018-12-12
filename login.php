@@ -119,9 +119,10 @@ window.fbAsyncInit = function() {
 }(document, 'script', 'facebook-jssdk'));
 
 function facebook_click(){
-  FB.login(function(response) {
-    // handle the response
-  }, {scope: 'public_profile,email'});
+  alert('서비스 준비중입니다.')
+  // FB.login(function(response) {
+  //   // handle the response
+  // }, {scope: 'public_profile,email'});
 }
 
 $(function(){
