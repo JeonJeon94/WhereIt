@@ -38,7 +38,7 @@ if($NEED_LOGIN == true){
   <script src="https://apis.google.com/js/platform.js" async defer></script>
 
   <title>Where It</title>
-  <link rel="stylesheet" href="./css/style.css?ver=1.1"  type="text/css" />
+  <link rel="stylesheet" href="./css/style.css?ver=2"  type="text/css" />
   <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
   <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="./OwlCarousel2/dist/assets/owl.carousel.css" type="text/css">
