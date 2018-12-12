@@ -139,7 +139,6 @@ function google_login(){
     console.log(auth2.currentUser.get().getId());
   });
 }
-
 </script>
 
 <?php include_once('./footer.php') ?>
