@@ -429,11 +429,15 @@
         #search-input{
           display: flex;
           flex: 1;
-          color:#a39aa3;
           border: 1px solid #737473;
           border-radius: 20px;
           padding:10px 30px 10px 14px;
           font-size: 14px;
+
+          &::placeholder{
+            color:#a39aa3;
+            font-family: "Noto Sans KR", sans-serif;
+          }
         }
         #search-img{
           width: 14px;
