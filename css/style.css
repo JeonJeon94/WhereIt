@@ -640,7 +640,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 20px;
+  padding-top: 3em;
   width: 1200px;
   margin: 0 auto;
 }
