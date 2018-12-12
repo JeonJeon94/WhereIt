@@ -10,8 +10,7 @@
   if($pw_search){
     $true = '';
     sql_query("UPDATE users SET
-    reset_password='$true',
-    password=''
+    reset_password='$true'
     WHERE id='$pw_search[id]'");
 
     for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
