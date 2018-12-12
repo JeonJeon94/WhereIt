@@ -665,6 +665,7 @@ body {
   -webkit-box-flex: 5;
       -ms-flex: 5;
           flex: 5;
+  padding-top: 20px;
 }
 
 .main-page .main .search-form .where-top .where-form .form {
