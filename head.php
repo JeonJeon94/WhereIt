@@ -1,17 +1,13 @@
 <?php
   include './dbconfig.php';
 
+    
   if(!empty($_GET['search'])){
     $search = $_GET['search'];
   }else{
     $search = "";
-    
-    if(!empty($_GET['search'])){
-      $search = $_GET['search'];
-    }else{
-      $search = "";
-    }
   }
+
   if(!empty($_GET['id'])){
     $id=$_GET['id'];
   }else{
