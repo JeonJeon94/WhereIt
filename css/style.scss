@@ -68,6 +68,8 @@ body{
 }
 
 .default-page{
+  min-height: 100vh;
+
   input::-ms-clear{
     display:none;
   }
@@ -90,11 +92,10 @@ body{
     flex:2;
   }
   .all{
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     flex:1;
     height: inherit;
+    min-height: 100vh;
     flex-direction: column;
 
     .modal-container{
@@ -323,6 +324,11 @@ body{
         }
       }  
     }
+    .main{
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
     .footer{
       display: flex;
       position: relative;
@@ -447,11 +453,11 @@ body{
       display: flex;
       flex:1;
       width: 1200px;
-      margin: 19px auto;
+      margin: 0 auto 20px auto;
 
       .where-top{
         display:flex;
-        align-items: center;
+        padding-top: 20px;
         width: 1200px;
         margin: 0 auto;
 

@@ -121,13 +121,13 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
   $(function(){
     var searchWord = "<?php echo $search; ?>";
     if(searchWord !== "" && searchWord !== " "){
-      search_fandein(i,searchWord);
+      search_fandein(searchWord);
     } else{
       nosearch();
     }
   })
   
-  function search_fandein(i,searchWord){
+  function search_fandein(searchWord){
     api_search_data(searchWord,function(res){
       data = res
       list_length += 16
