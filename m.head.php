@@ -75,7 +75,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="google-signin-scope" content="profile email">
-  <meta name="google-signin-client_id" content="676011647989-m5l1qeheu73dtfqvfcgkbcj3jf86tpif.apps.googleusercontent.com">
+  <meta name="google-signin-client_id" content="676011647989-pagptrujs79jsqrdrt5lkelukcvt4gbh.apps.googleusercontent.com">
   <script src="https://apis.google.com/js/platform.js" async defer></script>
   <title>Where It</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">

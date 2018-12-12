@@ -1,0 +1,131 @@
+.default-page {
+  margin: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.default-page input:focus {
+  outline: none;
+}
+
+.default-page button:focus {
+  outline: none;
+}
+
+.default-page .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid black;
+}
+
+.default-page .header #logout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  text-decoration: none;
+  color: black;
+  padding: 30px;
+}
+
+.default-page .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.default-page .main .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-right: 1px solid black;
+}
+
+.default-page .main .menu a {
+  text-decoration: none;
+  color: black;
+  padding: 10px 50px;
+}
+
+.default-page .main .submain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.default-page .main .test-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 10px auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.default-page .main .test-form #admin_id, .default-page .main .test-form #admin_pw {
+  width: 400px;
+  height: 49px;
+  font-size: 14px;
+  border-radius: 51px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border: 1px solid black;
+  background-color: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.default-page .main .test-form #admin_pw {
+  margin-bottom: 20px;
+}
+
+.default-page .main .test-form #admin-btn {
+  width: 200px;
+  height: 46px;
+  color: white;
+  background-color: #504f57;
+  font-size: 15px;
+  border: 0px solid #504f57;
+  border-radius: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+}
+
+.login-page .main {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=a_style.css.map */

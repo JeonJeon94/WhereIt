@@ -113,7 +113,7 @@ function facebook_click(){
 $(function(){
   gapi.load('auth2', function() {
     auth2 = gapi.auth2.init({
-      client_id: '676011647989-m5l1qeheu73dtfqvfcgkbcj3jf86tpif.apps.googleusercontent.com',
+      client_id: '676011647989-pagptrujs79jsqrdrt5lkelukcvt4gbh.apps.googleusercontent.com',
       fetch_basic_profile: false,
       scope: 'profile'
     });
