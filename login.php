@@ -93,6 +93,7 @@ function loginWithKakao(){
       location.href='./kakao_callback.php?access_token='+authObj.access_token
     },
     fail: function(err) {
+      console.log(err)
     }
   });
 }

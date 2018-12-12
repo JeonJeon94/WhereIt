@@ -77,7 +77,7 @@
   <meta name="google-signin-scope" content="profile email">
   <meta name="google-signin-client_id" content="676011647989-pagptrujs79jsqrdrt5lkelukcvt4gbh.apps.googleusercontent.com">
   <script src="https://apis.google.com/js/platform.js" async defer></script>
-  <title>Where It</title>
+  <title>WHERE It? WHERE EAT!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="./css/m.style.css?ver=2"  type="text/css" />
   <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
