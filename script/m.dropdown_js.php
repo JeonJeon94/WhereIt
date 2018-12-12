@@ -49,7 +49,7 @@
         $(".hot").parent().css("overflow","hidden")
         $(".hot-list").css("display","list-item")
         $(".hot-list-h").css("display","list-item")
-      },200)
+      },300)
     }
   });
   $("#in-down_bt").on("click", function(){
