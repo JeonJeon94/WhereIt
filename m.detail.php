@@ -111,15 +111,24 @@ if($member){
 <script>
   var img_pivot = 0
   var flag = false
-  var playing = false
+  function Loading(){
+    $('.loading').css('display', 'block')
+    flag = false
+    setTimeout(function(){
+      $('.loading').css('display', 'none')
+    }, 3000);
+  }
+
 
   function setImage(res){
     var slot_template = _.template($("#picture-slot").html());
-    if(!playing){
-      console.log('hih23123123ihi');
-      img_pivot += 16
-      playing = true;
-      if(img_pivot !== 16){
+    
+    if(res.payload.imgs.length <= img_pivot)
+      return
+    img_pivot += 16
+    if(img_pivot !== 16){
+      Loading()
+      setTimeout(function(){
         for(var i = img_pivot-16; i < img_pivot; i++){
           var row = res.payload.imgs[i]
           if(row === undefined){
@@ -129,57 +138,42 @@ if($member){
             $(".detail-picture").append( slot_template(row) )
           }catch(err){}
         }
-        flag = true;
-        playing = false;
-      }else{
-        Loading()
-        setTimeout(function(){
-          for(var i = img_pivot -16; i < img_pivot; i++){
-            var row = res.payload.imgs[i]
-            if(row === undefined){
-              continue
-            }
-            try{
-              $(".detail-picture").append( slot_template(row) )
-            }catch(err){}
-          }
-          playing = false;
-        }, 1000)
-      }
-    }
-  }
-
-  function Loading(){
-    if(flag === true){
-      $('.loading').css('display', 'block')
-      flag = false
-      setTimeout(function(){
-        $('.loading').css('display', 'none')
         flag = true
-      }, 1000);
+      }, 3000);
+    }else{
+      flag = true
+      for(var i = img_pivot -16; i < img_pivot; i++){
+        var row = res.payload.imgs[i]
+        if(row === undefined){
+          continue
+        }
+        try{
+          $(".detail-picture").append( slot_template(row) )
+        }catch(err){}
+      }
+      setTimeout(function(){
+        console.log($(window).scrollTop())
+        $(window).scrollTop(0)
+      },600)
+        
     }
   }
 
   $(window).scroll(function() {
-    if($(window).scrollTop() + $(window).height() === $(document).height() && flag && !playing) {
+    if($(window).scrollTop() + $(window).height() === $(document).height() && flag) {
+      flag = false
       setImage(res)
     }
   });
 
   $(function(){
     var storeId ='<?php echo $id; ?>'
-      detail_fandein(storeId)
-  });
-
-
-
-  function detail_fandein(storeId){
     api_shop_detail(storeId,function(data){
       res = data
-      img_pivot += 16
       setImage(res)
     })
-  };
+  });
+
 </script>
 
 <script id="picture-slot" type="text/template">
