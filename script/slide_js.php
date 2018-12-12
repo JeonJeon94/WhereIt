@@ -4,7 +4,6 @@
         loop:true,
         stagePadding: 0,
         center:true,
-        margin:20,
         nav:true,
         mouseDrag:false,
         autoWidth:true,
