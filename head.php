@@ -1,9 +1,8 @@
 <?php
   include './dbconfig.php';
 
-  if(!empty($_POST['search'])){
-    $search1 = json_encode($_POST['search']);
-    $search = json_decode($search1);
+  if(!empty($_GET['search'])){
+    $search = $_GET['search'];
   }else{
     $search = "";
     
@@ -71,7 +70,7 @@
         FIND A UNIQUE PLACE
       </div>
       <div class="where-form2">  
-        <form class="form" method="post" action="search.php">
+        <form class="form" method="get" action="search.php">
           <div class="search-word">
             <input type="text" id="search-word2" name="search" value="<?php echo $search; ?>" />
             <img id="search2"src="./images/search.png" onclick="submit()"/> 

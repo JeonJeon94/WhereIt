@@ -1,9 +1,8 @@
 <?php 
   include './dbconfig.php';
   
-  if(!empty($_POST['search'])){
-    $search1 = json_encode($_POST['search']);
-    $search = json_decode($search1);
+  if(!empty($_GET['search'])){
+    $search = $_GET['search'];
   }else{
     $search = "";
 
@@ -164,7 +163,7 @@
       <?php } ?>
           <img src="./images/etc/close.png" />
         </div>
-        <form  class="search-form2" method="POST" action="m.search.php">
+        <form  class="search-form2" method="GET" action="m.search.php">
           <div class="input-container">
             <input id="search2-input" maxlength="50" type="text" name="search" value="<?php echo $search; ?>" />
             <img id="search-img2" src="./images/search.png" onclick="submit()" />

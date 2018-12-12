@@ -19,7 +19,7 @@
       </div>
     </div>
   </div>
-  </body>
+</body>
   <?php include_once("./script/dropdown_js.php") ?>
   <?php include_once("./script/input_active_js.php") ?>
   <?php include_once("./script/move_top_js.php") ?>

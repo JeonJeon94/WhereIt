@@ -27,7 +27,7 @@
       인스타그램에서<br> <b>가장 핫한 곳</b>이 궁금해?
     </div>
     <div>
-      <form  class="search-form" method="POST" action="m.search.php">
+      <form  class="search-form" method="GET" action="m.search.php">
         <div class="input-form">
           <input id="search-input" type="text" name="search" maxlength="50" placeholder="지역명과 음식을 입력해주세요."/>
           <img id="search-img" src="./images/search.png" onclick="submit()" />
