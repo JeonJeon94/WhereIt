@@ -325,7 +325,8 @@ body{
     }
     .footer{
       display: flex;
-      position: relative;
+      position: fixed;
+      bottom: 0;
       max-height: 70px;
       width: 100%;
       background-color: #F1EDF0;
@@ -432,6 +433,8 @@ body{
   }
   .main{
     width: 100%;
+    padding-bottom: 70px;
+
     .item img{
       max-height: 610px;
       min-height: 610px;
