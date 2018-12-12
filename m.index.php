@@ -23,7 +23,7 @@
     <div>
       <form  class="search-form" method="POST" action="m.search.php">
         <div class="input-form">
-          <input id="search-input" type="text" name="search" maxlength="50" placeholder="가고싶은 지역을 입력해주세요."/>
+          <input id="search-input" type="text" name="search" maxlength="50" placeholder="지역명과 음식을 입력해주세요."/>
           <img id="search-img" src="./images/search.png" onclick="submit()" />
         </div>
         <button>SEARCH</button>

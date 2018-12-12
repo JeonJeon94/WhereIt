@@ -116,9 +116,10 @@ if($member){
   function setImage(res){
     var slot_template = _.template($("#picture-slot").html());
     if(!playing){
+      console.log('hih23123123ihi');
       img_pivot += 16
       playing = true;
-      if(img_pivot === 16){
+      if(img_pivot !== 16){
         for(var i = img_pivot-16; i < img_pivot; i++){
           var row = res.payload.imgs[i]
           if(row === undefined){
@@ -161,10 +162,7 @@ if($member){
 
   $(window).scroll(function() {
     if($(window).scrollTop() + $(window).height() === $(document).height() && flag && !playing) {
-      api_shop_detail(storeId,function(data){
-        res = data
-        setImage(res)
-      })
+      setImage(res)
     }
   });
 
@@ -178,6 +176,7 @@ if($member){
   function detail_fandein(storeId){
     api_shop_detail(storeId,function(data){
       res = data
+      img_pivot += 16
       setImage(res)
     })
   };

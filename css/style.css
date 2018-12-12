@@ -468,7 +468,6 @@ body {
   display: flex;
   width: 1200px;
   font-size: 14px;
-  margin: 25px auto;
   max-height: 20px;
 }
 
@@ -2243,6 +2242,7 @@ body {
   letter-spacing: 2px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  cursor: pointer;
 }
 
 .sign-page .main .sign-center .page-num3 .sign-form #send-btn:hover {
@@ -2337,6 +2337,7 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin-top: 10px;
+  cursor: pointer;
 }
 
 .sign-page .main .accept-contents #confirm-btn:hover {

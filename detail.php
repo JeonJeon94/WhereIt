@@ -168,10 +168,7 @@ if($member){
 
   $(window).scroll(function() {
     if($(window).scrollTop() + $(window).height() === $(document).height() && flag && !playing) {
-      api_shop_detail(storeId,function(data){
-        res = data
-        setImage(res)
-      })
+      setImage(res)
     }
   });
 
@@ -182,9 +179,10 @@ if($member){
 
 
 
-  function detail_fandein(itoreId){
+  function detail_fandein(storeId){
     api_shop_detail(storeId,function(data){
       res = data
+      img_pivot += 16
       setImage(res)
     })
   };
