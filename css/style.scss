@@ -277,6 +277,7 @@ body{
                   text-decoration: none;
                   color: #504f57;
                   cursor: pointer;
+                  max-height: 20px;
                 }
                 &:hover{
                   font-weight: bold;
@@ -288,6 +289,7 @@ body{
                   padding-top:2px;
                   font-weight: bold;
                   font-family: "Noto Sans KR", sans-serif;
+                  max-height: 20px;
                 }
               }
               .hot-list{
@@ -299,6 +301,7 @@ body{
                   text-decoration: none;
                   color: #504f57;
                   cursor: pointer;
+                  max-height: 20px;
                 }
                 &:hover{
                   font-weight: bold;
@@ -310,6 +313,7 @@ body{
                   padding-top:2px;
                   font-weight: bold;
                   font-family: "Noto Sans KR", sans-serif;
+                  max-height: 20px;
                 }
               }
             }

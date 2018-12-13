@@ -391,6 +391,7 @@ body {
   text-decoration: none;
   color: #504f57;
   cursor: pointer;
+  max-height: 20px;
 }
 
 .default-page .all .head .menu .hot-search .hot-rank .hot .hot-list-h:hover {
@@ -408,6 +409,7 @@ body {
   padding-top: 2px;
   font-weight: bold;
   font-family: "Noto Sans KR", sans-serif;
+  max-height: 20px;
 }
 
 .default-page .all .head .menu .hot-search .hot-rank .hot .hot-list {
@@ -425,6 +427,7 @@ body {
   text-decoration: none;
   color: #504f57;
   cursor: pointer;
+  max-height: 20px;
 }
 
 .default-page .all .head .menu .hot-search .hot-rank .hot .hot-list:hover {
@@ -442,6 +445,7 @@ body {
   padding-top: 2px;
   font-weight: bold;
   font-family: "Noto Sans KR", sans-serif;
+  max-height: 20px;
 }
 
 .default-page .all .head .menu .hot-search .rank_btn {
