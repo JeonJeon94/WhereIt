@@ -14,6 +14,14 @@
   }
 ?>
   <div class="main">
+  <?php if($data_id == 1){?>
     <img src="<?php echo $url ?>"/>
+  <?php }else{ ?>
+    <img src="./히치하이커/콘텐츠내용/히치하이커1회차_01.png"/>
+    <img src="./히치하이커/콘텐츠내용/히치하이커1회차_02.png"/>
+    <img src="./히치하이커/콘텐츠내용/히치하이커1회차_03.png"/>
+    <img src="./히치하이커/콘텐츠내용/히치하이커1회차_04.png"/>
+    <img src="./히치하이커/콘텐츠내용/히치하이커1회차_05.png"/>
+  <?php } ?>
   </div>
 <?php include_once("./m.footer.php") ?>
