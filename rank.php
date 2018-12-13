@@ -29,9 +29,9 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
           <div class="insta-tag">
             <div style="flex:0 1 auto;">
               <div class="insta-list">
-                <div class="insta-text-h" style="padding-top:3px;"><a href="">#럽스타그램</a></div>
-                <div class="insta-text" style="display:none; padding:3px 0;"><a href="">#럽스타그램</a></div>
-                <div class="insta-text" style="display:none; padding-bottom:3px;"><a href="">#럽스타그램</a></div>
+                <div class="insta-text-h" style="padding-top:3px;"><a href="">#핏자</a></div>
+                <div class="insta-text" style="display:none; padding:3px 0;"><a href="">#핏자</a></div>
+                <div class="insta-text" style="display:none; padding-bottom:3px;"><a href="">#핏자</a></div>
               </div>
             </div>
           </div>
