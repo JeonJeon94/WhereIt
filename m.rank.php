@@ -32,39 +32,56 @@
       </div> 
     </div>
     <div class="rank-area">
-      <?php 
-        for($i=0; $i<10; $i++){ 
-      ?>
-      <div class="ranking-store">
-        <div class="store-info">
-          <div class="rank-num"><?php
-            if($i<9) {
-              $_ = $i+1;
-              $number = '0' . '' . $_;
-              echo $number;
-            }else{
-              echo $i+1;
-            }
-          ?></div>
-          <div class="store-name" onclick="location.href='m.detail.php?id=5bb6c27ae0f1d504108ba16c'">
-            건대 소두마리
-          </div>
-          <div style="display:flex; align-items:center;"> 
-            <div class="keyword" style="margin-right: 10px;">
-              강남구
-            </div>
-            <div class="keyword">
-              카페
-            </div>
-          </div>
-        </div>
-        <div class="store-img">
-          <img src="./images/cafe1.jpg"  onclick="location.href='m.detail.php?id=5bb6c27ae0f1d504108ba16c'" />
-        </div>
-      </div>
-      <?php
-        } 
-      ?>
     </div> 
   </div>
+
+
+<script>
+  var store_name = ['계동피자','대장장이화덕피자','피자네버슬립스','옥인피자','리골레토시카고피자','매덕스피자','팔로피자','피자오','보니스피자펍','피자무쪼'];
+  function loadTemplate(id) { return document.getElementById(id).innerHTML; }
+
+  $(function(){
+    var temp = loadTemplate('rank-slot');
+    var rank_templete = _.template($("#rank-slot").html());
+    
+    function load(i){
+      api_search_data(store_name[i],function(res){
+        data = res
+        var row = data.payload[0]
+        row.no = i+1 < 10 ? "0"+(i+1) : i+1
+        $(".rank-area").append(rank_templete(row))
+        if(i >= 9) return ;
+        load(i+1);
+      })
+    }
+    load(0);
+  });
+
+
+
+</script>
+
+<script id="rank-slot" type="text/template">
+  <div class="ranking-store">
+    <div class="store-info">
+      <div class="rank-num"><%=no%></div>
+      <div class="store-name" onclick="location.href='m.detail.php?id=<%=_id%>'">
+        <%=Name%>
+      </div>
+      <div style="display:flex; align-items:center;"> 
+        <div class="keyword" style="margin-right: 10px;">
+          <%=collect_region%>
+        </div>
+        <div class="keyword">
+          <%=category[0]%>
+        </div>
+      </div>
+    </div>
+    <div class="store-img">
+      <img src="<%=main_img%>"  onclick="location.href='m.detail.php?id=<%=_id%>'" />
+    </div>
+  </div>
+
+</script>
+
 <?php include_once("./m.footer.php") ?>

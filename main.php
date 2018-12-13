@@ -16,19 +16,14 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
     <div>
       <div class="owl-carousel owl-theme" >
         <?php
-          // for($i=0; $i <= 2; $i++){
-            $url = "./news_detail.php";
+          for($i=1; $i <= 2; $i++){
+            $url = "./news_detail.php?data-id=$i";
+            $banner = "./images/main_banner/whereit_img_main_00$i.png"
         ?>
         <div class="item" style="width:1200px; margin-right:1em;" data-id="<?=$i?>" onclick="click_main_banner(this,'<?php echo $url ?>')" >
-          <img src="./images/whereit_img_main_01.png" >
+          <img src=<?=$banner?> >
         </div>
-        <div class="item" style="width:1200px; margin-right:1em;" data-id="<?=$i?>" onclick="click_main_banner(this,'<?php echo $url ?>')" >
-          <img src="./images/whereit_img_main_003.png" >
-        </div>
-        <div class="item" style="width:1200px; margin-right:1em;" data-id="<?=$i?>" onclick="click_main_banner(this,'<?php echo $url ?>')" >
-          <img src="./images/whereit_img_main_004.png" >
-        </div>
-        <?php //} ?>
+        <?php } ?>
       </div>
     </div>
     <div class="search-form">

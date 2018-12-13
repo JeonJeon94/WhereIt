@@ -994,6 +994,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   width: 90%;
+  margin-bottom: 30px;
 }
 
 .ranking-theme-page .main .rank-area .ranking-store, .ranking-thismonth-page .main .rank-area .ranking-store, .ranking-nowdays-page .main .rank-area .ranking-store {
@@ -1045,10 +1046,30 @@
   color: #8a7f8a;
 }
 
+.ranking-theme-page .main .rank-area .ranking-store .store-img, .ranking-thismonth-page .main .rank-area .ranking-store .store-img, .ranking-nowdays-page .main .rank-area .ranking-store .store-img {
+  overflow: hidden;
+  width: 373px;
+  position: relative;
+  height: 373px;
+}
+
 .ranking-theme-page .main .rank-area .ranking-store .store-img > img, .ranking-thismonth-page .main .rank-area .ranking-store .store-img > img, .ranking-nowdays-page .main .rank-area .ranking-store .store-img > img {
-  width: 100%;
+  position: absolute;
+  margin: auto;
   height: 100%;
+  width: 100%;
+  left: -100%;
+  right: -100%;
+  top: -100%;
+  bottom: -100%;
+  cursor: pointer;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 5px;
+}
+
+.news-page .main > img {
+  width: 100%;
 }
 
 .news-page .main .news-list {
@@ -2025,6 +2046,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding-right: 20px;
+  line-height: 20px;
 }
 
 .favorite-page .main {
@@ -2540,6 +2562,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding-right: 20px;
+  line-height: 20px;
 }
 
 .signup-page .accept-contents .confirm-btn {

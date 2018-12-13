@@ -1421,7 +1421,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 800px;
+  width: 850px;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -1459,6 +1459,7 @@ body {
   padding: 15px 0px;
   -webkit-animation: fadeInUp 1s;
           animation: fadeInUp 1s;
+  width: 316px;
 }
 
 .ranking-theme-page .all .main .rank-area .ranking5 .ranking-store .rank-num, .ranking-theme-page .all .main .rank-area .ranking10 .ranking-store .rank-num, .ranking-thismonth-page .all .main .rank-area .ranking5 .ranking-store .rank-num, .ranking-thismonth-page .all .main .rank-area .ranking10 .ranking-store .rank-num, .ranking-nowdays-page .all .main .rank-area .ranking5 .ranking-store .rank-num, .ranking-nowdays-page .all .main .rank-area .ranking10 .ranking-store .rank-num {
@@ -1527,6 +1528,10 @@ body {
 
 .magazine-page .main {
   width: 1200px;
+}
+
+.magazine-page .main > img {
+  width: 100%;
 }
 
 .magazine-page .main .news-detail {

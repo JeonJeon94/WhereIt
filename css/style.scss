@@ -1064,7 +1064,7 @@ body{
       .rank-area{
         margin: 0 auto;
         display: flex;
-        width: 800px;
+        width: 850px;
         flex: 1;
         box-sizing: border-box;
         padding: 20px 0px;
@@ -1084,6 +1084,7 @@ body{
             align-items: center;
             padding: 15px 0px;
             animation: fadeInUp 1s;
+            width: 316px;
 
             .rank-num{
               padding-right:30px; 
@@ -1150,6 +1151,10 @@ body{
   }
   .main{
     width: 1200px;
+    
+    >img{
+      width: 100% 
+    }
 
     .news-detail{
       display: block;

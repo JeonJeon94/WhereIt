@@ -148,7 +148,7 @@
         <img src="./images/etc/search.png" />
       </div>
       <div class="logo">
-        <img src="./images/header/logo.png" onclick="location.href='main.php'"/>
+        <img src="./images/header/whrereit_img_logo_01.png" onclick="location.href='main.php'"/>
       </div>
       <div class="form-container">
       <?php if($page=='search'){ ?>

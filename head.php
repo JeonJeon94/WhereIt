@@ -30,10 +30,10 @@
 <html>
 <head>
   <meta charset="utf-8" />
-
   <meta property="og:type" content="website">
   <meta property="og:title" content="웨얼잇">
   <meta property="og:description" content="리얼 맛집 정보 웨얼잇!">
+  <meta property="og:image" content="./imgaes/whrereit_img_og_001"/>
   <meta name="naver-site-verification" content="5a78e9f61a3e8046a961b19a6d877a5992cd3829"/>
 
   <meta name="google-signin-scope" content="profile email">
@@ -60,7 +60,7 @@
   <div class="head">
     <div class="top">
       <div class="logo">
-        <a href="./main.php"><img src="./images/header/logo.png"/></a>
+        <a href="./main.php"><img src="./images/header/whrereit_img_logo_01.png"/></a>
       </div>
       <div class="logo-copy">
         FIND A UNIQUE PLACE

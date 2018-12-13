@@ -26,66 +26,10 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
       </div>     
       <div class="rank-area">
         <div class="ranking5">
-          <?php 
-            for($i=0; $i<5; $i++){ 
-          ?>
-          <div class="ranking-store">
-            <div class="rank-num"><?php
-              $_ = $i+1;
-              $number = '0'. "" . $_;
-              echo $number;
-            ?></div>
-            <div class="store-img">
-              <img src="./images/foodimg2.jpeg" onclick="location.href='detail.php?id=<?php echo $id; ?>'" />
-            </div>
-            <div style="display:flex; flex-direction:column; padding-left: 10px; padding-bottom: 5px;">
-              <div class="name"  onclick="location.href='detail.php?id=<?php echo $id; ?>'" >건대 소두마리</div>
-              <div class="flex">
-                <div class="keyword">
-                  <div class="chile-flex-1;">강남구</div>
-                </div>
-                <div class="keyword">
-                  <div class="chile-flex-1;">카페</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <?php
-            } 
-          ?>
+          
         </div>
         <div class="ranking10">
-          <?php 
-            for($i=5; $i<10; $i++){ 
-          ?>
-          <div class="ranking-store">
-            <div class="rank-num"><?php
-              if($i<9) {
-                $_ = $i+1;
-                $number = '0'. "" . $_;
-                echo $number;
-              }else{
-                echo $i+1;
-              }
-            ?></div>
-            <div class="store-img">
-              <img src="./images/77.77.jpeg" onclick="location.href='detail.php?id=<?php echo $id; ?>'" />
-            </div>
-            <div style="display:flex; flex-direction:column; padding-left: 10px;">
-              <div class="name" onclick="location.href='detail.php?id=<?php echo $id; ?>'">건대 소두마리</div>
-              <div class="flex">
-                <div class="keyword">
-                  <div class="chile-flex-1;">강남구</div>
-                </div>
-                <div class="keyword">
-                  <div class="chile-flex-1;">카페</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <?php
-            }
-          ?>
+          
         </div>
       </div>
     </div>
@@ -106,6 +50,65 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
     }, n * 200);
   }
 
+</script>
+
+<script>
+  var store_name = ['세븐블레스','샤오짠','스테이터','비스테까','Tokyo420','훌라훌라','르브리에','마음을담아내면','더라스트펍','미스터카츠'];
+  function loadTemplate(id) { return document.getElementById(id).innerHTML; }
+
+  $(function(){
+    var temp = loadTemplate('rank-slot');
+    var rank_templete = _.template($("#rank-slot").html());
+    
+    function load(i){
+      api_search_data(store_name[i],function(res){
+        data = res
+        var row = data.payload[0]
+        row.no = i+1 < 10 ? "0"+(i+1) : i+1
+        $(".ranking5").append(rank_templete(row))
+        if(i >= 4) return ;
+        load(i+1);
+      })
+    }
+    load(0);
+
+    function load2(i){
+      api_search_data(store_name[i],function(res){
+        data = res
+        var row = data.payload[0]
+        row.no = i+1 < 10 ? "0"+(i+1) : i+1
+        $(".ranking10").append(rank_templete(row))
+        if(i >= 9) return ;
+        load2(i+1);
+      })
+    }
+    load2(5);
+  });
+
+
+
+</script>
+
+<script id="rank-slot" type="text/template">
+  <div class="ranking-store" style="display:flex;">
+    <div class="rank-num"><%=no%></div>
+    <div class="store-img" onclick="location.href='detail.php?id=<%=_id%>'">
+      <img src="<%=main_img%>" />
+    </div>
+    <div style="display:flex; flex-direction:column; padding-left: 10px; padding-bottom: 5px;">
+      <div class="name" onclick="location.href='detail.php?id=<%=_id%>'" >
+        <%=Name%>
+      </div>
+      <div class="flex">
+        <div class="keyword">
+          <div class="chile-flex-1;"><%=collect_region%></div>
+        </div>
+        <div class="keyword">
+          <div class="chile-flex-1;"><%=category[0]%></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </script>
 
 <?php include_once("./footer.php") ?>
