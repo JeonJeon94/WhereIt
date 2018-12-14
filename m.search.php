@@ -1,7 +1,6 @@
 <?php $page = "search" ?>
 
 <?php include_once("./m.head.php") ?>
-<div class="wow" style="position:fixed; left:0;top:0; background-color:#fff; padding:10px;font-weight:20px;"></div>
   <div class="main">
     <div class="main-top">
       <div class="top_layer_1">
@@ -100,7 +99,6 @@
     }
   }
   $(window).scroll(function() {
-    $(".wow").html(`${$(window).scrollTop()} + ${$(window).height()} == ${$(document).height()}`)
     if($(window).scrollTop() + $(window).height() +100 >= $(document).height() && flag) {
       list_length += 16
       SearchResultDraw()

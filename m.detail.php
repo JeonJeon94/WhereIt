@@ -160,7 +160,7 @@ if($member){
   }
 
   $(window).scroll(function() {
-    if($(window).scrollTop() + $(window).height() === $(document).height() && flag) {
+    if($(window).scrollTop() + $(window).height() +100 >= $(document).height() && flag) {
       flag = false
       setImage(res)
     }
