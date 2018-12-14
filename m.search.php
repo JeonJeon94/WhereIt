@@ -53,7 +53,7 @@
         }
       }, 1000);
     }
-  }s
+  }
   function SearchResultDraw(){
     var searchWord = "<?php echo $search; ?>";
     if(searchWord == "" || searchWord == " "){
