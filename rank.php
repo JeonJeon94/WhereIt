@@ -29,9 +29,9 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
           <div class="insta-tag">
             <div style="flex:0 1 auto;">
               <div class="insta-list">
-                <div class="insta-text-h" style="padding-top:3px;"><a href="">#핏자</a></div>
-                <div class="insta-text" style="display:none; padding:3px 0;"><a href="">#핏자</a></div>
-                <div class="insta-text" style="display:none; padding-bottom:3px;"><a href="">#핏자</a></div>
+                <div class="insta-text-h" style="padding-top:3px;"><a href="">#피자</a></div>
+                <div class="insta-text" style="display:none; padding:3px 0;"><a href="">#피자</a></div>
+                <div class="insta-text" style="display:none; padding-bottom:3px;"><a href="">#피자</a></div>
               </div>
             </div>
           </div>
@@ -53,19 +53,19 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
   
 <script>
 
-  var rank = $('.ranking-store')
+  // var rank = $('#rank-slot')
   
-  $(document).ready(function(){
-    for(var n=0; n < 10; n++){
-      ani_load(n)
-    }
-  });
+  // $(document).ready(function(){
+  //   for(var n=0; n < 10; n++){
+  //     ani_load(n)
+  //   }
+  // });
 
-  function ani_load(n){
-    setTimeout(function() {
-      $(rank[n]).css('display','flex')
-    }, n * 200);
-  }
+  // function ani_load(n){
+  //   setTimeout(function() {
+  //     $(rank[n]).css('display','flex')
+  //   }, n * 200);
+  // }
 
 </script>
 
