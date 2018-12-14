@@ -101,7 +101,7 @@
   }
   $(window).scroll(function() {
     $(".wow").html(`${$(window).scrollTop()} + ${$(window).height()} == ${$(document).height()}`)
-    if($(window).scrollTop() + $(window).height() +50 >= $(document).height() && flag) {
+    if($(window).scrollTop() + $(window).height() +100 >= $(document).height() && flag) {
       list_length += 16
       SearchResultDraw()
     }
