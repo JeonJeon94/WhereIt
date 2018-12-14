@@ -1077,8 +1077,8 @@
 }
 
 .news-page .main .news-list .list-item {
-  -webkit-animation: fadeInUp 3s;
-          animation: fadeInUp 3s;
+  -webkit-animation: fadeInUp 2s;
+          animation: fadeInUp 2s;
   width: 100%;
   display: none;
   -webkit-box-flex: 1;
