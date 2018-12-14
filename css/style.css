@@ -1620,15 +1620,14 @@ body {
 }
 
 .magazine-page .main .news-list .list-item {
-  -webkit-animation: fadeInUp 3s;
-          animation: fadeInUp 3s;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-bottom: 50px;
+  -webkit-animation: fadeInUp 2s;
+          animation: fadeInUp 2s;
+  display: none;
+  padding-bottom: 80px;
 }
 
 .magazine-page .main .news-list .list-item .item-picture img {
+  width: 471px;
   border-radius: 10px;
 }
 
@@ -1644,7 +1643,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-left: 80px;
+  padding-left: 50px;
 }
 
 .magazine-page .main .news-list .list-item .item-info .info-date {

@@ -1080,9 +1080,7 @@
   -webkit-animation: fadeInUp 3s;
           animation: fadeInUp 3s;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;

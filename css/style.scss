@@ -1231,11 +1231,12 @@ body{
       width: 1000px;
     
       .list-item{
-        animation: fadeInUp 3s;
-        display: flex;
-        padding-bottom: 50px;
-
+        animation: fadeInUp 2s;
+        display: none;
+        padding-bottom: 80px;
+        
         .item-picture img{
+          width: 471px;
           border-radius: 10px;
         }
         .item-info{
@@ -1243,7 +1244,7 @@ body{
           display: flex;
           flex-direction: column;
           justify-content: center;
-          padding-left: 80px;
+          padding-left: 50px;
 
           .info-date{
             font-size: 18px;
