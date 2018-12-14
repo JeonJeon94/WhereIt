@@ -15,8 +15,8 @@ include './dbconfig.php';
 <body class="default-page <?=$page?>-page">
   <div class="main">
     <form class="test-form" method="post" action="admin_check.php">
-      <input id="admin_id" name="admin_id" type="text"/>
-      <input id="admin_pw" name="password" type="password"/>    
+      <input id="admin_id" name="admin_id" type="text" placeholder="ID"/>
+      <input id="admin_pw" name="password" type="password" placeholder="PW"/>
       <input id="admin-btn" type="submit" value="전송"/>
     </form>
   </div>

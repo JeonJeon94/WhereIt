@@ -64,8 +64,12 @@
 
 .default-page .main .menu a {
   text-decoration: none;
-  color: black;
+  color: gray;
   padding: 10px 50px;
+}
+
+.default-page .main .menu a:hover {
+  color: black;
 }
 
 .default-page .main .submain {
@@ -75,6 +79,69 @@
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.default-page .main .submain .submenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+  padding-left: 50px;
+  border-bottom: 1px solid black;
+}
+
+.default-page .main .submain .contents {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 20px 50px;
+}
+
+.default-page .main .submain .contents .search_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+}
+
+.default-page .main .submain .contents .search_list #list_text {
+  padding-right: 200px;
+}
+
+.default-page .main .submain .contents .search_list .search-form {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.default-page .main .submain .contents .search_list .search-form .search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.default-page .main .submain .contents .user_list table {
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.default-page .main .submain .contents .user_list th {
+  border-bottom: 2px solid black;
+  height: 50px;
+}
+
+.default-page .main .submain .contents .user_list td {
+  height: 50px;
 }
 
 .default-page .main .test-form {

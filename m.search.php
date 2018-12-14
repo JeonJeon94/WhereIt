@@ -53,7 +53,7 @@
         }
       }, 1000);
     }
-  }
+  }s
   function SearchResultDraw(){
     var searchWord = "<?php echo $search; ?>";
     if(searchWord == "" || searchWord == " "){
@@ -100,7 +100,7 @@
     }
   }
   $(window).scroll(function() {
-    if($(window).scrollTop() + $(window).height() == $(document).height() && flag) {
+    if($(window).scrollTop() + $(window).height() +50 >= $(document).height() && flag) {
       list_length += 16
       SearchResultDraw()
     }
