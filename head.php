@@ -7,7 +7,6 @@
   }else{
     $search = "";
   }
-
   if(!empty($_GET['id'])){
     $id=$_GET['id'];
   }else{
@@ -25,6 +24,11 @@
       alert_back("로그인을 해주세요!");
     }
   }
+
+  //검색창 문구
+  $h_text= sql_one("SELECT search_h FROM banner_text WHERE id = 1");
+  $b_text= sql_one("SELECT search_b FROM banner_text WHERE id = 2");
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -68,7 +72,7 @@
       <div class="where-form2">  
         <form class="form" method="get" action="search.php">
           <div class="search-word">
-            <input type="text" id="search-word2" name="search" value="<?php echo $search; ?>" />
+            <input type="text" id="search-word2" name="search" placeholder="<?=$h_text[search_h]?>" value="<?=$search?>" />
             <img id="search2"src="./images/search.png" onclick="submit()"/> 
           </div>
         </form>

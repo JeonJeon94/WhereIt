@@ -34,13 +34,13 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
           </div>
         </div>
         <div class="support">
-          <form class="asking-form" method='post' action='./asking.php'>
+          <form class="asking-form" method='POST' action='./asking.php'>
             <div style="display:flex; flex-direction:column;" >
               <input id="title" type="text" name="title" placeholder="제목" maxlength="50" />
               <input id="e_mail" type="text" name="e_mail" placeholder="이메일" maxlength="50" />
               <textarea id="contents" type="text" name="contents"></textarea>
             </div>
-            <input id="send" type="button" value="SEND">
+            <input id="send" type="submit" value="SEND">
           </form>
         </div>
         <div class="modal-container">
@@ -56,3 +56,8 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
       </div>
     </div>
 <?php include_once('./footer.php') ?>
+<?php if(!empty($_GET['asksum'])){ ?>
+  <script>
+    ask_success()
+  </script>  
+<?php } ?>

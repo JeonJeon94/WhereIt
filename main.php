@@ -43,7 +43,7 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
         <div class="where-form">  
           <form class="form" method="GET" action="search.php">
             <div class="search-word">
-              <input type="text" id="search-word" name="search" placeholder="지역명과 음식을 입력해주세요. Ex)망원동 양꼬치" />
+              <input type="text" id="search-word" name="search" placeholder="<?=$b_text[search_b]?>" />
               <img id="search" src="./images/search.png" onclick="submit()"/>
             </div>
             <button id="search-btn">SEARCH</button>

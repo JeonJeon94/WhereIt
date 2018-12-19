@@ -25,6 +25,11 @@
       alert_back("로그인을 해주세요!");
     }
   }
+  //검색창 문구
+  $h_text= sql_one("SELECT search_h FROM banner_text WHERE id = 1");
+  $b_text= sql_one("SELECT search_b FROM banner_text WHERE id = 2");
+
+  //메뉴 클릭 이미지
   $rank_src = './images/default/rank.png';
   $news_src = './images/default/news.png';
   $favorite_src = './images/default/favorite.png';
@@ -32,6 +37,7 @@
   $service_src = './images/default/service.png';
   $ask_src = './images/default/ask.png';
   
+  //메뉴 클릭시 이동 페이지
   $rank_adress='m.rank.php';
   $news_adress='m.news.php';
   $favorite_adress='m.favorite.php';
@@ -160,7 +166,7 @@
         </div>
         <form  class="search-form2" method="GET" action="m.search.php">
           <div class="input-container">
-            <input id="search2-input" maxlength="50" type="text" name="search" value="<?php echo $search; ?>" />
+            <input id="search2-input" maxlength="50" type="text" name="search" placeholder="<?=$h_text[search_h]?>" value="<?=$search?>" />
             <img id="search-img2" src="./images/search.png" onclick="submit()" />
           </div>
         </form>

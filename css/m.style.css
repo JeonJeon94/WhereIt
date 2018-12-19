@@ -192,7 +192,7 @@
   border-radius: 40px;
   padding-left: 30px;
   padding: 5px 30px 5px 10px;
-  font-size: 14px;
+  font-size: 13px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -532,8 +532,8 @@
 }
 
 .main-page .main .item > img {
-  width: 340px;
-  height: auto;
+  width: 82vw;
+  height: 46vh;
   border-radius: 15px;
 }
 
@@ -580,7 +580,7 @@
   border: 1px solid #737473;
   border-radius: 20px;
   padding: 10px 30px 10px 14px;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .main-page .footer .search-form .input-form #search-input::-webkit-input-placeholder {
@@ -637,12 +637,13 @@
 }
 
 .search-o-page .store-list {
-  margin: 10px auto !important;
+  margin: 10px 0 !important;
+  width: 100% !important;
 }
 
 .search-o-page .store-list .img-container {
-  width: 320px !important;
-  height: 320px !important;
+  width: 100% !important;
+  height: 49vh !important;
 }
 
 .search-o-page .store-list .img-container > img {
@@ -777,8 +778,8 @@
 }
 
 .search-page .main .search-list .list-line .store-list .img-container, .search-o-page .main .search-list .list-line .store-list .img-container {
-  width: 170px;
-  height: 170px;
+  width: 42vw;
+  height: 23vh;
   overflow: hidden;
   position: relative;
 }
@@ -1048,9 +1049,9 @@
 
 .ranking-theme-page .main .rank-area .ranking-store .store-img, .ranking-thismonth-page .main .rank-area .ranking-store .store-img, .ranking-nowdays-page .main .rank-area .ranking-store .store-img {
   overflow: hidden;
-  width: 373px;
+  width: 91vw;
+  height: 51vh;
   position: relative;
-  height: 373px;
 }
 
 .ranking-theme-page .main .rank-area .ranking-store .store-img > img, .ranking-thismonth-page .main .rank-area .ranking-store .store-img > img, .ranking-nowdays-page .main .rank-area .ranking-store .store-img > img {
@@ -1446,8 +1447,8 @@
 }
 
 .detail-page .main .detail-main .detail-picture .store-list .img-container {
-  width: 180px;
-  height: 180px;
+  width: 43vw;
+  height: 24vh;
   overflow: hidden;
   position: relative;
 }
@@ -2054,7 +2055,13 @@
 .favorite-page .main .favorit-title {
   font-size: 25px;
   color: #504f57;
-  padding: 30px;
+  margin: 30px auto;
+  width: 80%;
+}
+
+.favorite-page .main .favorite-list {
+  width: 80%;
+  margin: 0 auto;
 }
 
 .favorite-page .main .favorite-list .list-line {
@@ -2063,15 +2070,15 @@
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-animation: fadeInUp 2s;
           animation: fadeInUp 2s;
 }
 
 .favorite-page .main .favorite-list .list-line .store-list {
-  margin: 10px auto;
+  margin: 10px 0;
   -ms-flex-preferred-size: auto;
       flex-basis: auto;
   -webkit-animation: fadeInUp 1s;
@@ -2079,8 +2086,8 @@
 }
 
 .favorite-page .main .favorite-list .list-line .store-list .img-container {
-  width: 150px;
-  height: 150px;
+  width: 38vw;
+  height: 21vh;
   position: relative;
   overflow: hidden;
 }
@@ -2094,7 +2101,6 @@
   right: -100%;
   top: -100%;
   bottom: -100%;
-  cursor: pointer;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 5px;
@@ -2116,7 +2122,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-right: 10px;
+  padding-right: 1px;
   font-size: 14px;
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 500;

@@ -132,7 +132,7 @@
               border-radius: 40px;
               padding-left: 30px;
               padding: 5px 30px 5px 10px;
-              font-size: 14px;
+              font-size: 13px;
               box-sizing: border-box;
             }
 
@@ -400,8 +400,8 @@
     .item{
 
       >img{
-        width: 340px;
-        height: auto;
+        width: 82vw;
+        height: 46vh;
         border-radius: 15px;
       }
     } 
@@ -432,7 +432,7 @@
           border: 1px solid #737473;
           border-radius: 20px;
           padding:10px 30px 10px 14px;
-          font-size: 14px;
+          font-size: 12px;
 
           &::placeholder{
             color:#a39aa3;
@@ -474,11 +474,12 @@
 }
 .search-o-page{
   .store-list{
-    margin: 10px auto !important;
+    margin: 10px 0 !important;
+    width: 100% !important;
 
     .img-container{
-      width: 320px !important;
-      height: 320px !important;
+      width: 100% !important;
+      height: 49vh !important;
       
       >img{
         border-radius: 10px !important;
@@ -579,8 +580,8 @@
           flex-basis: auto;
 
           .img-container{
-            width: 170px;
-            height: 170px;     
+            width: 42vw;
+            height: 23vh;     
             overflow: hidden;
             position: relative;
 
@@ -790,9 +791,9 @@
         }
         .store-img{
           overflow: hidden;
-          width: 373px;
+          width: 91vw;
+          height: 51vh;
           position: relative;
-          height: 373px;
 
           >img{
             position: absolute;
@@ -1110,8 +1111,8 @@
           margin: 6px 0;
 
           .img-container{
-            width: 180px;
-            height: 180px;
+            width: 43vw;
+            height: 24vh;
             overflow: hidden;
             position: relative;
             
@@ -1617,24 +1618,27 @@
     .favorit-title{
       font-size:25px; 
       color:#504f57; 
-      padding: 30px
+      margin: 30px auto;
+      width: 80%;
+
     }
     .favorite-list{
-  
+      width: 80%;
+      margin: 0 auto;
       .list-line{
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-between;
         animation: fadeInUp 2s;
   
         .store-list{
-          margin: 10px auto;
+          margin: 10px 0;
           flex-basis: auto;
           animation: fadeInUp 1s;
   
           .img-container{
-            width: 150px;
-            height: 150px;
+            width: 38vw;
+            height: 21vh;
             position: relative;
             overflow: hidden;
             
@@ -1647,7 +1651,6 @@
               right: -100%;
               top: -100%;
               bottom: -100%;
-              cursor: pointer;
               object-fit: cover;
               border-radius: 5px;
             }
@@ -1662,7 +1665,7 @@
             color:#d8a3d2; 
             display:flex;  
             justify-content:center;
-            padding-right:10px;
+            padding-right:1px;
             font-size: 14px;
             font-family: "Noto Sans KR", sans-serif;
             font-weight: 500;

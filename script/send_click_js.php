@@ -1,8 +1,4 @@
 <script>
-  $('#send').click(function(){
-    $('#notice').css('display','block')
-    $('.modal-container').css('display','block')
-  });
   $('#post-mail').keydown(function(key){ 
     if(key.keyCode == 13){
       $('#mail-send').click();
@@ -101,4 +97,8 @@
     $('.page-num2').css('display','none')
     $('.signup-end').css('display','block')
   }
+  function ask_success(){
+    $('#notice').css('display','block')
+    $('.modal-container').css('display','block')
+  } 
 </script>
