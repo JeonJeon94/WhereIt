@@ -93,7 +93,7 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
   <div class="ranking-store" style="display:flex;">
     <div class="rank-num"><%=no%></div>
     <div class="store-img" onclick="location.href='detail.php?id=<%=_id%>'">
-      <img src="<%=main_img%>" />
+      <img src="<%=main_img%>" onerror="this.src='./images/whereit_img_loading_p.png'"/>
     </div>
     <div style="display:flex; flex-direction:column; padding-left: 10px; padding-bottom: 5px;">
       <div class="name" onclick="location.href='detail.php?id=<%=_id%>'" >

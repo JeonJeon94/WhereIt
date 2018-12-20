@@ -62,7 +62,7 @@
       </div>
     </div>
     <div class="store-img">
-      <img src="<%=main_img%>"  onclick="location.href='m.detail.php?id=<%=_id%>'" />
+      <img src="<%=main_img%>"  onclick="location.href='m.detail.php?id=<%=_id%>'" onerror="this.src='./images/whereit_img_loading_p.png'"/>
     </div>
   </div>
 
