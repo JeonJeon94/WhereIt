@@ -78,7 +78,4 @@
     alert($msg);
     history_back();
   }
-  function alert_redirect($msg,$url){
-    alert($msg);
-  }
 ?>

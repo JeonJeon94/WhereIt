@@ -1,6 +1,31 @@
 <?php $page = "ranking-theme" ?>
 
 <?php include_once("./m.head.php") ?>
+
+<?php
+
+if(!empty($_GET['tag'])){
+  $g_tag = $_GET['tag'];
+  $rank = sql_one("SELECT * FROM rank WHERE tag='$g_tag' ");
+  $g_tag2 = $rank[tag];
+  $theme = $rank[theme];
+  $id = $rank[id];
+
+  if($id==1){
+    $rank = sql_one("SELECT * FROM rank WHERE id='2'");
+    $g_tag = $rank[tag];
+  }else if($id==2){
+    $rank= sql_one("SELECT * FROM rank WHERE id='1'");
+    $g_tag = $rank[tag];
+  }
+}else{
+  $rank= sql_select("SELECT * FROM rank");
+  $theme = $rank[1][theme];
+  $g_tag2 = $rank[0][tag];
+  $g_tag = $rank[1][tag];
+}
+
+?>
   <div class="main">
     <div class="title">
       <div class="nowdays" onclick="location.href='./m.rank-nowdays.php'">
@@ -19,9 +44,8 @@
         <div class="insta-tag">
           <div style="flex:0 1 auto;">
             <div class="insta-list">
-              <div class="insta-text-h" style="padding-top:3px;"><a href="">#피자</a></div>
-              <div class="insta-text" style="display:none; padding:3px 0;"><a href="">#피자</a></div>
-              <div class="insta-text" style="display:none; padding-bottom:3px;"><a href="">#피자</a></div>
+            <div class="insta-text-h" style="padding-top:3px;"><a href="">#<?=$g_tag2?></a></div>
+                <div class="insta-text" style="display:none; padding:3px 0;"><a href="m.rank.php?tag=<?=$g_tag?>">#<?=$g_tag?></a></div>
             </div>
           </div>
         </div>
@@ -37,7 +61,11 @@
 
 
 <script>
-  var store_name = ['계동피자','대장장이화덕피자','피자네버슬립스','옥인피자','리골레토시카고피자','매덕스피자','팔로피자','피자오','보니스피자펍','피자무쪼'];
+  if('<?=$g_tag2?>'=='피자'){
+    var store_name = ['계동피자','대장장이화덕피자','피자네버슬립스','옥인피자','리골레토시카고피자','매덕스피자','팔로피자','피자오','보니스피자펍','피자무쪼'];
+  }else if('<?=$g_tag2?>'=='와인'){
+    var store_name = ['먼데이블루스','재즈라운지','로마네꽁띠','서촌블루스','둘세이수아베','우아시스','몽리','뱅가','루나씨엘로','블루브릿지'];
+  }
   function loadTemplate(id) { return document.getElementById(id).innerHTML; }
 
   $(function(){

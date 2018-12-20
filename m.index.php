@@ -10,8 +10,8 @@
           //   $url = "./m.news_detail.php?data-id=$i";
           //   $banner = "./images/main_banner/whereit_img_m.main_00$i.png"
         ?>
-        <div class="item">
-          <img src='./images/main_banner/whereit_img_main_02.png'>
+        <div class="item" onclick="click_main_banner(this,'./rank.php?tag=와인')">
+          <img src='./images/main_banner/whereit_img_main_008.png'>
         </div>
         <div class="item" data-id="1" onclick="click_main_banner(this,'./news_detail.php?data-id=1')">
           <img src='./images/main_banner/whereit_img_m.main_001.png' >

@@ -34,6 +34,7 @@
 <html>
 <head>
   <meta charset="utf-8" />
+  <meta name="description" content="리얼 맛집 정보 웨얼잇!">
   <meta property="og:type" content="website">
   <meta property="og:title" content="웨얼잇">
   <meta property="og:description" content="리얼 맛집 정보 웨얼잇!">
