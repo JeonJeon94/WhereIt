@@ -91,7 +91,7 @@
   <script src="./OwlCarousel3/docs/assets/vendors/jquery.min.js" type="text/javascript"></script>
   <script src="./OwlCarousel3/dist/owl.carousel.js" type="text/javascript"></script>
   <script type="text/javascript" src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.0.js" charset="utf-8"></script>
-  <script src="http://13.124.4.4/gen_api.js"></script>
+  <script src="http://52.79.100.193/gen_api.js"></script>
   <script src="/kakao_sdk.js"></script>
 </head>
 <body class="default-page <?=$page?>-page">

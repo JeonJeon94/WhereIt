@@ -57,7 +57,7 @@
   <script src="./OwlCarousel2/docs/assets/vendors/jquery.min.js" type="text/javascript"></script>
   <script src="./OwlCarousel2/dist/owl.carousel.js" type="text/javascript"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
-  <script src="http://13.124.4.4/gen_api.js"></script>
+  <script src="http://52.79.100.193/gen_api.js"></script>
   <script src="/kakao_sdk.js"></script>
 </head>
 <body class="default-page <?=$page?>-page">
