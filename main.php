@@ -21,6 +21,9 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
           //   $banner = "./images/main_banner/whereit_img_main_00$i.png"
         ?>
         <div class="item" style="width:1200px; margin-right:1em;" onclick="click_main_banner(this,'./rank.php?tag=와인')">
+          <img src='./images/main_banner/whereit_img_main_01.png'>
+        </div>
+        <div class="item" style="width:1200px; margin-right:1em;" onclick="click_main_banner(this,'./rank.php?tag=와인')">
           <img src='./images/main_banner/whereit_img_main_009.png'>
         </div>
         <div class="item" style="width:1200px; margin-right:1em;" data-id="1" onclick="click_main_banner(this,'./news_detail.php?data-id=1')">

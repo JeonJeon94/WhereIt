@@ -52,7 +52,7 @@
   .owl-dots{
     position:absolute;
     bottom: 3%;
-    left: 50%;
+    left: 49%;
   }
   .owl-carousel .owl-nav.disabled,
   .owl-carousel .owl-dots.disabled {
@@ -102,7 +102,7 @@
     padding: 0 !important;
     position: absolute;
     top: 45%;
-    right: 23%;
+    right: 22%;
     margin: 0;
   }
   .owl-carousel .owl-nav .owl-next #bb{
