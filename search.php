@@ -11,6 +11,16 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
 }
 ?>
 <?php include_once("./head.php") ?>
+<?php
+
+  // $result = sql_select("SELECT black_id FROM blacklist");
+
+  // for($i=0; $i<=2; $i++){
+  //   $rows[] = $result[$i][blacklist];
+  // }
+  
+  // var_dump($row[]);
+?>
     <div class="move-top">
       <img id="top" src="./images/top.png" />
       <img id="hover" src="./images/top-hover.png" />

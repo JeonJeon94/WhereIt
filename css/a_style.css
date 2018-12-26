@@ -12,12 +12,18 @@
           flex-direction: column;
 }
 
-.default-page input:focus {
+.default-page .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.default-page input:focus, .default-page button:focus, .default-page textarea:focus {
   outline: none;
 }
 
-.default-page button:focus {
-  outline: none;
+.default-page textarea {
+  resize: none;
 }
 
 .default-page .header {
@@ -60,16 +66,83 @@
       -ms-flex-direction: column;
           flex-direction: column;
   border-right: 1px solid black;
+  padding-top: 40px;
 }
 
 .default-page .main .menu a {
   text-decoration: none;
   color: gray;
-  padding: 10px 50px;
+  padding: 10px 100px 10px 50px;
 }
 
 .default-page .main .menu a:hover {
   color: black;
+}
+
+.default-page .main .modal {
+  display: none;
+  position: fixed;
+  z-index: 9;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.default-page .main .modal .list_add {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 50px 0;
+  display: block;
+  text-align: center;
+  border: 1px solid #BEBFBE;
+  background-color: white;
+  width: 450px;
+  height: 220px;
+  text-align: center;
+  margin: 400px auto;
+}
+
+.default-page .main .modal .list_add #b_add_id {
+  width: 200px;
+  height: 30px;
+  border: 1px solid #A5A6A5;
+  padding: 6px;
+  margin: 0 10px 0 30px;
+  font-size: 15px;
+}
+
+.default-page .main .modal .list_add #b_add_btn {
+  background: #F1F2F1;
+  height: 30px;
+  font-size: 15px;
+  border-color: #A5A6A5;
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+.default-page .main .modal .list_add #b_close {
+  background: #F1F2F1;
+  height: 30px;
+  font-size: 15px;
+  border-color: #A5A6A5;
+  padding: 0 20px;
+  cursor: pointer;
+  width: 30px;
+  border: 1px solid #A5A6A5;
+  margin: 50px auto 0 auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .default-page .main .submain {
@@ -95,6 +168,13 @@
   height: 50px;
   padding-left: 50px;
   border-bottom: 1px solid black;
+  margin-top: 2px;
+  border-top: 1px solid black;
+}
+
+.default-page .main .submain .submenu .list, .default-page .main .submain .submenu .b_text, .default-page .main .submain .submenu .b_file, .default-page .main .submain .submenu .rank, .default-page .main .submain .submenu .blacklist, .default-page .main .submain .submenu .ask, .default-page .main .submain .submenu .content, .default-page .main .submain .submenu .store {
+  cursor: pointer;
+  padding-right: 70px;
 }
 
 .default-page .main .submain .contents {
@@ -102,6 +182,27 @@
       -ms-flex: 1;
           flex: 1;
   padding: 20px 50px;
+}
+
+.default-page .main .submain .contents table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.default-page .main .submain .contents table th {
+  border-bottom: 5px solid gray;
+  height: 50px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.default-page .main .submain .contents table td {
+  height: 50px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .default-page .main .submain .contents .search_list {
@@ -112,10 +213,13 @@
       -ms-flex-align: center;
           align-items: center;
   height: 50px;
+  margin: 30px 0 20px 0;
 }
 
 .default-page .main .submain .contents .search_list #list_text {
-  padding-right: 200px;
+  padding-right: 190px;
+  padding-left: 10px;
+  font-size: 24px;
 }
 
 .default-page .main .submain .contents .search_list .search-form {
@@ -124,24 +228,354 @@
           flex: 1;
 }
 
-.default-page .main .submain .contents .search_list .search-form .search {
+.default-page .main .submain .contents .search_list .search-form #search {
+  margin: 0;
+}
+
+.default-page .main .submain .contents .search_list .search-form #search #select_option {
+  margin-right: 20px;
+  font-size: 15px;
+}
+
+.default-page .main .submain .contents .search_list .search-form #search #search_word {
+  width: 300px;
+  height: 30px;
+  border: 1px solid #A5A6A5;
+  padding: 6px;
+  margin-right: 10px;
+  font-size: 15px;
+}
+
+.default-page .main .submain .contents .search_list .search-form #search #search_btn {
+  background: #F1F2F1;
+  height: 30px;
+  font-size: 15px;
+  border-color: #A5A6A5;
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+.default-page .main .submain .contents .text_h {
+  margin: 30px 0 20px 0;
+  font-size: 24px;
+}
+
+.default-page .main .submain .contents .banner_guide {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.default-page .main .submain .contents .user_list table {
-  border-collapse: collapse;
-  text-align: center;
+.default-page .main .submain .contents .banner_guide #h_text {
+  width: 350px;
+  height: 30px;
+  border: 1px solid #A5A6A5;
+  padding: 6px;
+  margin-right: 10px;
+  font-size: 15px;
 }
 
-.default-page .main .submain .contents .user_list th {
-  border-bottom: 2px solid black;
+.default-page .main .submain .contents .banner_guide #h_btn {
+  background: #F1F2F1;
+  height: 30px;
+  font-size: 15px;
+  border-color: #A5A6A5;
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+.default-page .main .submain .contents .m_banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.default-page .main .submain .contents .m_banner #m_text {
+  width: 350px;
+  height: 30px;
+  border: 1px solid #A5A6A5;
+  padding: 6px;
+  margin-right: 10px;
+  font-size: 15px;
+}
+
+.default-page .main .submain .contents .m_banner #m_btn {
+  background: #F1F2F1;
+  height: 30px;
+  font-size: 15px;
+  border-color: #A5A6A5;
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+.default-page .main .submain .contents .file_h {
+  margin: 30px 0 20px 0;
+  font-size: 24px;
+}
+
+.default-page .main .submain .contents .banner_file {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.default-page .main .submain .contents .banner_file #f_title, .default-page .main .submain .contents .banner_file #h_file {
+  width: 350px;
+  height: 30px;
+  border: 1px solid #A5A6A5;
+  padding: 6px;
+  font-size: 15px;
+}
+
+.default-page .main .submain .contents .banner_file #h_title {
+  margin-bottom: 10px;
+}
+
+.default-page .main .submain .contents .banner_file #h_file {
+  margin-right: 15px;
+}
+
+.default-page .main .submain .contents .banner_file .btn_file, .default-page .main .submain .contents .banner_file #sub_btn, .default-page .main .submain .contents .banner_file #del_btn, .default-page .main .submain .contents .banner_file #add_btn {
+  background: #F1F2F1;
+  height: 30px;
+  font-size: 15px;
+  border-color: #A5A6A5;
+  margin-right: 10px;
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+.default-page .main .submain .contents .banner_file .btn_file, .default-page .main .submain .contents .banner_file #add_btn, .default-page .main .submain .contents .banner_file #del_btn {
+  padding: 5px 20px;
+  border: 1px solid #A4A6A4;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.default-page .main .submain .contents .banner_file #up_btn {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.default-page .main .submain .contents #rank_text {
+  margin: 30px 0 20px 0;
+  font-size: 24px;
+}
+
+.default-page .main .submain .contents .rank_theme {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.default-page .main .submain .contents .rank_theme #theme_title, .default-page .main .submain .contents .rank_theme #theme_tag {
+  width: 350px;
+  height: 30px;
+  border: 1px solid #A5A6A5;
+  padding: 6px;
+  margin-right: 15px;
+  font-size: 15px;
+}
+
+.default-page .main .submain .contents .rank_theme #up_btn, .default-page .main .submain .contents .rank_theme #del_btn {
+  background: #F1F2F1;
+  height: 30px;
+  font-size: 15px;
+  border-color: #A5A6A5;
+  margin-right: 10px;
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+.default-page .main .submain .contents .rank_theme #del_btn {
+  padding: 5px 20px;
+  border: 1px solid #A4A6A4;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.default-page .main .submain .contents #b_list_text {
+  padding-right: 150px;
+  padding-left: 10px;
+  font-size: 24px;
+}
+
+.default-page .main .submain .contents .b_search-form #b_search {
+  margin: 0;
+}
+
+.default-page .main .submain .contents .b_search-form #b_search #b_search_id {
+  width: 350px;
+  height: 30px;
+  border: 1px solid #A5A6A5;
+  padding: 6px;
+  margin-right: 15px;
+  font-size: 15px;
+}
+
+.default-page .main .submain .contents .ask_text {
+  margin: 30px 0 20px 0;
+  font-size: 24px;
+}
+
+.default-page .main .submain .contents .title {
+  cursor: pointer;
+}
+
+.default-page .main .submain .contents .confirm_area {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.default-page .main .submain .contents .confirm_area #confirm_title, .default-page .main .submain .contents .confirm_area #confirm_email, .default-page .main .submain .contents .confirm_area #confirm_text {
+  width: 800px;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #C9CAC9;
+}
+
+.default-page .main .submain .contents .confirm_area #confirm_title, .default-page .main .submain .contents .confirm_area #confirm_email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+.default-page .main .submain .contents .confirm_area #confirm_text {
+  height: 400px;
+  line-height: 20px;
+  margin-bottom: 40px;
+}
+
+.default-page .main .submain .contents .confirm_area #confirm_btn {
+  width: 100px;
   height: 50px;
+  background-color: #DBE5F1;
+  border: 1px solid #DBE5F1;
+  border-radius: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
 }
 
-.default-page .main .submain .contents .user_list td {
+.default-page .main .submain .contents .reply_area form {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.default-page .main .submain .contents .reply_area form #reply_title, .default-page .main .submain .contents .reply_area form #reply_email, .default-page .main .submain .contents .reply_area form #reply_text {
+  width: 800px;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #C9CAC9;
+  font-size: 16px;
+}
+
+.default-page .main .submain .contents .reply_area form #reply_title, .default-page .main .submain .contents .reply_area form #reply_email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+.default-page .main .submain .contents .reply_area form #reply_text {
+  height: 400px;
+  line-height: 20px;
+  margin-bottom: 40px;
+}
+
+.default-page .main .submain .contents .reply_area form #reply_btn {
+  width: 100px;
   height: 50px;
+  background-color: #DBE5F1;
+  border: 1px solid #DBE5F1;
+  border-radius: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.default-page .main .submain #add_btn, .default-page .main .submain #del_btn {
+  background: #F1F2F1;
+  height: 30px;
+  font-size: 15px;
+  border-color: #A5A6A5;
+  margin-right: 10px;
+  padding: 5px 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #A4A6A4;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: pointer;
 }
 
 .default-page .main .test-form {
@@ -188,6 +622,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   text-align: center;
+  cursor: pointer;
 }
 
 .login-page .main {

@@ -32,7 +32,7 @@ function simpl_str($string,$limit_length) {
     <div class="news-list">
       <div class="list-item">
         <div class="news-picture" onclick="location.href='./m.news_detail.php?data-id=1'">
-          <img src="./images/main_banner/whereit_img_m.main_001.png" />
+          <img src="./images/main_banner/android/whereit_img_m.main_001.png" />
         </div>
         <div class="news-info">
           <div class="news-date">
@@ -49,7 +49,7 @@ function simpl_str($string,$limit_length) {
       </div>
       <div class="list-item">
         <div class="news-picture" onclick="location.href='./m.news_detail.php?data-id=2'">
-          <img src="./images/main_banner/whereit_img_m.main_002.png" />
+          <img src="./images/main_banner/android/whereit_img_m.main_002.png" />
         </div>
         <div class="news-info">
           <div class="news-date">

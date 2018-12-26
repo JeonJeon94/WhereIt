@@ -21,7 +21,7 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
       <div class="news-list">
         <div class="list-item">
           <div class="item-picture">
-            <img src="./images/main_banner/whereit_img_m.main_001.png" />
+            <img src="./images/main_banner/android/whereit_img_m.main_001.png" />
           </div>
           <div class="item-info">
             <div class="info-date">
@@ -43,7 +43,7 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
         </div>
         <div class="list-item">
           <div class="item-picture">
-            <img src="./images/main_banner/whereit_img_m.main_002.png" />
+            <img src="./images/main_banner/android/whereit_img_m.main_002.png" />
           </div>
           <div class="item-info">
             <div class="info-date">
@@ -119,7 +119,7 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
 <script id="news-slot" type="text/template">
   <!-- <div class="list-item">
     <div class="item-picture">
-      <img src="./images/main_banner/whereit_img_m.main_002.png" />
+      <img src="./images/main_banner/web/whereit_img_m.main_002.png" />
     </div>
     <div class="item-info">
       <div class="info-date">

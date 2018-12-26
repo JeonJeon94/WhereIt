@@ -4,11 +4,15 @@
   flex:1;
   flex-direction: column;
 
-  input:focus{
+  .flex{
+    display:flex;
+  }
+
+  input:focus, button:focus, textarea:focus{
     outline:none;
   }
-  button:focus{
-    outline:none;
+  textarea{
+    resize: none;
   }
   .header{
     display: flex;
@@ -29,13 +33,70 @@
       display: flex;
       flex-direction: column;
       border-right: 1px solid black;
+      padding-top: 40px;
       a{
         text-decoration: none;
         color: gray;
-        padding: 10px 50px;
+        padding: 10px 100px 10px 50px;
         
         &:hover{
           color:black;
+        }
+      }
+    }
+    .modal{
+      display: none; 
+      position: fixed;
+      z-index: 9;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0,0,0);
+      background-color: rgba(0,0,0,0);
+
+      .list_add{
+        box-sizing: border-box;
+        padding: 50px 0;
+        display:block;
+        text-align: center;
+        border: 1px solid #BEBFBE;
+        background-color: white;
+        width: 450px;
+        height: 220px;
+        text-align: center;
+        margin: 400px auto;
+        
+        #b_add_id{
+          width: 200px;
+          height: 30px;
+          border: 1px solid #A5A6A5;
+          padding: 6px;
+          margin: 0 10px 0 30px;
+          font-size: 15px;
+        }
+        #b_add_btn{
+          background: #F1F2F1;
+          height: 30px;
+          font-size: 15px;
+          border-color: #A5A6A5;
+          padding: 0 20px;
+          cursor: pointer;
+        }
+        #b_close{
+          background: #F1F2F1;
+          height: 30px;
+          font-size: 15px;
+          border-color: #A5A6A5;
+          padding: 0 20px;
+          cursor: pointer;
+          width: 30px;
+          border: 1px solid #A5A6A5;
+          margin: 50px auto 0 auto;
+          align-items: center; 
+          display: flex;
+          justify-content: center;
         }
       }
     }
@@ -50,38 +111,319 @@
         height: 50px;
         padding-left: 50px;
         border-bottom: 1px solid black;
+        margin-top: 2px;
+        border-top: 1px solid black;
+
+        .list, .b_text, .b_file, .rank, .blacklist, .ask, .content, .store{
+          cursor: pointer;
+          padding-right: 70px;
+        }
       }
       .contents{
         flex: 1;
         padding: 20px 50px;
+
+        table{
+          border-collapse: collapse;
+          width: 100%
+        }
+        table th{
+          border-bottom: 5px solid gray;
+          height:50px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        table td{
+          height:50px;
+          text-align: center;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+
+        }
         
         .search_list{
           display: flex;
           align-items: center;
           height: 50px;
+          margin: 30px 0 20px 0;
           
           #list_text{
-            padding-right: 200px;
+            padding-right: 190px;
+            padding-left: 10px;
+            font-size: 24px;
           }
           .search-form{
             flex:1;
-            
-            .search{
-              display: flex;
+
+            #search{
+              margin: 0;
+
+              #select_option{
+                margin-right: 20px;
+                font-size: 15px;
+              }
+
+              #search_word{
+                width: 300px;
+                height: 30px;
+                border: 1px solid #A5A6A5;
+                padding: 6px;
+                margin-right: 10px;
+                font-size: 15px;
+              }
+              #search_btn{
+                background: #F1F2F1;
+                height: 30px;
+                font-size: 15px;
+                border-color: #A5A6A5;
+                padding: 0 20px;
+                cursor: pointer;
+              }
             }
           }
         }
-        .user_list table{
-          border-collapse: collapse;
-          text-align: center;
+        
+        .text_h{
+          margin: 30px 0 20px 0;
+          font-size: 24px;
         }
-        .user_list th{
-          border-bottom: 2px solid black;
-          height:50px;
+        .banner_guide{
+          display: flex;
+          margin-bottom: 10px;
+          align-items: center;
+          
+          #h_text{
+            width: 350px;
+            height: 30px;
+            border: 1px solid #A5A6A5;
+            padding: 6px;
+            margin-right: 10px;
+            font-size: 15px;
+          }
+          #h_btn{
+            background: #F1F2F1;
+            height: 30px;
+            font-size: 15px;
+            border-color: #A5A6A5;
+            padding: 0 20px;
+            cursor: pointer;
+          }
         }
-        .user_list td{
-          height:50px;
+        .m_banner{
+          display: flex;
+          align-items: center;
+
+          #m_text{
+            width: 350px;
+            height: 30px;
+            border: 1px solid #A5A6A5;
+            padding: 6px;
+            margin-right: 10px;
+            font-size: 15px;
+          }
+          #m_btn{
+            background: #F1F2F1;
+            height: 30px;
+            font-size: 15px;
+            border-color: #A5A6A5;
+            padding: 0 20px;
+            cursor: pointer;
+          }
         }
+        .file_h{
+          margin: 30px 0 20px 0;
+          font-size: 24px;
+        }
+        .banner_file{
+          display: flex;
+          flex-direction: column;
+  
+          #f_title, #h_file{
+            width: 350px;
+            height: 30px;
+            border: 1px solid #A5A6A5;
+            padding: 6px;
+            font-size: 15px;
+          }
+          #h_title{
+            margin-bottom: 10px;
+          }
+          #h_file{
+            margin-right: 15px;
+          }
+          .btn_file, #sub_btn, #del_btn, #add_btn{
+            background: #F1F2F1;
+            height: 30px;
+            font-size: 15px;
+            border-color: #A5A6A5;
+            margin-right: 10px;
+            padding: 0 20px;
+            cursor: pointer;
+          }
+          .btn_file, #add_btn, #del_btn{
+            padding: 5px 20px;
+            border: 1px solid #A4A6A4;
+            box-sizing:border-box;
+          }
+          #up_btn{
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1;
+            overflow: hidden;
+            clip: rect(0,0,0,0);
+            border: 0;
+          }
+        }
+        #rank_text{
+          margin: 30px 0 20px 0;
+          font-size: 24px;
+        }
+        .rank_theme{
+          display: flex;
+          margin-bottom: 10px;
+          flex-direction: column;
+
+          #theme_title, #theme_tag{
+            width: 350px;
+            height: 30px;
+            border: 1px solid #A5A6A5;
+            padding: 6px;
+            margin-right: 15px;
+            font-size: 15px;
+          }
+          #up_btn, #del_btn{
+            background: #F1F2F1;
+            height: 30px;
+            font-size: 15px;
+            border-color: #A5A6A5;
+            margin-right: 10px;
+            padding: 0 20px;
+            cursor: pointer;
+          }
+          #del_btn{
+            padding: 5px 20px;
+            border: 1px solid #A4A6A4;
+            box-sizing:border-box;
+          }
+        }
+        #b_list_text{
+          padding-right: 150px;
+          padding-left: 10px;
+          font-size: 24px;
+        }
+        .b_search-form{
+          
+          #b_search{
+            margin: 0;
+            #b_search_id{
+              width: 350px;
+              height: 30px;
+              border: 1px solid #A5A6A5;
+              padding: 6px;
+              margin-right: 15px;
+              font-size: 15px;
+            }
+          }
+        }
+        .ask_text{
+          margin: 30px 0 20px 0;
+          font-size: 24px;
+        }
+        .title{
+          cursor: pointer;
+        }
+        .confirm_area{
+          margin-top: 50px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          #confirm_title, #confirm_email, #confirm_text{
+            width: 800px;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #C9CAC9; 
+          }
+          
+          #confirm_title, #confirm_email{
+            display: flex;
+            align-items: center;
+            height: 40px;
+            margin-bottom: 20px;
+          }
+          #confirm_text{
+            height: 400px;
+            line-height: 20px;
+            margin-bottom: 40px;
+          }
+          #confirm_btn{
+            width: 100px;
+            height: 50px;
+            background-color: #DBE5F1;
+            border: 1px solid #DBE5F1;
+            border-radius: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+          }
+        }
+        .reply_area{
+
+          form{
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            #reply_title, #reply_email, #reply_text{
+              width: 800px;
+              padding: 10px;
+              box-sizing: border-box;
+              border: 1px solid #C9CAC9; 
+              font-size:16px;
+            }
+            #reply_title, #reply_email{
+              display: flex;
+              align-items: center;
+              height: 40px;
+              margin-bottom: 20px;
+            }
+            #reply_text{
+              height: 400px;
+              line-height: 20px;
+              margin-bottom: 40px;
+            }
+            #reply_btn{
+              width: 100px;
+              height: 50px;
+              background-color: #DBE5F1;
+              border: 1px solid #DBE5F1;
+              border-radius: 30px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      #add_btn, #del_btn{
+        background: #F1F2F1;
+        height: 30px;
+        font-size: 15px;
+        border-color: #A5A6A5;
+        margin-right: 10px;
+        padding: 5px 20px;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #A4A6A4;
+        box-sizing:border-box;
+        cursor: pointer;
       }
     }
     .test-form{
@@ -116,6 +458,7 @@
         border-radius: 50px;
         box-sizing: border-box;
         text-align: center;
+        cursor: pointer;
       }
     }
   }

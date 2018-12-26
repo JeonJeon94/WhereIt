@@ -1049,8 +1049,8 @@
 
 .ranking-theme-page .main .rank-area .ranking-store .store-img, .ranking-thismonth-page .main .rank-area .ranking-store .store-img, .ranking-nowdays-page .main .rank-area .ranking-store .store-img {
   overflow: hidden;
-  width: 91vw;
-  height: 51vh;
+  width: 100%;
+  height: 90vw;
   position: relative;
 }
 
