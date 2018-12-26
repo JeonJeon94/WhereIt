@@ -95,6 +95,7 @@
   <script src="/kakao_sdk.js"></script>
 </head>
 <body class="default-page <?=$page?>-page">
+<?php include_once("analyticstracking.php") ?>
   <div class="slide-modal">
     <div class="tooltip-content">
       <div id="content-title"><b>검색 가능</b>한 지역</div>

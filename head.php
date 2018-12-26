@@ -61,6 +61,7 @@
   <script src="/kakao_sdk.js"></script>
 </head>
 <body class="default-page <?=$page?>-page">
+<?php include_once("analyticstracking.php") ?>
 <div class="all">
   <div class="head">
     <div class="top">
