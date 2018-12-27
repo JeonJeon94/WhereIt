@@ -19,8 +19,7 @@ if(!empty($_GET['tag'])){
   $g_tag2 = $rank[tag];
   $theme = $rank[theme];
   $id = $rank[id];
-
-  $rank = sql_one("SELECT * FROM rank WHERE NOT id='$id' AND NOT tag = '$g_tag2'");
+  $rank= sql_select("SELECT * FROM rank WHERE NOT id = '$id' AND NOT tag = '$g_tag2'");
   $g_tag = $rank;
 }else{
   $rank= sql_select("SELECT * FROM rank");
@@ -53,7 +52,7 @@ if(!empty($_GET['tag'])){
               <div class="insta-list">
                 <div class="insta-text-h" style="padding-top:3px;"><a href="">#<?=$g_tag2?></a></div>
                 <?php foreach ($g_tag as $info) {?>
-                <div class="insta-text" style="display:none; padding:3px 0;"><a href="rank.php?tag=<?=$info[tag]?>">#<?=$info[tag]?></a></div>
+                  <div class="insta-text" style="display:none; padding:3px 0;"><a href="rank.php?tag=<?=$info[tag]?>">#<?=$info[tag]?></a></div>
                 <?php } ?>
               </div>
             </div>
