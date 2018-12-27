@@ -1,18 +1,19 @@
 <?php $page = "main"; ?>
 
 <?php include_once("./m.head.php"); ?>
-
+<?php
+  $result = sql_select('SELECT * FROM banner_file_m ')
+?>
   <div class="main">
     <div>
       <div class="owl-carousel owl-theme">
         <?php
-          // for($i=1; $i <= 2; $i++){
-          //   $url = "./m.news_detail.php?data-id=$i";
-          //   $banner = "./images/main_banner/whereit_img_m.main_00$i.png"
+          foreach($result as $rows){
         ?>
-        <div class="item" style="margin:0 0.3em;" data-id="1" onclick="click_main_banner(this,'')">
-          <img src='./images/main_banner/android/whereit_img_main_02.png'>
+        <div class="item" style="margin:0 0.3em;" data-id="<?=$rows[id]?>" onclick="click_main_banner(this,'<?=$rows[url]?>')">
+          <img src='<?=$rows[banner_file]?>'>
         </div>
+        <!-- 
         <div class="item" style="margin:0 0.3em;" data-id="2" onclick="click_main_banner(this,'./rank.php?tag=와인')">
           <img src='./images/main_banner/android/whereit_img_main_008.png'>
         </div>
@@ -21,8 +22,8 @@
         </div>
         <div class="item" style="margin:0 0.3em;" data-id="4" onclick="click_main_banner(this,'./news_detail.php?data-id=2')" >
           <img src='./images/main_banner/android/whereit_img_m.main_002.png' >
-        </div>
-        <?php //} ?>
+        </div> -->
+        <?php } ?>
       </div>
     </div>
   </div>
@@ -51,15 +52,11 @@
       }else{
         var center = $(".center .item").attr("data-id")
         console.log(center, max, clicked)
-        if(center == 0){
-          if(clicked == max){
-            return $(".owl-prev").click()
-          }
+        if(center == 1 && clicked == max){
+          return $(".owl-prev").click()
         }
-        if(center == max){
-          if(clicked == 0){
-            return $(".owl-next").click()
-          }
+        if(center == max && clicked == 1){
+          return $(".owl-next").click()
         }
         if(center > clicked){
           $(".owl-prev").click()

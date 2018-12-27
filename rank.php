@@ -29,7 +29,7 @@ if(!empty($_GET['tag'])){
   }
 }else{
   $rank= sql_select("SELECT * FROM rank");
-  $theme = $rank[0][theme];
+  $theme = $rank[1][theme];
   $g_tag2 = $rank[0][tag];
   $g_tag = $rank[1][tag];
 }

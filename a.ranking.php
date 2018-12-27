@@ -24,20 +24,20 @@
             <form class="rank_theme" method=get action="a.ranking_h.php" >
               <div style="display:flex; margin-bottom:10px; align-items:center;">
                 <div style="width: 100px;">테마<?=$i?></div>
-                <input id="theme_title" name="theme_title" placeholder="<?=$rows[theme]?>" />
+                <input id="theme_title" name="theme_title<?=$i?>" placeholder="<?=$rows[theme]?>" />
                 <input type="hidden" name="num" value="<?=$i?>" />
               </div>
               <div style="display:flex; align-items:center;">
                 <div style="width: 100px;">태그<?=$i?></div>
-                <input id="theme_tag" name="theme_tag" placeholder="<?=$rows[tag]?>" />
+                <input id="theme_tag" name="theme_tag<?=$i?>" placeholder="<?=$rows[tag]?>" />
+                <input id="up_btn" type="submit" value="적용" />
                 <div id="del_btn" onclick="del_item(this,<?=$i?>)">삭제</div>
               </div>
             </form>
           </div>
           <?php } ?>
         </div>
-        <div style="display:flex; margin:50px 0 0 200px;">
-          <div id="up_btn" onclick="$('form').submit()">적용</div>
+        <div style="margin:50px 0 0 200px;">
           <div id="add_btn" onclick="add_item()">추가</div>
         </div>
       </div>
@@ -55,12 +55,13 @@
     var str = '<form class="rank_theme" method=get action="a.ranking_h.php">'+
                 '<div style="display:flex; margin-bottom:10px; align-items:center;">'+
                   '<div style="width: 100px;">테마'+count+'</div>'+
-                  '<input id="theme_title" name="theme_title" placeholder="테마를 입력해주세요"/>'+
+                  '<input id="theme_title" name="theme_title'+count+'" placeholder="테마를 입력해주세요"/>'+
                   '<input type="hidden" name="num" value="'+count+'" />'+
                 '</div>'+
                 '<div style="display:flex; align-items:center;">'+
                   '<div style="width: 100px;">태그'+count+'</div>'+
-                  '<input id="theme_tag" name="theme_tag" placeholder="태그를 입력해주세요"/>'+
+                  '<input id="theme_tag" name="theme_tag'+count+'" placeholder="태그를 입력해주세요"/>'+
+                  '<input id="up_btn" type="submit" value="적용" />'+
                   '<div id="del_btn" onclick="del_item(this,'+count+')">삭제</div>'+
                 '</div>'+
               '</form>';

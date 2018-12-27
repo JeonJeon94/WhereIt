@@ -184,7 +184,20 @@
             }
           }
         }
-        #add_btn, #sub_btn,#del_btn {
+        .add_btn{
+          width: 70px;
+          background: #F1F2F1;
+          height: 30px;
+          font-size: 15px;
+          border-color: #A5A6A5;
+          margin-right: 10px;
+          padding: 0 20px;
+          cursor: pointer;
+          padding: 5px 20px;
+          border: 1px solid #A4A6A4;
+          box-sizing:border-box;
+        }
+        #add_btn, .sub_btn, #del_btn {
           width: 70px;
           background: #F1F2F1;
           height: 30px;
@@ -329,27 +342,34 @@
           }
         }
         .file_h{
-          margin: 30px 0 20px 0;
+          margin-right: 60px;
           font-size: 24px;
         }
+        .web, .mobile{
+          font-size: 20px;
+          margin-right: 20px;
+          cursor: pointer;
+        }
+        
         .banner_file{
           display: flex;
           flex-direction: column;
   
-          #f_title, #h_file{
-            width: 350px;
+          .f_title, .h_file{
+            width: 400px;
             height: 30px;
             border: 1px solid #A5A6A5;
             padding: 6px;
             font-size: 15px;
+            margin-right: 20px;
           }
-          #h_title{
+          .h_title{
             margin-bottom: 10px;
           }
-          #h_file{
+          .h_file{
             margin-right: 15px;
           }
-          .btn_file, #del_btn{
+          .btn_file, .del_btn{
             background: #F1F2F1;
             height: 30px;
             font-size: 15px;
@@ -358,7 +378,7 @@
             padding: 0 20px;
             cursor: pointer;
           }
-          .btn_file, #del_btn{
+          .btn_file, .del_btn{
             padding: 5px 20px;
             border: 1px solid #A4A6A4;
             box-sizing:border-box;

@@ -255,7 +255,22 @@
   cursor: pointer;
 }
 
-.default-page .main .submain .contents #add_btn, .default-page .main .submain .contents #sub_btn, .default-page .main .submain .contents #del_btn {
+.default-page .main .submain .contents .add_btn {
+  width: 70px;
+  background: #F1F2F1;
+  height: 30px;
+  font-size: 15px;
+  border-color: #A5A6A5;
+  margin-right: 10px;
+  padding: 0 20px;
+  cursor: pointer;
+  padding: 5px 20px;
+  border: 1px solid #A4A6A4;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.default-page .main .submain .contents #add_btn, .default-page .main .submain .contents .sub_btn, .default-page .main .submain .contents #del_btn {
   width: 70px;
   background: #F1F2F1;
   height: 30px;
@@ -431,8 +446,14 @@
 }
 
 .default-page .main .submain .contents .file_h {
-  margin: 30px 0 20px 0;
+  margin-right: 60px;
   font-size: 24px;
+}
+
+.default-page .main .submain .contents .web, .default-page .main .submain .contents .mobile {
+  font-size: 20px;
+  margin-right: 20px;
+  cursor: pointer;
 }
 
 .default-page .main .submain .contents .banner_file {
@@ -445,23 +466,24 @@
           flex-direction: column;
 }
 
-.default-page .main .submain .contents .banner_file #f_title, .default-page .main .submain .contents .banner_file #h_file {
-  width: 350px;
+.default-page .main .submain .contents .banner_file .f_title, .default-page .main .submain .contents .banner_file .h_file {
+  width: 400px;
   height: 30px;
   border: 1px solid #A5A6A5;
   padding: 6px;
   font-size: 15px;
+  margin-right: 20px;
 }
 
-.default-page .main .submain .contents .banner_file #h_title {
+.default-page .main .submain .contents .banner_file .h_title {
   margin-bottom: 10px;
 }
 
-.default-page .main .submain .contents .banner_file #h_file {
+.default-page .main .submain .contents .banner_file .h_file {
   margin-right: 15px;
 }
 
-.default-page .main .submain .contents .banner_file .btn_file, .default-page .main .submain .contents .banner_file #del_btn {
+.default-page .main .submain .contents .banner_file .btn_file, .default-page .main .submain .contents .banner_file .del_btn {
   background: #F1F2F1;
   height: 30px;
   font-size: 15px;
@@ -471,7 +493,7 @@
   cursor: pointer;
 }
 
-.default-page .main .submain .contents .banner_file .btn_file, .default-page .main .submain .contents .banner_file #del_btn {
+.default-page .main .submain .contents .banner_file .btn_file, .default-page .main .submain .contents .banner_file .del_btn {
   padding: 5px 20px;
   border: 1px solid #A4A6A4;
   -webkit-box-sizing: border-box;

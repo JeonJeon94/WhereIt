@@ -1,15 +1,5 @@
 <?php $page = "main"; ?>
-<?php 
-$arr_browser = array ("iPhone","iPod","IEMobile","Mobile","lgtelecom","PPC");
-
-for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
-  if(strpos($_SERVER['HTTP_USER_AGENT'],$arr_browser[$indexi]) == true){
-  // 모바일 브라우저라면  모바일 URL로 이동 
-    header("Location: ./m.index.php");
-    exit;
-  }
-}
-?>
+ㅈ
 <?php include_once('./head.php'); ?>
 <?php
   $result = sql_select('SELECT * FROM banner_file ')
@@ -20,7 +10,7 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
         <?php
           foreach($result as $rows){
         ?>
-        <div class="item" style="width:1200px; margin:0 0.5em;" onclick="click_main_banner(this,'<?=$rows[url]?>')">
+        <div class="item" style="width:1200px; margin:0 0.5em;" data-id="<?=$rows[id]?>" onclick="click_main_banner(this,'<?=$rows[url]?>')">
           <img src='<?=$rows[banner_file]?>'>
         </div>
         <!-- <div class="item" style="width:1200px; margin:0 0.5em;" data-id="2" onclick="click_main_banner(this,'./rank.php?tag=와인')">
@@ -66,15 +56,11 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
       }else{
         var center = $(".center .item").attr("data-id")
         console.log(center, max, clicked)
-        if(center == 0){
-          if(clicked == max){
-            return $(".owl-prev").click()
-          }
+        if(center == 1 && clicked == max){
+          return $(".owl-prev").click()
         }
-        if(center == max){
-          if(clicked == 0){
-            return $(".owl-next").click()
-          }
+        if(center == max && clicked == 1){
+          return $(".owl-next").click()
         }
         if(center > clicked){
           $(".owl-prev").click()
