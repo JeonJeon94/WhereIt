@@ -3,6 +3,7 @@
 <?php
 
   $ask_list = sql_select("SELECT * FROM ask ORDER BY id DESC");
+  
 ?>
   <div class="main">
     <?php include_once('./a.menu.php'); ?>

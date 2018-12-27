@@ -67,52 +67,52 @@ if($member){
 </script>
 
 <script id="detail-slot" type="text/template">
-    <div class="photo">
-      <img src="<%=imgs[0].link%>" onerror="this.src='./images/whereit_img_loading_p.png'"/>
-    </div>
-    <div class="info">
-      <div class="flex" style="padding-bottom:15px; padding-top:15px;">
-        <div class="keyword">
-          <div class="child-flex-1"><%=collect_region%></div>
-        </div>
-        <div class="keyword">
-          <div class="child-flex-1"><%=category[0]%></div>
-        </div>
+  <div class="photo">
+    <img src="<%=imgs[0].link%>" onerror="this.src='./images/whereit_img_loading_p.png'"/>
+  </div>
+  <div class="info">
+    <div class="flex" style="padding-bottom:15px; padding-top:15px;">
+      <div class="keyword">
+        <div class="child-flex-1"><%=collect_region%></div>
       </div>
-      <div class="name">
-        <%=Name%>
-      </div>
-      <div class="number"><%=phonenumber%></div>
-      <div class="adress"><%=new_address%></div>
-      <div class="hashtag">
-        <% 
-          for(var i=0; i < hasgtag.length;i++){
-        %>
-        <div id="hashtag">#<%=hasgtag[i]%></div>
-        <% } %>
+      <div class="keyword">
+        <div class="child-flex-1"><%=category[0]%></div>
       </div>
     </div>
-    <div class="etc">
-      <div class="month">
-        <div class="share" style="cursor:pointer;">
-          <img src="./images/share.png" />
-        </div>
-        <div class="usage" style="cursor:pointer;" onclick='location.href="toggle_favorit.php?shopId=<?php echo $id; ?>"'>
-          <?php if($favorit){ ?>
-            <img src="./images/star_active.png"/>
-          <?php }else{ ?>
-            <img src="./images/star.png"/>
-          <?php } ?>
-        </div>
+    <div class="name">
+      <%=Name%>
+    </div>
+    <div class="number"><%=phonenumber%></div>
+    <div class="adress"><%=new_address%></div>
+    <div class="hashtag">
+      <% 
+        for(var i=0; i < hasgtag.length;i++){
+      %>
+      <div id="hashtag">#<%=hasgtag[i]%></div>
+      <% } %>
+    </div>
+  </div>
+  <div class="etc">
+    <div class="month">
+      <div class="share" style="cursor:pointer;">
+        <img src="./images/share.png" />
       </div>
-      <div>
-        <div style="padding-top:10px; font-size:14px; font-weight:500; color:#a39aa3;">월간 해시태그 사용량</div>
-        <div style="padding-right:80px; font-size:14px; font-weight:500; float:right; color:#a39aa3;">2.55K</div>
-      </div>
-      <div class="map" style="cursor:pointer;">
-        <img src="./images/map.png"/>
+      <div class="usage" style="cursor:pointer;" onclick='location.href="toggle_favorit.php?shopId=<?php echo $id; ?>"'>
+        <?php if($favorit){ ?>
+          <img src="./images/star_active.png"/>
+        <?php }else{ ?>
+          <img src="./images/star.png"/>
+        <?php } ?>
       </div>
     </div>
+    <div>
+      <div style="padding-top:10px; font-size:14px; font-weight:500; color:#a39aa3;">월간 해시태그 사용량</div>
+      <div style="padding-right:80px; font-size:14px; font-weight:500; float:right; color:#a39aa3;">2.55K</div>
+    </div>
+    <div class="map" style="cursor:pointer;">
+      <img src="./images/map.png"/>
+    </div>
+  </div>
 </script>
 
 <script>
@@ -159,7 +159,6 @@ if($member){
         }catch(err){}
       }
       setTimeout(function(){
-        console.log($(window).scrollTop())
         $(window).scrollTop(0)
       },600)
         
