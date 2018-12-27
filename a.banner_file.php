@@ -80,10 +80,11 @@
   //폼 추가 버튼
   function add_item(e){
     none(e);
+    var flag = false;
+    if(!flag){
     <?php $i = $i+1; ?>
     var count = <?=$i?>;
     var addedFormDiv = document.getElementById("bannerBox");
-
     var str = '<form class="banner_file" method="post" action="a.file.php" enctype="multipart/form-data">'+
                 '<div style="display:flex; margin-bottom:10px; align-items:center;">'+
                   '<div style="width: 100px;">banner'+count+'</div>'+
@@ -105,7 +106,7 @@
     addedDiv.innerHTML = str;
     addedDiv.setAttribute("id","form_num "+count);
     addedFormDiv.appendChild(addedDiv);
-
+    }
   }
 
 </script>

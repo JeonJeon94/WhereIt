@@ -1,5 +1,4 @@
 <?php $page = "main"; ?>
-ㅈ
 <?php include_once('./head.php'); ?>
 <?php
   $result = sql_select('SELECT * FROM banner_file ')
