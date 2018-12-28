@@ -336,7 +336,7 @@
   cursor: pointer;
 }
 
-.default-page .main .submain .contents #add_title {
+.default-page .main .submain .contents .add_title {
   width: 800px;
   height: 30px;
   border: 1px solid #A5A6A5;
@@ -345,7 +345,7 @@
   font-size: 15px;
 }
 
-.default-page .main .submain .contents #add_text {
+.default-page .main .submain .contents .add_text {
   width: 800px;
   height: 400px;
   border: 1px solid #A5A6A5;
@@ -353,7 +353,7 @@
   font-size: 15px;
 }
 
-.default-page .main .submain .contents #c_file, .default-page .main .submain .contents #c_file_sub {
+.default-page .main .submain .contents .c_file, .default-page .main .submain .contents .c_file_sub {
   width: 300px;
   height: 30px;
   border: 1px solid #A5A6A5;
@@ -542,7 +542,7 @@
           flex-direction: column;
 }
 
-.default-page .main .submain .contents .rank_theme #theme_title, .default-page .main .submain .contents .rank_theme #theme_tag {
+.default-page .main .submain .contents .rank_theme .theme_title, .default-page .main .submain .contents .rank_theme .theme_tag {
   width: 350px;
   height: 30px;
   border: 1px solid #A5A6A5;
@@ -551,7 +551,7 @@
   font-size: 15px;
 }
 
-.default-page .main .submain .contents .rank_theme #del_btn {
+.default-page .main .submain .contents .rank_theme .del_btn, .default-page .main .submain .contents .rank_theme .up_btn {
   background: #F1F2F1;
   height: 30px;
   font-size: 15px;
@@ -559,9 +559,6 @@
   margin-right: 10px;
   padding: 0 20px;
   cursor: pointer;
-}
-
-.default-page .main .submain .contents .rank_theme #del_btn {
   padding: 5px 20px;
   border: 1px solid #A4A6A4;
   -webkit-box-sizing: border-box;
@@ -766,6 +763,15 @@
 
 .contents-page .contents {
   width: 900px;
+}
+
+.contents-page .contents #img_box {
+  width: 100px;
+}
+
+.contents-page .contents #img_box #td-img {
+  width: 100%;
+  margin: 20px 0;
 }
 
 .contents-page .contents #enter_btn, .contents-page .contents #cancel_btn {

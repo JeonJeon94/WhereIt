@@ -41,7 +41,7 @@
                 <input class="sub_btn" type="submit" value="적용" />
                 <div class="del_btn" onclick="del_item(this,<?=$i?>)">삭제</div>
                 <?php if($i == $last_num){ ?>
-                <div class="add_btn" onclick="add_item(this)">추가</div>
+                <div id="add_btn<?=$i?>" class="add_btn" onclick="add_item(this)">추가</div>
                 <?php }else{?>
                 <?php } ?>
               </div>
@@ -55,35 +55,44 @@
 </body>
 
 <script>
+  var count = <?=$i?>;
+  
+  //추가 버튼 생성
+  function show(){
+    $('#add_btn<?=$i?>').css('display','block')
+    flag = true;
+  }
+  //추가 버튼 삭제
   function none(e){
     var none = $(e)
-    none.css('display','none')
+      none.css('display','none')
   }
-  
+  //파일 업로드
   function fileupload(e){
     var parentElement = $(e.parentElement.parentElement)
     var textElement = parentElement.children('.h_file')
     var Filename = e.files[0].name;
     textElement[0].value = Filename;
   }
-  
+  //폼 삭제 버튼
   function del_item(obj,thisCount){
-    // obj.parentNode 를 이용하여 삭제
-    
     var thisId = obj.parentNode.parentNode.parentNode;
     document.getElementById("bannerBox").removeChild(thisId);
     if(thisCount <= <?=$last_num?>){
       location.href="a.banner_d.php?id="+thisCount
+    }else {
+      show()
     }
   }
 
   //폼 추가 버튼
+  var flag = true;
+  
   function add_item(e){
     none(e);
-    var flag = false;
-    if(!flag){
+    if(flag){
     <?php $i = $i+1; ?>
-    var count = <?=$i?>;
+    count = <?=$i?>;
     var addedFormDiv = document.getElementById("bannerBox");
     var str = '<form class="banner_file" method="post" action="a.file.php" enctype="multipart/form-data">'+
                 '<div style="display:flex; margin-bottom:10px; align-items:center;">'+
@@ -98,7 +107,7 @@
                   '</label>'+
                   '<input class="sub_btn" type="submit" value="적용" />'+
                   '<div class="del_btn" onclick="del_item(this,'+count+')">삭제</div>'+
-                  '<div class="add_btn" onclick="add_item()">추가</div>'+
+                  '<div id="add_btn'+count+'" class="add_btn" onclick="add_item()">추가</div>'+
                 '</div>'+
               '</form>';
 
@@ -106,6 +115,9 @@
     addedDiv.innerHTML = str;
     addedDiv.setAttribute("id","form_num "+count);
     addedFormDiv.appendChild(addedDiv);
+    flag =false;
+    }else{
+      alert("배너 적용후에 추가해 주세요.")
     }
   }
 

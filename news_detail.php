@@ -19,12 +19,12 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
     $data_id ='';
   }
 
-  if($data_id == 1){
-    $url = "./어디지도/콘텐츠/1회차.png";
-  }else if($data_id == 2){
-    $url = "./히치하이커/콘텐츠내용/히치하이커1회차_01.png";
-  }
+  $result = sql_one("SELECT * FROM contents where id='$data_id'");
+  $text = $result[sub];
 
+  $str = "$text";
+  $arr = explode(',', $str);
+  
 ?>
     <div class="move-top">
       <img id="top" src="./images/top.png" />
@@ -33,17 +33,11 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
       <br>TOP
     </div>
     <div class="main">
-    <?php if($data_id==1) {?>
-      <img src="<?php echo $url ?>"/>
-    <?php }else if($data_id == 2){?>
-      <img src="./히치하이커/콘텐츠내용/히치하이커1회차_01.png"/>
-      <img src="./히치하이커/콘텐츠내용/히치하이커1회차_02.png"/>
-      <img src="./히치하이커/콘텐츠내용/히치하이커1회차_03.png"/>
-      <img src="./히치하이커/콘텐츠내용/히치하이커1회차_04.png"/>
-      <img src="./히치하이커/콘텐츠내용/히치하이커1회차_05.png"/>
-    <?php }else{?>
-      
-    <?php } ?>
+      <?php if(count($arr)<=1){?>
+        <img src="<?=$result[sub]?>"/>
+      <?php }else{ for($i=0; $i<count($arr); $i++){ ?>
+        <img src="<?php echo trim($arr[$i]); ?> " />
+      <?php }} ?>
     </div>
   </div>
 </div>

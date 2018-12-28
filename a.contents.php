@@ -30,28 +30,57 @@
         </div>
         <div class="contents_list">
           <table>
-            <tr>
-              <th style="width:15px;"></th>
-              <th style="width:100px;">번호</th>
-              <th style="width:150px;">대표이미지</th>
-              <th style="width:250px;">제목</th>     
-            </tr>
-            <?php 
-              $count = 0;
-              foreach($result as $rows){ 
-                $count += 1;
-            ?>
-            <tr>
-              <td><input id="check" class="del_check <?= $rows['id']; ?>" type="checkbox" value="<?php echo $rows['id']; ?>"/></td>
-              <td><?php echo $count; ?></td>
-              <td><img src="<?php echo $rows['main']; ?>"/></td>
-              <td><?php echo $rows['title']; ?></td>
-            </tr>
-            <?php } ?>
+            <thead>
+              <tr>
+                <th style="width:15px;"></th>
+                <th style="width:100px;">번호</th>
+                <th style="width:100px;">대표이미지</th>
+                <th>제목</th>     
+              </tr>
+            </thead>
+            <tbody>
+              <?php 
+                $count = 0;
+                foreach($result as $rows){ 
+                  $count += 1;
+              ?>
+              <tr>
+                <td><input id="check" class="del_check <?= $rows['id']; ?>" type="checkbox" value="<?php echo $rows['id']; ?>"/></td>
+                <td><?php echo $count; ?></td>
+                <td id="img_box"><img id="td-img" src="<?php echo $rows['main']; ?>"/></td>
+                <td><?php echo $rows['title']; ?></td>
+              </tr>
+              <?php } ?>
+            </tbody>
           </table>
         </div>
       </div>
     </div>
   </div>
 </body>
+<script>
+
+  var deleteContents = []
+  
+  $('.del_check').click(function(e){
+    var check = $(e.target)[0]
+    let flag = check.checked
+    let id = check.classList[1]
+
+    if(flag){
+      deleteContents.push($(check)[0].classList[1])
+    } else {
+      let index = deleteContents.findIndex((number)=>{
+        return number === check.value
+      })
+      deleteContents.splice(index,1)
+    }
+  })
+  
+  function del_btn(){
+    location.href="./a.del_contents.php?id="+deleteContents
+  }
+
+
+</script>
 </html>

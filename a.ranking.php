@@ -24,21 +24,22 @@
             <form class="rank_theme" method=get action="a.ranking_h.php" >
               <div style="display:flex; margin-bottom:10px; align-items:center;">
                 <div style="width: 100px;">테마<?=$i?></div>
-                <input id="theme_title" name="theme_title<?=$i?>" placeholder="<?=$rows[theme]?>" />
+                <input class="theme_title" name="theme_title<?=$i?>" placeholder="<?=$rows[theme]?>" />
                 <input type="hidden" name="num" value="<?=$i?>" />
               </div>
               <div style="display:flex; align-items:center;">
                 <div style="width: 100px;">태그<?=$i?></div>
-                <input id="theme_tag" name="theme_tag<?=$i?>" placeholder="<?=$rows[tag]?>" />
-                <input id="up_btn" type="submit" value="적용" />
-                <div id="del_btn" onclick="del_item(this,<?=$i?>)">삭제</div>
+                <input class="theme_tag" name="theme_tag<?=$i?>" placeholder="<?=$rows[tag]?>" />
+                <input class="up_btn" type="submit" value="적용" />
+                <div class="del_btn" onclick="del_item(this,<?=$i?>)">삭제</div>
+                <?php if($i == $last_num){ ?>
+                <div id="add_btn<?=$i?>" class="add_btn" onclick="add_item(this)">추가</div>
+                <?php }else{ ?>
+                <?php } ?>
               </div>
             </form>
           </div>
           <?php } ?>
-        </div>
-        <div style="margin:50px 0 0 200px;">
-          <div id="add_btn" onclick="add_item()">추가</div>
         </div>
       </div>
     </div>
@@ -47,42 +48,66 @@
 
 <script>
 
-  //폼 추가 버튼
-  function add_item(){
-    var count = <?=$i?>+1;
-    var addedFormDiv = document.getElementById("rank_form");
+  var count = <?=$i?>;
 
-    var str = '<form class="rank_theme" method=get action="a.ranking_h.php">'+
-                '<div style="display:flex; margin-bottom:10px; align-items:center;">'+
-                  '<div style="width: 100px;">테마'+count+'</div>'+
-                  '<input id="theme_title" name="theme_title'+count+'" placeholder="테마를 입력해주세요"/>'+
-                  '<input type="hidden" name="num" value="'+count+'" />'+
-                '</div>'+
-                '<div style="display:flex; align-items:center;">'+
-                  '<div style="width: 100px;">태그'+count+'</div>'+
-                  '<input id="theme_tag" name="theme_tag'+count+'" placeholder="태그를 입력해주세요"/>'+
-                  '<input id="up_btn" type="submit" value="적용" />'+
-                  '<div id="del_btn" onclick="del_item(this,'+count+')">삭제</div>'+
-                '</div>'+
-              '</form>';
-
-    var addedDiv = document.createElement("div");
-    addedDiv.innerHTML = str;
-    addedDiv.setAttribute('id','form_num '+count);
-    addedFormDiv.appendChild(addedDiv);
-    
-    count++;
+  function none(e){
+    var none = $(e)
+    console.log(none);
+      none.css('display','none')
+  }
+  function show(){
+    $('#add_btn<?=$i?>').css('display','block')
+    flag = true;
   }
 
   //폼 삭제 버튼
   function del_item(obj,thisCount){
-      // obj.parentNode 를 이용하여 삭제
-      var thisId = obj.parentNode.parentNode.parentNode;
-      document.getElementById('rank_form').removeChild(thisId);
-      if(thisCount <= <?=$last_num?>){
-        location.href="a.ranking_d.php?id="+thisCount
-      }
+
+    var thisId = obj.parentNode.parentNode.parentNode;
+    document.getElementById('rank_form').removeChild(thisId);
+    if(thisCount <= <?=$last_num?>){
+      location.href="a.ranking_d.php?id="+thisCount
+    }else{
+      show();
     }
+  }
+
+  var flag = true;
+  //폼 추가 버튼
+  function add_item(e){
+    none(e)
+
+    if(flag){
+      <?php $i = $i+1; ?>
+      count = <?=$i?>;
+      var addedFormDiv = document.getElementById("rank_form");
+
+      var str = '<form class="rank_theme" method=get action="a.ranking_h.php">'+
+                  '<div style="display:flex; margin-bottom:10px; align-items:center;">'+
+                    '<div style="width: 100px;">테마'+count+'</div>'+
+                    '<input class="theme_title" name="theme_title'+count+'" placeholder="테마를 입력해주세요"/>'+
+                    '<input type="hidden" name="num" value="'+count+'" />'+
+                  '</div>'+
+                  '<div style="display:flex; align-items:center;">'+
+                    '<div style="width: 100px;">태그'+count+'</div>'+
+                    '<input class="theme_tag" name="theme_tag'+count+'" placeholder="태그를 입력해주세요"/>'+
+                    '<input class="up_btn" type="submit" value="적용" />'+
+                    '<div class="del_btn" onclick="del_item(this,'+count+')">삭제</div>'+
+                    '<div id="add_btn'+count+'" class="add_btn" onclick="add_item()">추가</div>'+
+                  '</div>'+
+                '</form>';
+
+      var addedDiv = document.createElement("div");
+      addedDiv.innerHTML = str;
+      addedDiv.setAttribute('id','form_num '+count);
+      addedFormDiv.appendChild(addedDiv);
+      flag=false
+    }else{
+
+      alert("배너 적용후에 추가해 주세요.")
+    }
+  }
+
 
 </script>
 

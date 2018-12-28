@@ -251,7 +251,7 @@
           justify-content: center;
           cursor: pointer;
         }
-        #add_title{
+        .add_title{
           width: 800px;
           height: 30px;
           border: 1px solid #A5A6A5;
@@ -259,14 +259,14 @@
           margin: 50px 0 20px 0;
           font-size: 15px;
         }
-        #add_text{
+        .add_text{
           width: 800px;
           height: 400px;
           border: 1px solid #A5A6A5;
           padding: 10px;
           font-size: 15px;
         }
-        #c_file,#c_file_sub{
+        .c_file,.c_file_sub{
           width: 300px;
           height: 30px;
           border: 1px solid #A5A6A5;
@@ -417,7 +417,7 @@
           margin-bottom: 10px;
           flex-direction: column;
 
-          #theme_title, #theme_tag{
+          .theme_title, .theme_tag{
             width: 350px;
             height: 30px;
             border: 1px solid #A5A6A5;
@@ -425,7 +425,7 @@
             margin-right: 15px;
             font-size: 15px;
           }
-          #del_btn{
+          .del_btn, .up_btn{
             background: #F1F2F1;
             height: 30px;
             font-size: 15px;
@@ -433,8 +433,6 @@
             margin-right: 10px;
             padding: 0 20px;
             cursor: pointer;
-          }
-          #del_btn{
             padding: 5px 20px;
             border: 1px solid #A4A6A4;
             box-sizing:border-box;
@@ -590,6 +588,14 @@
   
   .contents{
     width: 900px;
+
+    #img_box{
+      width: 100px;
+      #td-img{
+        width: 100%;
+        margin: 20px 0;
+      }
+    }
     
     #enter_btn, #cancel_btn{
       width: 100px;

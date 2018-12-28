@@ -13,16 +13,6 @@
         <div class="item" style="margin:0 0.3em;" data-id="<?=$rows[id]?>" onclick="click_main_banner(this,'<?=$rows[url]?>')">
           <img src='<?=$rows[banner_file]?>'>
         </div>
-        <!-- 
-        <div class="item" style="margin:0 0.3em;" data-id="2" onclick="click_main_banner(this,'./rank.php?tag=와인')">
-          <img src='./images/main_banner/android/whereit_img_main_008.png'>
-        </div>
-        <div class="item" style="margin:0 0.3em;" data-id="3" onclick="click_main_banner(this,'./news_detail.php?data-id=1')">
-          <img src='./images/main_banner/android/whereit_img_m.main_001.png' >
-        </div>
-        <div class="item" style="margin:0 0.3em;" data-id="4" onclick="click_main_banner(this,'./news_detail.php?data-id=2')" >
-          <img src='./images/main_banner/android/whereit_img_m.main_002.png' >
-        </div> -->
         <?php } ?>
       </div>
     </div>

@@ -21,12 +21,12 @@
         </div>
         <div id="bannerBox">
           <?php
-            $i =0; 
+            $i = 0;
             foreach( $result as $rows){ 
               $i +=1;
           ?>
           <div id="form_num <?=$i?>">
-            <form class="banner_file" method=post action="a.file.php" enctype="multipart/form-data">
+            <form class="banner_file" method=post action="a.file_m.php" enctype="multipart/form-data">
               <div style="display:flex; margin-bottom:10px; align-items:center;">
                 <div style="width: 100px;">banner<?=$i?></div>
                 <input class="f_title" name="title<?=$i?>" value="<?=$rows[url]?>" />
@@ -34,18 +34,20 @@
               </div>
               <div class="fileBox" style="display:flex; padding-left:100px;">
                 <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
-                <input class="h_file h_file<?=$i?>" class="h_file" type="text" name="upload_text" readonly="readonly" value="<?=$rows[banner_file]?>" />
-                <input class="up_btn" type="file" class="upload<?=$i?>" name="upload<?=$i?>"/>
-                <label for="up_btn" class="btn_file">첨부</label>
+                <input class="h_file h_file<?=$i?>" type="text" name="upload_text" readonly="readonly" value="<?=$rows[banner_file]?>" />
+                <label class="btn_file">
+                  <input style="display:none;" class="up_btn" type="file" class="upload<?=$i?>" name="upload<?=$i?>" onchange="fileupload(this)"/>첨부
+                </label>
                 <input class="sub_btn" type="submit" value="적용" />
                 <div class="del_btn" onclick="del_item(this,<?=$i?>)">삭제</div>
+                <?php if($i == $last_num){ ?>
+                <div id="add_btn<?=$i?>" class="add_btn" onclick="add_item(this)">추가</div>
+                <?php }else{?>
+                <?php } ?>
               </div>
             </form>
           </div>
           <?php } ?>
-        </div>
-        <div style="margin:80px 0 0 300px;">
-          <div class="add_btn" onclick="add_item()">추가</div>
         </div>
       </div>
     </div>
@@ -53,48 +55,60 @@
 </body>
 
 <script>
-  //파일 첨부 버튼
-  $('.btn_file').click(function(){
-    var count = <?=$i?>;
-    var uploadFile = $('.fileBox .upload'+count+'');
-    uploadFile.on('change', function(){
-      if(window.FileReader){
-        var filename = $(this)[0].files[0].name;
-      } else {
-        var filename = $(this).val().split('/').pop().split('\\').pop();
-      }
-      $(this).siblings('#h_file'+count+'').val(filename);
-      
-    });
-  });
   
+  var count = <?=$i?>;
+  //추가 버튼 생성
+  function show(){
+    $('#add_btn<?=$i?>').css('display','block')
+    flag = true;
+  }
+  
+  //추가 버튼 삭제
+  function none(e){
+    var none = $(e)
+      none.css('display','none')
+  }
+  //파일 업로드
+  function fileupload(e){
+    var parentElement = $(e.parentElement.parentElement)
+    var textElement = parentElement.children('.h_file')
+    var Filename = e.files[0].name;
+    textElement[0].value = Filename;
+  }
+  //폼 삭제 버튼
   function del_item(obj,thisCount){
-    // obj.parentNode 를 이용하여 삭제
-    
     var thisId = obj.parentNode.parentNode.parentNode;
     document.getElementById("bannerBox").removeChild(thisId);
     if(thisCount <= <?=$last_num?>){
-      location.href="a.banner_d.php?id="+thisCount
+      location.href="a.banner_dm.php?id="+thisCount
+    }else{
+      show();
     }
   }
 
   //폼 추가 버튼
-  function add_item(){
-    var count = <?=$i?>+1;
+  var flag = true;
+  
+  function add_item(e){
+    none(e);
+    if(flag){
+    <?php $i = $i+1; ?>
+    count = <?=$i?>;
     var addedFormDiv = document.getElementById("bannerBox");
-
-    var str = '<form class="banner_file" method=get action="a.file.php" enctype="multipart/form-data">'+
+    var str = '<form class="banner_file" method="post" action="a.file_m.php" enctype="multipart/form-data">'+
                 '<div style="display:flex; margin-bottom:10px; align-items:center;">'+
                   '<div style="width: 100px;">banner'+count+'</div>'+
-                  '<input id="f_title" name="title'+count+'" placeholder="URL" />'+
+                  '<input class="f_title" name="title'+count+'" placeholder="URL" />'+
                   '<input type="hidden" name="num" value="'+count+'" />'+
                 '</div>'+
                 '<div class="fileBox" style="display:flex; padding-left:100px;">'+
-                  '<input id="h_file'+count+'" class="h_file" type="text" readonly="readonly" placeholder="파일명" />'+
-                  '<label for="up_btn" class="btn_file">첨부</label>'+
-                  '<input id="up_btn" type="file" class="upload'+count+'" name="upload'+count+'"/>'+
-                  '<input id="sub_btn" type="submit" value="적용" />'+
-                  '<div id="del_btn" onclick="del_item(this,'+count+')">삭제</div>'+
+                  '<input class="h_file h_file'+count+'" type="text" readonly="readonly" placeholder="파일명" />'+
+                  '<label class="btn_file">'+
+                    '<input style="display:none;" class="up_btn" type="file" class="upload'+count+'" name="upload'+count+'" onchange="fileupload(this)"/>첨부'+
+                  '</label>'+
+                  '<input class="sub_btn" type="submit" value="적용" />'+
+                  '<div class="del_btn" onclick="del_item(this,'+count+')">삭제</div>'+
+                  '<div id="add_btn'+count+'"class="add_btn" onclick="add_item()">추가</div>'+
                 '</div>'+
               '</form>';
 
@@ -102,7 +116,10 @@
     addedDiv.innerHTML = str;
     addedDiv.setAttribute("id","form_num "+count);
     addedFormDiv.appendChild(addedDiv);
-
+    flag =false;
+    }else{
+      alert("배너 적용후에 추가해 주세요.")
+    }
   }
 
 </script>

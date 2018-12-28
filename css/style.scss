@@ -1242,6 +1242,7 @@ body{
         .item-info{
           position: relative;
           display: flex;
+          flex:1;
           flex-direction: column;
           justify-content: center;
           padding-left: 50px;
