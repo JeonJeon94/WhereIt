@@ -839,8 +839,8 @@
 }
 
 .store-page .contents .store_info .photo {
-  width: 400px;
-  height: 400px;
+  width: 350px;
+  height: 350px;
   overflow: hidden;
   position: relative;
 }
