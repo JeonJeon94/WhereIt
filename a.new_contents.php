@@ -15,7 +15,7 @@
       <div class="submenu">
         <div class="content" onclick="location.href='./a.contents.php'">컨텐츠관리</div>
       </div>
-      <div class="contents">
+      <div class="contents" style="margin: 0 auto;">
         <form method="post" action="a.add_contents.php" enctype="multipart/form-data">
           <input class="add_title" name="add_title" type="text" placeholder="제목"/>
           <div style="display:flex; align-items:center; margin-bottom:20px;">

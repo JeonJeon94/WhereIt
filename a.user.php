@@ -14,26 +14,52 @@ if(!empty($_GET['search_word'])){
   $option = $_GET['option'];
   $word = $_GET['search_word'];
   $sql = "SELECT * FROM users";
-  $find_sql = " WHERE ".$option." LIKE '%$word%' ORDER BY id DESC";
+  $find_sql = " WHERE ".$option." LIKE '%$word%' ";
   $sql .= $find_sql;
 }else{
   if(isset($word)){
-    $find_sql = " WHERE ".$option." LIKE '%$word%' ORDER BY id DESC";
+    $find_sql = " WHERE ".$option." LIKE '%$word%' ";
     $sql = "SELECT * FROM users";
     $sql .= $find_sql;
   }else{
-    $sql = "SELECT * FROM users ORDER BY id DESC";
+    $sql = "SELECT * FROM users";
   }
 }
 
 $result = sql_select($sql);
 
 
+$LIST_SIZE = 10;
+$MORE_PAGE = 10;
 
-$a = sql_query("SELECT count(*) FROM users");
-$aa = mysqli_fetch_array($a);
+$page = isset($_GET['page']) ? intval($_GET['page']) : 1;
+if(!empty($find_sql)){
+  $page_q = mysqli_query($conn,"SELECT CEIL( COUNT(*)/$LIST_SIZE ) FROM users ".$find_sql);
+  $page_qq = mysqli_fetch_row($page_q); 
+  $page_count = $page_qq[0];
+  $start_page = max($page - $MORE_PAGE, 1);
+  $end_page = min($page + $MORE_PAGE, $page_count);
+  $prev_page = max($start_page - $MORE_PAGE - 1, 1);
+  $next_page = min($end_page + $MORE_PAGE + 1, $page_count);
+  $offset = ( $page - 1 ) * $LIST_SIZE;
+}else{
+  if(isset($_GET['search_word'])){
+    $page_q = mysqli_query($conn,"SELECT CEIL( COUNT(*)/$LIST_SIZE ) FROM users WHERE ".$_GET['option']." LIKE '%".$_GET['word']."%'");
+  }else if(isset($word)){
+    $page_q = mysqli_query($conn,"SELECT CEIL( COUNT(*)/$LIST_SIZE ) FROM users WHERE ".$option." LIKE '%".$word."%'");
+  }
+  $page_q = mysqli_query($conn,"SELECT CEIL( COUNT(*)/$LIST_SIZE ) FROM users ");
+  $page_qq = mysqli_fetch_row($page_q); 
+  $page_count = $page_qq[0];
+  $start_page = max($page - $MORE_PAGE, 1);
+  $end_page = min($page + $MORE_PAGE, $page_count);
+  $prev_page = max($start_page - $MORE_PAGE - 1, 1);
+  $next_page = min($end_page + $MORE_PAGE + 1, $page_count);
+  $offset = ( $page - 1 ) * $LIST_SIZE;
+}
 
-$count = $aa[0][0];
+$result = sql_select($sql." ORDER BY id DESC LIMIT $offset, $LIST_SIZE ");
+
 
 ?>
   <div class="main">
@@ -71,7 +97,12 @@ $count = $aa[0][0];
               <th style="width:200px;">가입 경로</th>     
             </tr>
             <?php 
-              $u_count = 0;
+              if($page == 1 ){
+                $u_count = 0;
+              }else{
+                $page_num = $page-1;
+                $u_count = $page_num*10;
+              }
               foreach($result as $rows){
                 $u_count +=1; 
             ?>
@@ -91,8 +122,50 @@ $count = $aa[0][0];
               <td><?php echo $rows['register']; ?></td>
             </tr>
             <?php } ?>
-          </table>
-          
+          </table>  
+        </div>
+        <div class='paging_area'>
+          <?php if(isset($word) || isset($_GET['search_word'])){ ?>
+          <?php if( $start_page > 1 ): ?>
+          <a class='move_btn' href="<?= "a.user.php?page=$prev_page&search_word=$word&option=$option" ?>">이전</a>
+          <a class='pagenum' href="<?= "a.user.php?page=1&search_word=$word&option=$option" ?>">1</a> <span class="move_btn">..</span>
+          <?php else: ?>
+          <span class='move_btn disabled'>이전</span>
+          <?php endif ?>
+
+          <?php for( $p = $start_page; $p <= $end_page; $p++ ): ?>
+          <a class='pagenum <?= ( $p == $page )?"current":"" ?>' href="<?= "a.user.php?page=$p&search_word=$word&option=$option" ?>">
+            <?= $p ?>
+          </a>
+          <?php endfor ?>
+
+          <?php if( $end_page < $page_count ): ?>
+          <span class="move_btn">..</span> <a class='pagenum' href="<?= "a.user.php?page=$page_count&search_word=$word&option=$option" ?>"><?= $page_count ?></a>
+          <a class='move_btn' href="<?= "a.user.php?page=$next_page&search_word=$word&option=$option" ?>">다음</a>
+          <?php else: ?>
+          <span class='move_btn disabled'>다음</span>
+          <?php endif ?>
+          <?php }else{ ?>
+          <?php if( $start_page > 1 ): ?>
+          <a class='move_btn' href="<?= "a.user.php?page=$prev_page" ?>">이전</a>
+          <a class='pagenum' href="<?= "a.user.php?page=1" ?>">1</a> <span class="move_btn">..</span>
+          <?php else: ?>
+          <span class='move_btn disabled'>이전</span>
+          <?php endif ?>
+        
+          <?php for( $p = $start_page; $p <= $end_page; $p++ ): ?>
+          <a class='pagenum <?= ( $p == $page )?"current":"" ?>' href="<?= "a.user.php?page=$p" ?>">
+            <?= $p ?>
+          </a>
+          <?php endfor ?>
+
+          <?php if( $end_page < $page_count ): ?>
+          <span class="move_btn">..</span> <a class='pagenum' href="<?= "a.user.php?page=$page_count" ?>"><?= $page_count ?></a>
+          <a class='move_btn' href="<?= "a.user.php?page=$next_page" ?>">다음</a>
+          <?php else: ?>
+          <span class='move_btn disabled'>다음</span>
+          <?php endif ?>
+          <?php } ?>
         </div>
       </div>
     </div>

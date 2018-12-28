@@ -122,7 +122,6 @@
       .contents{
         flex: 1;
         padding: 20px 50px;
-
         table{
           border-collapse: collapse;
           width: 100%
@@ -174,6 +173,7 @@
                 font-size: 15px;
               }
               #search_btn{
+                width: 100px;
                 background: #F1F2F1;
                 height: 30px;
                 font-size: 15px;
@@ -184,8 +184,28 @@
             }
           }
         }
+        .user_list{
+          height: 550px;
+        }
+        .paging_area{
+          font-size: 17px;
+          width: 500px;
+          text-align: center;
+          margin: 30px auto;
+
+          .pagenum{
+            padding: 0 5px;
+          }
+          >a{
+            text-decoration: none;
+          }
+          .move_btn{
+            padding: 0 5px;
+          }
+        }
         .add_btn{
-          width: 70px;
+          width: 100px;
+          text-align: center;
           background: #F1F2F1;
           height: 30px;
           font-size: 15px;
@@ -198,7 +218,8 @@
           box-sizing:border-box;
         }
         #add_btn, .sub_btn, #del_btn {
-          width: 70px;
+          width: 100px;
+          text-align: center;
           background: #F1F2F1;
           height: 30px;
           font-size: 15px;
@@ -261,7 +282,7 @@
         }
         .add_text{
           width: 800px;
-          height: 400px;
+          height: 450px;
           border: 1px solid #A5A6A5;
           padding: 10px;
           font-size: 15px;
@@ -313,6 +334,7 @@
           }
           #h_btn{
             background: #F1F2F1;
+            width: 100px;
             height: 30px;
             font-size: 15px;
             border-color: #A5A6A5;
@@ -334,6 +356,7 @@
           }
           #m_btn{
             background: #F1F2F1;
+            width: 100px;
             height: 30px;
             font-size: 15px;
             border-color: #A5A6A5;
@@ -356,7 +379,7 @@
           flex-direction: column;
   
           .f_title, .h_file{
-            width: 400px;
+            width: 450px;
             height: 30px;
             border: 1px solid #A5A6A5;
             padding: 6px;
@@ -370,6 +393,8 @@
             margin-right: 15px;
           }
           .btn_file, .del_btn{
+            width: 100px;
+            text-align: center;
             background: #F1F2F1;
             height: 30px;
             font-size: 15px;
@@ -379,11 +404,13 @@
             cursor: pointer;
           }
           .btn_file, .del_btn{
+            width: 100px;
             padding: 5px 20px;
             border: 1px solid #A4A6A4;
             box-sizing:border-box;
           }
           #up_btn{
+            width: 100px;
             position: absolute;
             width: 1px;
             height: 1px;
@@ -400,7 +427,7 @@
 
         }
         #up_btn{
-          width: 70px;
+          width: 100px;
           background: #F1F2F1;
           height: 30px;
           font-size: 15px;
@@ -426,6 +453,8 @@
             font-size: 15px;
           }
           .del_btn, .up_btn{
+            text-align: center;
+            width: 100px;
             background: #F1F2F1;
             height: 30px;
             font-size: 15px;
@@ -484,7 +513,7 @@
             margin-bottom: 20px;
           }
           #confirm_text{
-            height: 400px;
+            height: 450px;
             line-height: 20px;
             margin-bottom: 40px;
           }
@@ -522,7 +551,7 @@
               margin-bottom: 20px;
             }
             #reply_text{
-              height: 400px;
+              height: 450px;
               line-height: 20px;
               margin-bottom: 40px;
             }
@@ -548,7 +577,7 @@
       align-items:center;
       
       #admin_id, #admin_pw{
-        width: 400px;
+        width: 450px;
         height: 49px;
         font-size: 14px;
         border-radius: 51px;
@@ -587,7 +616,6 @@
 .contents-page{
   
   .contents{
-    width: 900px;
 
     #img_box{
       width: 100px;
@@ -784,7 +812,6 @@
       display: flex;
       flex : 1;
       flex-wrap: wrap;
-      overflow-x : scroll;
       .list-line{
         overflow: hidden;
         width: 250px;

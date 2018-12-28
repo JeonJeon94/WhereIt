@@ -247,6 +247,7 @@
 }
 
 .default-page .main .submain .contents .search_list .search-form #search #search_btn {
+  width: 100px;
   background: #F1F2F1;
   height: 30px;
   font-size: 15px;
@@ -255,8 +256,32 @@
   cursor: pointer;
 }
 
+.default-page .main .submain .contents .user_list {
+  height: 550px;
+}
+
+.default-page .main .submain .contents .paging_area {
+  font-size: 17px;
+  width: 500px;
+  text-align: center;
+  margin: 30px auto;
+}
+
+.default-page .main .submain .contents .paging_area .pagenum {
+  padding: 0 5px;
+}
+
+.default-page .main .submain .contents .paging_area > a {
+  text-decoration: none;
+}
+
+.default-page .main .submain .contents .paging_area .move_btn {
+  padding: 0 5px;
+}
+
 .default-page .main .submain .contents .add_btn {
-  width: 70px;
+  width: 100px;
+  text-align: center;
   background: #F1F2F1;
   height: 30px;
   font-size: 15px;
@@ -271,7 +296,8 @@
 }
 
 .default-page .main .submain .contents #add_btn, .default-page .main .submain .contents .sub_btn, .default-page .main .submain .contents #del_btn {
-  width: 70px;
+  width: 100px;
+  text-align: center;
   background: #F1F2F1;
   height: 30px;
   font-size: 15px;
@@ -347,7 +373,7 @@
 
 .default-page .main .submain .contents .add_text {
   width: 800px;
-  height: 400px;
+  height: 450px;
   border: 1px solid #A5A6A5;
   padding: 10px;
   font-size: 15px;
@@ -411,6 +437,7 @@
 
 .default-page .main .submain .contents .banner_guide #h_btn {
   background: #F1F2F1;
+  width: 100px;
   height: 30px;
   font-size: 15px;
   border-color: #A5A6A5;
@@ -438,6 +465,7 @@
 
 .default-page .main .submain .contents .m_banner #m_btn {
   background: #F1F2F1;
+  width: 100px;
   height: 30px;
   font-size: 15px;
   border-color: #A5A6A5;
@@ -467,7 +495,7 @@
 }
 
 .default-page .main .submain .contents .banner_file .f_title, .default-page .main .submain .contents .banner_file .h_file {
-  width: 400px;
+  width: 450px;
   height: 30px;
   border: 1px solid #A5A6A5;
   padding: 6px;
@@ -484,6 +512,8 @@
 }
 
 .default-page .main .submain .contents .banner_file .btn_file, .default-page .main .submain .contents .banner_file .del_btn {
+  width: 100px;
+  text-align: center;
   background: #F1F2F1;
   height: 30px;
   font-size: 15px;
@@ -494,6 +524,7 @@
 }
 
 .default-page .main .submain .contents .banner_file .btn_file, .default-page .main .submain .contents .banner_file .del_btn {
+  width: 100px;
   padding: 5px 20px;
   border: 1px solid #A4A6A4;
   -webkit-box-sizing: border-box;
@@ -501,6 +532,7 @@
 }
 
 .default-page .main .submain .contents .banner_file #up_btn {
+  width: 100px;
   position: absolute;
   width: 1px;
   height: 1px;
@@ -517,7 +549,7 @@
 }
 
 .default-page .main .submain .contents #up_btn {
-  width: 70px;
+  width: 100px;
   background: #F1F2F1;
   height: 30px;
   font-size: 15px;
@@ -552,6 +584,8 @@
 }
 
 .default-page .main .submain .contents .rank_theme .del_btn, .default-page .main .submain .contents .rank_theme .up_btn {
+  text-align: center;
+  width: 100px;
   background: #F1F2F1;
   height: 30px;
   font-size: 15px;
@@ -627,7 +661,7 @@
 }
 
 .default-page .main .submain .contents .confirm_area #confirm_text {
-  height: 400px;
+  height: 450px;
   line-height: 20px;
   margin-bottom: 40px;
 }
@@ -685,7 +719,7 @@
 }
 
 .default-page .main .submain .contents .reply_area form #reply_text {
-  height: 400px;
+  height: 450px;
   line-height: 20px;
   margin-bottom: 40px;
 }
@@ -723,7 +757,7 @@
 }
 
 .default-page .main .test-form #admin_id, .default-page .main .test-form #admin_pw {
-  width: 400px;
+  width: 450px;
   height: 49px;
   font-size: 14px;
   border-radius: 51px;
@@ -759,10 +793,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.contents-page .contents {
-  width: 900px;
 }
 
 .contents-page .contents #img_box {
@@ -1024,7 +1054,6 @@
           flex: 1;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  overflow-x: scroll;
 }
 
 .store-page .contents .detail_img .list-line {
