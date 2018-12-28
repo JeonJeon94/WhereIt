@@ -47,7 +47,7 @@
               <tr>
                 <td><input id="check" class="del_check <?= $rows['id']; ?>" type="checkbox" value="<?php echo $rows['id']; ?>"/></td>
                 <td><?php echo $count; ?></td>
-                <td id="img_box"><img id="td-img" src="<?php echo $rows['main']; ?>"/></td>
+                <td id="img_box"><img id="td-img" onclick="location.href='a.contents_edit.php?id=<?=$rows[id]?>'" src="<?php echo $rows['main']; ?>"/></td>
                 <td><?php echo $rows['title']; ?></td>
               </tr>
               <?php } ?>

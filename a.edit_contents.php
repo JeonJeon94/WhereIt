@@ -1,19 +1,20 @@
 <?php
 include "dbconfig.php";
 
-$title = addslashes($_POST['add_title']);
-$text = addslashes($_POST['add_text']);
-$main = $_FILES['add_main']['name'];
-$count = count($_FILES['add_sub']['name']);
+$title = addslashes($_POST['edit_title']);
+$text = addslashes($_POST['edit_text']);
+$main = $_FILES['edit_main']['name'];
+$count = count($_FILES['edit_sub']['name']);
 $id = $_POST['num'];
-if(!empty($_FILES['add_sub']['name'])){
+
+if(!empty($_FILES['edit_sub']['name'])){
   //파일 업로드
-  if(!empty($_FILES['add_main']['name'])){
+  if(!empty($_FILES['edit_main']['name'])){
     //파일 업로드
-    $m_file_name = $_FILES['add_main']['name'];
-    $m_file_tmp_name = $_FILES['add_main']['tmp_name'];   // 임시 디렉토리에 저장된 파일명
-    $m_file_size = $_FILES['add_main']['size'];                 // 업로드한 파일의 크기
-    $m_mimeType = $_FILES['add_main']['type'];                 // 업로드한 파일의 MIME Type
+    $m_file_name = $_FILES['edit_main']['name'];
+    $m_file_tmp_name = $_FILES['edit_main']['tmp_name'];   // 임시 디렉토리에 저장된 파일명
+    $m_file_size = $_FILES['edit_main']['size'];                 // 업로드한 파일의 크기
+    $m_mimeType = $_FILES['edit_main']['type'];                 // 업로드한 파일의 MIME Type
   
     // 첨부 파일이 저장될 서버 디렉토리 지정(원하는 경로에 맞게 수정하세요)
     $m_save_dir = './contents/main/';
@@ -38,14 +39,15 @@ if(!empty($_FILES['add_sub']['name'])){
       die("파일을 지정한 디렉토리에 업로드하는데 실패했습니다.");
     }
   }else{
-    alert_back("대표이미지를 첨부해주세요.");
+    alert_back('대표이미지를 첨부해주세요.');
   }
   for($i=0; $i<$count; $i++){
-    $file_name[$i] = $_FILES['add_sub']['name'][$i];
-    $file_tmp_name[$i] = $_FILES['add_sub']['tmp_name'][$i];   // 임시 디렉토리에 저장된 파일명
-    $file_size[$i] = $_FILES['add_sub']['size'][$i];                 // 업로드한 파일의 크기
-    $mimeType[$i] = $_FILES['add_sub']['type'][$i];                 // 업로드한 파일의 MIME Type
+    $file_name[$i] = $_FILES['edit_sub']['name'][$i];
+    $file_tmp_name[$i] = $_FILES['edit_sub']['tmp_name'][$i];   // 임시 디렉토리에 저장된 파일명
+    $file_size[$i] = $_FILES['edit_sub']['size'][$i];                 // 업로드한 파일의 크기
+    $mimeType[$i] = $_FILES['edit_sub']['type'][$i];                 // 업로드한 파일의 MIME Type
   
+    var_dump($mimeType[$i]);
     // 첨부 파일이 저장될 서버 디렉토리 지정(원하는 경로에 맞게 수정하세요)
     $save_dir = './contents/sub/';
 
@@ -74,9 +76,6 @@ if(!empty($_FILES['add_sub']['name'])){
       die("파일을 지정한 디렉토리에 업로드하는데 실패했습니다.");
     }
 
-    $last = sql_one("SELECT id FROM contents ORDER BY id DESC");
-    $last_num = $last[id];
-
     $m_link = "./contents/main/".$m_file_name;
       $link = "./contents/sub/".$file_name[$i];
     if($count==1){
@@ -85,7 +84,7 @@ if(!empty($_FILES['add_sub']['name'])){
       $link_a = $link_a.','.$link;
     }
   }
-  sql_query("INSERT INTO contents SET title='$title', text='$text', main='$m_link', sub='$link_a',date=now(), id='$id' ");
+  sql_query("UPDATE contents SET title='$title', text='$text', main='$m_link', sub='$link_a' WHERE id='$id' ");
   php_redirect('./a.contents.php');
 }
 
