@@ -97,17 +97,17 @@ $result = sql_select($sql." ORDER BY id DESC LIMIT $offset, $LIST_SIZE ");
               <th style="width:200px;">가입 경로</th>     
             </tr>
             <?php 
-              if($page == 1 ){
-                $u_count = 0;
-              }else{
-                $page_num = $page-1;
-                $u_count = $page_num*10;
-              }
+              // if($page == 1 ){
+              //   $u_count = 0;
+              // }else{ß
+              //   $page_num = $page-1;
+              //   $u_count = $page_num*10;
+              // }
               foreach($result as $rows){
-                $u_count +=1; 
+                // $u_count +=1; 
             ?>
             <tr>
-              <td><?php echo $u_count; ?></td>
+              <td><?php echo $rows['id']; ?></td>
               <td><?php echo $rows['user_email']; ?></td>
               <td><?php echo $rows['user_name']; ?></td>
               <td><?php 
