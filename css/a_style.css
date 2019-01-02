@@ -275,7 +275,7 @@
 .default-page .main .submain .contents .paging_area .pagenum {
   padding: 0 5px;
   text-decoration: none;
-  color: gray;
+  color: #A5A6A5;
 }
 
 .default-page .main .submain .contents .paging_area .pagenum:hover {
