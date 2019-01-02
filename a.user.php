@@ -97,14 +97,7 @@ $result = sql_select($sql." ORDER BY id DESC LIMIT $offset, $LIST_SIZE ");
               <th style="width:200px;">가입 경로</th>     
             </tr>
             <?php 
-              // if($page == 1 ){
-              //   $u_count = 0;
-              // }else{ß
-              //   $page_num = $page-1;
-              //   $u_count = $page_num*10;
-              // }
-              foreach($result as $rows){
-                // $u_count +=1; 
+              foreach($result as $rows){ 
             ?>
             <tr>
               <td><?php echo $rows['id']; ?></td>

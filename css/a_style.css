@@ -217,7 +217,7 @@
 }
 
 .default-page .main .submain .contents .search_list #list_text {
-  padding-right: 190px;
+  padding-right: 150px;
   padding-left: 10px;
   font-size: 24px;
 }
@@ -261,18 +261,26 @@
 }
 
 .default-page .main .submain .contents .paging_area {
-  font-size: 17px;
+  font-size: 19px;
   width: 500px;
   text-align: center;
   margin: 30px auto;
 }
 
-.default-page .main .submain .contents .paging_area .pagenum {
-  padding: 0 5px;
+.default-page .main .submain .contents .paging_area .current {
+  text-decoration: none;
+  color: black !important;
 }
 
-.default-page .main .submain .contents .paging_area > a {
+.default-page .main .submain .contents .paging_area .pagenum {
+  padding: 0 5px;
   text-decoration: none;
+  color: gray;
+}
+
+.default-page .main .submain .contents .paging_area .pagenum:hover {
+  text-decoration: none;
+  color: coral;
 }
 
 .default-page .main .submain .contents .paging_area .move_btn {

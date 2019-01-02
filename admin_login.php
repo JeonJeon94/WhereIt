@@ -17,7 +17,7 @@ include './dbconfig.php';
     <form class="test-form" method="post" action="admin_check.php">
       <input id="admin_id" name="admin_id" type="text" placeholder="ID"/>
       <input id="admin_pw" name="password" type="password" placeholder="PW"/>
-      <input id="admin-btn" type="submit" value="전송"/>
+      <input id="admin-btn" type="submit" value="로그인"/>
     </form>
   </div>
 </body>
