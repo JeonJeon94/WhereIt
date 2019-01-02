@@ -556,14 +556,13 @@
   font-size: 24px;
 }
 
-.default-page .main .submain .contents #up_btn {
+.default-page .main .submain .contents #up_btn, .default-page .main .submain .contents .store_btn {
   width: 100px;
   background: #F1F2F1;
   height: 30px;
   font-size: 15px;
   border-color: #A5A6A5;
   margin-right: 10px;
-  padding: 0 20px;
   cursor: pointer;
   padding: 5px 20px;
   border: 1px solid #A4A6A4;
@@ -571,7 +570,11 @@
           box-sizing: border-box;
 }
 
-.default-page .main .submain .contents .rank_theme {
+.default-page .main .submain .contents .store_btn {
+  margin: 20px 0 20px 100px;
+}
+
+.default-page .main .submain .contents .rank_theme, .default-page .main .submain .contents .rank_store {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -582,7 +585,27 @@
           flex-direction: column;
 }
 
-.default-page .main .submain .contents .rank_theme .theme_title, .default-page .main .submain .contents .rank_theme .theme_tag {
+.default-page .main .submain .contents .rank_theme .edit-store, .default-page .main .submain .contents .rank_store .edit-store {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.default-page .main .submain .contents .rank_theme .edit-store .store_title, .default-page .main .submain .contents .rank_store .edit-store .store_title {
+  width: 200px;
+  height: 30px;
+  border: 1px solid #A5A6A5;
+  padding: 6px;
+  font-size: 18px;
+}
+
+.default-page .main .submain .contents .rank_theme .theme_title, .default-page .main .submain .contents .rank_theme .theme_tag, .default-page .main .submain .contents .rank_store .theme_title, .default-page .main .submain .contents .rank_store .theme_tag {
   width: 350px;
   height: 30px;
   border: 1px solid #A5A6A5;
@@ -591,7 +614,7 @@
   font-size: 15px;
 }
 
-.default-page .main .submain .contents .rank_theme .del_btn, .default-page .main .submain .contents .rank_theme .up_btn {
+.default-page .main .submain .contents .rank_theme .del_btn, .default-page .main .submain .contents .rank_theme .up_btn, .default-page .main .submain .contents .rank_store .del_btn, .default-page .main .submain .contents .rank_store .up_btn {
   text-align: center;
   width: 100px;
   background: #F1F2F1;
