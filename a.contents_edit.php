@@ -26,9 +26,7 @@
             <input id="add_main" name="edit_main" type="file" onchange="fileupload(this)"/>
             <input name="num" type="hidden" value="<?=$back[id]?>"/>
           </div>
-          <textarea class="add_text" name="edit_text" type="text">
-            <?php echo $back[text] ?>
-          </textarea>
+          <textarea class="add_text" name="edit_text" type="text"><?php echo $back[text] ?></textarea>
           <div style="display:flex; align-items:center; margin-top:20px;">
             <div>이미지 추가</div>
             <input class="c_file_sub" type="text" readonly="readonly" value="<?php for($i=1; $i<count($sub); $i++){ echo $sub[$i]; }?>" />
