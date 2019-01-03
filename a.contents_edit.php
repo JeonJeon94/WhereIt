@@ -7,8 +7,6 @@
   
   $main = explode('./contents/main/', $back[main]);
   $sub = explode('./contents/sub/', $back[sub]);
-  $main_i = explode(',', $back[main]);
-  $sub_i = explode(',', $back[sub]);
 ?>
   <div class="main">
     <?php include_once('./a.menu.php'); ?>
@@ -34,10 +32,6 @@
             <input id="add_sub" multiple="multiple" name="edit_sub[]" type="file" onchange="fileupload2(this)"/>
           </div>
           <div style="display:flex; justify-content:center; margin-top:20px;">
-          <?php 
-            unlink($main_i[0]);
-            for($i=0; $i<count($sub); $i++){ unlink($sub_i[$i]); }
-          ?>
             <button id="enter_btn" type="submit">수정</button>
             <div id="cancel_btn">취소</div>
           </div>

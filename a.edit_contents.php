@@ -1,11 +1,24 @@
 <?php
 include "dbconfig.php";
 
+$id = $_POST['num'];
+
+$back = sql_one("SELECT * FROM contents WHERE id='$id'");
+$sub_c = explode('./contents/sub/', $back[sub]);  
+
+$main_i = explode(',', $back[main]);
+$sub_i = explode(',', $back[sub]);
+
+unlink($main_i[0]);
+for($i=0; $i<count($sub_c); $i++){ unlink($sub_i[$i]); }
+
 $title = addslashes($_POST['edit_title']);
 $text = addslashes($_POST['edit_text']);
 $main = $_FILES['edit_main']['name'];
 $count = count($_FILES['edit_sub']['name']);
-$id = $_POST['num'];
+
+
+          
 
 if(!empty($_FILES['edit_sub']['name'])){
   //파일 업로드
