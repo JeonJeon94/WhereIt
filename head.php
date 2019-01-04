@@ -106,15 +106,15 @@
             <div style="flex:1;overflow: hidden;">
               <div class="hot" style="transition:all 0.5s">
                 <div class="hot-list-h"><div class="num">1</div><a href="search.php?search=강남">강남</a></div>
-                <div class="hot-list"><div class="num">2</div><a href="search.php?search=서초">서초</a></div>
-                <div class="hot-list"><div class="num">3</div><a href="search.php?search=구의">구의</a></div>
-                <div class="hot-list"><div class="num">4</div><a href="search.php?search=건대">건대</a></div>
-                <div class="hot-list"><div class="num">5</div><a href="search.php?search=목동">목동</a></div>
-                <div class="hot-list"><div class="num">6</div><a href="search.php?search=잠실">잠실</a></div>
-                <div class="hot-list"><div class="num">7</div><a href="search.php?search=신림">신림</a></div>
-                <div class="hot-list"><div class="num">8</div><a href="search.php?search=강변">강변</a></div>
-                <div class="hot-list"><div class="num">9</div><a href="search.php?search=역삼">역삼</a></div>
-                <div class="hot-list"><div class="num">10</div><a href="search.php?search=논현">논현</a></div>
+                <div class="hot-list"><div class="num">2</div><a href="search.php?search=홍대">홍대</a></div>
+                <div class="hot-list"><div class="num">3</div><a href="search.php?search=이태원">이태원</a></div>
+                <div class="hot-list"><div class="num">4</div><a href="search.php?search=익선동">익선동</a></div>
+                <div class="hot-list"><div class="num">5</div><a href="search.php?search=합정">합정</a></div>
+                <div class="hot-list"><div class="num">6</div><a href="search.php?search=압구정">압구정</a></div>
+                <div class="hot-list"><div class="num">7</div><a href="search.php?search=가로수길">가로수길</a></div>
+                <div class="hot-list"><div class="num">8</div><a href="search.php?search=샤로수길">샤로수길</a></div>
+                <div class="hot-list"><div class="num">9</div><a href="search.php?search=경리단길">경리단길</a></div>
+                <div class="hot-list"><div class="num">10</div><a href="search.php?search=북촌">북촌</a></div>
               </div>
             </div>
           </div>
