@@ -54,7 +54,7 @@ if($member){
 <script id="detail-slot" type="text/template">
   <div class="store-info">
     <div class="photo">
-      <img src="<%=imgs[0].link%>" onerror="this.src='./images/whereit_img_loading_m.png'"/>
+      <img src="<%=main_img%>" onerror="this.src='./images/whereit_img_loading_m.png'"/>
     </div>
     <div class="info">
       <div style="padding:3px 0 0 0; display:flex;">

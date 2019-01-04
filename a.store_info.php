@@ -57,7 +57,7 @@
   
 <script id="store-slot" type="text/template">
   <div class="photo">
-    <img src="<%=imgs[0].link%>" onerror="this.src='./images/whereit_img_loading_p.png'"/>
+    <img src="<%=main_img%>" onerror="this.src='./images/whereit_img_loading_p.png'"/>
   </div>
   <div class="info">
     <div class="flex" style="padding-bottom:15px; padding-top:15px;">
@@ -93,7 +93,6 @@
   var storeId = '<?php echo $id; ?>'
   var checkList = []
   var storeName = ''
-
   function delClick(){
     for(let c of checkList){
       api_delete_pic(storeName, c)
@@ -101,7 +100,6 @@
     location.href='a.store_info.php?id=<?=$id?>'
   }
   function checkImg(code){
-    console.log(code);
     let f = checkList.findIndex((ele)=>{
       return ele === code
     })

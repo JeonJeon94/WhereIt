@@ -59,7 +59,7 @@
   
 <script id="store-slot" type="text/template">
   <div class="photo">
-    <img src="<%=imgs[0].link%>" onerror="this.src='./images/whereit_img_loading_p.png'"/>
+    <img src="<%=main_img%>" onerror="this.src='./images/whereit_img_loading_p.png'"/>
   </div>
   <div class="info">
     <div class="flex" style="padding-bottom:15px; padding-top:15px;">
