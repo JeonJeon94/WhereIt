@@ -24,23 +24,23 @@
 ?>
   <div class="main">
     <div class="news-list">
-      <?php foreach($result as $rows){ ?>
+    <?php for($i = $last_num-1; 0 <= $i ; $i--){ ?>
       <div class="list-item">
-        <div class="news-picture" onclick="location.href='./m.news_detail.php?data-id=<?=$rows[id]?>'">
-          <img src="<?=$rows[main]?>" />
+        <div class="news-picture" onclick="location.href='./m.news_detail.php?data-id=<?=$result[$i][id]?>'">
+          <img src="<?=$result[$i][main]?>" />
         </div>
         <div class="news-info">
           <div class="news-date">
-            <?=$rows[date]?>
+            <?=$result[$i][date]?>
           </div>
           <div class="news-title">
-            <?=$rows[title]?>
+            <?=$result[$i][title]?>
           </div>
           <div class="news-content">
-          <?php if(count($rows[text])>52){
-            echo $rows[text];
+          <?php if(count($result[$i][text])>52){
+            echo $result[$i][text];
           }else{
-            echo simpl_str($rows[text],52); 
+            echo simpl_str($result[$i][text],52); 
           }?>
           </div>
         </div>

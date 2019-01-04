@@ -14,7 +14,6 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
 <?php
 
   $result = sql_select("SELECT * FROM contents");
-  
   $last = sql_one("SELECT id FROM contents ORDER BY id DESC");
   $last_num = $last[id];
 ?>
@@ -26,22 +25,22 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
     </div>
     <div class="main">
       <div class="news-list">
-        <?php foreach($result as $rows){ ?>
+        <?php for($i = $last_num-1; 0 <= $i ; $i--){ ?>
         <div class="list-item">
           <div class="item-picture">
-            <img src="<?=$rows[main]?>" />
+            <img src="<?=$result[$i][main]?>" />
           </div>
           <div class="item-info">
             <div class="info-date">
-              <?=$rows[date]?>
+              <?=$result[$i][date]?>
             </div>
             <div class="theme-title">
-              <?=$rows[title]?>
+              <?=$result[$i][title]?>
             </div>
             <div class="text">
-              <?=$rows[text]?>
+              <?=$result[$i][text]?>
             </div>
-            <div class="more" onclick="location.href='news_detail.php?data-id=<?=$rows[id]?>'">
+            <div class="more" onclick="location.href='news_detail.php?data-id=<?=$result[$i][id]?>'">
               <div id="text">
                 VIEW MORE
               </div>
