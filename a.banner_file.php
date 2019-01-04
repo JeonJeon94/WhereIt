@@ -33,7 +33,6 @@
                 <input type="hidden" name="num" value="<?=$i?>" />
               </div>
               <div class="fileBox" style="display:flex; padding-left:100px;">
-                <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
                 <input class="h_file h_file<?=$i?>" type="text" name="upload_text" readonly="readonly" value="<?=$rows[banner_file]?>" />
                 <label class="btn_file">
                   <input style="display:none;" class="up_btn" type="file" class="upload<?=$i?>" name="upload<?=$i?>" onchange="fileupload(this)"/>첨부

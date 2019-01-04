@@ -60,7 +60,6 @@ if(!empty($_FILES['edit_sub']['name'])){
     $file_size[$i] = $_FILES['edit_sub']['size'][$i];                 // 업로드한 파일의 크기
     $mimeType[$i] = $_FILES['edit_sub']['type'][$i];                 // 업로드한 파일의 MIME Type
   
-    var_dump($mimeType[$i]);
     // 첨부 파일이 저장될 서버 디렉토리 지정(원하는 경로에 맞게 수정하세요)
     $save_dir = './contents/sub/';
 

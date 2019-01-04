@@ -26,6 +26,26 @@
       padding: 30px;
     }
   }
+  .store_add{
+    position: absolute;
+    background-color: white;
+    z-index: 10;
+    border-radius: 30px;
+    left: 600px;
+    top: 300px;
+    border: 1px solid black;
+    width: 600px;
+    height: 400px;
+    padding: 50px;
+
+    .store_name, .store_phone, .store_index, .store_hashtag, .store_address{
+      width: 100px;
+
+    }
+    #store_name,{
+
+    }
+  }
   .main{
     display: flex;
     flex: 1;
