@@ -126,6 +126,9 @@
           flex-direction: column;
   border-right: 1px solid black;
   padding-top: 40px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 240px;
 }
 
 .default-page .main .menu a {
@@ -1005,7 +1008,7 @@
 }
 
 .store-page .contents .store_info .info .hashtag > input {
-  width: 250px;
+  width: 50px;
   height: 30px;
   font-size: 16px;
   margin-right: 20px;

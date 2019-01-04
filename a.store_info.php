@@ -79,7 +79,7 @@
       <% } %>
     </div>
     <div class="number"><%=phonenumber%></div>
-    <div class="adress"><%=new_address%></div>
+    <div class="address"><%=new_address%></div>
   </div>
   <div class="etc">
     <div>
@@ -93,6 +93,7 @@
   var storeId = '<?php echo $id; ?>'
   var checkList = []
   var storeName = ''
+
   function delClick(){
     for(let c of checkList){
       api_delete_pic(storeName, c)
@@ -100,6 +101,7 @@
     location.href='a.store_info.php?id=<?=$id?>'
   }
   function checkImg(code){
+    console.log(code);
     let f = checkList.findIndex((ele)=>{
       return ele === code
     })

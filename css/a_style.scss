@@ -86,6 +86,8 @@
       flex-direction: column;
       border-right: 1px solid black;
       padding-top: 40px;
+      flex-shrink: 0;
+      width: 240px;
       a{
         text-decoration: none;
         color: gray;
@@ -788,7 +790,7 @@
           margin-bottom: 80px;
           
           >input{
-            width: 250px;
+            width: 50px;
             height: 30px;
             font-size: 16px;
             margin-right: 20px;

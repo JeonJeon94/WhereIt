@@ -1,7 +1,7 @@
 <?php $page="store"; ?>
 <?php include_once('./a.head.php'); ?>
 <?php 
-  
+
   if(!empty($_GET['id'])){
     $id = $_GET['id'];
   }else{
@@ -23,7 +23,7 @@
 </body>
 
 <script>
-  
+
   function loadTemplate(id) { return document.getElementById(id).innerHTML; }
 
   $(function(){
@@ -48,13 +48,47 @@
   <div style="display:flex;">
     <div id="img_list" onclick="location.href='a.store.php'">목록</div>
     <div id="img_name"><%=Name%></div>
-    <div id="img_save" onclick="saveImg()">저장</div> 
+    <div id="img_save" onclick="saveImg('<%=Name%>')">저장</div> 
   </div>
 </script>
   
 <script>
+  
   var storeId = '<?php echo $id; ?>'
+  var checkList = []
 
+  function saveImg(storeName){
+    if(checkList.length >1){
+      alert("대표이미지는 한개만 설정할수 있습니다.")
+
+    }else if(checkList.length == 1){
+
+      for(let c of checkList){
+        api_select_pic(storeName,c, function(res){
+          if(res.code ==1){
+            location.href='a.store.php'
+          }else{
+            alert("대표이미지 설정에 실패하였습니다.")
+          }
+        })
+      }
+    }else(
+      alert("이미지를 선택해주세요!")
+    )
+  }
+
+  function __select(code){
+    let f = checkList.findIndex((ele)=>{
+      return ele === code
+    })
+    
+    if(f !== -1){
+      checkList.splice(f,1)
+    } else{
+      checkList.push(code)
+    }
+  }
+  
   $(function(){
     api_shop_detail(storeId,function(data){
       var store_template = _.template($("#img-slot").html());
@@ -65,7 +99,7 @@
           continue
         }
         try{
-          $(".detail_img").append( store_template(row) )
+          $(".detail_img").append( store_template(row))
         }catch(err){}
       }  
     })
@@ -74,8 +108,9 @@
 
 <script id="img-slot" type="text/template">
   <div class="list-line">
-    <input id="check" class="del_check" type="checkbox"/>
+    <input class="select_check" onclick="__select('<%=code%>')" type="checkbox"/>
     <img src="<%=link%>" onerror="this.src='./images/whereit_img_loading_p.png'" onclick="location.href='https://instagram.com/p/<%=code%>'"/>
   </div>
 </script>
+
 </html>

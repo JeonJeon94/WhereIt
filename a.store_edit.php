@@ -36,6 +36,7 @@
       var slot_template = _.template($("#store-slot").html());
       var row = data.payload
       var hastag = []
+
       for(var i=0; i<row.hasgtag.length; i++){
         if(row.hasgtag[i] === " "){
             continue
@@ -52,17 +53,7 @@
       }catch(err){console.log(err)}  
     })
   })
-  function endClick(){
-    var hashtag = $('#hashtag0').val()
-    var hashtag2 = $('#hashtag1').val()
-    var number = $('.number').val()
-    var adress = $('.adress').val()
-    console.log(hashtag);
-    console.log(hashtag2);
-    console.log(number);
-    console.log(adress);
 
-  }
 </script>
   
   
@@ -86,11 +77,12 @@
       <% 
         for(var i=0; i < hasgtag.length;i++){
       %>
-      <input id="hashtag<%=i%>" name="hashtag" value="<%=hasgtag[i]%>"/>
+      <input class="__hashtag" onKeyDown='hash_keydown(event)' value="<%=hasgtag[i]%>"/>
       <% } %>
+      <button onclick="more_hashtag(this)">+</button>
     </div>
     <input class="number" name="number" value="<%=phonenumber%>"/>
-    <input class="adress" name="adress" value="<%=new_address%>" />
+    <input class="address" name="address" value="<%=new_address%>" />
   </div>
   <div class="etc">
     <div>
@@ -136,6 +128,40 @@
       }  
     })
   })
+
+  function hash_keydown(e){
+    // console.log(e.target.value.length)
+    if(e.keyCode == 8 && e.target.value.length == 0){
+      $(e.target).remove()
+    }
+  }
+
+  function more_hashtag(elem){
+    // delete 버튼으로 폼 삭제
+    $(elem).before("<input class='__hashtag' onKeyDown='hash_keydown(event)'></input>")
+  }
+
+  function endClick(){
+    var number = $('.number').val()
+    var address = $('.address').val()
+
+    if('<?=$id?>'==""||address==""||number==""){
+      alert("빈칸을 모두 채워주세요.")
+    }else{
+      var hashtag = []
+      $('.__hashtag').each(function(){
+        hashtag.push($(this).val())
+      })
+
+      api_update_shop('<?=$id?>',address,number,hashtag.join(","),function(res){
+        if(res.code == 1){
+          location.href='a.store_info.php?id=<?=$id?>'
+        }else{
+          alert('업체 수정에 오류가 있습니다.');
+        }
+      })
+    }
+  }
   
 </script>
 
