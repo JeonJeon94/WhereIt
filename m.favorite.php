@@ -30,6 +30,9 @@ $shop_list = sql_select("SELECT shopId FROM favorit WHERE user_id = '$member[id]
 
 
 <script>
+
+  var main = []
+  
   $(document).ready(function(){
     var L_array = <?php echo json_encode($shop_list); ?>;
     L_array.forEach(
@@ -40,6 +43,11 @@ $shop_list = sql_select("SELECT shopId FROM favorit WHERE user_id = '$member[id]
           let nameDump = row.Name
               nameDump = nameDump.length>6 ? nameDump.slice(0,6)+"..." : nameDump
               row.Name = nameDump
+
+          if(row.main_img === undefined){
+            main.push(row.imgs[0].link)
+            row.main_img = main
+          }
           try{
             $(".list-line").append( slot_template(row) )
           }catch(err){}  

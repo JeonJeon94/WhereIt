@@ -36,6 +36,7 @@
       var slot_template = _.template($("#store-slot").html());
       var row = data.payload
       var hastag = []
+      var main = []
       for(var i=0; i<row.hasgtag.length; i++){
         if(row.hasgtag[i] === " "){
             continue
@@ -47,6 +48,11 @@
         row.imgs[0].link = './images/whereit_img_loading_p.png'
       }
       row.hasgtag = hastag
+
+      if(row.main_img === undefined){
+        main.push(row.imgs[0].link)
+        row.main_img = main
+      }
       try{
         $(".store_info").append(slot_template(row))
       }catch(err){console.log(err)}  

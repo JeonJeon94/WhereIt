@@ -36,7 +36,7 @@
       var slot_template = _.template($("#store-slot").html());
       var row = data.payload
       var hastag = []
-
+      var main = []
       for(var i=0; i<row.hasgtag.length; i++){
         if(row.hasgtag[i] === " "){
             continue
@@ -48,6 +48,11 @@
         row.imgs[0].link = './images/whereit_img_loading_p.png'
       }
       row.hasgtag = hastag
+
+      if(row.main_img === undefined){
+        main.push(row.imgs[0].link)
+        row.main_img = main
+      }
       try{
         $(".store_info").append(slot_template(row))
       }catch(err){console.log(err)}  
@@ -55,7 +60,6 @@
   })
 
 </script>
-  
   
 <script id="store-slot" type="text/template">
   <div class="photo">
@@ -154,7 +158,7 @@
       })
       for(let i = 0; i < hashtag.length; i++){
         if(hashtag[i]==""){
-          alert("해시태그값을 모두 채워주세.")
+          alert("해시태그값을 모두 채워주세요.")
           return location.href='a.store_edit.php?id=<?=$id?>';
         }else{
           continue;

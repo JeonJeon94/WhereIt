@@ -69,6 +69,9 @@ $shop_list = sql_select("SELECT shopId FROM favorit WHERE user_id = '$member[id]
     </div>
 
 <script>
+
+  var main = []
+  
   $(document).ready(function(){
     var L_array = <?php echo json_encode($shop_list); ?>;
     L_array.forEach(
@@ -76,6 +79,11 @@ $shop_list = sql_select("SELECT shopId FROM favorit WHERE user_id = '$member[id]
         api_shop_detail(value.shopId,function(data){
           var slot_template = _.template($("#store-slot").html());
           var row = data.payload
+
+          if(row.main_img === undefined){
+            main.push(row.imgs[0].link)
+            row.main_img = main
+          }
           try{
             $(".list-line").append( slot_template(row) )
           }catch(err){}  
