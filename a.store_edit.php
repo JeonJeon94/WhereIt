@@ -152,6 +152,14 @@
       $('.__hashtag').each(function(){
         hashtag.push($(this).val())
       })
+      for(let i = 0; i < hashtag.length; i++){
+        if(hashtag[i]==""){
+          alert("해시태그값을 모두 채워주세.")
+          return location.href='a.store_edit.php?id=<?=$id?>';
+        }else{
+          continue;
+        }
+      }
 
       api_update_shop('<?=$id?>',address,number,hashtag.join(","),function(res){
         if(res.code == 1){
