@@ -44,7 +44,7 @@ if(!empty($_GET['tag'])){
         <div class="insta-tag">
           <div style="flex:0 1 auto;">
             <div class="insta-list">
-            <div class="insta-text-h" style="padding-top:3px;"><a href="">#<?=$g_tag2?></a></div>
+            <div class="insta-text-h" style="padding-top:3px;"><a href="rank.php">#<?=$g_tag2?></a></div>
                 <div class="insta-text" style="display:none; padding:3px 0;"><a href="m.rank.php?tag=<?=$g_tag?>">#<?=$g_tag?></a></div>
             </div>
           </div>
