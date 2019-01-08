@@ -29,7 +29,6 @@
       }else if(res.code == -2){
         if(res.err.indexOf('Duplicate') >= 0 ){
           alert_back("이미 가입되어 있는 이메일입니다.");
-          console.log(res.err.indexOf())
         }else{
           alert_back("이메일 전송에 실패했습니다. 정확한 이메일을 입력해주세요");
         }
@@ -37,7 +36,6 @@
         alert_back("가입도중 문제가 발생했습니다. 다시 시도해주세요!");
       }
     })
-
   })
 
 </script>
