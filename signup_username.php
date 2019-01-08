@@ -12,7 +12,7 @@
     alert_back("이미 사용중인 닉네임 입니다.");
   }
 ?>
-<script src="http://13.124.4.4/gen_api.js"></script>
+<script src="http://52.79.100.193/gen_api.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <script>
@@ -29,6 +29,7 @@
       }else if(res.code == -2){
         if(res.err.indexOf('Duplicate') >= 0 ){
           alert_back("이미 가입되어 있는 이메일입니다.");
+          console.log(res.err.indexOf())
         }else{
           alert_back("이메일 전송에 실패했습니다. 정확한 이메일을 입력해주세요");
         }
