@@ -570,6 +570,10 @@ body {
   margin-left: 21px;
 }
 
+.info-page .main {
+  min-height: 1132px !important;
+}
+
 .info-page .main .service-info {
   width: 950px;
   height: auto;
