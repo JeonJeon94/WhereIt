@@ -18,6 +18,8 @@ if(!empty($_GET['tag'])){
   $rank = sql_one("SELECT * FROM rank WHERE tag='$g_tag' ");
   $g_tag2 = $rank[tag];
   $theme = $rank[theme];
+  $ranking = $rank[ranking];
+  $list = explode(",", $ranking);
   $id = $rank[id];
   $rank= sql_select("SELECT * FROM rank WHERE NOT id = '$id' AND NOT tag = '$g_tag2'");
   $g_tag = $rank;
@@ -26,6 +28,7 @@ if(!empty($_GET['tag'])){
   $theme = $rank[0][theme];
   $g_tag2 = $rank[0][tag];
   $id = $rank[0][id];
+  $ranking = $rank[0][ranking];
   $rank= sql_select("SELECT * FROM rank WHERE NOT id = '$id' AND NOT tag = '$g_tag2'");
   $g_tag = $rank;
 }
@@ -74,12 +77,13 @@ if(!empty($_GET['tag'])){
     </div>
 
 <script>
-  if('<?=$g_tag2?>'=='피자'){
-    var store_name = ['대장장이화덕피자','피자네버슬립스','옥인피자','리골레토시카고피자','매덕스피자','팔로피자','피자오','보니스피자펍','피자무쪼','계동피자'];
-  }else if('<?=$g_tag2?>'=='와인'){
-    var store_name = ['먼데이블루스','세컨라운드','심퍼티쿠시','서촌블루스','둘세이수아베','몽리와인바','순라길비비','루나씨엘로','블루브릿지','우아시스'];
-  }
-
+  // if('<?=$g_tag2?>'=='피자'){
+  //   var store_name = ['대장장이화덕피자','피자네버슬립스','옥인피자','리골레토시카고피자','매덕스피자','팔로피자','피자오','보니스피자펍','피자무쪼','계동피자'];
+  // }else if('<?=$g_tag2?>'=='와인'){
+  //   // var store_name = ['먼데이블루스','세컨라운드','심퍼티쿠시','서촌블루스','둘세이수아베','몽리와인바','순라길비비','루나씨엘로','블루브릿지','우아시스'];
+  // }
+  var store_name = ['<?=$list[0]?>','<?=$list[1]?>',<?=$list[2]?>,<?=$list[3]?>,<?=$list[4]?>,<?=$list[5]?>,<?=$list[6]?>,<?=$list[7]?>,<?=$list[8]?>,<?=$list[9]?>,<?=$list[10]?>]
+  console.log(store_name);
   
   function loadTemplate(id) { return document.getElementById(id).innerHTML; }
 
