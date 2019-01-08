@@ -5,7 +5,7 @@
     $(document).on("click", ".share", function(){
       j = !j
       if( j == true){
-        $('.share img').attr('src', './images/ETC/share-active.png')
+        $('.share img').attr('src', './images/etc/share-active.png')
       }else{
         $('.share img').attr('src', './images/share.png')
       }
