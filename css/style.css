@@ -826,6 +826,7 @@ body {
 .info-page .main, .search-page .main, .ranking-theme-page .main, .ranking-nowdays-page .main, .ranking-thismonth-page .main, .detail-page .main, .magazine-page .main, .asking-page .main, .login-page .main, .find-page .main, .sign-page .main, .edit-pw-page .main, .mypage-page .main, .myinfo-page .main, .userule-page .main {
   width: 1200px;
   margin: 0 auto;
+  min-height: 84vh !important;
 }
 
 .info-page .main .loading, .search-page .main .loading, .ranking-theme-page .main .loading, .ranking-nowdays-page .main .loading, .ranking-thismonth-page .main .loading, .detail-page .main .loading, .magazine-page .main .loading, .asking-page .main .loading, .login-page .main .loading, .find-page .main .loading, .sign-page .main .loading, .edit-pw-page .main .loading, .mypage-page .main .loading, .myinfo-page .main .loading, .userule-page .main .loading {
@@ -1431,6 +1432,7 @@ body {
           box-sizing: border-box;
   padding: 20px 0px;
   min-height: 545px;
+  max-height: 585px;
 }
 
 .ranking-theme-page .all .main .rank-area .ranking5, .ranking-thismonth-page .all .main .rank-area .ranking5, .ranking-nowdays-page .all .main .rank-area .ranking5 {

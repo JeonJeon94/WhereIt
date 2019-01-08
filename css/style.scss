@@ -587,6 +587,7 @@ body{
   .main{
     width: 1200px;
     margin: 0 auto;
+    min-height: 84vh !important;
     
     .loading {
       position: relative;
@@ -1072,6 +1073,7 @@ body{
         box-sizing: border-box;
         padding: 20px 0px;
         min-height: 545px;
+        max-height: 585px;
 
         .ranking5{
           border-right: 1px solid #e1eae9;
