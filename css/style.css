@@ -762,6 +762,10 @@ body {
   background-color: #d8a3d2;
 }
 
+.search-page .main {
+  min-height: 149vh !important;
+}
+
 .info-page .all, .search-page .all, .ranking-theme-page .all, .ranking-nowdays-page .all, .ranking-thismonth-page .all, .detail-page .all, .magazine-page .all, .asking-page .all, .login-page .all, .find-page .all, .sign-page .all, .edit-pw-page .all, .mypage-page .all, .myinfo-page .all, .userule-page .all {
   display: -webkit-box;
   display: -ms-flexbox;
