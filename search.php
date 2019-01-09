@@ -27,7 +27,7 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
             </div>
           </div> 
           <div class="search-time">
-            <a id="all" style="color:#504F57; font-weight:bold; border-bottom:2px solid black; padding-bottom:2px;" href ="">누적</a>
+            <a id="all" style="color:#504F57; font-weight:bold; border-bottom:2px solid black; padding-bottom:2px;" href ="search.php?search=<?php echo $search; ?>">누적</a>
             <a id="recently" href ="search_recently.php?search=<?php echo $search; ?>">최근 3개월</a>
           </div>
         </div>
