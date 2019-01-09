@@ -61,6 +61,10 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
     for(var n=0; n < <?=$last_num?> ; n++){
       ani_load(n)
     }
+    $('html, body').css({'overflow': 'hidden', 'height': '100%'});
+    setTimeout(function(){
+      $('html, body').css('overflow','auto')
+    }, 3000);
   });
 
   function ani_load(n){
