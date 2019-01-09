@@ -94,6 +94,7 @@ body{
   .all{
     display: flex;
     flex:1;
+    display: inline;
     height: inherit;
     min-height: 100vh;
     flex-direction: column;
@@ -447,6 +448,7 @@ body{
     width: 100%;
     display: flex;
     flex:1;
+    min-height: 81vh !important;
     flex-direction: column;
 
     .item img{
@@ -543,7 +545,7 @@ body{
 }
 .search-page{
   .main{
-    
+    min-height: 149vh !important;
   }
 }
 .info-page,.search-page, .ranking-theme-page, .ranking-nowdays-page, .ranking-thismonth-page, .detail-page, .magazine-page, .asking-page, .login-page, .find-page, .sign-page, .edit-pw-page, .mypage-page, .myinfo-page, .userule-page{
@@ -591,6 +593,7 @@ body{
   .main{
     width: 1200px;
     margin: 0 auto;
+    min-height: 84vh;
     
     .loading {
       position: relative;

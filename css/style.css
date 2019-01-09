@@ -141,6 +141,7 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  display: inline;
   height: inherit;
   min-height: 100vh;
   -webkit-box-orient: vertical;
@@ -620,6 +621,7 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  min-height: 81vh !important;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -761,6 +763,10 @@ body {
   background-color: #d8a3d2;
 }
 
+.search-page .main {
+  min-height: 149vh !important;
+}
+
 .info-page .all, .search-page .all, .ranking-theme-page .all, .ranking-nowdays-page .all, .ranking-thismonth-page .all, .detail-page .all, .magazine-page .all, .asking-page .all, .login-page .all, .find-page .all, .sign-page .all, .edit-pw-page .all, .mypage-page .all, .myinfo-page .all, .userule-page .all {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -828,6 +834,7 @@ body {
 .info-page .main, .search-page .main, .ranking-theme-page .main, .ranking-nowdays-page .main, .ranking-thismonth-page .main, .detail-page .main, .magazine-page .main, .asking-page .main, .login-page .main, .find-page .main, .sign-page .main, .edit-pw-page .main, .mypage-page .main, .myinfo-page .main, .userule-page .main {
   width: 1200px;
   margin: 0 auto;
+  min-height: 84vh;
 }
 
 .info-page .main .loading, .search-page .main .loading, .ranking-theme-page .main .loading, .ranking-nowdays-page .main .loading, .ranking-thismonth-page .main .loading, .detail-page .main .loading, .magazine-page .main .loading, .asking-page .main .loading, .login-page .main .loading, .find-page .main .loading, .sign-page .main .loading, .edit-pw-page .main .loading, .mypage-page .main .loading, .myinfo-page .main .loading, .userule-page .main .loading {
