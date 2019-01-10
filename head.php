@@ -91,7 +91,7 @@
       <div style="background:linear-gradient( to bottom, #F1EDF0, #FAF6F9);">
         <div style="flex:1; display:flex; padding-left:20px;">
           <div class="rank">
-            <a href="./rank.php">랭킹</a>
+            <a href="./rank-thismonth.php">랭킹</a>
           </div>
           <div class="news">
             <a href="./news.php">매거진</a>

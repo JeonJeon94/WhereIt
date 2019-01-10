@@ -38,7 +38,7 @@
   $ask_src = './images/default/ask.png';
   
   //메뉴 클릭시 이동 페이지
-  $rank_adress='m.rank.php';
+  $rank_adress='m.rank-thismonth.php';
   $news_adress='m.news.php';
   $favorite_adress='m.favorite.php';
   $contents_adress='m.contents.php';
