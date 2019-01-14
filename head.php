@@ -59,6 +59,13 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
   <script src="http://52.79.100.193/gen_api.js"></script>
   <script src="/kakao_sdk.js"></script>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-8731291940203445",
+      enable_page_level_ads: true
+    });
+  </script>
 </head>
 <body class="default-page <?=$page?>-page">
 <?php include_once("analyticstracking.php") ?>
@@ -81,7 +88,7 @@
       </div>
       <div class="login">
         <?php if($member) { ?> 
-          <a style="color:#D8A3D2; padding:2px 5px 0 0; font-weight:bold;" href="./myinfo.php"><?= $member[user_name]?> </a>님
+          <a style="color:#FF5566; padding:2px 5px 0 0; font-weight:bold;" href="./myinfo.php"><?= $member[user_name]?> </a>님
         <?php }else{ ?>
           <a href="./login.php">로그인</a>
         <?php } ?>
