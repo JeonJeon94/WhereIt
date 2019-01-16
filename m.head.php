@@ -93,6 +93,7 @@
   <script type="text/javascript" src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.0.js" charset="utf-8"></script>
   <script src="http://52.79.100.193/gen_api.js"></script>
   <script src="/kakao_sdk.js"></script>
+  <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({
