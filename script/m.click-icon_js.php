@@ -11,12 +11,14 @@
         $('.phone img').attr('src', './images/etc/phone.png')
       }
     });
-    $(document).on("click", ".share", function(){
+    $(document).on("click", "#share", function(){
       y = !y
       if( y == true){
-        $('.share img').attr('src', './images/etc/share-active.png')
+        $('#share').attr('src', './images/etc/share-active.png')
+        $('.modal_share').css("display","flex")
       }else{
-        $('.share img').attr('src', './images/etc/share.png')
+        $('#share').attr('src', './images/etc/share.png')
+        $('.modal_share').css("display","none")
       }
     });
   });

@@ -81,7 +81,17 @@ if($member){
     </div>
     <div class="etc">
       <div class="share">
-        <img src="./images/share.png" />
+        <div class="modal_share">
+          <div id="kakao_share">
+            <a id="kakao-link-btn" href="javascript:;">
+            <img src="//developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"/>
+            </a>
+          </div>
+          <div id="facebook_share">
+            <img src="./images/sns/sns_facebook.png"/>
+          </div>
+        </div>
+        <img id="share" src="./images/share.png" />
       </div>
       <div class="phone">
         <img src="./images/etc/phone.png"/>
@@ -158,7 +168,6 @@ if($member){
         }catch(err){}
       }
       setTimeout(function(){
-        console.log($(window).scrollTop())
         $(window).scrollTop(0)
       },600)
         
@@ -179,6 +188,54 @@ if($member){
       setImage(res)
     })
   });
+
+</script>
+
+<script type='text/javascript'>
+
+  setTimeout(function(){
+    jQuery(document).ready(function($){
+
+      var share_url = "http://whereit.kr/detail.php?id=<?=$id?>"
+
+      window.Kakao.cleanup()
+      window.Kakao.init('0b4dc8f4b2eca7999b6ae1ba6b47e872');
+    
+      window.Kakao.Link.createDefaultButton({
+        container: '#kakao-link-btn',
+        objectType: 'feed',
+    
+        content: {
+          title: "WhereIt",
+          description: '#WhereIt #인스타맛집',
+          imageUrl: 'http://whereit.kr/images/whereit_img_og_001.png',
+          link: {
+            androidExecParams: share_url,
+            mobileWebUrl: share_url,
+            webUrl: share_url
+          }
+        },
+        social: {
+          likeCount: 0,
+          commentCount: 0,
+          sharedCount: 0
+        },
+        buttons: [
+          {
+            title: '웹으로 보기',
+            link: {
+              androidExecParams: share_url,
+              mobileWebUrl: share_url,
+              webUrl: share_url
+            }
+          },                        
+        ]
+      })
+    });
+    $('#facebook_share').click(function(){
+      alert('서비스 준비중입니다.')
+    })
+  }, 1000);
 
 </script>
 
