@@ -1,0 +1,1 @@
+<img src="https://s3-ap-southeast-1.amazonaws.com/img2.mangashow.me/upload/000074f0be9b9a7f12eae5d58130ce98.jpg">
