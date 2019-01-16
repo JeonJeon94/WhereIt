@@ -210,7 +210,7 @@ body{
         width: 100%;
         font-size: 14px;
         max-height: 45px;
-        background: linear-gradient( to bottom, #F1EDF0, #FAF6F9 );
+        
       
         >div{
           width: 1200px;
@@ -285,7 +285,7 @@ body{
                 .num{
                   display: flex;
                   flex: 0 1 auto;
-                  color: #d8a3d2;
+                  color: #FF5566;
                   padding-top:2px;
                   font-weight: bold;
                   font-family: "Noto Sans KR", sans-serif;
@@ -309,7 +309,7 @@ body{
                 .num{
                   display: flex;
                   flex: 0 1 auto;
-                  color: #d8a3d2;
+                  color: #FF5566;
                   padding-top:2px;
                   font-weight: bold;
                   font-family: "Noto Sans KR", sans-serif;
@@ -464,7 +464,7 @@ body{
 
       .where-top{
         display:flex;
-        padding-top: 2em;
+        padding-top: 1em;
         width: 1200px;
         margin: 0 auto;
 
@@ -519,9 +519,9 @@ body{
               height: 49px;
               width: 190px;
               font-size: 14px;
-              border: 0px solid #504f57;
+              border: 0px solid #FF5566;
               border-radius: 51px;
-              background-color: #504f57;
+              background-color: #FF5566;
               color: white;
               justify-content: center;
               box-sizing: border-box;
@@ -863,7 +863,28 @@ body{
           .share{
             color: #a39aa3;
             text-align: center;
-            img{
+            
+            .modal_share{
+              position: absolute;
+              display: none;
+              top:  55px;
+              left: -7px;
+              width: 120px;
+              height: 60px;
+              background: white;
+              border: 1px solid #FF5566;
+              border-radius: 20px;
+              justify-content: center;
+              align-items: center;
+
+              img{
+                width: 27px;
+                height: 27px;
+                padding: 0 10px;
+              }
+            }
+
+            #share{
               padding-left:40px;
               width: 27px;
               height: 27px;
@@ -1007,7 +1028,7 @@ body{
     .head{
       display: flex;
       .rank a{
-        color: #d8a3d2 !important;
+        color: #FF5566 !important;
       }
     }
     .main{
@@ -1151,7 +1172,7 @@ body{
     padding-bottom: 50px;
 
     .news a{
-      color: #d8a3d2 !important;
+      color: #FF5566 !important;
     }
   }
   .main{

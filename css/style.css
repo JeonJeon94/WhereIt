@@ -283,8 +283,6 @@ body {
   width: 100%;
   font-size: 14px;
   max-height: 45px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#F1EDF0), to(#FAF6F9));
-  background: linear-gradient(to bottom, #F1EDF0, #FAF6F9);
 }
 
 .default-page .all .head .menu > div {
@@ -403,7 +401,7 @@ body {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 auto;
           flex: 0 1 auto;
-  color: #d8a3d2;
+  color: #FF5566;
   padding-top: 2px;
   font-weight: bold;
   font-family: "Noto Sans KR", sans-serif;
@@ -439,7 +437,7 @@ body {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 auto;
           flex: 0 1 auto;
-  color: #d8a3d2;
+  color: #FF5566;
   padding-top: 2px;
   font-weight: bold;
   font-family: "Noto Sans KR", sans-serif;
@@ -647,7 +645,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 2em;
+  padding-top: 1em;
   width: 1200px;
   margin: 0 auto;
 }
@@ -738,9 +736,9 @@ body {
   height: 49px;
   width: 190px;
   font-size: 14px;
-  border: 0px solid #504f57;
+  border: 0px solid #FF5566;
   border-radius: 51px;
-  background-color: #504f57;
+  background-color: #FF5566;
   color: white;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -1180,7 +1178,31 @@ body {
   text-align: center;
 }
 
-.detail-page .detail-main .main-top .etc .month .share img {
+.detail-page .detail-main .main-top .etc .month .share .modal_share {
+  position: absolute;
+  display: none;
+  top: 55px;
+  left: -7px;
+  width: 120px;
+  height: 60px;
+  background: white;
+  border: 1px solid #FF5566;
+  border-radius: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.detail-page .detail-main .main-top .etc .month .share .modal_share img {
+  width: 27px;
+  height: 27px;
+  padding: 0 10px;
+}
+
+.detail-page .detail-main .main-top .etc .month .share #share {
   padding-left: 40px;
   width: 27px;
   height: 27px;
@@ -1342,7 +1364,7 @@ body {
 }
 
 .ranking-theme-page .all .head .rank a, .ranking-thismonth-page .all .head .rank a, .ranking-nowdays-page .all .head .rank a {
-  color: #d8a3d2 !important;
+  color: #FF5566 !important;
 }
 
 .ranking-theme-page .all .main .title, .ranking-thismonth-page .all .main .title, .ranking-nowdays-page .all .main .title {
@@ -1526,7 +1548,7 @@ body {
 }
 
 .magazine-page .head .news a {
-  color: #d8a3d2 !important;
+  color: #FF5566 !important;
 }
 
 .magazine-page .main {
