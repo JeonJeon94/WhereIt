@@ -5,141 +5,68 @@
     <div class="main-top">
       <div class="top_layer_1">
         <div class="text">
-          가장 인기있는<br><b>핫 플레이스</b>
-        </div>
-        <div class="search-time">
-          <a id="all" style="color:#504f57; font-weight:bold; border-bottom:2px solid black; padding-bottom:10px;" href="">누적</a>
-          <a id="recently" href="m.search_recently.php?search=<?php echo $search; ?>">최근 3개월</a>
-        </div>
-      </div>
-      <div class="top_layer_2">
-        <div class="view-type">
-          <img id="double" src="./images/etc/menu1-active.png" />
-          <img id="single" src="./images/etc/menu2.png" onclick="location.href='m.search-one.php?search=<?php echo $search; ?>'"/>
+          <div style="display:flex;">
+            <div style="color:#FF5566; margin-right:4px;">
+              <?=$address?>
+            </div>/
+            <div style="color:#FF5566; margin-left:4px;">
+              <?=$food?>
+            </div>
+          </div><br><b>TOP10</b>
         </div>
       </div>
     </div>
-    <div class="search-list">
-      <div class="no-search">
-        <b>"<?php echo $search; ?>"</b> 로 검색된 내용이 없습니다.<br>
-        다른 <b>"검색어"</b>로 검색해주세요.
-      </div>
-      <div class="list-line">
-      </div>
-    </div>
-    <div class="loading dot">
-      <div></div>
-      <div></div>
-      <div></div>
+    <div class="list-line">
     </div>
   </div>
-  
+
 <script>
-  var list_length = 0
-  var data = null
-  var flag = false
-  function nosearch(){
-    $('.no-search').css('display', 'block')
-  }
-  function Loading(){
-    if(flag === true){
-      $('.loading').css('display', 'block')
-      flag = false
-      setTimeout(function(){
-        $('.loading').css('display', 'none')
-        if(data.payload.length >= list_length){
-          flag = true
-        }
-      }, 1000);
-    }
-  }
-  function SearchResultDraw(){
-    var searchWord = "<?php echo $search; ?>";
-    if(searchWord == "" || searchWord == " "){
-      nosearch();
-    } else{
-      if(data === null)
-        return
-      var slot_template = _.template($("#store-slot").html());
-      if(data.payload.length == 0 ){
-        nosearch();
-      }else{
-        if(list_length !== 16){
-          Loading()
-          setTimeout(function(){
-            for(var i = list_length - 16; i < list_length; i++){
-              var row = data.payload[i]
-              if(row === undefined)
-                continue
-              let nameDump = row.Name
-              nameDump = nameDump.length>6 ? nameDump.slice(0,6)+"..." : nameDump
-              row.Name = nameDump
-              try{
-                $(".list-line").append( slot_template(row) )
-              }catch(err){}  
-            }
-          }, 1000);
-        }
-        else{
-          for(var i = list_length - 16; i < list_length; i++){
-            var row = data.payload[i]
-            if(row === undefined)
-              continue
-            let nameDump = row.Name
-            nameDump = nameDump.length>6 ? nameDump.slice(0,6)+"..." : nameDump
-            row.Name = nameDump
-            try{
-              $(".list-line").append( slot_template(row) )
-            }catch(err){}  
-            flag = true
-          }
-        }
-        
-      }
-    }
-  }
-  $(window).scroll(function() {
-    if($(window).scrollTop() + $(window).height() +100 >= $(document).height() && flag) {
-      list_length += 16
-      SearchResultDraw()
-    }
-  });
+  var searchWord = "<?=$address?>"+" "+"<?=$food?>";
+
+  function loadTemplate(id) { return document.getElementById(id).innerHTML; }
+
   $(function(){
-    var searchWord = "<?php echo $search; ?>";
-    if(searchWord !== "" && searchWord !== " "){
-      search_fandein(searchWord);
-    } else{
-      nosearch();
-    }
-  })
-  
-  function search_fandein(searchWord){
-    api_search_data(searchWord,function(res){
-      data = res
-      list_length += 16
-      SearchResultDraw()
+    var temp = loadTemplate('store-slot');
+    var store_template = _.template($("#store-slot").html());
+    api_search_data(searchWord,function(data){
+      for(var i = 0; i < 10; i++){
+        var row = data.payload[i]
+        row.no = i+1 < 10 ? "0"+(i+1) : i+1
+        if(row === undefined)
+          continue
+        try{
+          $(".list-line").append( store_template(row) )
+        }catch(err){console.log(err)}  
+      }
     })
-  }
+  });
+
+
+
 </script>
 
 <script id="store-slot" type="text/template">
   <div class="store-list">
-    <div class="img-container" onclick="location.href='./m.detail.php?id=<%=_id%>'">
-      <img alt="food-img" src="<%=main_img%>" onerror="this.src='./images/whereit_img_loading_m.png'"/>
-    </div>
-    <div style="padding:5px 0px; display:flex; align-items:center;">
-      <div class="store-name"><%=Name%></div>
-      <div class="views">2.40K</div>
-    </div>
-    <div style="display:flex;">
-      <div class="keyword">
-        <div><%=collect_region%></div>
+    <div class="store-info">
+      <div class="store-num"><%=no%></div>
+      <div class="store-name" onclick="location.href='m.detail.php?id=<%=_id%>'">
+        <%=Name%>
       </div>
-      <div class="keyword">
-        <div><%=category[0]%></div>
+      <div style="display:flex; align-items:center;"> 
+        <div class="keyword" style="margin-right: 10px;">
+          <%=collect_region%>
+        </div>
+        <div class="keyword">
+          <%=category[0]%>
+        </div>
       </div>
+    </div>
+    <div class="store-img">
+      <img src="<%=main_img%>"  onclick="location.href='m.detail.php?id=<%=_id%>'" onerror="this.src='./images/whereit_img_loading_p.png'"/>
     </div>
   </div>
+
 </script>
+
 
 <?php include_once("./m.footer.php") ?>

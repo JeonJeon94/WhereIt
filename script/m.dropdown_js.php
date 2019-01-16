@@ -40,7 +40,7 @@
       })
 
       $(".hot").css("border", "none")
-      $(".hot").css("background", "#f9f5f8")
+      $(".hot").css("background", "white")
       setTimeout(function(){
         _hot_paging_enable = true;
         slide_bt_click = false;

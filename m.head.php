@@ -1,10 +1,11 @@
 <?php 
   include './dbconfig.php';
   
-  if(!empty($_GET['search'])){
-    $search = $_GET['search'];
-  }else{
-    $search = "";
+  if(!empty($_GET['address'])){
+    $address = $_GET['address'];
+  }
+  if(!empty($_GET['food'])){
+    $food = $_GET['food'];
   }
 
   if(!empty($_GET['id'])){
@@ -25,6 +26,11 @@
       alert_back("로그인을 해주세요!");
     }
   }
+
+  //검색창 리스트
+  $a_list = sql_select("SELECT * FROM address_list");
+  $f_list = sql_select("SELECT * FROM food_list");
+
   //검색창 문구
   $h_text= sql_one("SELECT search_h FROM banner_text WHERE id = 1");
   $b_text= sql_one("SELECT search_b FROM banner_text WHERE id = 2");
@@ -93,7 +99,6 @@
   <script type="text/javascript" src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.0.js" charset="utf-8"></script>
   <script src="http://52.79.100.193/gen_api.js"></script>
   <script src="/kakao_sdk.js"></script>
-  <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({
@@ -101,9 +106,28 @@
       enable_page_level_ads: true
     });
   </script>
+  <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 </head>
 <body class="default-page <?=$page?>-page">
 <?php include_once("analyticstracking.php") ?>
+  <div class="address-modal">
+    <div class="close"><img src="./images/etc/close.png" /></div>
+    <div class="address">
+      <div style="color:#FF5566;">지역 선택</div>
+      <?php foreach($a_list as $row){ ?>
+      <div class="address_text"><?=$row[address]?></div>
+      <?php } ?>
+    </div>
+  </div>
+  <div class="food-modal">
+    <div class="close"><img src="./images/etc/close.png" /></div>
+    <div class="food">
+      <div style="color:#FF5566;">음식 선택</div>
+      <?php foreach($f_list as $row){ ?>
+      <div class="food_text"><?=$row[food]?></div>
+      <?php } ?>
+    </div>
+  </div>
   <div class="slide-modal">
     <div class="tooltip-content">
       <div id="content-title"><b>검색 가능</b>한 지역</div>
@@ -155,11 +179,11 @@
   </div>
   <div class="head">
     <div class="head-top">
-    <?php if($page == 'search'){ ?>
-      <div class="search-icon" style="display:none !important;">
-    <?php }else{ ?>
-      <div class="search-icon">
-    <?php } ?>
+      <?php if($page == 'search'){ ?>
+        <div class="search-icon" style="display:none !important;">
+      <?php }else{ ?>
+        <div class="search-icon">
+      <?php } ?>
         <img src="./images/etc/search.png" />
       </div>
       <div class="logo">
@@ -173,12 +197,12 @@
       <?php } ?>
           <img src="./images/etc/close.png" />
         </div>
-        <form  class="search-form2" method="GET" action="m.search.php">
+        <div class="search-form2">
           <div class="input-container">
-            <input id="search2-input" maxlength="50" type="text" name="search" placeholder="<?=$h_text[search_h]?>" value="<?=$search?>" />
-            <img id="search-img2" src="./images/search.png" onclick="submit()" />
+            <div id="address-select2"><?php if(isset($address)){echo $address;}else{echo "지역 선택";} ?></div>
+            <div id="food-select2"ㅋ><?php if(isset($food)){echo $food;}else{echo "음식 선택";} ?></div>
           </div>
-        </form>
+        </div>
       </div>
       <div class="menu">
         <div class="menu-bar">
@@ -194,16 +218,16 @@
           <div style="flex:1; overflow:hidden">
             <ul class="hot" style="transition:all 0.5s">
               <li class="hot-text" style="display:none; padding: 5px 0px; color: #504f57;">인기검색어</li>
-              <li class="hot-list-h"><div class="num">1</div><a href="m.search.php?search=강남">강남</a></li>
-              <li class="hot-list"><div class="num">2</div><a href="m.search.php?search=홍대">홍대</a></li>
-              <li class="hot-list"><div class="num">3</div><a href="m.search.php?search=이태원">이태원</a></li>
-              <li class="hot-list"><div class="num">4</div><a href="m.search.php?search=익선동">익선동</a></li>
-              <li class="hot-list"><div class="num">5</div><a href="m.search.php?search=합정">합정</a></li>
-              <li class="hot-list"><div class="num">6</div><a href="m.search.php?search=압구정">압구정</a></li>
-              <li class="hot-list"><div class="num">7</div><a href="m.search.php?search=가로수길">가로수길</a></li>
-              <li class="hot-list"><div class="num">8</div><a href="m.search.php?search=샤로수길">샤로수길</a></li>
-              <li class="hot-list"><div class="num">9</div><a href="m.search.php?search=경리단길">경리단길</a></li>
-              <li class="hot-list"><div class="num">10</div><a href="m.search.php?search=북촌">북촌</a></li>
+              <li class="hot-list-h"><div class="num">1</div><a href="m.search.php?address=강남">강남</a></li>
+              <li class="hot-list"><div class="num">2</div><a href="m.search.php?address=홍대">홍대</a></li>
+              <li class="hot-list"><div class="num">3</div><a href="m.search.php?address=이태원">이태원</a></li>
+              <li class="hot-list"><div class="num">4</div><a href="m.search.php?address=익선동">익선동</a></li>
+              <li class="hot-list"><div class="num">5</div><a href="m.search.php?address=합정">합정</a></li>
+              <li class="hot-list"><div class="num">6</div><a href="m.search.php?address=압구정">압구정</a></li>
+              <li class="hot-list"><div class="num">7</div><a href="m.search.php?address=가로수길">가로수길</a></li>
+              <li class="hot-list"><div class="num">8</div><a href="m.search.php?address=샤로수길">샤로수길</a></li>
+              <li class="hot-list"><div class="num">9</div><a href="m.search.php?address=경리단길">경리단길</a></li>
+              <li class="hot-list"><div class="num">10</div><a href="m.search.php?address=북촌">북촌</a></li>
             </ul>
           </div>
           <div class="rank-btn">

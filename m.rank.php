@@ -70,14 +70,14 @@ if(!empty($_GET['tag'])){
 
   $(function(){
     var temp = loadTemplate('rank-slot');
-    var rank_templete = _.template($("#rank-slot").html());
+    var rank_template = _.template($("#rank-slot").html());
     
     function load(i){
       api_search_data(store_name[i],function(res){
         data = res
         var row = data.payload[0]
         row.no = i+1 < 10 ? "0"+(i+1) : i+1
-        $(".rank-area").append(rank_templete(row))
+        $(".rank-area").append(rank_template(row))
         if(i >= 9) return ;
         load(i+1);
       })

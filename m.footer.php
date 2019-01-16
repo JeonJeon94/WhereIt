@@ -12,5 +12,6 @@
 <?php include_once('./script/m.rank-area_js.php') ?>
 <?php include_once('./script/m.slide_js.php') ?>
 <?php include_once('./script/m.input_active_js.php') ?>
+<?php include_once('./script/m.search_key_js.php') ?>
 
 </html>

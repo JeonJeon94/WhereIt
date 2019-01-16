@@ -115,33 +115,29 @@
             height: auto;
           } 
         }
-
         .search-form2{
           display: flex;
           flex: 1;
           flex-direction: column;
-          
+    
           .input-container{
             display: flex;
             position: relative;
-            
-            #search2-input{
-              width: 100%;
-              border: 1px solid #c9c9cc;
-              color:#717076;
-              border-radius: 40px;
-              padding-left: 30px;
-              padding: 5px 30px 5px 10px;
-              font-size: 13px;
-              box-sizing: border-box;
+    
+            #address-select2, #food-select2{
+              display: flex;
+              flex: 1;
+              border: 1px solid #E0E0E0;
+              border-radius: 20px;
+              font-size: 12px;
             }
-
-            #search-img2{
-              position: absolute;
-              width: 14px;
-              height: auto;
-              right: 14px;
-              top: 25%;
+            #address-select2{
+              margin-right: 5px;
+              padding:10px 20px 10px 15px;
+            }
+            #food-select2{
+              margin-left: 5px;
+              padding:10px 30px 10px 15px;
             }
           }
         }
@@ -190,7 +186,6 @@
       justify-content: flex-end;
       width: 100%;
       height: 30px;
-      background: #f9f5f8;
       
       .rank-container{
         display: flex;
@@ -218,7 +213,7 @@
               align-items: center;
 
               .num{
-                color: #D8A3D2;
+                color: #FF5566;
                 font-family: "Noto Sans KR", sans-serif;
                 float:left;
               }
@@ -236,7 +231,7 @@
               align-items: center;
 
               .num{
-                color: #D8A3D2;
+                color: #FF5566;
                 font-family: "Noto Sans KR", sans-serif;
                 float:left;
               }
@@ -264,6 +259,55 @@
             padding: 5px;
           }
         }
+      }
+    }
+  }
+  .address-modal, .food-modal{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    background-color: rgba(80, 79, 87, 0.4);
+
+    .address, .food{
+      width: 75%;
+      height: 75%;
+      background-color: white;
+      border: 1px solid white;
+      border-radius: 20px;
+      padding: 15px;
+      z-index: 5;
+      display: flex;
+      align-items:center;
+      line-height: 50px;
+      margin: 70px auto;
+      flex-direction: column;
+      overflow:scroll;
+
+      .address_text, .food_text{
+
+        &:active{
+          color:#FF5566;
+        }
+      }
+    }
+    .close{
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: white;
+      margin: auto;
+      right: 10%;
+      top: 5%;
+      position: absolute;
+      
+      >img{
+        width: 8px;
+        height: 8px;
+        padding: 6px;
       }
     }
   }
@@ -407,7 +451,7 @@
     } 
   }
   .footer{
-    padding: 0px 50px;
+    padding: 0px 50px 20px 50px;
 
     .footer-top{
       color: #504F57;
@@ -426,39 +470,34 @@
         display: flex;
         width: 95%;
 
-        #search-input{
+        #address-select, #food-select{
           display: flex;
           flex: 1;
-          border: 1px solid #737473;
+          border: 1px solid #E0E0E0;
           border-radius: 20px;
-          padding:10px 30px 10px 14px;
           font-size: 12px;
-
-          &::placeholder{
-            color:#a39aa3;
-            font-family: "Noto Sans KR", sans-serif;
-          }
         }
-        #search-img{
-          width: 14px;
-          height: auto;
-          position: absolute;
-          right: 5%;
-          top: 31%;
+        #address-select{
+          margin-right: 5px;
+          padding:10px 20px 10px 15px;
+        }
+        #food-select{
+          margin-left: 5px;
+          padding:10px 30px 10px 15px;
         }
       }
       
-      >button{
+      #s_btn{
         padding: 14px;
         display: flex;
-        width: 150px;
+        width: 35%;
         font-size: 11px;
         letter-spacing: 1px;
         border-radius: 30px;
         color: white;
         justify-content: center;
-        background: #504F57;
-        border: 0px solid #504F57;
+        background: #FF5566;
+        border: 0px solid #FF5566;
         font-family: "Montserrat", sans-serif;
         font-weight: 700;
         margin-top: 20px;
@@ -528,7 +567,7 @@
         padding: 15px 0 30px 0;
         .text{
           font-size: 22px;
-          line-height: 30px;
+          line-height: 15px;
           color: #504f57;
           flex: 1;
         }
@@ -537,11 +576,6 @@
             text-decoration: none;
             color: #504F57;
             margin-right: 15px;
-            font-size: 13px;
-          }
-          #recently{
-            text-decoration: none;
-            color: #504F57;
             font-size: 13px;
           }
         }
@@ -562,68 +596,66 @@
         }
       }
     }
-    .search-list{
-      .no-search{
-        display:none;
-        text-align: center;
-        font-size: 20px;
-        margin-top: 40px;
-      }
-      .list-line{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+    .list-line{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 30px;
+    
+      .store-list{
+        width: 100%;
+        margin: 30px auto 0px auto;
+        animation: fadeInUp 2s;
 
-        .store-list{
-          margin: 15px 0;
-          animation: fadeInUp 1s;
-          flex-basis: auto;
-
-          .img-container{
-            width: 42vw;
-            height: 23vh;     
-            overflow: hidden;
-            position: relative;
-
-            >img{
-              position: absolute;
-              margin: auto;
-              height: 100%;
-              width: 100%;
-              left: -100%;
-              right: -100%;
-              top: -100%;
-              bottom: -100%;
-              cursor: pointer;
-              object-fit: cover;
-              border-radius: 5px;
-            }
-          }
+        .store-info{
+          display: flex;
+          margin-bottom: 10px;
+          align-items: center;
 
           .store-name{
-            font-weight:400;
-            font-size: 14px;
+            font-size: 18px;
+            font-weight: 500;
+            color:#504f57;
+            display: flex;
             flex:1;
-            color:#47464f;
           }
-
-          .views{
-            color:#d8a3d2; 
-            display:flex;  
-            justify-content:center;
-            font-size: 12px;
-            font-family: "Noto Sans KR", sans-serif;
-
+          .store-num{
+            font-family: 'Montserrat-bold', sans-serif;
+            padding-right: 10px; 
+            font-size: 35px;
+            text-align: center;
+            font-weight:bold;
+            color: #D0C1D0;
+            letter-spacing: 5px;
           }
           .keyword{
-            margin-right: 3px;
-            font-size: 10px;
+            font-size: 12px;
             min-width: 40px;
             border: 1px solid #ebdaeb;
             border-radius: 5px;
-            padding: 0px 3px;
+            padding: 0px 5px;
             text-align: center;
             color:#8a7f8a;
+          }
+        }
+        .store-img{
+          overflow: hidden;
+          width: 100%;
+          height: 90vw;
+          position: relative;
+
+          >img{
+            position: absolute;
+            margin: auto;
+            height: 100%;
+            width: 100%;
+            left: -100%;
+            right: -100%;
+            top: -100%;
+            bottom: -100%;
+            cursor: pointer;
+            object-fit: cover;
+            border-radius: 5px;
           }
         }
       }
@@ -1038,7 +1070,31 @@
             .share, .phone{
               margin: 0 auto;
               padding-right: 15px;
-            
+
+              .modal_share{
+                position: absolute;
+                display: none;
+                top:  30px;
+                left: -30px;
+                width: 100%;
+                height: 30px;
+                background: white;
+                border: 1px solid #FF5566;
+                border-radius: 20px;
+                justify-content: center;
+                align-items: center;
+  
+                img{
+                  width: 15px;
+                  height: 15px;
+                  padding: 0 8px;
+                }
+              }
+  
+              #share{
+                width: 15px;
+                height: 15px;
+              }
               >img{
                 width: 15px;
                 height: 15px;
