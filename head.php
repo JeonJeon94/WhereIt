@@ -66,6 +66,7 @@
       enable_page_level_ads: true
     }); 
   </script>
+  <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 </head>
 <body class="default-page <?=$page?>-page">
 <?php include_once("analyticstracking.php") ?>
@@ -95,7 +96,7 @@
       </div>
     </div>
     <div class="menu">
-      <div style="background:linear-gradient( to bottom, #F1EDF0, #FAF6F9);">
+      <div>
         <div style="flex:1; display:flex; padding-left:20px;">
           <div class="rank">
             <a href="./rank-thismonth.php">랭킹</a>
