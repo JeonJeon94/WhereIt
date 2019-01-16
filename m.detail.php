@@ -198,13 +198,13 @@ if($member){
 
       var share_url = "http://whereit.kr/m.detail.php?id=<?=$id?>"
 
+      console.log(share_url)
       window.Kakao.cleanup()
       window.Kakao.init('0b4dc8f4b2eca7999b6ae1ba6b47e872');
     
       window.Kakao.Link.createDefaultButton({
         container: '#kakao-link-btn',
         objectType: 'feed',
-    
         content: {
           title: "WhereIt",
           description: '#WhereIt #인스타맛집',
