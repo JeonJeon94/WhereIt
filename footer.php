@@ -28,4 +28,6 @@
   <?php include_once("./script/click_agree_js.php") ?>
   <?php include_once("./script/tooltip_js.php") ?>
   <?php include_once("./script/slide_js.php") ?>
+  <?php include_once("./script/search_key_js.php") ?>
+
 </html>

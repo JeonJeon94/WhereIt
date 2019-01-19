@@ -4,7 +4,7 @@ $arr_browser = array ("iPhone","iPod","IEMobile","Mobile","lgtelecom","PPC");
 
 for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
   if(strpos($_SERVER['HTTP_USER_AGENT'],$arr_browser[$indexi]) == true){
-  // 모바일 브라우저라면  모바일 URL로 이동 
+    // 모바일 브라우저라면  모바일 URL로 이동 
     header("Location: ./m.index.php");
     exit;
   }
@@ -13,19 +13,8 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
 <?php include_once('./head.php'); ?>
 <?php
   $result = sql_select('SELECT * FROM banner_file ')
-?>
+  ?>
   <div class="main">
-    <div>
-      <div class="owl-carousel owl-theme" >
-        <?php
-          foreach($result as $rows){
-        ?>
-        <div class="item" style="width:1200px; margin:0 0.5em;" data-id="<?=$rows[id]?>" onclick="click_main_banner(this,'<?=$rows[url]?>')">
-          <img src='<?=$rows[banner_file]?>'>
-        </div>
-        <?php } ?>
-      </div>
-    </div>
     <div class="search-form">
       <div class="where-top">
         <div class="where">
@@ -34,15 +23,42 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
             있으신가요?
           </div>
         </div>
-        <div class="where-form">  
-          <form class="form" method="GET" action="search.php">
-            <div class="search-word">
-              <input type="text" id="search-word" name="search" placeholder="<?=$b_text[search_b]?>" />
-              <img id="search" src="./images/search.png" onclick="submit()"/>
+        <div class="where-form">
+          <div style="display:flex; margin-left:200px;">
+            <div class="input-form">
+              <div style="position:relative">
+                <div id="address-select"><?php if(isset($address)){echo $address;}else{echo "지역 선택";} ?></div>
+                <div class="address">
+                  <div id="address_text">지역 선택</div>
+                  <?php foreach($a_list as $row){ ?>
+                  <div class="address_text"><?=$row[address]?></div>
+                  <?php } ?>
+                </div>
+              </div>
+              <div style="position:relative">
+                <div id="food-select"><?php if(isset($food)){echo $food;}else{echo "음식 선택";} ?></div>
+                <div class="food">
+                  <div id="food_text">음식 선택</div>
+                  <?php foreach($f_list as $row){ ?>
+                  <div class="food_text"><?=$row[food]?></div>
+                  <?php } ?>
+                </div>
+              </div>
             </div>
-            <button id="search-btn">SEARCH</button>
-          </form>
+            <div id="s_btn" onclick="s_get()">SEARCH</div>
+          </div>
         </div>
+      </div>
+    </div>
+    <div style="display:flex; flex:1; align-items:center; padding:1em 0;">
+      <div class="owl-carousel owl-theme" >
+        <?php
+          foreach($result as $rows){
+        ?>
+        <div class="item" style="width:1200px; margin:0 0.5em;" data-id="<?=$rows[id]?>" onclick="click_main_banner(this,'<?=$rows[url]?>')">
+          <img src='<?=$rows[banner_file]?>'>
+        </div>
+        <?php } ?>
       </div>
     </div>
   </div>

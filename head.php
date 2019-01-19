@@ -2,10 +2,11 @@
   include './dbconfig.php';
 
     
-  if(!empty($_GET['search'])){
-    $search = $_GET['search'];
-  }else{
-    $search = "";
+  if(!empty($_GET['address'])){
+    $address = $_GET['address'];
+  }
+  if(!empty($_GET['food'])){
+    $food = $_GET['food'];
   }
   if(!empty($_GET['id'])){
     $id=$_GET['id'];
@@ -25,10 +26,14 @@
     }
   }
 
+  //검색창 리스트
+  $a_list = sql_select("SELECT * FROM address_list");
+  $f_list = sql_select("SELECT * FROM food_list");
+
   //검색창 문구
   $h_text= sql_one("SELECT search_h FROM banner_text WHERE id = 1");
   $b_text= sql_one("SELECT search_b FROM banner_text WHERE id = 2");
-
+  
 ?>
 <!DOCTYPE html>
 <html>
@@ -79,13 +84,54 @@
       <div class="logo-copy">
         FIND A UNIQUE PLACE
       </div>
-      <div class="where-form2">  
-        <form class="form" method="get" action="search.php">
-          <div class="search-word">
-            <input type="text" id="search-word2" name="search" placeholder="<?=$h_text[search_h]?>" value="<?=$search?>" />
-            <img id="search2"src="./images/search.png" onclick="submit()"/> 
+      <div class="where-form2">
+        <div style="display:flex;">
+          <div class="input-form">
+            <div style="position:relative">
+              <div id="address-select2">
+                <?php
+                  if(isset($address)){
+                    if($page=="search"){
+                      echo "지역 선택";
+                    }else{
+                      echo $address;
+                    }
+                  }else{
+                    echo "지역 선택";
+                  } 
+                ?>
+              </div>
+              <div class="address">
+                <div id="address_text">지역 선택</div>
+                <?php foreach($a_list as $row){ ?>
+                <div class="address_text"><?=$row[address]?></div>
+                <?php } ?>
+              </div>
+            </div>
+            <div style="position:relative">
+              <div id="food-select2">
+                <?php
+                  if(isset($food)){
+                    if($page=="search"){
+                      echo "음식 선택";
+                    }else{
+                      echo $food;
+                    }
+                  }else{
+                    echo "음식 선택";
+                  } 
+                  ?>
+              </div>
+              <div class="food">
+                <div id="food_text">음식 선택</div>
+                <?php foreach($f_list as $row){ ?>
+                <div class="food_text"><?=$row[food]?></div>
+                <?php } ?>
+              </div>
+            </div>
           </div>
-        </form>
+          <div id="s_btn" onclick="s_get()">SEARCH</div>
+        </div>
       </div>
       <div class="login">
         <?php if($member) { ?> 
@@ -113,16 +159,16 @@
           <div class="hot-rank">
             <div style="flex:1;overflow: hidden;">
               <div class="hot" style="transition:all 0.5s">
-                <div class="hot-list-h"><div class="num">1</div><a href="search.php?search=강남">강남</a></div>
-                <div class="hot-list"><div class="num">2</div><a href="search.php?search=홍대">홍대</a></div>
-                <div class="hot-list"><div class="num">3</div><a href="search.php?search=이태원">이태원</a></div>
-                <div class="hot-list"><div class="num">4</div><a href="search.php?search=익선동">익선동</a></div>
-                <div class="hot-list"><div class="num">5</div><a href="search.php?search=합정">합정</a></div>
-                <div class="hot-list"><div class="num">6</div><a href="search.php?search=압구정">압구정</a></div>
-                <div class="hot-list"><div class="num">7</div><a href="search.php?search=가로수길">가로수길</a></div>
-                <div class="hot-list"><div class="num">8</div><a href="search.php?search=샤로수길">샤로수길</a></div>
-                <div class="hot-list"><div class="num">9</div><a href="search.php?search=경리단길">경리단길</a></div>
-                <div class="hot-list"><div class="num">10</div><a href="search.php?search=북촌">북촌</a></div>
+                <div class="hot-list-h"><div class="num">1</div><a href="search.php?address=강남">강남</a></div>
+                <div class="hot-list"><div class="num">2</div><a href="search.php?address=홍대">홍대</a></div>
+                <div class="hot-list"><div class="num">3</div><a href="search.php?address=이태원">이태원</a></div>
+                <div class="hot-list"><div class="num">4</div><a href="search.php?address=익선동">익선동</a></div>
+                <div class="hot-list"><div class="num">5</div><a href="search.php?address=합정">합정</a></div>
+                <div class="hot-list"><div class="num">6</div><a href="search.php?address=압구정">압구정</a></div>
+                <div class="hot-list"><div class="num">7</div><a href="search.php?address=가로수길">가로수길</a></div>
+                <div class="hot-list"><div class="num">8</div><a href="search.php?address=샤로수길">샤로수길</a></div>
+                <div class="hot-list"><div class="num">9</div><a href="search.php?address=경리단길">경리단길</a></div>
+                <div class="hot-list"><div class="num">10</div><a href="search.php?address=북촌">북촌</a></div>
               </div>
             </div>
           </div>

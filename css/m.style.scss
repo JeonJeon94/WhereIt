@@ -468,7 +468,7 @@
       .input-form{
         position: relative;
         display: flex;
-        width: 95%;
+        width: 90%;
 
         #address-select, #food-select{
           display: flex;
@@ -511,32 +511,7 @@
     }
   }
 }
-.search-o-page{
-  .store-list{
-    margin: 10px 0 !important;
-    width: 100% !important;
-
-    .img-container{
-      width: 100% !important;
-      height: 49vh !important;
-      
-      >img{
-        border-radius: 10px !important;
-      }
-    }
-    .store-name{
-      font-size: 18px !important; 
-    }
-    .views{
-      font-size: 15px !important;
-    }
-    .keyword{
-      font-size: 14px !important;
-    }
-  }
-}
-
-.search-page, .search-o-page{
+.search-page{
   font-family: "Noto Sans KR", sans-serif;
   .head{
     .head-top{
@@ -596,6 +571,13 @@
         }
       }
     }
+    .no-search{
+      display:none;
+      text-align: center;
+      font-size: 18px;
+      margin-top: 60px;
+      word-break: keep-all;
+    }
     .list-line{
       display: flex;
       flex-direction: column;
@@ -625,7 +607,6 @@
             font-size: 35px;
             text-align: center;
             font-weight:bold;
-            color: #D0C1D0;
             letter-spacing: 5px;
           }
           .keyword{
@@ -1719,7 +1700,7 @@
   
           }
           .views{
-            color:#d8a3d2; 
+            color:#FF5566;; 
             display:flex;  
             justify-content:center;
             padding-right:1px;

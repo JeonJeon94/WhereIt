@@ -16,12 +16,25 @@
         </div>
       </div>
     </div>
+    <div class="no-search">
+      <?php if(empty($food)){ ?>
+        <b>"<?=$address?>"</b> 지역으로 검색된 내용이 없습니다.<br>
+        다른 <b>"키워드"</b>로 검색해주세요.
+      <?php }else{ ?>
+        <b>"<?=$address?>"</b> 지역에 <b>"<?=$food?>"</b> (으)로 검색된 내용이 없습니다.<br>
+        다른 <b>"키워드"</b>로 검색해주세요.
+      <?php } ?>
+    </div>
     <div class="list-line">
     </div>
   </div>
 
 <script>
   var searchWord = "<?=$address?>"+" "+"<?=$food?>";
+  
+  function nosearch(){
+    $('.no-search').css('display', 'block')
+  }
 
   function loadTemplate(id) { return document.getElementById(id).innerHTML; }
 
@@ -29,14 +42,18 @@
     var temp = loadTemplate('store-slot');
     var store_template = _.template($("#store-slot").html());
     api_search_data(searchWord,function(data){
-      for(var i = 0; i < 10; i++){
-        var row = data.payload[i]
-        row.no = i+1 < 10 ? "0"+(i+1) : i+1
-        if(row === undefined)
-          continue
-        try{
-          $(".list-line").append( store_template(row) )
-        }catch(err){console.log(err)}  
+      if(data.payload.length == 0 ){
+        nosearch();
+      }else{
+        for(var i = 0; i < 10; i++){
+          var row = data.payload[i]
+          row.no = i+1
+          if(row === undefined)
+            continue
+          try{
+            $(".list-line").append( store_template(row) )
+          }catch(err){console.log(err)}  
+        }
       }
     })
   });

@@ -486,7 +486,7 @@
         #rank_text{
           margin: 30px 0 20px 0;
           font-size: 24px;
-
+          display: flex;
         }
         #up_btn, .store_btn{
           width: 100px;
@@ -502,6 +502,15 @@
         }
         .store_btn{
           margin: 20px 0 20px 100px;
+        }
+        .tag_option{
+          margin: 0 0 0 65px;
+          
+          #tag_option{
+            width: 100px;
+            height: 30px;
+            font-size: 15px;
+          }
         }
         .rank_theme, .rank_store{
           display: flex;

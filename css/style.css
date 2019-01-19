@@ -634,9 +634,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   width: 1200px;
   margin: 0 auto 20px auto;
 }
@@ -645,7 +642,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 1em;
+  padding-top: 2em;
   width: 1200px;
   margin: 0 auto;
 }
@@ -670,92 +667,113 @@ body {
   -webkit-box-flex: 5;
       -ms-flex: 5;
           flex: 5;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-top: 20px;
 }
 
-.main-page .main .search-form .where-top .where-form .form {
+.main-page .main .search-form .where-top .where-form .input-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-page .main .search-form .where-top .where-form .input-form #address-select, .main-page .main .search-form .where-top .where-form .input-form #food-select {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  padding-right: 20px;
-}
-
-.main-page .main .search-form .where-top .where-form .form .search-word {
-  position: relative;
-  width: 600px;
-  margin-right: 30px;
-}
-
-.main-page .main .search-form .where-top .where-form .form .search-word #search-word {
-  position: absolute;
-  padding-left: 20px;
-  font-size: 14px;
-  height: 49px;
-  border: 1px solid #737473;
+  border: 1px solid #E0E0E0;
   border-radius: 51px;
-  width: 600px;
+  font-size: 16px;
+  width: 200px;
+  height: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-.main-page .main .search-form .where-top .where-form .form .search-word #search-word::-webkit-input-placeholder {
-  color: #a39aa3;
-  font-family: "Noto Sans KR", sans-serif;
+.main-page .main .search-form .where-top .where-form .input-form #address-select {
+  margin-right: 10px;
 }
 
-.main-page .main .search-form .where-top .where-form .form .search-word #search-word:-ms-input-placeholder {
-  color: #a39aa3;
-  font-family: "Noto Sans KR", sans-serif;
+.main-page .main .search-form .where-top .where-form .input-form #food-select {
+  margin-left: 10px;
 }
 
-.main-page .main .search-form .where-top .where-form .form .search-word #search-word::-ms-input-placeholder {
-  color: #a39aa3;
-  font-family: "Noto Sans KR", sans-serif;
-}
-
-.main-page .main .search-form .where-top .where-form .form .search-word #search-word::placeholder {
-  color: #a39aa3;
-  font-family: "Noto Sans KR", sans-serif;
-}
-
-.main-page .main .search-form .where-top .where-form .form .search-word #search {
-  cursor: pointer;
+.main-page .main .search-form .where-top .where-form .input-form .address, .main-page .main .search-form .where-top .where-form .input-form .food {
   position: absolute;
-  top: 15px;
-  right: 25px;
-  max-height: 20px;
+  display: none;
+  width: 200px;
+  height: 400px;
+  text-align: center;
+  background-color: white;
+  z-index: 10;
+  top: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #E0E0E0;
+  border-radius: 24px;
+  line-height: 51px;
+  overflow: scroll;
 }
 
-.main-page .main .search-form .where-top .where-form .form #search-btn {
-  height: 49px;
-  width: 190px;
-  font-size: 14px;
-  border: 0px solid #FF5566;
+.main-page .main .search-form .where-top .where-form .input-form .address #address_text, .main-page .main .search-form .where-top .where-form .input-form .address #food_text, .main-page .main .search-form .where-top .where-form .input-form .food #address_text, .main-page .main .search-form .where-top .where-form .input-form .food #food_text {
+  cursor: pointer;
+}
+
+.main-page .main .search-form .where-top .where-form .input-form .address #address_text:hover, .main-page .main .search-form .where-top .where-form .input-form .address #food_text:hover, .main-page .main .search-form .where-top .where-form .input-form .food #address_text:hover, .main-page .main .search-form .where-top .where-form .input-form .food #food_text:hover {
+  color: #FF5566;
+}
+
+.main-page .main .search-form .where-top .where-form .input-form .address .address_text, .main-page .main .search-form .where-top .where-form .input-form .address .food_text, .main-page .main .search-form .where-top .where-form .input-form .food .address_text, .main-page .main .search-form .where-top .where-form .input-form .food .food_text {
+  cursor: pointer;
+}
+
+.main-page .main .search-form .where-top .where-form .input-form .address .address_text:hover, .main-page .main .search-form .where-top .where-form .input-form .address .food_text:hover, .main-page .main .search-form .where-top .where-form .input-form .food .address_text:hover, .main-page .main .search-form .where-top .where-form .input-form .food .food_text:hover {
+  color: #FF5566;
+}
+
+.main-page .main .search-form .where-top .where-form .input-form .food {
+  margin-left: 10px;
+}
+
+.main-page .main .search-form .where-top .where-form #s_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 180px;
+  height: 50px;
+  font-size: 16px;
+  letter-spacing: 1px;
   border-radius: 51px;
-  background-color: #FF5566;
   color: white;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  letter-spacing: 3px;
+  background: #FF5566;
+  border: 0px solid #FF5566;
   font-family: "Montserrat-bold", sans-serif;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-left: 20px;
   cursor: pointer;
 }
 
-.main-page .main .search-form .where-top .where-form .form #search-btn:hover {
-  background-color: #d0c1d0;
-}
-
-.main-page .main .search-form .where-top .where-form .form #search-btn:active {
-  background-color: #d8a3d2;
+.main-page .main .search-form .where-top .where-form #s_btn:active {
+  background: #d8a3d2;
 }
 
 .info-page .all, .search-page .all, .ranking-theme-page .all, .ranking-nowdays-page .all, .ranking-thismonth-page .all, .detail-page .all, .magazine-page .all, .asking-page .all, .login-page .all, .find-page .all, .sign-page .all, .edit-pw-page .all, .mypage-page .all, .myinfo-page .all, .userule-page .all {
@@ -774,50 +792,115 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.info-page .where-form2 .form, .search-page .where-form2 .form, .ranking-theme-page .where-form2 .form, .ranking-nowdays-page .where-form2 .form, .ranking-thismonth-page .where-form2 .form, .detail-page .where-form2 .form, .magazine-page .where-form2 .form, .asking-page .where-form2 .form, .login-page .where-form2 .form, .find-page .where-form2 .form, .sign-page .where-form2 .form, .edit-pw-page .where-form2 .form, .mypage-page .where-form2 .form, .myinfo-page .where-form2 .form, .userule-page .where-form2 .form {
+.info-page .where-form2 .input-form, .search-page .where-form2 .input-form, .ranking-theme-page .where-form2 .input-form, .ranking-nowdays-page .where-form2 .input-form, .ranking-thismonth-page .where-form2 .input-form, .detail-page .where-form2 .input-form, .magazine-page .where-form2 .input-form, .asking-page .where-form2 .input-form, .login-page .where-form2 .input-form, .find-page .where-form2 .input-form, .sign-page .where-form2 .input-form, .edit-pw-page .where-form2 .input-form, .mypage-page .where-form2 .input-form, .myinfo-page .where-form2 .input-form, .userule-page .where-form2 .input-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.info-page .where-form2 .input-form #address-select2, .info-page .where-form2 .input-form #food-select2, .search-page .where-form2 .input-form #address-select2, .search-page .where-form2 .input-form #food-select2, .ranking-theme-page .where-form2 .input-form #address-select2, .ranking-theme-page .where-form2 .input-form #food-select2, .ranking-nowdays-page .where-form2 .input-form #address-select2, .ranking-nowdays-page .where-form2 .input-form #food-select2, .ranking-thismonth-page .where-form2 .input-form #address-select2, .ranking-thismonth-page .where-form2 .input-form #food-select2, .detail-page .where-form2 .input-form #address-select2, .detail-page .where-form2 .input-form #food-select2, .magazine-page .where-form2 .input-form #address-select2, .magazine-page .where-form2 .input-form #food-select2, .asking-page .where-form2 .input-form #address-select2, .asking-page .where-form2 .input-form #food-select2, .login-page .where-form2 .input-form #address-select2, .login-page .where-form2 .input-form #food-select2, .find-page .where-form2 .input-form #address-select2, .find-page .where-form2 .input-form #food-select2, .sign-page .where-form2 .input-form #address-select2, .sign-page .where-form2 .input-form #food-select2, .edit-pw-page .where-form2 .input-form #address-select2, .edit-pw-page .where-form2 .input-form #food-select2, .mypage-page .where-form2 .input-form #address-select2, .mypage-page .where-form2 .input-form #food-select2, .myinfo-page .where-form2 .input-form #address-select2, .myinfo-page .where-form2 .input-form #food-select2, .userule-page .where-form2 .input-form #address-select2, .userule-page .where-form2 .input-form #food-select2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  border: 1px solid #E0E0E0;
+  border-radius: 51px;
+  font-size: 16px;
+  width: 200px;
+  height: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.info-page .where-form2 .form .search-word, .search-page .where-form2 .form .search-word, .ranking-theme-page .where-form2 .form .search-word, .ranking-nowdays-page .where-form2 .form .search-word, .ranking-thismonth-page .where-form2 .form .search-word, .detail-page .where-form2 .form .search-word, .magazine-page .where-form2 .form .search-word, .asking-page .where-form2 .form .search-word, .login-page .where-form2 .form .search-word, .find-page .where-form2 .form .search-word, .sign-page .where-form2 .form .search-word, .edit-pw-page .where-form2 .form .search-word, .mypage-page .where-form2 .form .search-word, .myinfo-page .where-form2 .form .search-word, .userule-page .where-form2 .form .search-word {
-  width: 400px;
-  position: relative;
-  margin-right: 150px;
-}
-
-.info-page .where-form2 .form .search-word #search-word2, .search-page .where-form2 .form .search-word #search-word2, .ranking-theme-page .where-form2 .form .search-word #search-word2, .ranking-nowdays-page .where-form2 .form .search-word #search-word2, .ranking-thismonth-page .where-form2 .form .search-word #search-word2, .detail-page .where-form2 .form .search-word #search-word2, .magazine-page .where-form2 .form .search-word #search-word2, .asking-page .where-form2 .form .search-word #search-word2, .login-page .where-form2 .form .search-word #search-word2, .find-page .where-form2 .form .search-word #search-word2, .sign-page .where-form2 .form .search-word #search-word2, .edit-pw-page .where-form2 .form .search-word #search-word2, .mypage-page .where-form2 .form .search-word #search-word2, .myinfo-page .where-form2 .form .search-word #search-word2, .userule-page .where-form2 .form .search-word #search-word2 {
-  position: absolute;
-  font-size: 14px;
-  padding-left: 20px;
-  height: 49px;
-  border: 1px solid #737473;
-  border-radius: 51px;
-  width: 400px;
+  cursor: pointer;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-.info-page .where-form2 .form .search-word #search2, .search-page .where-form2 .form .search-word #search2, .ranking-theme-page .where-form2 .form .search-word #search2, .ranking-nowdays-page .where-form2 .form .search-word #search2, .ranking-thismonth-page .where-form2 .form .search-word #search2, .detail-page .where-form2 .form .search-word #search2, .magazine-page .where-form2 .form .search-word #search2, .asking-page .where-form2 .form .search-word #search2, .login-page .where-form2 .form .search-word #search2, .find-page .where-form2 .form .search-word #search2, .sign-page .where-form2 .form .search-word #search2, .edit-pw-page .where-form2 .form .search-word #search2, .mypage-page .where-form2 .form .search-word #search2, .myinfo-page .where-form2 .form .search-word #search2, .userule-page .where-form2 .form .search-word #search2 {
-  cursor: pointer;
+.info-page .where-form2 .input-form #address-select2, .search-page .where-form2 .input-form #address-select2, .ranking-theme-page .where-form2 .input-form #address-select2, .ranking-nowdays-page .where-form2 .input-form #address-select2, .ranking-thismonth-page .where-form2 .input-form #address-select2, .detail-page .where-form2 .input-form #address-select2, .magazine-page .where-form2 .input-form #address-select2, .asking-page .where-form2 .input-form #address-select2, .login-page .where-form2 .input-form #address-select2, .find-page .where-form2 .input-form #address-select2, .sign-page .where-form2 .input-form #address-select2, .edit-pw-page .where-form2 .input-form #address-select2, .mypage-page .where-form2 .input-form #address-select2, .myinfo-page .where-form2 .input-form #address-select2, .userule-page .where-form2 .input-form #address-select2 {
+  margin-right: 10px;
+}
+
+.info-page .where-form2 .input-form #food-select2, .search-page .where-form2 .input-form #food-select2, .ranking-theme-page .where-form2 .input-form #food-select2, .ranking-nowdays-page .where-form2 .input-form #food-select2, .ranking-thismonth-page .where-form2 .input-form #food-select2, .detail-page .where-form2 .input-form #food-select2, .magazine-page .where-form2 .input-form #food-select2, .asking-page .where-form2 .input-form #food-select2, .login-page .where-form2 .input-form #food-select2, .find-page .where-form2 .input-form #food-select2, .sign-page .where-form2 .input-form #food-select2, .edit-pw-page .where-form2 .input-form #food-select2, .mypage-page .where-form2 .input-form #food-select2, .myinfo-page .where-form2 .input-form #food-select2, .userule-page .where-form2 .input-form #food-select2 {
+  margin-left: 10px;
+}
+
+.info-page .where-form2 .input-form .address, .info-page .where-form2 .input-form .food, .search-page .where-form2 .input-form .address, .search-page .where-form2 .input-form .food, .ranking-theme-page .where-form2 .input-form .address, .ranking-theme-page .where-form2 .input-form .food, .ranking-nowdays-page .where-form2 .input-form .address, .ranking-nowdays-page .where-form2 .input-form .food, .ranking-thismonth-page .where-form2 .input-form .address, .ranking-thismonth-page .where-form2 .input-form .food, .detail-page .where-form2 .input-form .address, .detail-page .where-form2 .input-form .food, .magazine-page .where-form2 .input-form .address, .magazine-page .where-form2 .input-form .food, .asking-page .where-form2 .input-form .address, .asking-page .where-form2 .input-form .food, .login-page .where-form2 .input-form .address, .login-page .where-form2 .input-form .food, .find-page .where-form2 .input-form .address, .find-page .where-form2 .input-form .food, .sign-page .where-form2 .input-form .address, .sign-page .where-form2 .input-form .food, .edit-pw-page .where-form2 .input-form .address, .edit-pw-page .where-form2 .input-form .food, .mypage-page .where-form2 .input-form .address, .mypage-page .where-form2 .input-form .food, .myinfo-page .where-form2 .input-form .address, .myinfo-page .where-form2 .input-form .food, .userule-page .where-form2 .input-form .address, .userule-page .where-form2 .input-form .food {
   position: absolute;
-  top: 15px;
-  right: 15px;
-  max-height: 20px;
+  display: none;
+  width: 200px;
+  height: 400px;
+  text-align: center;
+  background-color: white;
+  z-index: 10;
+  top: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #E0E0E0;
+  border-radius: 24px;
+  line-height: 51px;
+  overflow: scroll;
+}
+
+.info-page .where-form2 .input-form .address #address_text, .info-page .where-form2 .input-form .address #food_text, .info-page .where-form2 .input-form .food #address_text, .info-page .where-form2 .input-form .food #food_text, .search-page .where-form2 .input-form .address #address_text, .search-page .where-form2 .input-form .address #food_text, .search-page .where-form2 .input-form .food #address_text, .search-page .where-form2 .input-form .food #food_text, .ranking-theme-page .where-form2 .input-form .address #address_text, .ranking-theme-page .where-form2 .input-form .address #food_text, .ranking-theme-page .where-form2 .input-form .food #address_text, .ranking-theme-page .where-form2 .input-form .food #food_text, .ranking-nowdays-page .where-form2 .input-form .address #address_text, .ranking-nowdays-page .where-form2 .input-form .address #food_text, .ranking-nowdays-page .where-form2 .input-form .food #address_text, .ranking-nowdays-page .where-form2 .input-form .food #food_text, .ranking-thismonth-page .where-form2 .input-form .address #address_text, .ranking-thismonth-page .where-form2 .input-form .address #food_text, .ranking-thismonth-page .where-form2 .input-form .food #address_text, .ranking-thismonth-page .where-form2 .input-form .food #food_text, .detail-page .where-form2 .input-form .address #address_text, .detail-page .where-form2 .input-form .address #food_text, .detail-page .where-form2 .input-form .food #address_text, .detail-page .where-form2 .input-form .food #food_text, .magazine-page .where-form2 .input-form .address #address_text, .magazine-page .where-form2 .input-form .address #food_text, .magazine-page .where-form2 .input-form .food #address_text, .magazine-page .where-form2 .input-form .food #food_text, .asking-page .where-form2 .input-form .address #address_text, .asking-page .where-form2 .input-form .address #food_text, .asking-page .where-form2 .input-form .food #address_text, .asking-page .where-form2 .input-form .food #food_text, .login-page .where-form2 .input-form .address #address_text, .login-page .where-form2 .input-form .address #food_text, .login-page .where-form2 .input-form .food #address_text, .login-page .where-form2 .input-form .food #food_text, .find-page .where-form2 .input-form .address #address_text, .find-page .where-form2 .input-form .address #food_text, .find-page .where-form2 .input-form .food #address_text, .find-page .where-form2 .input-form .food #food_text, .sign-page .where-form2 .input-form .address #address_text, .sign-page .where-form2 .input-form .address #food_text, .sign-page .where-form2 .input-form .food #address_text, .sign-page .where-form2 .input-form .food #food_text, .edit-pw-page .where-form2 .input-form .address #address_text, .edit-pw-page .where-form2 .input-form .address #food_text, .edit-pw-page .where-form2 .input-form .food #address_text, .edit-pw-page .where-form2 .input-form .food #food_text, .mypage-page .where-form2 .input-form .address #address_text, .mypage-page .where-form2 .input-form .address #food_text, .mypage-page .where-form2 .input-form .food #address_text, .mypage-page .where-form2 .input-form .food #food_text, .myinfo-page .where-form2 .input-form .address #address_text, .myinfo-page .where-form2 .input-form .address #food_text, .myinfo-page .where-form2 .input-form .food #address_text, .myinfo-page .where-form2 .input-form .food #food_text, .userule-page .where-form2 .input-form .address #address_text, .userule-page .where-form2 .input-form .address #food_text, .userule-page .where-form2 .input-form .food #address_text, .userule-page .where-form2 .input-form .food #food_text {
+  cursor: pointer;
+}
+
+.info-page .where-form2 .input-form .address #address_text:hover, .info-page .where-form2 .input-form .address #food_text:hover, .info-page .where-form2 .input-form .food #address_text:hover, .info-page .where-form2 .input-form .food #food_text:hover, .search-page .where-form2 .input-form .address #address_text:hover, .search-page .where-form2 .input-form .address #food_text:hover, .search-page .where-form2 .input-form .food #address_text:hover, .search-page .where-form2 .input-form .food #food_text:hover, .ranking-theme-page .where-form2 .input-form .address #address_text:hover, .ranking-theme-page .where-form2 .input-form .address #food_text:hover, .ranking-theme-page .where-form2 .input-form .food #address_text:hover, .ranking-theme-page .where-form2 .input-form .food #food_text:hover, .ranking-nowdays-page .where-form2 .input-form .address #address_text:hover, .ranking-nowdays-page .where-form2 .input-form .address #food_text:hover, .ranking-nowdays-page .where-form2 .input-form .food #address_text:hover, .ranking-nowdays-page .where-form2 .input-form .food #food_text:hover, .ranking-thismonth-page .where-form2 .input-form .address #address_text:hover, .ranking-thismonth-page .where-form2 .input-form .address #food_text:hover, .ranking-thismonth-page .where-form2 .input-form .food #address_text:hover, .ranking-thismonth-page .where-form2 .input-form .food #food_text:hover, .detail-page .where-form2 .input-form .address #address_text:hover, .detail-page .where-form2 .input-form .address #food_text:hover, .detail-page .where-form2 .input-form .food #address_text:hover, .detail-page .where-form2 .input-form .food #food_text:hover, .magazine-page .where-form2 .input-form .address #address_text:hover, .magazine-page .where-form2 .input-form .address #food_text:hover, .magazine-page .where-form2 .input-form .food #address_text:hover, .magazine-page .where-form2 .input-form .food #food_text:hover, .asking-page .where-form2 .input-form .address #address_text:hover, .asking-page .where-form2 .input-form .address #food_text:hover, .asking-page .where-form2 .input-form .food #address_text:hover, .asking-page .where-form2 .input-form .food #food_text:hover, .login-page .where-form2 .input-form .address #address_text:hover, .login-page .where-form2 .input-form .address #food_text:hover, .login-page .where-form2 .input-form .food #address_text:hover, .login-page .where-form2 .input-form .food #food_text:hover, .find-page .where-form2 .input-form .address #address_text:hover, .find-page .where-form2 .input-form .address #food_text:hover, .find-page .where-form2 .input-form .food #address_text:hover, .find-page .where-form2 .input-form .food #food_text:hover, .sign-page .where-form2 .input-form .address #address_text:hover, .sign-page .where-form2 .input-form .address #food_text:hover, .sign-page .where-form2 .input-form .food #address_text:hover, .sign-page .where-form2 .input-form .food #food_text:hover, .edit-pw-page .where-form2 .input-form .address #address_text:hover, .edit-pw-page .where-form2 .input-form .address #food_text:hover, .edit-pw-page .where-form2 .input-form .food #address_text:hover, .edit-pw-page .where-form2 .input-form .food #food_text:hover, .mypage-page .where-form2 .input-form .address #address_text:hover, .mypage-page .where-form2 .input-form .address #food_text:hover, .mypage-page .where-form2 .input-form .food #address_text:hover, .mypage-page .where-form2 .input-form .food #food_text:hover, .myinfo-page .where-form2 .input-form .address #address_text:hover, .myinfo-page .where-form2 .input-form .address #food_text:hover, .myinfo-page .where-form2 .input-form .food #address_text:hover, .myinfo-page .where-form2 .input-form .food #food_text:hover, .userule-page .where-form2 .input-form .address #address_text:hover, .userule-page .where-form2 .input-form .address #food_text:hover, .userule-page .where-form2 .input-form .food #address_text:hover, .userule-page .where-form2 .input-form .food #food_text:hover {
+  color: #FF5566;
+}
+
+.info-page .where-form2 .input-form .address .address_text, .info-page .where-form2 .input-form .address .food_text, .info-page .where-form2 .input-form .food .address_text, .info-page .where-form2 .input-form .food .food_text, .search-page .where-form2 .input-form .address .address_text, .search-page .where-form2 .input-form .address .food_text, .search-page .where-form2 .input-form .food .address_text, .search-page .where-form2 .input-form .food .food_text, .ranking-theme-page .where-form2 .input-form .address .address_text, .ranking-theme-page .where-form2 .input-form .address .food_text, .ranking-theme-page .where-form2 .input-form .food .address_text, .ranking-theme-page .where-form2 .input-form .food .food_text, .ranking-nowdays-page .where-form2 .input-form .address .address_text, .ranking-nowdays-page .where-form2 .input-form .address .food_text, .ranking-nowdays-page .where-form2 .input-form .food .address_text, .ranking-nowdays-page .where-form2 .input-form .food .food_text, .ranking-thismonth-page .where-form2 .input-form .address .address_text, .ranking-thismonth-page .where-form2 .input-form .address .food_text, .ranking-thismonth-page .where-form2 .input-form .food .address_text, .ranking-thismonth-page .where-form2 .input-form .food .food_text, .detail-page .where-form2 .input-form .address .address_text, .detail-page .where-form2 .input-form .address .food_text, .detail-page .where-form2 .input-form .food .address_text, .detail-page .where-form2 .input-form .food .food_text, .magazine-page .where-form2 .input-form .address .address_text, .magazine-page .where-form2 .input-form .address .food_text, .magazine-page .where-form2 .input-form .food .address_text, .magazine-page .where-form2 .input-form .food .food_text, .asking-page .where-form2 .input-form .address .address_text, .asking-page .where-form2 .input-form .address .food_text, .asking-page .where-form2 .input-form .food .address_text, .asking-page .where-form2 .input-form .food .food_text, .login-page .where-form2 .input-form .address .address_text, .login-page .where-form2 .input-form .address .food_text, .login-page .where-form2 .input-form .food .address_text, .login-page .where-form2 .input-form .food .food_text, .find-page .where-form2 .input-form .address .address_text, .find-page .where-form2 .input-form .address .food_text, .find-page .where-form2 .input-form .food .address_text, .find-page .where-form2 .input-form .food .food_text, .sign-page .where-form2 .input-form .address .address_text, .sign-page .where-form2 .input-form .address .food_text, .sign-page .where-form2 .input-form .food .address_text, .sign-page .where-form2 .input-form .food .food_text, .edit-pw-page .where-form2 .input-form .address .address_text, .edit-pw-page .where-form2 .input-form .address .food_text, .edit-pw-page .where-form2 .input-form .food .address_text, .edit-pw-page .where-form2 .input-form .food .food_text, .mypage-page .where-form2 .input-form .address .address_text, .mypage-page .where-form2 .input-form .address .food_text, .mypage-page .where-form2 .input-form .food .address_text, .mypage-page .where-form2 .input-form .food .food_text, .myinfo-page .where-form2 .input-form .address .address_text, .myinfo-page .where-form2 .input-form .address .food_text, .myinfo-page .where-form2 .input-form .food .address_text, .myinfo-page .where-form2 .input-form .food .food_text, .userule-page .where-form2 .input-form .address .address_text, .userule-page .where-form2 .input-form .address .food_text, .userule-page .where-form2 .input-form .food .address_text, .userule-page .where-form2 .input-form .food .food_text {
+  cursor: pointer;
+}
+
+.info-page .where-form2 .input-form .address .address_text:hover, .info-page .where-form2 .input-form .address .food_text:hover, .info-page .where-form2 .input-form .food .address_text:hover, .info-page .where-form2 .input-form .food .food_text:hover, .search-page .where-form2 .input-form .address .address_text:hover, .search-page .where-form2 .input-form .address .food_text:hover, .search-page .where-form2 .input-form .food .address_text:hover, .search-page .where-form2 .input-form .food .food_text:hover, .ranking-theme-page .where-form2 .input-form .address .address_text:hover, .ranking-theme-page .where-form2 .input-form .address .food_text:hover, .ranking-theme-page .where-form2 .input-form .food .address_text:hover, .ranking-theme-page .where-form2 .input-form .food .food_text:hover, .ranking-nowdays-page .where-form2 .input-form .address .address_text:hover, .ranking-nowdays-page .where-form2 .input-form .address .food_text:hover, .ranking-nowdays-page .where-form2 .input-form .food .address_text:hover, .ranking-nowdays-page .where-form2 .input-form .food .food_text:hover, .ranking-thismonth-page .where-form2 .input-form .address .address_text:hover, .ranking-thismonth-page .where-form2 .input-form .address .food_text:hover, .ranking-thismonth-page .where-form2 .input-form .food .address_text:hover, .ranking-thismonth-page .where-form2 .input-form .food .food_text:hover, .detail-page .where-form2 .input-form .address .address_text:hover, .detail-page .where-form2 .input-form .address .food_text:hover, .detail-page .where-form2 .input-form .food .address_text:hover, .detail-page .where-form2 .input-form .food .food_text:hover, .magazine-page .where-form2 .input-form .address .address_text:hover, .magazine-page .where-form2 .input-form .address .food_text:hover, .magazine-page .where-form2 .input-form .food .address_text:hover, .magazine-page .where-form2 .input-form .food .food_text:hover, .asking-page .where-form2 .input-form .address .address_text:hover, .asking-page .where-form2 .input-form .address .food_text:hover, .asking-page .where-form2 .input-form .food .address_text:hover, .asking-page .where-form2 .input-form .food .food_text:hover, .login-page .where-form2 .input-form .address .address_text:hover, .login-page .where-form2 .input-form .address .food_text:hover, .login-page .where-form2 .input-form .food .address_text:hover, .login-page .where-form2 .input-form .food .food_text:hover, .find-page .where-form2 .input-form .address .address_text:hover, .find-page .where-form2 .input-form .address .food_text:hover, .find-page .where-form2 .input-form .food .address_text:hover, .find-page .where-form2 .input-form .food .food_text:hover, .sign-page .where-form2 .input-form .address .address_text:hover, .sign-page .where-form2 .input-form .address .food_text:hover, .sign-page .where-form2 .input-form .food .address_text:hover, .sign-page .where-form2 .input-form .food .food_text:hover, .edit-pw-page .where-form2 .input-form .address .address_text:hover, .edit-pw-page .where-form2 .input-form .address .food_text:hover, .edit-pw-page .where-form2 .input-form .food .address_text:hover, .edit-pw-page .where-form2 .input-form .food .food_text:hover, .mypage-page .where-form2 .input-form .address .address_text:hover, .mypage-page .where-form2 .input-form .address .food_text:hover, .mypage-page .where-form2 .input-form .food .address_text:hover, .mypage-page .where-form2 .input-form .food .food_text:hover, .myinfo-page .where-form2 .input-form .address .address_text:hover, .myinfo-page .where-form2 .input-form .address .food_text:hover, .myinfo-page .where-form2 .input-form .food .address_text:hover, .myinfo-page .where-form2 .input-form .food .food_text:hover, .userule-page .where-form2 .input-form .address .address_text:hover, .userule-page .where-form2 .input-form .address .food_text:hover, .userule-page .where-form2 .input-form .food .address_text:hover, .userule-page .where-form2 .input-form .food .food_text:hover {
+  color: #FF5566;
+}
+
+.info-page .where-form2 .input-form .food, .search-page .where-form2 .input-form .food, .ranking-theme-page .where-form2 .input-form .food, .ranking-nowdays-page .where-form2 .input-form .food, .ranking-thismonth-page .where-form2 .input-form .food, .detail-page .where-form2 .input-form .food, .magazine-page .where-form2 .input-form .food, .asking-page .where-form2 .input-form .food, .login-page .where-form2 .input-form .food, .find-page .where-form2 .input-form .food, .sign-page .where-form2 .input-form .food, .edit-pw-page .where-form2 .input-form .food, .mypage-page .where-form2 .input-form .food, .myinfo-page .where-form2 .input-form .food, .userule-page .where-form2 .input-form .food {
+  margin-left: 10px;
+}
+
+.info-page .where-form2 #s_btn, .search-page .where-form2 #s_btn, .ranking-theme-page .where-form2 #s_btn, .ranking-nowdays-page .where-form2 #s_btn, .ranking-thismonth-page .where-form2 #s_btn, .detail-page .where-form2 #s_btn, .magazine-page .where-form2 #s_btn, .asking-page .where-form2 #s_btn, .login-page .where-form2 #s_btn, .find-page .where-form2 #s_btn, .sign-page .where-form2 #s_btn, .edit-pw-page .where-form2 #s_btn, .mypage-page .where-form2 #s_btn, .myinfo-page .where-form2 #s_btn, .userule-page .where-form2 #s_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 180px;
+  height: 50px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  border-radius: 51px;
+  color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #FF5566;
+  border: 0px solid #FF5566;
+  font-family: "Montserrat-bold", sans-serif;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.info-page .where-form2 #s_btn:active, .search-page .where-form2 #s_btn:active, .ranking-theme-page .where-form2 #s_btn:active, .ranking-nowdays-page .where-form2 #s_btn:active, .ranking-thismonth-page .where-form2 #s_btn:active, .detail-page .where-form2 #s_btn:active, .magazine-page .where-form2 #s_btn:active, .asking-page .where-form2 #s_btn:active, .login-page .where-form2 #s_btn:active, .find-page .where-form2 #s_btn:active, .sign-page .where-form2 #s_btn:active, .edit-pw-page .where-form2 #s_btn:active, .mypage-page .where-form2 #s_btn:active, .myinfo-page .where-form2 #s_btn:active, .userule-page .where-form2 #s_btn:active {
+  background: #d8a3d2;
 }
 
 .info-page .main, .search-page .main, .ranking-theme-page .main, .ranking-nowdays-page .main, .ranking-thismonth-page .main, .detail-page .main, .magazine-page .main, .asking-page .main, .login-page .main, .find-page .main, .sign-page .main, .edit-pw-page .main, .mypage-page .main, .myinfo-page .main, .userule-page .main {
@@ -835,38 +918,8 @@ body {
   display: none;
 }
 
-.info-page .main .dot div, .search-page .main .dot div, .ranking-theme-page .main .dot div, .ranking-nowdays-page .main .dot div, .ranking-thismonth-page .main .dot div, .detail-page .main .dot div, .magazine-page .main .dot div, .asking-page .main .dot div, .login-page .main .dot div, .find-page .main .dot div, .sign-page .main .dot div, .edit-pw-page .main .dot div, .mypage-page .main .dot div, .myinfo-page .main .dot div, .userule-page .main .dot div {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 10px;
-  height: 10px;
-  margin: auto;
-  border-radius: 10px;
-  background-color: #D0C1D0;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-animation: dot 1.5s linear infinite;
-          animation: dot 1.5s linear infinite;
-}
-
-.info-page .main .dot div:nth-child(1), .search-page .main .dot div:nth-child(1), .ranking-theme-page .main .dot div:nth-child(1), .ranking-nowdays-page .main .dot div:nth-child(1), .ranking-thismonth-page .main .dot div:nth-child(1), .detail-page .main .dot div:nth-child(1), .magazine-page .main .dot div:nth-child(1), .asking-page .main .dot div:nth-child(1), .login-page .main .dot div:nth-child(1), .find-page .main .dot div:nth-child(1), .sign-page .main .dot div:nth-child(1), .edit-pw-page .main .dot div:nth-child(1), .mypage-page .main .dot div:nth-child(1), .myinfo-page .main .dot div:nth-child(1), .userule-page .main .dot div:nth-child(1) {
-  left: -50px;
-  -webkit-animation-delay: -0.1s;
-          animation-delay: -0.1s;
-}
-
-.info-page .main .dot div:nth-child(3), .search-page .main .dot div:nth-child(3), .ranking-theme-page .main .dot div:nth-child(3), .ranking-nowdays-page .main .dot div:nth-child(3), .ranking-thismonth-page .main .dot div:nth-child(3), .detail-page .main .dot div:nth-child(3), .magazine-page .main .dot div:nth-child(3), .asking-page .main .dot div:nth-child(3), .login-page .main .dot div:nth-child(3), .find-page .main .dot div:nth-child(3), .sign-page .main .dot div:nth-child(3), .edit-pw-page .main .dot div:nth-child(3), .mypage-page .main .dot div:nth-child(3), .myinfo-page .main .dot div:nth-child(3), .userule-page .main .dot div:nth-child(3) {
-  right: -50px;
-  -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s;
-}
-
 .info-page .main .search-center, .search-page .main .search-center, .ranking-theme-page .main .search-center, .ranking-nowdays-page .main .search-center, .ranking-thismonth-page .main .search-center, .detail-page .main .search-center, .magazine-page .main .search-center, .asking-page .main .search-center, .login-page .main .search-center, .find-page .main .search-center, .sign-page .main .search-center, .edit-pw-page .main .search-center, .mypage-page .main .search-center, .myinfo-page .main .search-center, .userule-page .main .search-center {
-  width: 1100px;
-  margin: 0 auto;
+  width: 1300px;
 }
 
 .info-page .main .search-center .main-top, .search-page .main .search-center .main-top, .ranking-theme-page .main .search-center .main-top, .ranking-nowdays-page .main .search-center .main-top, .ranking-thismonth-page .main .search-center .main-top, .detail-page .main .search-center .main-top, .magazine-page .main .search-center .main-top, .asking-page .main .search-center .main-top, .login-page .main .search-center .main-top, .find-page .main .search-center .main-top, .sign-page .main .search-center .main-top, .edit-pw-page .main .search-center .main-top, .mypage-page .main .search-center .main-top, .myinfo-page .main .search-center .main-top, .userule-page .main .search-center .main-top {
@@ -876,62 +929,73 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  padding: 35px 0px;
-  min-height: 78px;
+  line-height: 20px;
+  padding: 100px 0px;
 }
 
-.info-page .main .search-center .main-top .search-time, .search-page .main .search-center .main-top .search-time, .ranking-theme-page .main .search-center .main-top .search-time, .ranking-nowdays-page .main .search-center .main-top .search-time, .ranking-thismonth-page .main .search-center .main-top .search-time, .detail-page .main .search-center .main-top .search-time, .magazine-page .main .search-center .main-top .search-time, .asking-page .main .search-center .main-top .search-time, .login-page .main .search-center .main-top .search-time, .find-page .main .search-center .main-top .search-time, .sign-page .main .search-center .main-top .search-time, .edit-pw-page .main .search-center .main-top .search-time, .mypage-page .main .search-center .main-top .search-time, .myinfo-page .main .search-center .main-top .search-time, .userule-page .main .search-center .main-top .search-time {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  height: 34px;
-  padding-right: 20px;
-}
-
-.info-page .main .search-center .main-top .search-time a, .search-page .main .search-center .main-top .search-time a, .ranking-theme-page .main .search-center .main-top .search-time a, .ranking-nowdays-page .main .search-center .main-top .search-time a, .ranking-thismonth-page .main .search-center .main-top .search-time a, .detail-page .main .search-center .main-top .search-time a, .magazine-page .main .search-center .main-top .search-time a, .asking-page .main .search-center .main-top .search-time a, .login-page .main .search-center .main-top .search-time a, .find-page .main .search-center .main-top .search-time a, .sign-page .main .search-center .main-top .search-time a, .edit-pw-page .main .search-center .main-top .search-time a, .mypage-page .main .search-center .main-top .search-time a, .myinfo-page .main .search-center .main-top .search-time a, .userule-page .main .search-center .main-top .search-time a {
-  text-decoration: none;
-  color: gray;
-  margin-right: 25px;
-}
-
-.info-page .main .search-center .main-top .search-time a:hover, .search-page .main .search-center .main-top .search-time a:hover, .ranking-theme-page .main .search-center .main-top .search-time a:hover, .ranking-nowdays-page .main .search-center .main-top .search-time a:hover, .ranking-thismonth-page .main .search-center .main-top .search-time a:hover, .detail-page .main .search-center .main-top .search-time a:hover, .magazine-page .main .search-center .main-top .search-time a:hover, .asking-page .main .search-center .main-top .search-time a:hover, .login-page .main .search-center .main-top .search-time a:hover, .find-page .main .search-center .main-top .search-time a:hover, .sign-page .main .search-center .main-top .search-time a:hover, .edit-pw-page .main .search-center .main-top .search-time a:hover, .mypage-page .main .search-center .main-top .search-time a:hover, .myinfo-page .main .search-center .main-top .search-time a:hover, .userule-page .main .search-center .main-top .search-time a:hover {
-  text-decoration: none;
-  color: #504f57;
+.info-page .main .search-center .no-search, .search-page .main .search-center .no-search, .ranking-theme-page .main .search-center .no-search, .ranking-nowdays-page .main .search-center .no-search, .ranking-thismonth-page .main .search-center .no-search, .detail-page .main .search-center .no-search, .magazine-page .main .search-center .no-search, .asking-page .main .search-center .no-search, .login-page .main .search-center .no-search, .find-page .main .search-center .no-search, .sign-page .main .search-center .no-search, .edit-pw-page .main .search-center .no-search, .mypage-page .main .search-center .no-search, .myinfo-page .main .search-center .no-search, .userule-page .main .search-center .no-search {
+  display: none;
+  text-align: center;
+  font-size: 18px;
 }
 
 .info-page .main .search-center .search-list, .search-page .main .search-center .search-list, .ranking-theme-page .main .search-center .search-list, .ranking-nowdays-page .main .search-center .search-list, .ranking-thismonth-page .main .search-center .search-list, .detail-page .main .search-center .search-list, .magazine-page .main .search-center .search-list, .asking-page .main .search-center .search-list, .login-page .main .search-center .search-list, .find-page .main .search-center .search-list, .sign-page .main .search-center .search-list, .edit-pw-page .main .search-center .search-list, .mypage-page .main .search-center .search-list, .myinfo-page .main .search-center .search-list, .userule-page .main .search-center .search-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 8;
-      -ms-flex: 8;
-          flex: 8;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  min-height: 605px;
-}
-
-.info-page .main .search-center .search-list .no-search, .search-page .main .search-center .search-list .no-search, .ranking-theme-page .main .search-center .search-list .no-search, .ranking-nowdays-page .main .search-center .search-list .no-search, .ranking-thismonth-page .main .search-center .search-list .no-search, .detail-page .main .search-center .search-list .no-search, .magazine-page .main .search-center .search-list .no-search, .asking-page .main .search-center .search-list .no-search, .login-page .main .search-center .search-list .no-search, .find-page .main .search-center .search-list .no-search, .sign-page .main .search-center .search-list .no-search, .edit-pw-page .main .search-center .search-list .no-search, .mypage-page .main .search-center .search-list .no-search, .myinfo-page .main .search-center .search-list .no-search, .userule-page .main .search-center .search-list .no-search {
-  display: none;
-  text-align: center;
-  font-size: 18px;
 }
 
 .info-page .main .search-center .search-list .list-line, .search-page .main .search-center .search-list .list-line, .ranking-theme-page .main .search-center .search-list .list-line, .ranking-nowdays-page .main .search-center .search-list .list-line, .ranking-thismonth-page .main .search-center .search-list .list-line, .detail-page .main .search-center .search-list .list-line, .magazine-page .main .search-center .search-list .list-line, .asking-page .main .search-center .search-list .list-line, .login-page .main .search-center .search-list .list-line, .find-page .main .search-center .search-list .list-line, .sign-page .main .search-center .search-list .list-line, .edit-pw-page .main .search-center .search-list .list-line, .mypage-page .main .search-center .search-list .list-line, .myinfo-page .main .search-center .search-list .list-line, .userule-page .main .search-center .search-list .list-line {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 20px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  position: relative;
+}
+
+.info-page .main .search-center .search-list .list-line .search-store1, .search-page .main .search-center .search-list .list-line .search-store1, .ranking-theme-page .main .search-center .search-list .list-line .search-store1, .ranking-nowdays-page .main .search-center .search-list .list-line .search-store1, .ranking-thismonth-page .main .search-center .search-list .list-line .search-store1, .detail-page .main .search-center .search-list .list-line .search-store1, .magazine-page .main .search-center .search-list .list-line .search-store1, .asking-page .main .search-center .search-list .list-line .search-store1, .login-page .main .search-center .search-list .list-line .search-store1, .find-page .main .search-center .search-list .list-line .search-store1, .sign-page .main .search-center .search-list .list-line .search-store1, .edit-pw-page .main .search-center .search-list .list-line .search-store1, .mypage-page .main .search-center .search-list .list-line .search-store1, .myinfo-page .main .search-center .search-list .list-line .search-store1, .userule-page .main .search-center .search-list .list-line .search-store1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.info-page .main .search-center .search-list .list-line .search-store2, .search-page .main .search-center .search-list .list-line .search-store2, .ranking-theme-page .main .search-center .search-list .list-line .search-store2, .ranking-nowdays-page .main .search-center .search-list .list-line .search-store2, .ranking-thismonth-page .main .search-center .search-list .list-line .search-store2, .detail-page .main .search-center .search-list .list-line .search-store2, .magazine-page .main .search-center .search-list .list-line .search-store2, .asking-page .main .search-center .search-list .list-line .search-store2, .login-page .main .search-center .search-list .list-line .search-store2, .find-page .main .search-center .search-list .list-line .search-store2, .sign-page .main .search-center .search-list .list-line .search-store2, .edit-pw-page .main .search-center .search-list .list-line .search-store2, .mypage-page .main .search-center .search-list .list-line .search-store2, .myinfo-page .main .search-center .search-list .list-line .search-store2, .userule-page .main .search-center .search-list .list-line .search-store2 {
+  display: none;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.info-page .main .search-center .search-list .list-line .right-btn, .search-page .main .search-center .search-list .list-line .right-btn, .ranking-theme-page .main .search-center .search-list .list-line .right-btn, .ranking-nowdays-page .main .search-center .search-list .list-line .right-btn, .ranking-thismonth-page .main .search-center .search-list .list-line .right-btn, .detail-page .main .search-center .search-list .list-line .right-btn, .magazine-page .main .search-center .search-list .list-line .right-btn, .asking-page .main .search-center .search-list .list-line .right-btn, .login-page .main .search-center .search-list .list-line .right-btn, .find-page .main .search-center .search-list .list-line .right-btn, .sign-page .main .search-center .search-list .list-line .right-btn, .edit-pw-page .main .search-center .search-list .list-line .right-btn, .mypage-page .main .search-center .search-list .list-line .right-btn, .myinfo-page .main .search-center .search-list .list-line .right-btn, .userule-page .main .search-center .search-list .list-line .right-btn {
+  position: absolute;
+  top: 40%;
+  right: 10px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.info-page .main .search-center .search-list .list-line .left-btn, .search-page .main .search-center .search-list .list-line .left-btn, .ranking-theme-page .main .search-center .search-list .list-line .left-btn, .ranking-nowdays-page .main .search-center .search-list .list-line .left-btn, .ranking-thismonth-page .main .search-center .search-list .list-line .left-btn, .detail-page .main .search-center .search-list .list-line .left-btn, .magazine-page .main .search-center .search-list .list-line .left-btn, .asking-page .main .search-center .search-list .list-line .left-btn, .login-page .main .search-center .search-list .list-line .left-btn, .find-page .main .search-center .search-list .list-line .left-btn, .sign-page .main .search-center .search-list .list-line .left-btn, .edit-pw-page .main .search-center .search-list .list-line .left-btn, .mypage-page .main .search-center .search-list .list-line .left-btn, .myinfo-page .main .search-center .search-list .list-line .left-btn, .userule-page .main .search-center .search-list .list-line .left-btn {
+  position: absolute;
+  display: none;
+  top: 40%;
+  left: -34px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.info-page .main .search-center .search-list .list-line .store_num, .search-page .main .search-center .search-list .list-line .store_num, .ranking-theme-page .main .search-center .search-list .list-line .store_num, .ranking-nowdays-page .main .search-center .search-list .list-line .store_num, .ranking-thismonth-page .main .search-center .search-list .list-line .store_num, .detail-page .main .search-center .search-list .list-line .store_num, .magazine-page .main .search-center .search-list .list-line .store_num, .asking-page .main .search-center .search-list .list-line .store_num, .login-page .main .search-center .search-list .list-line .store_num, .find-page .main .search-center .search-list .list-line .store_num, .sign-page .main .search-center .search-list .list-line .store_num, .edit-pw-page .main .search-center .search-list .list-line .store_num, .mypage-page .main .search-center .search-list .list-line .store_num, .myinfo-page .main .search-center .search-list .list-line .store_num, .userule-page .main .search-center .search-list .list-line .store_num {
+  font-family: "Montserrat-bold", sans-serif;
+  font-size: 50px;
+  padding-bottom: 15px;
 }
 
 .info-page .main .search-center .search-list .list-line .store-list, .search-page .main .search-center .search-list .list-line .store-list, .ranking-theme-page .main .search-center .search-list .list-line .store-list, .ranking-nowdays-page .main .search-center .search-list .list-line .store-list, .ranking-thismonth-page .main .search-center .search-list .list-line .store-list, .detail-page .main .search-center .search-list .list-line .store-list, .magazine-page .main .search-center .search-list .list-line .store-list, .asking-page .main .search-center .search-list .list-line .store-list, .login-page .main .search-center .search-list .list-line .store-list, .find-page .main .search-center .search-list .list-line .store-list, .sign-page .main .search-center .search-list .list-line .store-list, .edit-pw-page .main .search-center .search-list .list-line .store-list, .mypage-page .main .search-center .search-list .list-line .store-list, .myinfo-page .main .search-center .search-list .list-line .store-list, .userule-page .main .search-center .search-list .list-line .store-list {
@@ -941,15 +1005,13 @@ body {
   margin-bottom: 35px;
   max-width: 275px;
   max-height: 294px;
-  -webkit-animation: fadeInUp 1s;
-          animation: fadeInUp 1s;
   -ms-flex-preferred-size: auto;
       flex-basis: auto;
 }
 
 .info-page .main .search-center .search-list .list-line .store-list .img-container, .search-page .main .search-center .search-list .list-line .store-list .img-container, .ranking-theme-page .main .search-center .search-list .list-line .store-list .img-container, .ranking-nowdays-page .main .search-center .search-list .list-line .store-list .img-container, .ranking-thismonth-page .main .search-center .search-list .list-line .store-list .img-container, .detail-page .main .search-center .search-list .list-line .store-list .img-container, .magazine-page .main .search-center .search-list .list-line .store-list .img-container, .asking-page .main .search-center .search-list .list-line .store-list .img-container, .login-page .main .search-center .search-list .list-line .store-list .img-container, .find-page .main .search-center .search-list .list-line .store-list .img-container, .sign-page .main .search-center .search-list .list-line .store-list .img-container, .edit-pw-page .main .search-center .search-list .list-line .store-list .img-container, .mypage-page .main .search-center .search-list .list-line .store-list .img-container, .myinfo-page .main .search-center .search-list .list-line .store-list .img-container, .userule-page .main .search-center .search-list .list-line .store-list .img-container {
-  width: 232px;
-  height: 232px;
+  width: 220px;
+  height: 220px;
   overflow: hidden;
   border-radius: 5px;
   position: relative;
@@ -986,7 +1048,7 @@ body {
 }
 
 .info-page .main .search-center .search-list .list-line .store-list .views, .search-page .main .search-center .search-list .list-line .store-list .views, .ranking-theme-page .main .search-center .search-list .list-line .store-list .views, .ranking-nowdays-page .main .search-center .search-list .list-line .store-list .views, .ranking-thismonth-page .main .search-center .search-list .list-line .store-list .views, .detail-page .main .search-center .search-list .list-line .store-list .views, .magazine-page .main .search-center .search-list .list-line .store-list .views, .asking-page .main .search-center .search-list .list-line .store-list .views, .login-page .main .search-center .search-list .list-line .store-list .views, .find-page .main .search-center .search-list .list-line .store-list .views, .sign-page .main .search-center .search-list .list-line .store-list .views, .edit-pw-page .main .search-center .search-list .list-line .store-list .views, .mypage-page .main .search-center .search-list .list-line .store-list .views, .myinfo-page .main .search-center .search-list .list-line .store-list .views, .userule-page .main .search-center .search-list .list-line .store-list .views {
-  color: #d8a3d2;
+  color: #FF5566;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2697,7 +2759,7 @@ body {
 }
 
 .mypage-page .main .favorite-list .list-line .store-list .views, .myinfo-page .main .favorite-list .list-line .store-list .views, .userule-page .main .favorite-list .list-line .store-list .views {
-  color: #d8a3d2;
+  color: #FF5566;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

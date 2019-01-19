@@ -199,8 +199,32 @@
         </div>
         <div class="search-form2">
           <div class="input-container">
-            <div id="address-select2"><?php if(isset($address)){echo $address;}else{echo "지역 선택";} ?></div>
-            <div id="food-select2"ㅋ><?php if(isset($food)){echo $food;}else{echo "음식 선택";} ?></div>
+            <div id="address-select2">
+            <?php
+              if(isset($address)){
+                if($page=="search"){
+                  echo "지역 선택";
+                }else{
+                  echo $address;
+                }
+              }else{
+                echo "지역 선택";
+              } 
+            ?>
+            </div>
+            <div id="food-select2">
+            <?php
+              if(isset($food)){
+                if($page=="search"){
+                  echo "음식 선택";
+                }else{
+                  echo $food;
+                }
+              }else{
+                echo "음식 선택";
+              } 
+            ?>
+            </div>
           </div>
         </div>
       </div>

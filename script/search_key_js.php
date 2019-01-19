@@ -12,8 +12,6 @@
     }
   })
 
-
-  
   $("div.food_text").click(function(){
     var valFood = $(this).text()
     if(a_get!= null){
@@ -24,34 +22,28 @@
   })
 
   function s_get(){
-    location.href="./m.search.php?address="+a_get+"&food="+f_get
+    location.href="./search.php?address="+a_get+"&food="+f_get
   }
-
-
-  $("#address_text").click(function(){
-    $(".address-modal").css("display","none")
+  
+  $('#food_text').click(function(){
+    $(".food").css("display","none")
   })
-  $("#food_text").click(function(){
-    $(".food-modal").css("display","none")
+   $('#address_text').click(function(){
+    $(".address").css("display","none")
   })
 
   $("#address-select").click(function(){
-    $(".address-modal").css("display","block")
+    $(".address").css("display","block")
   })
   $("#food-select").click(function(){
-    $(".food-modal").css("display","block")
+    $(".food").css("display","block")
   })
   
   $("#address-select2").click(function(){
-    $(".address-modal").css("display","block")
+    $(".address").css("display","block")
   })
   $("#food-select2").click(function(){
-    $(".food-modal").css("display","block")
+    $(".food").css("display","block")
   })
-  
-  $('.close').click(function(){
-    $(".address-modal").css("display","none")
-    $(".food-modal").css("display","none")
-  })
-  
+
 </script>

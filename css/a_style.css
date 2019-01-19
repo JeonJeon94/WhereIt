@@ -616,6 +616,9 @@
 .default-page .main .submain .contents #rank_text {
   margin: 30px 0 20px 0;
   font-size: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .default-page .main .submain .contents #up_btn, .default-page .main .submain .contents .store_btn {
@@ -634,6 +637,16 @@
 
 .default-page .main .submain .contents .store_btn {
   margin: 20px 0 20px 100px;
+}
+
+.default-page .main .submain .contents .tag_option {
+  margin: 0 0 0 65px;
+}
+
+.default-page .main .submain .contents .tag_option #tag_option {
+  width: 100px;
+  height: 30px;
+  font-size: 15px;
 }
 
 .default-page .main .submain .contents .rank_theme, .default-page .main .submain .contents .rank_store {

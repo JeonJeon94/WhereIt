@@ -199,7 +199,9 @@ if($member){
 
   setTimeout(function(){
     jQuery(document).ready(function($){
+
       var share_url = "http://whereit.kr/detail.php?id=<?=$id?>"
+      
       window.Kakao.cleanup()
       window.Kakao.init('0b4dc8f4b2eca7999b6ae1ba6b47e872');
     
