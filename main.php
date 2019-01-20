@@ -27,7 +27,7 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
           <div style="display:flex; margin-left:200px;">
             <div class="input-form">
               <div style="position:relative">
-                <div id="address-select"><?php if(isset($address)){echo $address;}else{echo "지역 선택";} ?></div>
+                <div id="address-select"><?php if($address!=""){echo $address;}else{echo "지역 선택";} ?></div>
                 <div class="address">
                   <div id="address_text">지역 선택</div>
                   <?php foreach($a_list as $row){ ?>
@@ -36,7 +36,7 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
                 </div>
               </div>
               <div style="position:relative">
-                <div id="food-select"><?php if(isset($food)){echo $food;}else{echo "음식 선택";} ?></div>
+                <div id="food-select"><?php if($food!=""){echo $food;}else{echo "음식 선택";} ?></div>
                 <div class="food">
                   <div id="food_text">음식 선택</div>
                   <?php foreach($f_list as $row){ ?>

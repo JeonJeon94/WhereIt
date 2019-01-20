@@ -4,9 +4,13 @@
     
   if(!empty($_GET['address'])){
     $address = $_GET['address'];
+  }else{
+    $address = ""; 
   }
   if(!empty($_GET['food'])){
     $food = $_GET['food'];
+  }else{
+    $food = "";
   }
   if(!empty($_GET['id'])){
     $id=$_GET['id'];

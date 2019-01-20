@@ -12,8 +12,24 @@
       <div>
         <div class="search-form">
           <div class="input-form">
-            <div id="address-select"><?php if(isset($address)){echo $address;}else{echo "지역 선택";} ?></div>
-            <div id="food-select"><?php if(isset($food)){echo $food;}else{echo "음식 선택";} ?></div>
+            <div id="address-select">
+            <?php 
+            if($address != ""){
+              echo $address;
+            }else{
+              echo "지역 선택";
+            } 
+            ?>
+            </div>
+            <div id="food-select">
+            <?php
+              if($food != ""){
+                echo $food;
+              }else{
+                echo "음식 선택";
+              }
+            ?>
+            </div>
           </div>
           <div id="s_btn" onclick="s_get()">SEARCH</div>
         </div>

@@ -5,7 +5,7 @@
   
   $("div.address_text").click(function(){
     var valAddress = $(this).text()
-    if(f_get!= null){
+    if(f_get!= ""){
       location.href="<?php echo $_SERVER['PHP_SELF'];?>?address="+valAddress+"&food="+f_get
     }else{
       location.href="<?php echo $_SERVER['PHP_SELF'];?>?address="+valAddress
@@ -14,7 +14,7 @@
 
   $("div.food_text").click(function(){
     var valFood = $(this).text()
-    if(a_get!= null){
+    if(a_get!= ""){
       location.href="<?php echo $_SERVER['PHP_SELF'];?>?address="+a_get+"&food="+valFood
     }else{
       location.href="<?php echo $_SERVER['PHP_SELF'];?>&food="+valFood
