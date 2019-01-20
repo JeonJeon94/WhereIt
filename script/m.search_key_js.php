@@ -20,7 +20,7 @@
     if(a_get!= ""){
       location.href="<?php echo $_SERVER['PHP_SELF'];?>?address="+a_get+"&food="+valFood
     }else{
-      location.href="<?php echo $_SERVER['PHP_SELF'];?>&food="+valFood
+      location.href="<?php echo $_SERVER['PHP_SELF'];?>?food="+valFood
     }
   })
 
