@@ -94,7 +94,7 @@
             <div style="position:relative">
               <div id="address-select2">
                 <?php
-                  if(isset($address)){
+                  if($address != ""){
                     if($page=="search"){
                       echo "지역 선택";
                     }else{
@@ -115,7 +115,7 @@
             <div style="position:relative">
               <div id="food-select2">
                 <?php
-                  if(isset($food)){
+                  if($food != ""){
                     if($page=="search"){
                       echo "음식 선택";
                     }else{

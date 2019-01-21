@@ -30,7 +30,12 @@
   </div>
 
 <script>
-  var searchWord = "<?=$address?>"+" "+"<?=$food?>";
+
+  if('<?=$food?>' != ""){
+    var searchWord = "<?=$address?>"+" "+"<?=$food?>";
+  }else{
+    var searchWord = "<?=$address?>"
+  }
   
   function nosearch(){
     $('.no-search').css('display', 'block')
@@ -47,7 +52,7 @@
       }else{
         for(var i = 0; i < 10; i++){
           var row = data.payload[i]
-          row.no = i+1
+          row.no = (i+1)
           if(row === undefined)
             continue
           try{

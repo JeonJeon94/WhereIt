@@ -205,7 +205,7 @@
           <div class="input-container">
             <div id="address-select2">
             <?php
-              if(isset($address)){
+              if($address != ""){
                 if($page=="search"){
                   echo "지역 선택";
                 }else{
@@ -218,7 +218,7 @@
             </div>
             <div id="food-select2">
             <?php
-              if(isset($food)){
+              if($food != ""){
                 if($page=="search"){
                   echo "음식 선택";
                 }else{
@@ -266,3 +266,19 @@
       </div>
     </div>
   </div>
+
+<script>
+  var a_get = '<?=$address?>'
+  var f_get = '<?=$food?>'
+
+  if('<?=$page?>'!='main'){
+    if(a_get!=""||f_get!=""){
+      $(function(){
+        $(".search-icon").css("display", "none")
+        $(".logo").css("display", "none")
+        $(".form-container").css("display", "flex")
+      })
+    }
+  }
+
+</script>
