@@ -256,4 +256,5 @@ if($member){
 <?php include_once('./script/move_top_js.php'); ?>
 <?php include_once('./script/click_favorite_js.php'); ?>
 <?php include_once('./script/dropdown_js.php'); ?>
+<?php include_once('./script/search_key_js.php'); ?>
 </html>

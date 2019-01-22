@@ -10,9 +10,13 @@
         location.href="<?php echo $_SERVER['PHP_SELF'];?>?address="+valAddresst+"&food="+f_get
       }else{
         if('<?=$page?>' == 'search'){
-          location.href="<?php echo $_SERVER['PHP_SELF'];?>?address="+valAddress
+          if(a_get != ""){
+            location.href="<?php echo $_SERVER['PHP_SELF'];?>?address="+valAddress
+          }else{
+            location.href="<?php echo $_SERVER['PHP_SELF'];?>?address="+valAddress+"&food="+f_get
+          }
         }else{
-          location.href="./m.search.php?address="+valAddress+"&food="+f_get  
+          location.href="./search.php?address="+valAddress+"&food="+f_get
         }
       }
     }else{
@@ -26,7 +30,15 @@
       if('<?=$page?>' == 'main'){
         location.href="<?php echo $_SERVER['PHP_SELF'];?>?address="+a_get+"&food="+valFood
       }else{
-        location.href="./m.search.php?address="+a_get+"&food="+valFood
+        if('<?=$page?>' == 'search'){
+          if(f_get != ""){
+            location.href="<?php echo $_SERVER['PHP_SELF'];?>?food="+valFood
+          }else{
+            location.href="<?php echo $_SERVER['PHP_SELF'];?>?address="+a_get+"&food="+valFood
+          }
+        }else{
+          location.href="./search.php?address="+a_get+"&food="+valFood
+        }
       }
     }else{
       location.href="<?php echo $_SERVER['PHP_SELF'];?>?food="+valFood
