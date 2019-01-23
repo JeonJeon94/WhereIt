@@ -167,7 +167,7 @@
 
       api_update_shop('<?=$id?>',address,number,hashtag.join(","),function(res){
         if(res.code == 1){
-          location.href='a.store_info.php?id=<?=$id?>'
+          location.href='a.store.php'
         }else{
           alert('업체 수정에 오류가 있습니다.');
         }

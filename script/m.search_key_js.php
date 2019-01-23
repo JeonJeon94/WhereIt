@@ -1,66 +1,86 @@
 <script>
 
-  var a_get = "<?=$address?>"
-  var f_get = "<?=$food?>"
-  
+  g_Address = '<?=address?>'
+  g_Food = '<?=$food?>'
+  var a_get = []
+  var f_get = []
+
+  var a_Address = ""
+  var f_Food = ""
+
   $("div.address_text").click(function(){
-    var valAddress = $(this).text()
-    if(f_get!= ""){
-      if('<?=$page?>' == 'main'){
-        location.href="<?php echo $_SERVER['PHP_SELF'];?>?address="+valAddresst+"&food="+f_get
-      }else{
-        if('<?=$page?>' == 'search'){
-          if(a_get != ""){
-            location.href="<?php echo $_SERVER['PHP_SELF'];?>?address="+valAddress
-          }else{
-            location.href="<?php echo $_SERVER['PHP_SELF'];?>?address="+valAddress+"&food="+f_get
-          }
-        }else{
-          location.href="./search.php?address="+valAddress+"&food="+f_get
-        }
-      }
+    var Address = a_get.push($(this).text())
+    if(Address == 1){
+      a_Address = a_get[0]
     }else{
-      location.href="<?php echo $_SERVER['PHP_SELF'];?>?address="+valAddress
+      let __a = a_get.length-1
+      a_Address = a_get[__a]
     }
+
+    if('<?=$page?>' != 'main'){
+      if(f_Food !== ""){
+        location.href="./m.search.php?address="+a_Address+"&food="+f_Food
+      }
+    }
+  
+    $('#address-select').html(a_Address)
+    $('#address-select2').html(a_Address)
   })
   
   $("div.food_text").click(function(){
-    var valFood = $(this).text()
-    if(a_get!= ""){
-      if('<?=$page?>' == 'main'){
-        location.href="<?php echo $_SERVER['PHP_SELF'];?>?address="+a_get+"&food="+valFood
-      }else{
-        if('<?=$page?>' == 'search'){
-          if(f_get != ""){
-            location.href="<?php echo $_SERVER['PHP_SELF'];?>?food="+valFood
-          }else{
-            location.href="<?php echo $_SERVER['PHP_SELF'];?>?address="+a_get+"&food="+valFood
-          }
-        }else{
-          location.href="./search.php?address="+a_get+"&food="+valFood
-        }
-      }
+    var Food = f_get.push($(this).text())
+    if(Food == 1){
+      f_Food = f_get[0]
     }else{
-      location.href="<?php echo $_SERVER['PHP_SELF'];?>?food="+valFood
+      let __f = f_get.length-1
+      f_Food = f_get[__f]
     }
+
+    if('<?=$page?>' != 'main'){
+      if(a_Address !== ""){
+        location.href="./m.search.php?address="+a_Address+"&food="+f_Food
+      }
+    }
+    $('#food-select').html(f_Food)
+    $('#food-select2').html(f_Food)
   })
 
   function s_get(){
-    if(a_get!= "" && f_get!= ""){
-    location.href="./m.search.php?address="+a_get+"&food="+f_get
-    }else if(f_get == ""){
-      location.href="./m.search.php?address="+a_get
-    }else if(a_get == ""){
-      location.href="./m.search.php?food="+f_get
+    if(a_Address!= "" && f_Food!= ""){
+      location.href="./m.search.php?address="+a_Address+"&food="+f_Food
+    }else if(f_Food == ""){
+      location.href="./m.search.php?address="+a_Address
+    }else if(a_Address == ""){
+      location.href="./m.search.php?food="+f_Food
+    }else{
+      location.href="./m.rank-thismonth.php"
     }
   }
 
 
-  $("#address_text").click(function(){
-    $(".address-modal").css("display","none")
+  $(".address_text").click(function(){
+    if('<?=$page?>' == 'main'){
+      $(".address-modal").css("display","none")
+    }else{
+      if(f_Food == ""){
+        $(".address-modal").css("display","none")
+        $(".food-modal").css("display","flex")
+      }else{
+        $(".address-modal").css("display","none")
+      }
+    }
   })
-  $("#food_text").click(function(){
-    $(".food-modal").css("display","none")
+  $(".food_text").click(function(){
+    if('<?=$page?>' == 'main'){
+      $(".food-modal").css("display","none")
+    }else{
+      if(a_Address == ""){
+        $(".address-modal").css("display","flex")
+        $(".food-modal").css("display","none")
+      }else{
+        $(".food-modal").css("display","none")
+      }
+    }
   })
 
   $("#address-select").click(function(){

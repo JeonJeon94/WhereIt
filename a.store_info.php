@@ -103,7 +103,9 @@
     for(let c of checkList){
       api_delete_pic(storeName, c)
     }
-    location.href='a.store_info.php?id=<?=$id?>'
+    setTimeout(function(){
+      location.href='a.store_info.php?id=<?=$id?>'
+    }, 500);
   }
   function checkImg(code){
     let f = checkList.findIndex((ele)=>{

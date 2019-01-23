@@ -91,7 +91,7 @@
   <script src="https://apis.google.com/js/platform.js" async defer></script>
   <title>WHERE It? WHERE EAT!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link rel="stylesheet" href="./css/m.style.css?ver=2.2"  type="text/css" />
+  <link rel="stylesheet" href="./css/m.style.css?ver=2.3"  type="text/css" />
   <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
   <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="./OwlCarousel3/dist/assets/owl.carousel.css" type="text/css">
