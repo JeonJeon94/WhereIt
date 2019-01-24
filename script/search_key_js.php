@@ -5,6 +5,7 @@
 
   var a_Address = ""
   var f_Food = ""
+
   $("div.address_text").click(function(){
     var Address = a_get.push($(this).text())
     if(Address == 1){
@@ -30,11 +31,11 @@
   })
 
   function s_get(){
-    if(a_Address !== "" && f_Food !== ""){
+    if(a_Address != "" && f_Food != ""){
       location.href="./search.php?address="+a_Address+"&food="+f_Food
-    }else if(f_Food == ""){
+    }else if(f_Food == "" && a_Address !=""){
       location.href="./search.php?address="+a_Address
-    }else if(a_Address == ""){
+    }else if(a_Address == "" && f_Food != ""){
       location.href="./search.php?food="+f_Food
     }else{
       location.href="./rank-thismonth.php"

@@ -2,6 +2,7 @@
 
   g_Address = '<?=address?>'
   g_Food = '<?=$food?>'
+
   var a_get = []
   var f_get = []
 
@@ -48,9 +49,9 @@
   function s_get(){
     if(a_Address!= "" && f_Food!= ""){
       location.href="./m.search.php?address="+a_Address+"&food="+f_Food
-    }else if(f_Food == ""){
+    }else if(f_Food == "" && a_Address!= ""){
       location.href="./m.search.php?address="+a_Address
-    }else if(a_Address == ""){
+    }else if(a_Address == "" && f_Food!= ""){
       location.href="./m.search.php?food="+f_Food
     }else{
       location.href="./m.rank-thismonth.php"
