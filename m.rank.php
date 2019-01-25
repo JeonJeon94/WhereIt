@@ -98,10 +98,10 @@ if(!empty($_GET['tag'])){
       </div>
       <div style="display:flex; align-items:center;"> 
         <div class="keyword" style="margin-right: 10px;">
-          <%=collect_region%>
+          <%=region%>
         </div>
         <div class="keyword">
-          <%=category[0]%>
+          <%=food_category%>
         </div>
       </div>
     </div>

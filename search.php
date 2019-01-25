@@ -150,10 +150,10 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
       </div>
       <div class="flex" style="padding-left: 4px;">
         <div class="keyword">
-          <div class="chile-flex-1;"><%=collect_region%></div>
+          <div class="chile-flex-1;"><%=region%></div>
         </div>
         <div class="keyword">
-          <div class="chile-flex-1;"><%=category[0]%></div>
+          <div class="chile-flex-1;"><%=food_category%></div>
         </div>
       </div>
     </div>

@@ -22,6 +22,10 @@
         <input id="store_index" name="store_index" type="text" />
       </div>
       <div style="display:flex; height:30px; margin:30px 0; align-items:center; ">
+        <div class="store_index">검색색인</div>
+        <input id="store_index" name="store_index" type="text" />
+      </div>
+      <div style="display:flex; height:30px; margin:30px 0; align-items:center; ">
         <div class="store_hashtag">해시태그</div>
         <input id="store_hashtag" name="store_hashtag" type="text" />
       </div>
@@ -127,7 +131,7 @@
     var rank_templete = _.template($("#store-slot").html());
 
     function load(i){
-      api_shop_list(i, 4000, function(res){
+      api_shop_list(i, 10, function(res){
         data = res
         if(data.payload !== undefined){
           for(let j=0;j<data.payload.length;j++){
@@ -167,7 +171,7 @@
     <td id="img_box"><img id="td-img"alt="store-img" onerror="this.src='./images/whereit_img_loading_m.png'"  src='<%=main_img%>' onclick="location.href='a.store_img.php?id=<%=_id%>'"/></td>
     <td><div style="cursor:pointer;" onclick="location.href='a.store_info.php?id=<%=_id%>'"><%=Name%></div></td>
     <td><%=phonenumber%></td>
-    <td><%=category[0]%></td>
+    <td><%=food_category%></td>
     <td><%=hasgtag[0]%></td>
     <td><%=new_address%></td>
   </tr>

@@ -67,10 +67,10 @@ $shop_list = sql_select("SELECT shopId FROM favorit WHERE user_id = '$member[id]
     </div>
     <div style="display:flex;">
       <div class="keyword">
-        <div><%=collect_region%></div>
+        <div><%=region%></div>
       </div>
       <div class="keyword">
-        <div><%=category[0]%></div>
+        <div><%=food_category%></div>
       </div>
     </div>
   </div>

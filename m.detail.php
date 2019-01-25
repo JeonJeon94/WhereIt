@@ -65,10 +65,10 @@ if($member){
     <div class="info">
       <div style="padding:3px 0 0 0; display:flex;">
         <div class="keyword">
-          <div><%=collect_region%></div>
+          <div><%=region%></div>
         </div>
         <div class="keyword">
-          <div><%=category[0]%></div>
+          <div><%=food_category%></div>
         </div>
       </div>
       <div class="name">
@@ -94,7 +94,7 @@ if($member){
         <img id="share" src="./images/share.png" />
       </div>
       <div class="phone">
-        <img src="./images/etc/phone.png"/>
+        <a href="tel:<%=phonenumber%>"><img src="./images/etc/phone.png"/></a>
       </div>
       <div class="usage">
         <div onclick='location.href="m.toggle_favorit.php?shopId=<?php echo $id; ?>"'>

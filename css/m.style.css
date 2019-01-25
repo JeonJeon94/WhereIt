@@ -1369,12 +1369,18 @@
   padding: 3px 3px 0 0;
 }
 
-.detail-page .main .detail-main .main-top .store-info .etc .share, .detail-page .main .detail-main .main-top .store-info .etc .phone {
+.detail-page .main .detail-main .main-top .store-info .etc .phone {
   margin: 0 auto;
   padding-right: 15px;
 }
 
-.detail-page .main .detail-main .main-top .store-info .etc .share .modal_share, .detail-page .main .detail-main .main-top .store-info .etc .phone .modal_share {
+.detail-page .main .detail-main .main-top .store-info .etc .phone a img {
+  width: 15px;
+  height: 15px;
+  padding: 0 8px;
+}
+
+.detail-page .main .detail-main .main-top .store-info .etc .share .modal_share {
   position: absolute;
   display: none;
   top: 30px;
@@ -1392,18 +1398,18 @@
           align-items: center;
 }
 
-.detail-page .main .detail-main .main-top .store-info .etc .share .modal_share img, .detail-page .main .detail-main .main-top .store-info .etc .phone .modal_share img {
+.detail-page .main .detail-main .main-top .store-info .etc .share .modal_share img {
   width: 15px;
   height: 15px;
   padding: 0 8px;
 }
 
-.detail-page .main .detail-main .main-top .store-info .etc .share #share, .detail-page .main .detail-main .main-top .store-info .etc .phone #share {
+.detail-page .main .detail-main .main-top .store-info .etc .share #share {
   width: 15px;
   height: 15px;
 }
 
-.detail-page .main .detail-main .main-top .store-info .etc .share > img, .detail-page .main .detail-main .main-top .store-info .etc .phone > img {
+.detail-page .main .detail-main .main-top .store-info .etc .share > img {
   width: 15px;
   height: 15px;
 }

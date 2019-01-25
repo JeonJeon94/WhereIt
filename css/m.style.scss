@@ -1048,9 +1048,21 @@
             position: relative;
             padding: 3px 3px 0 0;
               
-            .share, .phone{
+
+            .phone{
               margin: 0 auto;
               padding-right: 15px;
+              
+              a{
+                img{
+                  width: 15px;
+                  height: 15px;
+                  padding: 0 8px;
+                }
+              }
+            }
+            
+            .share{
 
               .modal_share{
                 position: absolute;

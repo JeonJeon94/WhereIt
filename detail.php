@@ -79,10 +79,10 @@ if($member){
   <div class="info">
     <div class="flex" style="padding-bottom:15px; padding-top:15px;">
       <div class="keyword">
-        <div class="child-flex-1"><%=collect_region%></div>
+        <div class="child-flex-1"><%=region%></div>
       </div>
       <div class="keyword">
-        <div class="child-flex-1"><%=category[0]%></div>
+        <div class="child-flex-1"><%=food_category%></div>
       </div>
     </div>
     <div class="name"><%=Name%></div>

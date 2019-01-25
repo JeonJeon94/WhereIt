@@ -128,10 +128,10 @@ if(!empty($_GET['tag'])){
       </div>
       <div class="flex">
         <div class="keyword">
-          <div class="chile-flex-1;"><%=collect_region%></div>
+          <div class="chile-flex-1;"><%=region%></div>
         </div>
         <div class="keyword">
-          <div class="chile-flex-1;"><%=category[0]%></div>
+          <div class="chile-flex-1;"><%=food_category%></div>
         </div>
       </div>
     </div>
