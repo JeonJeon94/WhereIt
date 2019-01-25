@@ -1380,6 +1380,11 @@
   padding: 0 8px;
 }
 
+.detail-page .main .detail-main .main-top .store-info .etc .share {
+  margin: 0 auto;
+  padding-right: 15px;
+}
+
 .detail-page .main .detail-main .main-top .store-info .etc .share .modal_share {
   position: absolute;
   display: none;
