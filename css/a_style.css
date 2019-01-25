@@ -67,17 +67,17 @@
   border-radius: 10px;
   border: 1px solid black;
   width: 600px;
-  height: 480px;
+  height: 400px;
   padding: 50px;
   margin: 300px auto;
 }
 
-.default-page .modal .store_add .store_name, .default-page .modal .store_add .store_phone, .default-page .modal .store_add .store_index, .default-page .modal .store_add .store_hashtag, .default-page .modal .store_add .store_address, .default-page .modal .store_add .store_img {
+.default-page .modal .store_add .store_name, .default-page .modal .store_add .store_phone, .default-page .modal .store_add .search_index, .default-page .modal .store_add .store_hashtag, .default-page .modal .store_add .store_address, .default-page .modal .store_add .store_img {
   width: 100px;
   font-size: 15px;
 }
 
-.default-page .modal .store_add #store_name, .default-page .modal .store_add #store_phone, .default-page .modal .store_add #store_index, .default-page .modal .store_add #store_hashtag, .default-page .modal .store_add #store_address, .default-page .modal .store_add #store_address {
+.default-page .modal .store_add #store_name, .default-page .modal .store_add #store_phone, .default-page .modal .store_add #search_index, .default-page .modal .store_add #store_hashtag, .default-page .modal .store_add #store_address, .default-page .modal .store_add #store_address {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: 1px solid #BEBFBE;

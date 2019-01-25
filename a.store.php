@@ -17,13 +17,17 @@
         <div class="store_phone">전화번호</div>
         <input id="store_phone" name="store_phone" type="text" />
       </div>
-      <div style="display:flex; height:30px; margin:30px 0; align-items:center; ">
-        <div class="store_index">검색색인</div>
-        <input id="store_index" name="store_index" type="text" />
+      <!-- <div style="display:flex; height:30px; margin:30px 0; align-items:center; ">
+        <div class="address_index">지역검색색인</div>
+        <input id="address_index" name="address_index" type="text" />
       </div>
       <div style="display:flex; height:30px; margin:30px 0; align-items:center; ">
-        <div class="store_index">검색색인</div>
-        <input id="store_index" name="store_index" type="text" />
+        <div class="food_index">음식검색색인</div>
+        <input id="food_index" name="food_index" type="text" />
+      </div> -->
+      <div style="display:flex; height:30px; margin:30px 0; align-items:center; ">
+        <div class="search_index">검색색인</div>
+        <input id="search_index" name="search_index" type="text" />
       </div>
       <div style="display:flex; height:30px; margin:30px 0; align-items:center; ">
         <div class="store_hashtag">해시태그</div>
@@ -100,7 +104,9 @@
   function add_shop(){
     var store_name = $('#store_name').val();
     var store_phone = $('#store_phone').val();
-    var store_index = $('#store_index').val();
+    // var address_index = $('#address_index').val();
+    // var food_index = $('#food_index').val();    
+    var search_index = $('#search_index').val();
     var store_hashtag = $('#store_hashtag').val();
     var store_address = $('#store_address').val();
     
@@ -108,11 +114,11 @@
       return alert("이미지를 선택해주세요")
     }
     
-    if(store_name==""||store_phone==""||store_index==""||store_hashtag==""||store_address==""){
+    if(store_name==""||store_phone==""||search_index==""||store_hashtag==""||store_address==""){
       alert('빈칸을 모두 채워주세요.');
     }else{
 
-      api_insert_shop(store_name,store_address,store_phone,store_index,store_hashtag,selected_file, function(res){
+      api_insert_shop(store_name,store_address,store_phone,search_index,store_hashtag,selected_file, function(res){
         if(res.code==1){
           return location.href="./a.store.php";
         }else{
@@ -131,7 +137,7 @@
     var rank_templete = _.template($("#store-slot").html());
 
     function load(i){
-      api_shop_list(i, 10, function(res){
+      api_shop_list(i, 4000, function(res){
         data = res
         if(data.payload !== undefined){
           for(let j=0;j<data.payload.length;j++){
