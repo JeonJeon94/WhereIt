@@ -112,7 +112,7 @@
   </script>
   <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 </head>
-<body class="default-page <?=$page?>-page" onpageshow="Init()">
+<body class="default-page <?=$page?>-page">
 <?php include_once("analyticstracking.php") ?>
   <div class="address-modal">
     <div class="close"><img src="./images/etc/close.png" /></div>
@@ -281,8 +281,10 @@
     }
   }
 
-  function Init(){
-    window.location.reload();
+  window.onpageshow = function(event){
+    if(event.persistd){
+      window.location.reload();
+    }else{}
   }
 
 </script>
