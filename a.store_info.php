@@ -101,9 +101,12 @@
   var storeName = ''
   function delClick(){
     for(let c of checkList){
-      api_delete_pic(storeName,c)
+      setTimeout(function(){
+        api_delete_pic(storeName,c)
+        console.log(c)
+      }, 100);
     }
-    location.href='a.store_info.php?id=<?=$id?>'
+    // location.href='a.store_info.php?id=<?=$id?>'
   }
   function checkImg(code){
     let f = checkList.findIndex((ele)=>{
