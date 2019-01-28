@@ -99,18 +99,21 @@
   var storeId = '<?php echo $id; ?>'
   var checkList = []
   var storeName = ''
-  function delClick(){
+  async function f_call_del(c){
+    return new Promise((r)=>{
+      api_delete_pic(storeName,c,function(res){
+        if(res.code == 1){
+          return r(c)
+        }else{
+          console.log("error")
+          alert("이미지 삭제 오류")
+        }
+      })
+    })
+  }
+  async function delClick(){
     for(let c of checkList){
-      setTimeout(function(){
-        api_delete_pic(storeName,c,function(res){
-          if(res.code == 1){
-            return
-          }else{
-            alert("이미지 삭제 오류")
-          }
-        })
-        console.log(c)
-      }, 100);
+      let call_del = await f_call_del(c)
     }
     location.href='a.store_info.php?id=<?=$id?>'
   }
