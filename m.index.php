@@ -77,12 +77,12 @@
 
 <script>
 
-  $(window).bind("pageshow", function(event) {
-    if (event.originalEvent.persisted) {
-      alert("페이지 새로고침")
+  window.onpageshow = function(event) {
+    if (event.persisted) {
+      alert("페이지 새로고침")  
       document.location.reload();
     }
-  });
+  };
 
 </script>
 
