@@ -78,11 +78,12 @@
 <script>
 
   $(window).bind("pageshow", function(event) {
-      if (event.originalEvent.persisted) {
-          document.location.reload();
-      }
+    if (event.originalEvent.persisted) {
+      alert("페이지 새로고침")
+      document.location.reload();
+    }
   });
-  
+
 </script>
 
 <?php include_once("./m.footer.php"); ?>
