@@ -75,4 +75,20 @@
 
 </script>
 
+<script>
+
+  $(window).bind("pageshow", function(event) {
+      if (event.originalEvent.persisted) {
+          document.location.reload();
+      }
+  });
+
+  window.onpageshow = function(event) {
+      if (event.persisted) {
+          document.location.reload();
+      }
+  };
+  
+</script>
+
 <?php include_once("./m.footer.php"); ?>
