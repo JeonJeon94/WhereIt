@@ -40,7 +40,7 @@
         <?php
           foreach($result as $rows){
         ?>
-        <div class="item" style="margin:0 0.3em;" data-id="<?=$rows[id]?>" onclick="click_main_banner(this,'<?=$rows[url]?>')">
+        <div class="item" style="margin:0 0.3em;" data-id="<?php echo $rows[id]; ?>" onclick="click_main_banner(this,'<?php echo $rows[url]; ?>')">
           <img src='<?php echo $rows[banner_file]; ?>'>
         </div>
         <?php }?>
