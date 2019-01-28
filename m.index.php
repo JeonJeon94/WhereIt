@@ -41,9 +41,9 @@
           foreach($result as $rows){
         ?>
         <div class="item" style="margin:0 0.3em;" data-id="<?=$rows[id]?>" onclick="click_main_banner(this,'<?=$rows[url]?>')">
-          <img src='<?=$rows[banner_file]?>'>
+          <img src='<?php echo $rows[banner_file]; ?>'>
         </div>
-        <?php } ?>
+        <?php }?>
       </div>
     </div>
   </div>
