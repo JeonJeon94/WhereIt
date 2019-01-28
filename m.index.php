@@ -73,5 +73,11 @@
     }
   }
 
+  window.onpageshow = function(event) {
+    if ( event.persisted || (window.performance && window.performance.navigation.type == 2)) {
+      document.location.reload();
+    } 
+  }
 </script>
+
 <?php include_once("./m.footer.php"); ?>
