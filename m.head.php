@@ -282,7 +282,7 @@
   }
 
   window.onpageshow = function(event){
-    if(event.persistd){
+    if(event.persisted){
       window.location.reload();
     }else{}
   }
