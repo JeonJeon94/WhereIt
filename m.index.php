@@ -74,16 +74,4 @@
   }
 
 </script>
-
-<script>
-
-  window.onpageshow = function(event) {
-    if (event.persisted) {
-      alert("페이지 새로고침")  
-      document.location.reload();
-    }
-  };
-
-</script>
-
 <?php include_once("./m.footer.php"); ?>
