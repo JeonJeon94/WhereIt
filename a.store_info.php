@@ -102,11 +102,17 @@
   function delClick(){
     for(let c of checkList){
       setTimeout(function(){
-        api_delete_pic(storeName,c)
+        api_delete_pic(storeName,c,function(res){
+          if(res.code == 1){
+            return
+          }else{
+            alert("이미지 삭제 오류")
+          }
+        })
         console.log(c)
       }, 100);
     }
-    // location.href='a.store_info.php?id=<?=$id?>'
+    location.href='a.store_info.php?id=<?=$id?>'
   }
   function checkImg(code){
     let f = checkList.findIndex((ele)=>{
