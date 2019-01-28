@@ -17,9 +17,9 @@
 ?>
   <div class="main">
     <?php if(count($arr)<=1){?>
-      <img src="<?=$result[sub]?>?ver=2"/>
+      <img src="<?=$result[sub]?>?ver=3"/>
     <?php }else{ for($i=0; $i<count($arr); $i++){ ?>
-      <img src="<?php echo trim($arr[$i]); ?>?ver=2" />
+      <img src="<?=trim($arr[$i])?>?ver=3" />
     <?php }} ?>
   </div>
 <?php include_once("./m.footer.php") ?>
