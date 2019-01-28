@@ -1,6 +1,6 @@
 <script type="text/javascript">
-
-    $('.owl-carousel').owlCarousel({
+    var owl = $('.owl-carousel');
+    owl.owlCarousel({
         loop:true,
         stagePadding: 0,
         center:true,
