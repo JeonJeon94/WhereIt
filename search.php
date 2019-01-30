@@ -14,17 +14,22 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
     <div class="main">
       <div class="search-center">
         <div class="main-top">
-          <div style="display:flex; font-size: 2em; flex-direction:column;">
-            <div style="display:flex; align-items:center;">
-              <div style="color:#FF5566; margin-right:4px;">
-                <?=$address?>
-              </div>/
-              <div style="color:#FF5566; margin-left:4px;">
-                <?=$food?>
-              </div>
-            </div><br><b style="font-weight: 500; font-family:Noto Sans KR, sans-serif !important;">TOP10</b>
+          <div class="top-left">
+            <div style="display:flex; font-size: 2em; flex-direction:column;">
+              <div style="display:flex; align-items:center;">
+                <div style="color:#FF5566; margin-right:4px;">
+                  <?=$address?>
+                </div>/
+                <div style="color:#FF5566; margin-left:4px;">
+                  <?=$food?>
+                </div>
+              </div><br><b style="font-weight: 500; font-family:Noto Sans KR, sans-serif !important;">TOP10</b>
+            </div>
+          </div>  
+          <div class="top-right">
+            
           </div>
-        </div>  
+        </div>
         <div class="search-list">
           <div class="no-search">
             <?php if(empty($food)){ ?>
@@ -53,6 +58,9 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
 
 <script>
 
+  var main = []
+  var main_none = "./images/whereit_img_loading_p.png"
+  
   if('<?=$food?>' != ""){
     var searchWord = "<?=$address?>"+" "+"<?=$food?>";
   }else{
@@ -75,6 +83,10 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
             row.no = (i+1)
             if(row === undefined)
               continue
+            if(row.main_img === undefined){
+              main.push(main_none)
+              row.main_img = main
+            }
             let nameDump = row.Name
             nameDump = nameDump.length>8 ? nameDump.slice(0,8)+"..." : nameDump
             row.Name = nameDump
@@ -88,6 +100,11 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
             row.no = (i+1)
             if(row === undefined)
               continue
+            if(row.main_img === undefined){
+              main.push(main_none)
+              row.main_img = main
+            }
+              
             let nameDump = row.Name
             nameDump = nameDump.length>8 ? nameDump.slice(0,8)+"..." : nameDump
             row.Name = nameDump
@@ -110,6 +127,10 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
           row.no = (i+1)
           if(row === undefined)
             continue
+          if(row.main_img === undefined){
+            main.push(main_none)
+            row.main_img = main
+          }
           let nameDump = row.Name
           nameDump = nameDump.length>8 ? nameDump.slice(0,8)+"..." : nameDump
           row.Name = nameDump
