@@ -24,6 +24,8 @@
   var store_name = ['세븐블레스','샤오짠','스테이터','비스테까','Tokyo420','훌라훌라','르브리에','마음을담아내면','더라스트펍','미스터카츠'];
   function loadTemplate(id) { return document.getElementById(id).innerHTML; }
 
+  var main = []
+  var main_none = "./images/whereit_img_loading_p.png"
   $(function(){
     var temp = loadTemplate('rank-slot');
     var rank_templete = _.template($("#rank-slot").html());
@@ -32,6 +34,10 @@
       api_search_data(store_name[i],function(res){
         data = res
         var row = data.payload[0]
+        if(row.main_img === undefined){
+          main.push(main_none)
+          row.main_img = main
+        }
         row.no = i+1 < 10 ? "0"+(i+1) : i+1
         $(".rank-area").append(rank_templete(row))
         if(i >= 9) return ;

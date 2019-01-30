@@ -42,6 +42,8 @@
   }
 
   function loadTemplate(id) { return document.getElementById(id).innerHTML; }
+  var main = []
+  var main_none = "./images/whereit_img_loading_p.png"
 
   $(function(){
     var temp = loadTemplate('store-slot');
@@ -55,6 +57,10 @@
           row.no = (i+1)
           if(row === undefined)
             continue
+          if(row.main_img === undefined){
+            main.push(main_none)
+            row.main_img = main
+          }
           try{
             $(".list-line").append( store_template(row) )
           }catch(err){console.log(err)}  

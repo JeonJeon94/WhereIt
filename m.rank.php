@@ -68,6 +68,9 @@ if(!empty($_GET['tag'])){
   }
   function loadTemplate(id) { return document.getElementById(id).innerHTML; }
 
+  var main = []
+  var main_none = "./images/whereit_img_loading_p.png"
+  
   $(function(){
     var temp = loadTemplate('rank-slot');
     var rank_template = _.template($("#rank-slot").html());
@@ -77,6 +80,10 @@ if(!empty($_GET['tag'])){
         data = res
         var row = data.payload[0]
         row.no = i+1 < 10 ? "0"+(i+1) : i+1
+        if(row.main_img === undefined){
+          main.push(main_none)
+          row.main_img = main
+        }
         $(".rank-area").append(rank_template(row))
         if(i >= 9) return ;
         load(i+1);

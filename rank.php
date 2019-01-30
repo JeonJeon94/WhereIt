@@ -82,6 +82,9 @@ if(!empty($_GET['tag'])){
 
   
   function loadTemplate(id) { return document.getElementById(id).innerHTML; }
+  
+  var main = []
+  var main_none = "./images/whereit_img_loading_p.png"
 
   $(function(){
     var temp = loadTemplate('rank-slot');
@@ -91,6 +94,10 @@ if(!empty($_GET['tag'])){
       api_search_data(store_name[i],function(res){
         data = res
         var row = data.payload[0]
+        if(row.main_img === undefined){
+          main.push(main_none)
+          row.main_img = main
+        }
         row.no = i+1 < 10 ? "0"+(i+1) : i+1
         $(".ranking5").append(rank_templete(row))
         if(i >= 4) return ;
@@ -103,6 +110,10 @@ if(!empty($_GET['tag'])){
       api_search_data(store_name[i],function(res){
         data = res
         var row = data.payload[0]
+        if(row.main_img === undefined){
+          main.push(main_none)
+          row.main_img = main
+        }
         row.no = i+1 < 10 ? "0"+(i+1) : i+1
         $(".ranking10").append(rank_templete(row))
         if(i >= 9) return ;

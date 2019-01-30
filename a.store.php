@@ -131,6 +131,9 @@
 
 
   function loadTemplate(id) { return document.getElementById(id).innerHTML; }
+  
+  var main = []
+  var main_none = "./images/whereit_img_loading_p.png"
 
   $(function(){
     var temp = loadTemplate('store-slot');
@@ -148,6 +151,7 @@
         }
       })
     }
+
     function loadByKeyword(){
       api_search_data('<?=$keyword?>',function(res){
         data = res
@@ -155,6 +159,10 @@
           for(let j=0;j<data.payload.length;j++){
             data.payload[j].number = j+1
             let row = data.payload[j]
+            if(row.main_img === undefined){
+              main.push(main_none)
+              row.main_img = main
+            }
             $(".list-line").append(rank_templete(row))
           }
         }
