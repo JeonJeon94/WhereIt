@@ -58,6 +58,7 @@
       }catch(err){console.log(err)}  
     })
   })
+  
 </script>
   
   
@@ -117,6 +118,7 @@
     }
     location.href='a.store_info.php?id=<?=$id?>'
   }
+  
   function checkImg(code){
     let f = checkList.findIndex((ele)=>{
       return ele === code
@@ -140,17 +142,20 @@
         try{
           $(".detail_img").append( store_template(row,i))
         }catch(err){}
-      }  
+      }
     })
   })
 
-  
+  function err_img(e){
+    e.src='./images/whereit_img_loading_p.png';
+    $(e).parent().find("input").click()
+  }
 </script>
 
 <script id="img-slot" type="text/template">
   <div class="list-line">
     <input onclick="checkImg('<%=code%>')" class="del_check" type="checkbox"/>
-    <img src="<%=link%>" onerror="this.src='./images/whereit_img_loading_p.png'" onclick="location.href='https://instagram.com/p/<%=code%>'"/>
+    <img src="<%=link%>" onerror="err_img(this)" onclick="location.href='https://instagram.com/p/<%=code%>'"/>
   </div>
 </script>
 
