@@ -140,7 +140,7 @@
     var rank_templete = _.template($("#store-slot").html());
 
     function load(i){
-      api_shop_list(i, 4000, function(res){
+      api_shop_list(i, 3056, function(res){
         data = res
         if(data.payload !== undefined){
           for(let j=0;j<data.payload.length;j++){

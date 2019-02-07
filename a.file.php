@@ -17,9 +17,8 @@
   
     // 업로드 파일 확장자 검사 (필요시 확장자 추가)
     if($mimeType!="image/png" && $mimeType!="image/jpeg" && $mimeType!="image/jpg" && $mimeType!="image/gif") { 
-      // alert_back('메인 이미지는 png,jpg,gif 파일만 업로드 가능합니다'); 
-      // exit;
-      echo "type error";
+      alert_back('메인 이미지는 png,jpg,gif 파일만 업로드 가능합니다'); 
+      exit;
     } 
   
     // 파일명 변경 (업로드되는 파일명을 별도로 생성하고 원래 파일명을 별도의 변수에 지정하여 DB에 기록할 수 있습니다.)

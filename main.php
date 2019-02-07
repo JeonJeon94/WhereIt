@@ -69,7 +69,7 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
       $(".item").each(function(){ max = $(this).attr("data-id") > max ? $(this).attr("data-id") : max })
 
       if($(element).parent().hasClass("center")){
-        location.href=url;
+        window.location=url
       }else{
         var center = $(".center .item").attr("data-id")
         console.log(center, max, clicked)

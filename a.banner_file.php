@@ -54,8 +54,8 @@
 </body>
 
 <script>
-  var count = <?=$i?>;
-  
+  var count = "<?=$i?>";
+  var last_num = '<?=$last_num?>';
   //추가 버튼 생성
   function show(){
     $('#add_btn<?=$i?>').css('display','block')
@@ -77,7 +77,7 @@
   function del_item(obj,thisCount){
     var thisId = obj.parentNode.parentNode.parentNode;
     document.getElementById("bannerBox").removeChild(thisId);
-    if(thisCount <= <?=$last_num?>){
+    if(thisCount <= last_num){
       location.href="a.banner_d.php?id="+thisCount
     }else {
       show()
@@ -90,9 +90,10 @@
   function add_item(e){
     none(e);
     if(flag){
-    <?php $i = $i+1; ?>
-    count = <?=$i?>;
+      <?php $i = $i+1;?>
+    count = "<?=$i?>";
     var addedFormDiv = document.getElementById("bannerBox");
+    console.log(addedFormDiv);
     var str = '<form class="banner_file" method="post" action="a.file.php" enctype="multipart/form-data">'+
                 '<div style="display:flex; margin-bottom:10px; align-items:center;">'+
                   '<div style="width: 100px;">banner'+count+'</div>'+

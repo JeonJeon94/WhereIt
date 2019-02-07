@@ -52,6 +52,8 @@
       if(row.main_img === undefined){
         main.push(row.imgs[0].link)
         row.main_img = main
+      }else{
+        
       }
       try{
         $(".store_info").append(slot_template(row))
@@ -59,6 +61,15 @@
     })
   })
   
+  // function main_del(){
+  //   main.push(row.imgs[0].link)
+  //   row.main_img = main
+  // }
+  
+  // function re_img(e){
+  //   e.src='./images/whereit_img_loading_p.png';
+  //   main_del()
+  // }
 </script>
   
   
@@ -107,7 +118,8 @@
           return r(c)
         }else{
           console.log("error")
-          alert("이미지 삭제 오류")
+          return r()
+          //alert("이미지 삭제 오류")
         }
       })
     })
@@ -128,7 +140,9 @@
     } else{
       checkList.push(code)
     }
+    console.log(checkList)
   }
+
   $(function(){
     api_shop_detail(storeId,function(data){
       var store_template = _.template($("#img-slot").html());
@@ -148,6 +162,7 @@
 
   function err_img(e){
     e.src='./images/whereit_img_loading_p.png';
+    // $(e).parent().find("input").prop("checked",true)
     $(e).parent().find("input").click()
   }
 </script>
