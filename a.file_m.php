@@ -11,9 +11,8 @@
     $file_tmp_name = $_FILES['upload'.$num]['tmp_name'];   // 임시 디렉토리에 저장된 파일명
     $file_size = $_FILES['upload'.$num]['size'];                 // 업로드한 파일의 크기
     $mimeType = $_FILES['upload'.$num]['type'];                 // 업로드한 파일의 MIME Type
-
     // 첨부 파일이 저장될 서버 디렉토리 지정(원하는 경로에 맞게 수정하세요)
-    $save_dir = "./images/main_banner/web/";
+    $save_dir = "./images/main_banner/android/";
   
     // 업로드 파일 확장자 검사 (필요시 확장자 추가)
     if($mimeType!="image/png" && $mimeType!="image/jpeg" && $mimeType!="image/jpg" && $mimeType!="image/gif") { 
@@ -39,7 +38,7 @@
     $last_num = $last[id];
 
     $link = "./images/main_banner/android/".$file_name;
-    // echo $link;
+
     if($num <= $last_num ){
       sql_query("UPDATE banner_file_m SET url='$url', banner_file='$link' where id='$num' ");
       php_redirect('./a.banner_file_m.php');
@@ -48,7 +47,7 @@
       php_redirect('./a.banner_file_m.php');
     }
   }else{
-    alert_back("잘못된 접근입니다.");
+    alert_back("대표이미지를 첨부해주세요.");
   }
 
 ?>
