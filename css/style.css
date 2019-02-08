@@ -776,6 +776,19 @@ body {
   background: #d8a3d2;
 }
 
+.main-page .main .banner-views {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1em 0;
+}
+
 .info-page .all, .search-page .all, .ranking-theme-page .all, .ranking-nowdays-page .all, .ranking-thismonth-page .all, .detail-page .all, .magazine-page .all, .asking-page .all, .login-page .all, .find-page .all, .sign-page .all, .edit-pw-page .all, .mypage-page .all, .myinfo-page .all, .userule-page .all {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -922,7 +935,7 @@ body {
   width: 1300px;
 }
 
-.info-page .main .search-center .main-top, .search-page .main .search-center .main-top, .ranking-theme-page .main .search-center .main-top, .ranking-nowdays-page .main .search-center .main-top, .ranking-thismonth-page .main .search-center .main-top, .detail-page .main .search-center .main-top, .magazine-page .main .search-center .main-top, .asking-page .main .search-center .main-top, .login-page .main .search-center .main-top, .find-page .main .search-center .main-top, .sign-page .main .search-center .main-top, .edit-pw-page .main .search-center .main-top, .mypage-page .main .search-center .main-top, .myinfo-page .main .search-center .main-top, .userule-page .main .search-center .main-top {
+.info-page .main .search-center .main-top .top-left, .search-page .main .search-center .main-top .top-left, .ranking-theme-page .main .search-center .main-top .top-left, .ranking-nowdays-page .main .search-center .main-top .top-left, .ranking-thismonth-page .main .search-center .main-top .top-left, .detail-page .main .search-center .main-top .top-left, .magazine-page .main .search-center .main-top .top-left, .asking-page .main .search-center .main-top .top-left, .login-page .main .search-center .main-top .top-left, .find-page .main .search-center .main-top .top-left, .sign-page .main .search-center .main-top .top-left, .edit-pw-page .main .search-center .main-top .top-left, .mypage-page .main .search-center .main-top .top-left, .myinfo-page .main .search-center .main-top .top-left, .userule-page .main .search-center .main-top .top-left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

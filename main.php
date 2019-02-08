@@ -50,7 +50,7 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
         </div>
       </div>
     </div>
-    <div style="display:flex; padding:1em 0;">
+    <div class="banner-views">
       <div class="owl-carousel owl-theme" >
         <?php
           foreach($result as $rows){

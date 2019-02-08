@@ -564,6 +564,12 @@ body{
         }
       }
     }
+    .banner-views{
+      display:flex;
+      flex:1;
+      align-items:center;
+      padding:1em 0;
+    }
   }
 }
 .info-page,.search-page, .ranking-theme-page, .ranking-nowdays-page, .ranking-thismonth-page, .detail-page, .magazine-page, .asking-page, .login-page, .find-page, .sign-page, .edit-pw-page, .mypage-page, .myinfo-page, .userule-page{
@@ -673,39 +679,19 @@ body{
       padding: 10px;
       display : none;
     }
-    
-    // .dot div {
-    //   position: absolute;
-    //   left: 0;
-    //   right: 0;
-    //   top: 0;
-    //   bottom: 0;
-    //   width: 10px;
-    //   height: 10px;
-    //   margin: auto;
-    //   border-radius: 10px;
-    //   background-color: #D0C1D0;
-    //   transform: scale(0);
-    //   animation: dot 1.5s linear infinite;
-    // }
-    
-    // .dot div:nth-child(1) {
-    //   left: -50px;
-    //   animation-delay: -0.1s;
-    // }
-    
-    // .dot div:nth-child(3) {
-    //   right: -50px;
-    //   animation-delay: 0.1s;
-    // }
     .search-center{
       width:  1300px;
 
       .main-top{
-        display: flex;
-        flex: 1;
-        line-height: 20px;
-        padding: 100px 0px;
+        .top-left{
+          display: flex;
+          flex: 1;
+          line-height: 20px;
+          padding: 100px 0px;
+        }
+        .top-right{
+           
+        }
       }
       .no-search{
         display:none;
