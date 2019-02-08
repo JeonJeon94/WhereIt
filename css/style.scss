@@ -93,7 +93,7 @@ body{
   }
   .all{
     flex:1;
-    display: inline;
+    display: flex;
     height: inherit;
     min-height: 100vh;
     flex-direction: column;
@@ -566,6 +566,7 @@ body{
     }
     .banner-views{
       display:flex;
+      flex: 1;
       align-items:center;
       padding:1em 0;
     }

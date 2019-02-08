@@ -138,7 +138,9 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  display: inline;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   height: inherit;
   min-height: 100vh;
   -webkit-box-orient: vertical;
@@ -780,6 +782,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
