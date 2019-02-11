@@ -85,7 +85,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8" />
+<meta charset="utf-8" />
+  <meta name="description" content="리얼 맛집 정보 웨얼잇!">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="웨얼잇">
+  <meta property="og:description" content="리얼 맛집 정보 웨얼잇!">
+  <meta property="og:image" content="./images/whereit_img_og_001.png"/>
+  <meta name="naver-site-verification" content="5a78e9f61a3e8046a961b19a6d877a5992cd3829"/>
+
   <meta name="google-signin-scope" content="profile email">
   <meta name="google-signin-client_id" content="676011647989-pagptrujs79jsqrdrt5lkelukcvt4gbh.apps.googleusercontent.com">
   <script src="https://apis.google.com/js/platform.js" async defer></script>
