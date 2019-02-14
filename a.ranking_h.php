@@ -19,7 +19,7 @@
     $num = $_GET['num'];
     if($num==99){
       if(!empty($r1)&&!empty($r2)&&!empty($r3)&&!empty($r4)&&!empty($r5)&&!empty($r6)&&!empty($r7)&&!empty($r8)&&!empty($r9)&&!empty($r10)){
-        sql_query("UPDATE rank SET r1 = '$r1',r2 = '$r2',r3 = '$r3',r4 = '$r4',r5 = '$r5',r6 = '$r6',r7 = '$r7',r8 = '$r8',r9 = '$r9',r10 = '$r10' WHERE id =100 ");
+        sql_query("UPDATE rank SET r1 = '$r1',r2 = '$r2',r3 = '$r3',r4 = '$r4',r5 = '$r5',r6 = '$r6',r7 = '$r7',r8 = '$r8',r9 = '$r9',r10 = '$r10' WHERE id =99 ");
         history_back();
       }else{
         alert_back('업체명을 모두 입력해주세요!');
