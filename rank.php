@@ -50,9 +50,9 @@ if(!empty($_GET['tag'])){
           <div class="insta-tag">
             <div style="flex:0 1 auto;">
               <div class="insta-list">
-                <div class="insta-text-h" style="padding-top:3px;"><a href="rank.php">#<?=$g_tag2?></a></div>
+                <div class="insta-text-h" style="padding-top:3px;"><a href="rank.php?tag=<?=$g_tag2?>">#<?=$g_tag2?></a></div>
                 <?php foreach ($g_tag as $info) {?>
-                  <div class="insta-text" style="display:none; padding:3px 0;"><a href="rank.php?tag=<?=$info[tag]?>">#<?=$info[tag]?></a></div>
+                <div class="insta-text" style="display:none; padding:3px 0;"><a href="rank.php?tag=<?=$info[tag]?>">#<?=$info[tag]?></a></div>
                 <?php } ?>
               </div>
             </div>
@@ -76,8 +76,8 @@ if(!empty($_GET['tag'])){
 <script>
   if('<?=$g_tag2?>'=='피자'){
     var store_name = ['대장장이화덕피자','피자네버슬립스','옥인피자','리골레토시카고피자','매덕스피자','팔로피자','피자오','보니스피자펍','피자무쪼','계동피자'];
-  }else if('<?=$g_tag2?>'=='와인'){
-    var store_name = ['먼데이블루스','세컨라운드','심퍼티쿠시','서촌블루스','둘세이수아베','몽리와인바','순라길비비','루나씨엘로','블루브릿지','우아시스'];
+  }else if('<?=$g_tag2?>'=='분식'){
+    var store_name = ['도산분식','엉클스','풍년쌀농산','남도분식','김피라','그동네떡볶이','낙원꽃분식','추남식당','뚝떡','꽃추장'];
   }
 
   

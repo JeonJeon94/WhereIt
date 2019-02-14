@@ -53,7 +53,7 @@ for($indexi = 0 ; $indexi < count($arr_browser) ; $indexi++) {
 </script>
 
 <script>
-  var store_name = ['세븐블레스','샤오짠','스테이터','비스테까','Tokyo420','훌라훌라','르브리에','마음을담아내면','더라스트펍','미스터카츠'];
+  var store_name = ['익동정육점','푸울파티','꽃돼지갤러리','지구당','남산케미스트리','조선김밥','도산분식','아오이토리','C156','로리스더프라임립'];
   function loadTemplate(id) { return document.getElementById(id).innerHTML; }
   
   var main = []

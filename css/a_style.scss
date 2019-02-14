@@ -489,7 +489,7 @@
           margin: 30px 0 20px 0;
           font-size: 24px;
           display: flex;
-
+          min-height: 30px;
         }
         #up_btn, .store_btn{
           width: 100px;
@@ -515,12 +515,26 @@
             font-size: 15px;
           }
         }
-
         .rank_theme, .rank_store{
           display: flex;
           margin-bottom: 10px;
           flex-direction: column;
           
+          .rank_num{
+            display:flex; 
+            height:40px; 
+            align-items:center;
+            margin:5px 10px;
+
+            .ranking{
+              width: 130px;
+              height: 30px;
+              padding: 6px;
+              font-size: 15px;
+              border: 1px solid #A5A6A5;
+            }
+          }
+
           .edit-store{
             display:flex; 
             flex-direction:column; 

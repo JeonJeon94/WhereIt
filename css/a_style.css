@@ -626,6 +626,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  min-height: 30px;
 }
 
 .default-page .main .submain .contents #up_btn, .default-page .main .submain .contents .store_btn {
@@ -665,6 +666,25 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.default-page .main .submain .contents .rank_theme .rank_num, .default-page .main .submain .contents .rank_store .rank_num {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5px 10px;
+}
+
+.default-page .main .submain .contents .rank_theme .rank_num .ranking, .default-page .main .submain .contents .rank_store .rank_num .ranking {
+  width: 130px;
+  height: 30px;
+  padding: 6px;
+  font-size: 15px;
+  border: 1px solid #A5A6A5;
 }
 
 .default-page .main .submain .contents .rank_theme .edit-store, .default-page .main .submain .contents .rank_store .edit-store {
