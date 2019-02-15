@@ -1,7 +1,9 @@
 <?php $page = "ranking-nowdays" ?>
 
 <?php include_once("./m.head.php") ?>
-
+<?php 
+  $days = sql_one("SELECT * FROM rank WHERE id = 100");
+?>
   <div class="main">
     <div class="title">
       <div class="thismonth" onclick="location.href='./m.rank-thismonth.php'">
@@ -22,7 +24,7 @@
   
 
 <script>
-  var store_name = ['쥬벤쿠바','세븐블레스','리퀴드랩','리틀넥','랑만','젤렌','독일주택','시미시미','익동정육점','열두달'];
+  var store_name = ['<?=$days[r1]?>','<?=$days[r2]?>','<?=$days[r3]?>','<?=$days[r4]?>','<?=$days[r5]?>','<?=$days[r6]?>','<?=$days[r7]?>','<?=$days[r8]?>','<?=$days[r9]?>','<?=$days[r10]?>'];
   function loadTemplate(id) { return document.getElementById(id).innerHTML; }
   
   var main = []

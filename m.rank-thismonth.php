@@ -1,7 +1,9 @@
 <?php $page = "ranking-thismonth" ?>
 
 <?php include_once("./m.head.php") ?>
-
+<?php 
+  $month = sql_one("SELECT * FROM rank WHERE id = 99");
+?>
   <div class="main">
     <div class="title">
       <div class="theme" onclick="location.href='./m.rank.php'">
@@ -21,7 +23,7 @@
   </div>
   
 <script>
-  var store_name = ['익동정육점','푸울파티','꽃돼지갤러리','지구당','남산케미스트리','조선김밥','도산분식','아오이토리','C156','로리스더프라임립'];
+  var store_name = ['<?=$month[r1]?>','<?=$month[r2]?>','<?=$month[r3]?>','<?=$month[r4]?>','<?=$month[r5]?>','<?=$month[r6]?>','<?=$month[r7]?>','<?=$month[r8]?>','<?=$month[r9]?>','<?=$month[r10]?>'];
   function loadTemplate(id) { return document.getElementById(id).innerHTML; }
 
   var main = []

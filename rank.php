@@ -21,6 +21,7 @@ if(!empty($_GET['tag'])){
   $id = $rank[id];
   $rank= sql_select("SELECT * FROM rank WHERE NOT id = '$id' AND NOT tag = '$g_tag2'");
   $g_tag = $rank;
+  $ranking = sql_select("SELECT * FROM rank WHERE id = '$id' AND tag = '$g_tag2'");
 }else{
   $rank= sql_select("SELECT * FROM rank");
   $theme = $rank[0][theme];
@@ -28,6 +29,7 @@ if(!empty($_GET['tag'])){
   $id = $rank[0][id];
   $rank= sql_select("SELECT * FROM rank WHERE NOT id = '$id' AND NOT tag = '$g_tag2'");
   $g_tag = $rank;
+  $ranking = sql_select("SELECT * FROM rank WHERE id = '$id' AND tag = '$g_tag2'");
 }
 
 ?>
@@ -74,11 +76,7 @@ if(!empty($_GET['tag'])){
     </div>
 
 <script>
-  if('<?=$g_tag2?>'=='피자'){
-    var store_name = ['대장장이화덕피자','피자네버슬립스','옥인피자','리골레토시카고피자','매덕스피자','팔로피자','피자오','보니스피자펍','피자무쪼','계동피자'];
-  }else if('<?=$g_tag2?>'=='분식'){
-    var store_name = ['도산분식','엉클스','풍년쌀농산','남도분식','김피라','그동네떡볶이','낙원꽃분식','추남식당','뚝떡','꽃추장'];
-  }
+  var store_name = ['<?=$ranking[0][r1]?>','<?=$ranking[0][r2]?>','<?=$ranking[0][r3]?>','<?=$ranking[0][r4]?>','<?=$ranking[0][r5]?>','<?=$ranking[0][r6]?>','<?=$ranking[0][r7]?>','<?=$ranking[0][r8]?>','<?=$ranking[0][r9]?>','<?=$ranking[0][r10]?>'];
 
   
   function loadTemplate(id) { return document.getElementById(id).innerHTML; }
