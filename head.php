@@ -42,7 +42,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1" />
   <meta name="description" content="리얼 맛집 정보 웨얼잇!">
   <meta property="og:type" content="website">
