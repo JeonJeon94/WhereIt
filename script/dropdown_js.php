@@ -29,7 +29,8 @@
       });
       $('.hot').css("background","white");
       $('.hot').css("border",'0.04em solid #d8a3d2');
-      for(var t in rank_event){
+      for(var k in rank_event){
+        var t = rank_event[k];
         window.clearTimeout(t);
       }
     }
