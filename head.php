@@ -43,7 +43,7 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1" />
   <meta name="description" content="리얼 맛집 정보 웨얼잇!">
   <meta property="og:type" content="website">
   <meta property="og:title" content="웨얼잇">
