@@ -29,7 +29,7 @@
       });
       $('.hot').css("background","white");
       $('.hot').css("border",'0.04em solid #d8a3d2');
-      for(var t of rank_event){
+      for(var t in rank_event){
         window.clearTimeout(t);
       }
     }
