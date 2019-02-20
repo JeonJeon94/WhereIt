@@ -53,7 +53,7 @@
       $(".hot").parent().css("overflow","hidden")
       $(".hot-list").css("display","flex")
     },500)
-    rank_event.push();
+    rank_event.push(e);
   });
 
   $("#in-down_bt").on("mouseover", function(){
