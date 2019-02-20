@@ -55,7 +55,7 @@
     rank_event.push(e);
   });
 
-  $("#in-down_bt").on("mouseover", function(){
+  $("#in-down_bt").on("mouseover", function(e){
     $(".insta-text").slideDown('fast')
     $("#in-down_bt").css("display",'none');
     $("#in-up_bt").css("display",'block');
@@ -63,7 +63,7 @@
     $('.insta-list').css("border",'2px solid #EAF1F0');
   });
 
-  $(".insta-container").on("mouseleave",function(){
+  $(".insta-container").on("mouseleave",function(e){
     $(".insta-text").slideUp('fast');
     $('#in-down_bt').css('display', 'block');
     $('#in-up_bt').css('display','none');
