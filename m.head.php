@@ -142,7 +142,7 @@
   <div class="slide-modal">
     <div class="tooltip-content">
       <div id="content-title"><b>검색 가능</b>한 지역</div>
-      <div id="content-text">#강남 #삼청동 #샤로수길 #양재 #북촌 #익선동 #역삼 #홍대 #이태원 #신사동 #청담</div>
+      <div id="content-text">#강남 #건대 #홍대 #합정 #신촌 #서울대입구 #상수 #경리단길 #해방촌 #이태원 #한남동 #압구정 #신사동 #익선동 #삼청동 #북촌 #서촌 #성수동 #망원동</div>
     </div>
     <div class="menu-slide">
       <div id="close-icon">

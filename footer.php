@@ -8,7 +8,7 @@
             <div class="area-ok">
               <div class="tooltip-content" id="tooltip-content">
                 <p id="tooltip-content" style="font-size:18px; margin:0 0 20px 0;"><b>검색 가능</b>한 지역</p>
-                <p id="tooltip-content">#가로수길 #강남 #강남역 #건대 #경리단길 #녹사평 #도산공원 #망원동 #북촌 #삼청동 #상수 #샤로수길 #서울대입구 #서촌 #성수동 #세로수길 #신사 #신촌 #압구정 #용산 #이태원 #익선동 #한남동 #합정 #해방촌 #홍대</p>
+                <p id="tooltip-content">#강남 #건대 #홍대 #합정 #신촌 #서울대입구 #상수 #경리단길 #해방촌 #이태원 #한남동 #압구정 #신사동 #익선동 #삼청동 #북촌 #서촌 #성수동 #망원동</p>
               </div>
               <span id="tooltip">검색가능지역</span>
             </div>
