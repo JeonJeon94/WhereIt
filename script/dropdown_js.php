@@ -52,10 +52,10 @@
       $(".hot").parent().css("overflow","hidden")
       $(".hot-list").css("display","flex")
     },500)
-    rank_event.push(e);
+    rank_event.push();
   });
 
-  $("#in-down_bt").on("mouseover", function(e){
+  $("#in-down_bt").on("mouseover", function(){
     $(".insta-text").slideDown('fast')
     $("#in-down_bt").css("display",'none');
     $("#in-up_bt").css("display",'block');
@@ -63,7 +63,7 @@
     $('.insta-list').css("border",'2px solid #EAF1F0');
   });
 
-  $(".insta-container").on("mouseleave",function(e){
+  $(".insta-container").on("mouseleave",function(){
     $(".insta-text").slideUp('fast');
     $('#in-down_bt').css('display', 'block');
     $('#in-up_bt').css('display','none');
